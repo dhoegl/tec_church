@@ -1,7 +1,7 @@
 <?php
 session_start();
 	$host="50.62.209.187:3306"; // Host name 
-	$username="ofcdir_test"; // Mysql username 
+	$username="OFCDIR_TEST"; // Mysql username 
 	$password="Thr33Bl!ndM!c3"; // Mysql password 
 	$db_name="OFCDIR_TEST"; // Database name 
 	$login_tbl_name="login"; // Master User Login Table name 
