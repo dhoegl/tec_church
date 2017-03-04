@@ -73,12 +73,12 @@ if(mysql_num_rows($result) == 1)
 		$_SESSION['firstname'] = $_SESSION['username'];
 	}
 
-	header("location:teclogin_success.php");
+	header("location:ofc_login_success.php");
 	}
 	else 
 	{
 		// Throw alert if user has not yet been activated 
-		include('/includes/tec_credalert2.php');
+		include('/includes/ofc_credalert2.php');
 //		echo "Your membership has not yet been activated. Thank you for your patience!";
 //		echo "<br><a href='tecwelcome.php'>Return to Login Page</a>";
 	}
@@ -86,7 +86,7 @@ if(mysql_num_rows($result) == 1)
 else 
 {
 	// Throw alert if improper login credentials attempted 
-	include('/includes/tec_credalerts.php');
+	include('/includes/ofc_credalerts.php');
 }
 ?>
 

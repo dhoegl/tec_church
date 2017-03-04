@@ -2,11 +2,11 @@
 session_start();
 if(!$_SESSION['logged in'])
 {
-header("location:tecwelcome.php");
+header("location:ofc_welcome.php");
 }
 else 
 {
-	header("location:tecwelcome.php");
+	header("location:ofc_welcome.php");
 }
 ?>
 
