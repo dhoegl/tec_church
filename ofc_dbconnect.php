@@ -28,7 +28,7 @@ session_start();
 	$_SESSION['statestablename'] = $states_tbl_name;
 	$_SESSION['eventtablename'] = $event_tbl_name;
 
-   $db = @mysql_connect($host, $username, $password) or die("cannot connect to tecdir2. Error #" . mysql_errno() . " " . mysql_error());
+   $db = @mysql_connect($host, $username, $password) or die("cannot connect to ofcdir_test. Error #" . mysql_errno() . " " . mysql_error());
  
     if (!$db) {
         echo "Unable to establish connection to tecdir2 database server";

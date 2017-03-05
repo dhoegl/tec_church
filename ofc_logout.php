@@ -1,6 +1,6 @@
 <?php  
 session_start();
-    require_once('tec_dbconnect.php');
+    require_once('ofc_dbconnect.php');
 
 /*		Access Log entry  */
 	$client_ip = stripslashes($_SERVER['REMOTE_ADDR']);
@@ -10,5 +10,5 @@ session_start();
 /*		Access Log entry  */
 
 session_destroy();
-header("location:tecwelcome.php");
+header("location:ofc_welcome.php");
 ?>

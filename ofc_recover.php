@@ -2,7 +2,7 @@
 session_start();
 session_destroy();
 
-require_once('tec_dbconnect.php');
+require_once('ofc_dbconnect.php');
 
 ?>
 
@@ -10,7 +10,7 @@ require_once('tec_dbconnect.php');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link href="css/ofcstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/ofc_style.css" rel="stylesheet" type="text/css" />
 <title>Reset your Password to Our Family Connections</title>
 </head>
 
@@ -24,7 +24,7 @@ require_once('tec_dbconnect.php');
 			<p>Together</p>
 		</div>
 		<ul>
-			<li> <a href='/tecwelcome.php'>Welcome</a></li>
+			<li> <a href='/ofc_welcome.php'>Welcome</a></li>
 
 		</ul>
 	</div>
@@ -108,7 +108,7 @@ if($clear)
 		<div id="footerline"></div>
 	</div>
 	
-	<div id="footer">Copyright © 2012 OurFamilyConnections.org.  All rights reserved.</div>	
+	<div id="footer">Copyright ï¿½ 2012 OurFamilyConnections.org.  All rights reserved.</div>	
 </div>
 </body>
 </html>

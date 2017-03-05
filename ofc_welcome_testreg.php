@@ -5,7 +5,7 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link href="css/ofcstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/ofc_style.css" rel="stylesheet" type="text/css" />
 <title>Welcome to Our Family Connections</title>
 
 <!--Set Focus on User Name Entry textbox-->
