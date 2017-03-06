@@ -66,7 +66,7 @@ require_once('ofc_dbconnect.php');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link href="css/ofcstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/ofc_style.css" rel="stylesheet" type="text/css" />
 <title>Please Register to access Trinity Family Connections</title>
 
 <!--Set Focus on User Name Entry textbox-->
@@ -78,6 +78,9 @@ function focus_on_start()
 </script>
 <!-- Load the jquery libraries -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Password Strength Check script -->
+<script type="text/javascript" src="js/password_check.js"></script>
 
 </head>
 
@@ -147,8 +150,8 @@ function focus_on_start()
 	$himher = "";
 ?>
 
-<form name='form1' action='' method="POST">
-	<table class="user_cred_entry" width="350" border="0" cellpadding="1" cellspacing="1" >
+<form name='form1' id="register" action='' method="POST">
+	<table class="user_cred_entry" width="500" border="0" cellpadding="1" cellspacing="1" >
 		<tr>
 			<td>
 				<p></p>
@@ -185,7 +188,9 @@ function focus_on_start()
 			Choose a Password:
 			</td>
 			<td>
-			<input type='password' name='password'>
+                        <input name="password" id="password" type="password"/>
+                        <span id="register_result"></span>
+<!--			<input type='password' name='password'>-->
 			</td>
 		</tr>
 		<tr>
