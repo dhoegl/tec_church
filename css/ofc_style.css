@@ -256,24 +256,24 @@ h2{
     font-size:1em;
     outline:0;
 }
-#register_result
-{
-    margin-left:5px;
-}
 #register_result .short
 {
+    margin-left:5px;
     color:#FF0000;
 }
 #register_result .weak
 {
+    margin-left:5px;
     color:#0000FF;
 }
 #register_result .good
 {
+    margin-left:5px;
     color:#006400;
 }
 #register_result .strong
 {
+    margin-left:5px;
     font-weight: bold;
     color:#006400;
 }
