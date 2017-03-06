@@ -20,6 +20,12 @@ function focus_on_start()
  document.form1.username.focus();
  }
 </script>
+<!-- Initialize jQuery scripts -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Password Strength Check script -->
+<script type="text/javascript" src="js/password_check.js"></script>
+
 </head>
 
 <body onLoad="focus_on_start()";>
