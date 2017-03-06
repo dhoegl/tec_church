@@ -58,7 +58,7 @@ function focus_on_start()
 ?>
 
 <form name='form1' action='' method="POST">
-	<table class="ofc_content" width="350" border="0" cellpadding="1" cellspacing="1" >
+	<table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
 		<tr>
 			<td>
 				<p></p>
