@@ -239,7 +239,7 @@ h2{
 	}
 
 /********************** Password Register *************************/
-#register
+/*#register
 {
     margin-left:100px;
 }
@@ -255,23 +255,23 @@ h2{
     width:250px;
     font-size:1em;
     outline:0;
-}
-#register_result .short
+}*/
+#register .short
 {
     margin-left:5px;
     color:#FF0000;
 }
-#register_result .weak
+#register .weak
 {
     margin-left:5px;
     color:#0000FF;
 }
-#register_result .good
+#register .good
 {
     margin-left:5px;
     color:#006400;
 }
-#register_result .strong
+#register .strong
 {
     margin-left:5px;
     font-weight: bold;

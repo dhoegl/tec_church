@@ -57,7 +57,7 @@ function focus_on_start()
 		$repeatpassword = "";
 ?>
 
-<form name='form1' action='' method="POST">
+<form name='form1' id="register" action='' method="POST">
 	<table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
 		<tr>
 			<td>
