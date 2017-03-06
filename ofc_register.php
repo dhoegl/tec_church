@@ -144,6 +144,12 @@ function focus_on_start()
 	
 
 </form>
+                        
+<form id="register">
+    <label for="password">Password_Test:</label>
+    <input name="password" id="password" type="password"/>
+    <span id="register_result"></span>
+</form>
 <?php
 		
 	$submit = $_POST['submit'];
