@@ -11,20 +11,20 @@
 
 <?php
 if($_SESSION['super_admin'] == 1 || $_SESSION['reg_admin'] == 1 || $_SESSION['pray_admin'] == 1 || $_SESSION['accesslevel'] == '3'){ // Administrator or Authorized user
- 	 echo "<li><a href='/tecprayer.php'>Prayer</a></li>";
+ 	 echo "<li><a href='/ofc_prayer.php'>Prayer</a></li>";
 }
 if($_SESSION['reg_admin'] == 1){ // Registration Administrator
- 	 echo "<li><a href='/tecmemberadmin.php'>Access Admin</a></li>";
+ 	 echo "<li><a href='/ofc_memberadmin.php'>Access Admin</a></li>";
 }
 if($_SESSION['pray_admin'] == 1){ // Administrator
- 	 echo "<li><a href='/tecprayeradmin.php'>Prayer Admin</a></li>";
+ 	 echo "<li><a href='/ofc_prayeradmin.php'>Prayer Admin</a></li>";
 }
 if($_SESSION['super_admin'] == 1){ // SuperUser
-	 echo "<li><a href='/tec_maint_page.php'>Maintenance</a></li>";
+	 echo "<li><a href='/ofc_maint_page.php'>Maintenance</a></li>";
 }
  ?>
 
-<li><a href='/teccalendar.php'>Calendar</a></li>
+<li><a href='/ofc_calendar.php'>Calendar</a></li>
 
 <?php
 if($_SESSION['accesslevel'] == '3'){ // Authorized User
