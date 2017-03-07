@@ -1,5 +1,20 @@
+//Check for correct password strength
+//Password strength criteria is as follows
+//-- Length must be greater than 6 characters
+//-- Characters shall include at least the following:
+//---- Use lower case and upper case characters
+//---- Use numbers and special characters
+//  If password is less than 6 characters, don’t accept.
+//  If the length of password is more than 6 characters, increase the strength value by +1.
+//  If the password contains lower and uppercase characters, increase the strength value by +1.
+//  If the password contains characters and numbers, increase the strength value by +1.
+//  If the password contains one special character, increase the strength value by +1.
+//  If the password contains two special characters, increase the strength value by +1.
+// ---- Allow Passwords whose Strength is either "Good" or "Strong" (Strenght = 2 or greater)
+
 $(document).ready(function()
 {
+    $('#register_submit').prop('disabled', true);
     $('#password').keyup(function(){
     $('#register_result').html(checkStrength($('#password').val()));
     });
@@ -10,6 +25,7 @@ $(document).ready(function()
     if (password.length < 6) { 
         $('#register_result').removeClass(); 
         $('#register_result').addClass('short'); 
+        $('#register_submit').prop('disabled', true);
         return 'Too short'; 
     } 
     //length is ok, lets continue. 
@@ -32,17 +48,20 @@ $(document).ready(function()
         //if value is less than 2 
         if (strength < 2 ) {
             $('#register_result').removeClass(); 
-            $('#register_result').addClass('weak'); 
+            $('#register_result').addClass('weak');
+            $('#register_submit').prop('disabled', true);
             return 'Weak'; 
         } 
         else if (strength == 2 ) { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('good'); 
+            $('#register_submit').prop('disabled', false);
             return 'Good'; 
         } 
         else { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('strong'); 
+            $('#register_submit').prop('disabled', false);
             return 'Strong'; 
         }; 
     };

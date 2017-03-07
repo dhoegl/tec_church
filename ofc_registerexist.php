@@ -208,7 +208,7 @@ function focus_on_start()
 				<table>
 				<tr>
 					<td>
-						<input type='submit' name='submit' value='Register'>
+						<input type='submit' id="register_submit" name='submit' value='Register'>
 					</td>
 					<td>
 						<input type='submit' name='clear' value='Clear'>
@@ -257,7 +257,9 @@ elseif ($submit)
 		{
 				if($password==$repeatpassword)
 				{
-					if(strlen($password)<7||strlen($password)>19)
+                                    
+					
+                                    if(strlen($password)<7||strlen($password)>19)
 					{
 					echo "<strong><font color='Red'>Password must be at least 7 characters and less than 20 characters in length.</font> Please retry</strong>";
 					
