@@ -135,12 +135,11 @@ function focus_on_start()
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2">If this is correct, please identify yourself and select a NEW username and password below</td>
+		<td colspan="2">If this is correct, please identify yourself and select a NEW username and password</td>
 	</tr>
 	<tr>
-		<td>
-			<p></p>
-		</td>
+            <td colspan="2"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, contain one lowercase letter, and one number (0-9) or one special character.
+            </td>
 	</tr>
 </table>
 
@@ -159,7 +158,7 @@ function focus_on_start()
 		</tr>
 		<tr>
 			<td align="right">
-			Who are you:
+                            <strong>Who are you:</strong>
 			</td>
 <?php
 			if($recordFirstHim) {
@@ -177,7 +176,7 @@ function focus_on_start()
 		</tr>
 		<tr>
 			<td align="right">
-			Select a User Name:
+                            Select a User Name:
 			</td>
 			<td>
 			<input type='text' name='username' value="<?php echo $username; ?>">
