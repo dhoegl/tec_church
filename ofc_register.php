@@ -60,9 +60,23 @@ function focus_on_start()
 <form name='form1' id="register" action='' method="POST">
 	<table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
 		<tr>
-			<td>
-				<p></p>
-			</td>
+                    <td>
+                        <p></p>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                        All fields must be filled in
+                    </td>
+		</tr>
+        	<tr>
+                    <td colspan="2"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, contain one lowercase letter, and one number (0-9) or one special character.
+                    </td>
+                </tr>
+		<tr>
+                    <td>
+                        <p></p>
+                    </td>
 		</tr>
 		<tr>
 			<td align="right">
@@ -137,7 +151,7 @@ function focus_on_start()
 				<table>
 				<tr>
 					<td>
-						<input type='submit' name='submit' value='Register'>
+						<input type='submit' id="register_submit" name='submit' value='Register'>
 					</td>
 					<td>
 						<input type='submit' name='clear' value='Clear'>
