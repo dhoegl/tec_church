@@ -511,7 +511,7 @@ var jQ54 = jQuery.noConflict();
 			<p>Together</p>
 		</div>
 		<ul>
-			<li> <a href='/tecwelcome.php'>Welcome</a></li>
+			<li> <a href='/ofc_welcome.php'>Welcome</a></li>
 <?php
 	require_once('ofc_menu.php');
 
