@@ -148,8 +148,7 @@ $row = @mysql_fetch_assoc($result);
 
 <!-- Call Image Verify jQuery script -->
 <script src="/js/image_verify.js"></script>
-<script type="text/javascript" src="/js/ofc_tshoot.js"></script>
-
+<script type="text/javascript" src="/js/ofc_new_prayer_click"></script>
 <?php
 if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 // Get My Prayer List
@@ -166,7 +165,7 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 <!--***************************** Execute troubleshooting scripts ***********************************-->
 <!--***************************** Execute troubleshooting scripts ***********************************-->
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
 	var $loggedin = + <?php echo "'" . $_SESSION['user_id'] . "'"; ?>;
 	var $sessioniddir = + <?php echo "'" . $_SESSION['idDirectory'] . "'"; ?>;
 	var $recordID = + <?php echo "'" . $recordID . "'"; ?>;
@@ -180,12 +179,12 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 		console.log("Profileaddr = " + $profileaddr);
 		console.log("Admin_profilemaint = " + $admin_profilemaint);
 	});
-</script>-->
+</script>
 
 <!--***************************** New Prayer Scripts ***********************************-->
 <!--***************************** New Prayer Scripts ***********************************-->
 
-<!-- Detect 'New Prayer' button click -->
+<!-- Detect 'New Prayer' button click 
 <script type="text/javascript">
  var jQ4 = jQuery.noConflict();
 	jQ4(document).ready(function() {
@@ -203,7 +202,7 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 	});
  });
 </script>
-
+-->
 
 <!--***************************** Update My Prayer Scripts ***********************************-->
 <!--***************************** Update My Prayer Scripts ***********************************-->
