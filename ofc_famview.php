@@ -150,7 +150,12 @@ $row = @mysql_fetch_assoc($result);
 <script src="/js/image_verify.js"></script>
 <!--***************************** New Prayer Script ***********************************-->
 <script type="text/javascript" src="/js/ofc_new_prayer_click.js"></script>
-<?php
+<!--***************************** Update Prayer Script ***********************************-->
+<script type="text/javascript" src="/js/ofc_update_prayer_click.js"></script>
+<!-- Get Which Prayer Items 'Update' button was clicked -->
+<script type="text/javascript" src="/js/ofc_which_update_button_click.js"></script>
+
+    <?php
 if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 // Get My Prayer List
   	include('/includes/ofc_view_myprayerlist.php');
@@ -158,8 +163,6 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 // Get My Prayer jQuery
    include('/includes/ofc_get_myprayer_jquery.php');
 
-// Call Image Verify jQuery script
-//   include('/includes/image_verify.php');
    
 };
 ?>
@@ -186,7 +189,7 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 <!--***************************** Update My Prayer Scripts ***********************************-->
 <!--***************************** Update My Prayer Scripts ***********************************-->
 
-<!-- Detect 'Update My Prayer' button click -->
+<!-- Detect 'Update My Prayer' button click 
 <script type="text/javascript">
  var jQ50 = jQuery.noConflict();
 	jQ50(document).ready(function() {
@@ -207,7 +210,8 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 	});
 });
 </script>
-<!-- Get Which Prayer Items 'Update' button was clicked -->
+-->
+<!-- Get Which Prayer Items 'Update' button was clicked 
  <script type="text/javascript">
 var $clickbuttonid = "NA";
 var prayerWho = "NA";
@@ -227,7 +231,7 @@ jQ9(document).ready(function () {
 });
 
 </script>
-
+-->
 <!-- Detect 'Update' button click to open my_popup3 -->
 <script type="text/javascript">
  var jQ51 = jQuery.noConflict();

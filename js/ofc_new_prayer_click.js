@@ -1,8 +1,5 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Listen for, and open New Prayer Request when button clicked
+// Called from ofc_famview.php
  var jQ4 = jQuery.noConflict();
 	jQ4(document).ready(function() {
 //		jQ4("#prayer_new_button").on("click", "button", function () {
