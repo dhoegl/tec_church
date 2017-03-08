@@ -148,7 +148,8 @@ $row = @mysql_fetch_assoc($result);
 
 <!-- Call Image Verify jQuery script -->
 <script src="/js/image_verify.js"></script>
-<script type="text/javascript" src="/js/ofc_new_prayer_click"></script>
+<!--***************************** New Prayer Script ***********************************-->
+<script type="text/javascript" src="/js/ofc_new_prayer_click.js"></script>
 <?php
 if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 // Get My Prayer List
@@ -181,28 +182,6 @@ if($_SESSION['accesslevel'] == 2 || $_SESSION['accesslevel'] == 3) {
 	});
 </script>
 
-<!--***************************** New Prayer Scripts ***********************************-->
-<!--***************************** New Prayer Scripts ***********************************-->
-
-<!-- Detect 'New Prayer' button click 
-<script type="text/javascript">
- var jQ4 = jQuery.noConflict();
-	jQ4(document).ready(function() {
-//		jQ4("#prayer_new_button").on("click", "button", function () {
-		jQ4("#prayer_new_button").click(function () {
-			console.log("New Prayer Button clicked");
-// Launch New Prayer Popup
-// http://dev.vast.com/jquery-popup-overlay/
-		jQ4("#my_popup").popup({
-		background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
-		onopen: function () {
-			console.log("Popup Opened for New Prayer");
-		}
-		});
-	});
- });
-</script>
--->
 
 <!--***************************** Update My Prayer Scripts ***********************************-->
 <!--***************************** Update My Prayer Scripts ***********************************-->
