@@ -10,6 +10,7 @@ jQ150(document).ready(function () {
 		console.log("Approve Prayer button clicked");
 		console.log("$approve prayerid clicked = " + $approveclickbuttonid);
 //		$approveURL = "ofc_newprayeraccept.php?prayerid=" + $approveclickbuttonid;
+//		$approveURL = "bing.com";
 		console.log("approveURL = " + $approveURL);
 //		window.open($approveURL);
 //		window.location.href = $approveURL;
