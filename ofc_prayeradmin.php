@@ -82,7 +82,7 @@ jQ9(document).ready(function () {
 		jQ9("#updatePrayer").show();
 		var prayerID = jQ9(this).closest('tr').find(".indexcol").text();
 		$clickbuttonid = prayerID;
-		console.log("$prayerid clicked = " + $clickbuttonid);
+		console.log("View button - $prayerid clicked = " + $clickbuttonid);
 		var prayerDate = jQ9(this).closest('tr').find(".prayer_update").text();
 		var prayerWho = jQ9(this).closest('tr').find(".prayer_who").text();
 		var prayerTitle = jQ9(this).closest('tr').find(".prayer_title").text();
