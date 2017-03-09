@@ -110,6 +110,7 @@ jQ10(document).ready(function () {
 		var prayerWho = jQ10(this).closest('tr').find(".prayer_who").text();
 		var prayerTitle = jQ10(this).closest('tr').find(".prayer_title").text();
 		$approveURL = "ofc_newprayeraccept.php?prayerid=" + $approveclickbuttonid;
+		console.log("Approve Button clicked");
 		console.log("approveURL = " + $approveURL);
 //		window.open($approveURL);
 		window.location.href = $approveURL;
@@ -131,6 +132,7 @@ jQ11(document).ready(function () {
 		var prayerWho = jQ11(this).closest('tr').find(".prayer_who").text();
 		var prayerTitle = jQ11(this).closest('tr').find(".prayer_title").text();
 		$rejectURL = "ofc_newprayerreject.php?prayerid=" + $rejectclickbuttonid;
+		console.log("Reject Button clicked");
 		console.log("rejectURL = " + $rejectURL);
 //		window.open($rejectURL);
 		window.location.href = $rejectURL;
