@@ -39,6 +39,9 @@ $row = @mysql_fetch_assoc($newprayerresult);
 <!-- Load the jquery libraries -->
 <script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
 
+<!-- Load the New Prayer Accept listener -->
+<script type='text/javascript' src='/js/ofc_new_prayer_accept_click.js'></script>
+
 
 
 </head>
@@ -81,37 +84,37 @@ if($clear)
 	}
 if ($submit)
 	{
-			$acceptquerydir = "UPDATE " . $_SESSION['prayertable'] . " SET approved = '1'" . " WHERE prayer_id = '$prayer_id'";			
-			$acceptresultdir = @mysql_query($acceptquerydir)or die("A prayer request database error has occurred - UPDATE. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
+//			$acceptquerydir = "UPDATE " . $_SESSION['prayertable'] . " SET approved = '1'" . " WHERE prayer_id = '$prayer_id'";			
+//			$acceptresultdir = @mysql_query($acceptquerydir)or die("A prayer request database error has occurred - UPDATE. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
 
-			$verifyacceptquerydir = "SELECT * FROM " . $_SESSION['prayertable'] . " WHERE prayer_id = '$prayer_id' and approved = '1'";
+//			$verifyacceptquerydir = "SELECT * FROM " . $_SESSION['prayertable'] . " WHERE prayer_id = '$prayer_id' and approved = '1'";
 
 // Verify prayer approval - then send email notification
  
-			$verifyacceptresultdir = @mysql_query($verifyacceptquerydir);
-			$verifyacceptcountdir = @mysql_num_rows($verifyacceptresultdir);
+//			$verifyacceptresultdir = @mysql_query($verifyacceptquerydir);
+//			$verifyacceptcountdir = @mysql_num_rows($verifyacceptresultdir);
 
-			if($verifyacceptcountdir == 1)
-				{
+//			if($verifyacceptcountdir == 1)
+//				{
 //					echo "<p id='approve_flag'>Approved</p>";
-					echo "<script language='javascript'>";
-					echo "alert('Approval completed')";
-					echo "</script>";
+//					echo "<script language='javascript'>";
+//					echo "alert('Approval completed')";
+//					echo "</script>";
 // This synchronous script is causing delayed server response
- 					newprayernotify($prayer_id, $recordID, $prayerdate, $prayerfrom, $prayertitle, $prayertext);
-					header("location:ofc_prayeradmin.php");
+// 					newprayernotify($prayer_id, $recordID, $prayerdate, $prayerfrom, $prayertitle, $prayertext);
+//					header("location:ofc_prayeradmin.php");
 
 // Detect Approve button click - send notification email (async)
 
-				}
-				else 
-				{
-					echo "<strong><font color='Red'>Approval failed</font></strong>";
-				}
+//				}
+//				else 
+//				{
+//					echo "<strong><font color='Red'>Approval failed</font></strong>";
+//				}
 	}
 ?>
 
-<form action="" method="POST">
+<form id="acceptprayer" action="" method="POST">
 	<table>
 		<tr>
 			<td class="key">From:</td>
@@ -132,7 +135,7 @@ if ($submit)
 		</tr>
 		<tr>
 			<td>
-			<input type='submit' id="approvePrayer" class="button_flat_blue" name='submit' value="YES - Approve">
+			<input type='submit' id="approvePrayer" class="button_flat_blue prayer_approve" name='submit' value="YES - Approve">
 			</td>
 			<td>&nbsp &nbsp</td>
 			<td>
