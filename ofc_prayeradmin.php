@@ -97,7 +97,7 @@ jQ9(document).ready(function () {
 
 </script>
 
-<!-- Get Which Prayer Item's 'Approve' button was clicked -->
+<!-- Get Which Prayer Item's 'Approve' button was clicked 
  <script type="text/javascript">
 var $approveclickbuttonid = "NA";
 var $approveURL = "NA";
@@ -117,7 +117,7 @@ jQ10(document).ready(function () {
 });
 
 </script>
-
+-->
 <!-- Get Which Prayer Item's 'Reject' button was clicked -->
  <script type="text/javascript">
 var $rejectclickbuttonid = "NA";
