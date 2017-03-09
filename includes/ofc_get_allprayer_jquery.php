@@ -3,7 +3,7 @@ var $answered = "NA";
 var jQ110 = jQuery.noConflict();
  jQ110(document).ready(function () {
 //	console.log("$clickbuttonID again = " + $clickbuttonid);
-	var allprayerjson = 'ofc_get_json_allprayer.php'
+	var allprayerjson = 'ofc_get_json_allprayer.php';
 	jQ110("#allprayertable tbody").on("click", function () { //Tecfamview 'Update button clicked on #allprayertable
 		jQ110("tr.praytable_even").show();
 		jQ110("tr.praytable_odd").show();
