@@ -2,7 +2,7 @@
 // Populate Popup content with Prayer Details - Unapproved prayer request
  var jQ10 = jQuery.noConflict();
  jQ10(document).ready(function () {
-	var unapprovedprayerjson = 'ofc_get_json_unapprovedprayer.php'
+	var unapprovedprayerjson = 'ofc_get_json_unapprovedprayer.php';
 	jQ10("#unapprovedprayertable tbody").on("click", ".view_button", function () {
 		jQ10("td.praypraise").empty();
 		jQ10("td.praydate").empty();
