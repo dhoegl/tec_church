@@ -82,8 +82,8 @@ if($clear)
 		header("location:ofc_prayeradmin.php");
 //		echo "Clear was clicked";
 	}
-if ($submit)
-	{
+//if ($submit)
+//	{
 //			$acceptquerydir = "UPDATE " . $_SESSION['prayertable'] . " SET approved = '1'" . " WHERE prayer_id = '$prayer_id'";			
 //			$acceptresultdir = @mysql_query($acceptquerydir)or die("A prayer request database error has occurred - UPDATE. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
 
@@ -111,7 +111,7 @@ if ($submit)
 //				{
 //					echo "<strong><font color='Red'>Approval failed</font></strong>";
 //				}
-	}
+//	}
 ?>
 
 <form id="acceptprayer" action="" method="POST">
