@@ -75,7 +75,8 @@ if(!$_SESSION['logged in']) {
 var $clickbuttonid = "NA";
 var jQ9 = jQuery.noConflict();
 jQ9(document).ready(function () {
-	jQ9("#unapprovedprayertable tbody").on("click", 'tr', function () {
+//	jQ9("#unapprovedprayertable tbody").on("click", 'tr', function () {
+	jQ9("#unapprovedprayertable tbody").on("click", '.view_button', function () {
 		jQ9("tr.praytable_even").show();
 		jQ9("tr.praytable_odd").show();
 		jQ9("tr.praytable_text").show();
