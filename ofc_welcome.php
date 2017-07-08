@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Welcome to OurFamilyConnections</title>
+    <title>TEST - Welcome to OurFamilyConnections</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@ session_start();
     </nav>
 
     <div class="container">
-    <h1>Hello, world!</h1>
+    <h1>TEST - Hello, world!</h1>
 
 <!--      <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
