@@ -67,19 +67,22 @@ session_start();
     </nav>
 
     <div class="container-fluid">
+        <div class="row">
+                <div class="col-sm-12 well">
+                    <h1>TEST - Hello, world!</h1>
+                </div> <!--col-sm-12-->
+        </div>
+
     <div class="row">
-        <div class="col-sm-4 well">
+        <div class="col-sm-6 well">
             <img src="images/tfcbanner3.png" class="img-responsive" alt=""/>
-        </div> <!--col-sm-4-->
-        <div class="col-sm-4 well">
+        </div> <!--col-sm-6-->
+        <div class="col-sm-6 well">
             <p>Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</p>
             <p align="center">We believe in the inerrancy and sufficiency of God&#39;s Word</p>
             <p align="center">We believe in the sovereignty of God&#39;s grace</p>
             <p align="center">We believe in the priority of life-on-life discipleship</p>			
-        </div> <!--col-sm-4-->
-        <div class="col-sm-4 well">
-            <h1>TEST - Hello, world!</h1>
-        </div> <!--col-sm-4-->
+        </div> <!--col-sm-6-->
     </div> <!--row-->
 
 <!--      <form class="form-signin">
