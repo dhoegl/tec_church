@@ -71,7 +71,7 @@ session_start();
         <div class="col-sm-4 well">
             <img src="images/tfcbanner3.png" class="img-responsive" alt=""/>
         </div> <!--col-sm-4-->
-        <div class="col-sm-4 well-lg">
+        <div class="col-sm-4 well">
             <p>Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</p>
             <p align="center">We believe in the inerrancy and sufficiency of God&#39;s Word</p>
             <p align="center">We believe in the sovereignty of God&#39;s grace</p>
