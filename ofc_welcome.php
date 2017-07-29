@@ -42,21 +42,45 @@ session_start();
           <a class="navbar-brand" href="#">OurFamilyConnections</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-                <input type="text" placeholder="username" class="form-control" required="TRUE" autofocus="TRUE">
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="password" class="form-control" required="TRUE">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+            <?php
+            if(!$_SESSION['logged in']) {
+                echo '<form class="navbar-form navbar-right">';
+                echo '<div class="form-group">';
+                echo '<input type="text" placeholder="username" class="form-control" required="TRUE" autofocus="TRUE">';
+                echo '</div>';
+                echo '<div class="form-group">';
+                echo '<input type="password" placeholder="password" class="form-control" required="TRUE">';
+                echo '</div>';
+                echo '<button type="submit" class="btn btn-success">Sign in</button>';
+                echo '</form>';
+            }
+            else
+            {
+                echo '<ul class="nav navbar-nav navbar-right">';
+                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
+                echo '<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                echo '</ul>';
+            }
+            ?>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
-    <div class="container">
-    <h1>TEST - Hello, world!</h1>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>TEST - Hello, world!</h1>
+        </div> <!--col-sm-4-->
+        <div class="col-sm-4">
+            <p>Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</p>
+            <p align="center">We believe in the inerrancy and sufficiency of God&#39;s Word</p>
+            <p align="center">We believe in the sovereignty of God&#39;s grace</p>
+            <p align="center">We believe in the priority of life-on-life discipleship</p>			
+        </div> <!--col-sm-4-->
+        <div class="col-sm-4">
+            <img src="images/tfcbanner3.png" class="img-responsive" alt=""/>
+        </div> <!--col-sm-4-->
+    </div> <!--row-->
 
 <!--      <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
