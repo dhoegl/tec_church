@@ -68,8 +68,8 @@ session_start();
 
     <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4">
-            <h1>TEST - Hello, world!</h1>
+        <div class="col-sm-4 well">
+            <img src="images/tfcbanner3.png" class="img-responsive" alt=""/>
         </div> <!--col-sm-4-->
         <div class="col-sm-4">
             <p>Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</p>
@@ -78,7 +78,7 @@ session_start();
             <p align="center">We believe in the priority of life-on-life discipleship</p>			
         </div> <!--col-sm-4-->
         <div class="col-sm-4">
-            <img src="images/tfcbanner3.png" class="img-responsive" alt=""/>
+            <h1>TEST - Hello, world!</h1>
         </div> <!--col-sm-4-->
     </div> <!--row-->
 
