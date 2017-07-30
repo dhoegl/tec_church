@@ -44,7 +44,8 @@ session_start();
         <div id="navbar" class="navbar-collapse collapse">
             <?php
             if(!$_SESSION['logged in']) {
-                echo '<form class="navbar-form navbar-right">';
+                session_destroy();
+                echo '<form class="navbar-form navbar-right" name="form1" method="post" action="tec_checklogin.php">';
                 echo '<div class="form-group">';
                 echo '<input type="text" placeholder="username" class="form-control" required="TRUE" autofocus="TRUE">';
                 echo '</div>';
@@ -56,10 +57,15 @@ session_start();
             }
             else
             {
-                echo '<ul class="nav navbar-nav navbar-right">';
-                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
-                echo '<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                echo '<ul class="nav navbar-nav navbar-right nav-pills">';
+                echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
+                echo '<li role="presentation"><a href="#">Profile</a></li>';
+                echo '<li role="presentation"><a href="#">Messages</a></li>';
                 echo '</ul>';
+//                echo '<ul class="nav navbar-nav navbar-right">';
+//                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
+//                echo '<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+//                echo '</ul>';
             }
             ?>
         </div><!--/.navbar-collapse -->
