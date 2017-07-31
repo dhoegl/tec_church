@@ -20,10 +20,12 @@ $myusername = @mysql_real_escape_string($myusername);
 $mypassword = @mysql_real_escape_string(md5($mypassword));
 
 // Get user details
-$sqlquery = "SELECT * FROM $login_tbl_name WHERE username = '$myusername' AND password = '$mypassword'";
-$result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
-$count = mysql_num_rows($result);
-if(mysql_num_rows($result) == 1)
+$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername' AND password = '$mypassword'");
+// $result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+$count = $sqlquery->num_rows;
+	// Display count in console 
+	include('/includes/ofc_count_test.php');
+if($count >= 1)
 {
 // Login $myusername, $mypassword and redirect to file "login_success.php"
 	$row = @mysql_fetch_assoc($result);
