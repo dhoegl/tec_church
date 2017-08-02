@@ -14,37 +14,48 @@ $mysql_sstat = @mysql_select_db($db_name)or die("cannot select DB. Error:" . mys
 
 
 // To protect MySQL injection
-$myusername = stripslashes($myusername);
-$mypassword = stripslashes($mypassword);
-$myusername = @mysql_real_escape_string($myusername);
-$mypassword = @mysql_real_escape_string(md5($mypassword));
+$myusername2 = stripslashes($myusername);
+$mypassword2 = stripslashes($mypassword);
+$myusername3 = @mysql_real_escape_string($myusername2);
+$mypassword3 = @mysql_real_escape_string(md5($mypassword2));
 
 // Get user details
-$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername' AND password = '$mypassword'");
+$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername3' AND password = '$mypassword3'");
 // $result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
 $count = $sqlquery->num_rows;
 ?>
 
 <script type='text/javascript'>
  var $countval =  + <?php echo "'" . $count . "'"; ?>;
- var $myusername =  + <?php echo "'" . $myusername . "'"; ?>;
- var $mypassword =  + <?php echo "'" . $mypassword . "'"; ?>;
+ var $myusernameval =  + <?php echo "'" . $myusername2 . "'"; ?>;
+ var $mypasswordval =  + <?php echo "'" . $mypassword2 . "'"; ?>;
  var jQ3 = jQuery.noConflict();
                 jQ3(document).ready(function() {
 		console.log("Username and Password entered");
                 console.log("Count = " + $countval);
-                console.log("Username = " + $myusername);
-                console.log("Password = " + $mypassword);
+                console.log("Username = " + $myusernameval);
+                console.log("Password = " + $mypasswordval);
 
 });
 </script>
 
 <?php
-if(!$count)
+if($count == 1)
 {
 // Login $myusername, $mypassword and redirect to file "login_success.php"
 	$row = $sqlquery->fetch_assoc;
-	if($row['active']==1)
+?>
+<script type='text/javascript'>
+     var $userIDval =  + <?php echo "'" . $row['user_id'] . "'"; ?>;
+        var jQ5 = jQuery.noConflict();
+                jQ5(document).ready(function() {
+		console.log("User ID = " + $userIDval);
+
+});
+
+</script>
+<?php
+if($row['active']==1)
 	{
 		$fullname = $row['firstname'] . " " . $row['lastname'];
 		$_SESSION['user_id'] = $row['login_ID'];
@@ -61,13 +72,19 @@ if(!$count)
 /*		Access Log entry  */
 	$client_ip = stripslashes($_SERVER['REMOTE_ADDR']);
 	$client_browser = stripslashes($_SERVER['HTTP_USER_AGENT']);
-	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
-	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
+//	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
+//	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
+	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
+        if($accessquery->error){
+            echo " SQL query access log entry error. Error:" . $accessquery->errno . " " . $accessquery->error;
+        }
 
 /* Get user first name */
-	$namequery = "SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory'];
-	$nameresult = @mysql_query($namequery) or die(" Name query error. Error:" . mysql_errno() . " " . mysql_error());
-	$namerow = @mysql_fetch_assoc($nameresult);
+	$namequery = $mysql->query("SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory']);
+        if($namequery->error){
+            echo " Name Query error. Error:" . $namequery->errno . " " . $namequery->error;
+        }
+	$namerow = $namequery->fetch_assoc;
 	if($_SESSION['idDirectory'] <= 19999) //Shared Directory entries for generic users
 	{
 		if($_SESSION['gender'] == "M")
