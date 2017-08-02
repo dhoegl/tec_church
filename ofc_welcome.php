@@ -61,8 +61,11 @@ session_start();
             {
                 echo '<ul class="nav navbar-nav navbar-right nav-pills">';
                 echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
-                echo '<li role="presentation"><a href="#">Profile</a></li>';
-                echo '<li role="presentation"><a href="#">Messages</a></li>';
+                echo '<li role="presentation"><a href="#">Directory</a></li>';
+                echo '<li role="presentation"><a href="#">Calendar</a></li>';
+                echo '<li role="presentation"><a href="#">Prayer</a></li>';
+                echo '<li role="presentation"><a href="#">Events</a></li>';
+                echo '<li role="presentation"><a href="ofc_logout.php">Logout</a></li>';
                 echo '</ul>';
 //                echo '<ul class="nav navbar-nav navbar-right">';
 //                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
