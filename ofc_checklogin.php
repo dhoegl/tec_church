@@ -19,21 +19,27 @@ $mypassword = stripslashes($mypassword);
 $myusername = @mysql_real_escape_string($myusername);
 $mypassword = @mysql_real_escape_string(md5($mypassword));
 
+// Get user details
+$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername' AND password = '$mypassword'");
+// $result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+$count = $sqlquery->num_rows;
 ?>
 
 <script type='text/javascript'>
+ var $countval =  + <?php echo "'" . $count . "'"; ?>;
+ var $myusername =  + <?php echo "'" . $myusername . "'"; ?>;
+ var $mypassword =  + <?php echo "'" . $mypassword . "'"; ?>;
  var jQ3 = jQuery.noConflict();
-	jQ3(document).ready(function() {
+                jQ3(document).ready(function() {
 		console.log("Username and Password entered");
+                console.log("Count = " + $countval);
+                console.log("Username = " + $myusername);
+                console.log("Password = " + $mypassword);
 
 });
 </script>
 
 <?php
-// Get user details
-$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername' AND password = '$mypassword'");
-// $result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
-$count = $sqlquery->num_rows;
 if(!$count)
 {
 // Login $myusername, $mypassword and redirect to file "login_success.php"
