@@ -43,7 +43,7 @@ $count = $sqlquery->num_rows;
 if($count == 1)
 {
 // Login $myusername, $mypassword and redirect to file "login_success.php"
-	$row = $sqlquery->fetch_assoc;
+	$row = $sqlquery->fetch_assoc();
 ?>
 <script type='text/javascript'>
      var $userIDval =  + <?php echo "'" . $row['user_id'] . "'"; ?>;
