@@ -49,7 +49,7 @@ session_start();
                 session_destroy();
                 echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin.php">';
                 echo '<div class="form-group">';
-                echo '<input type="text" placeholder="myusername" name="username" class="form-control" required="TRUE" autofocus="TRUE">';
+                echo '<input type="text" placeholder="username" name="myusername" class="form-control" required="TRUE" autofocus="TRUE">';
                 echo '</div>';
                 echo '<div class="form-group">';
                 echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE">';
