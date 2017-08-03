@@ -53,19 +53,6 @@ if(!$_SESSION['logged in']) {
             <?php
             if(!$_SESSION['logged in']) {
                 session_destroy();
-                echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin.php">';
-                echo '<div class="form-group">';
-                echo '<input type="text" placeholder="username" name="myusername" class="form-control" required="TRUE" autofocus="TRUE">';
-                echo '</div>';
-                echo '<div class="form-group">';
-                echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE">';
-                echo '</div>';
-                echo '<button type="submit" class="btn btn-success">Sign in</button>';
-                echo '<div class="btn-group">';
-                    echo '<button type="button" class="btn btn-primary">Register</button>';
-                echo '</div>';
-                echo '</form>';
-
             }
             else
             {
