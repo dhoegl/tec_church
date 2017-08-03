@@ -55,7 +55,7 @@ session_start();
                 echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE">';
                 echo '</div>';
                 echo '<button type="submit" class="btn btn-success">Sign in</button>';
-                echo '<div class="btn-group">';
+                echo '<div class="btn-group pad-left">';
                     echo '<button type="button" class="btn btn-primary">Register</button>';
                 echo '</div>';
                 echo '</form>';

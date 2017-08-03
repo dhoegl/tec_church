@@ -37,7 +37,7 @@ if(!$_SESSION['logged in']) {
 
 
   </head>
-  <body>
+  <body class="appstyle">
    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -88,25 +88,16 @@ if(!$_SESSION['logged in']) {
     </nav>
 
 <div class="container">
-    <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-body bg-info">
-                <h1 class="text-center">PROFILE HOME PAGE</h1>
-            </div>
-        </div>
-            <div class="col-sm-12">
-                <img src="images/tfcbanner3.png" class="img-responsive center-block" alt=""/>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-body bg-success center-block">
-                    <h3 class="text-center">Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</h3>
-                    <h4 align="center">We believe in the inerrancy and sufficiency of God&#39;s Word</h4>
-                    <h4 align="center">We believe in the sovereignty of God&#39;s grace</h4>
-                    <h4 align="center">We believe in the priority of life-on-life discipleship</h4>
+    <div class="by ahy">
+        <div class="dq">
+            <div class="fh">
+                <div class="rp bqq agk">
+                    <div class="rv" style="background-image: url(images/trinity_logo_web.png);"></div>
                 </div>
             </div>
         </div> <!--row-->
-    </div> <!--container-->
+    </div> <!--class-->
+</div> <!--container-->
 
 
 
