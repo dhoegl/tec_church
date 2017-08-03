@@ -1,8 +1,80 @@
 body
 {
     padding-top: 70px;
+    width: 1px;
+    min-width: 100%;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #292b2c;
+    background-color: #f5f8fa;
+    margin: 0;
+}
+.pad-left
+{
+    padding-left: 50px;
 }
 .well
 {
     margin: 0px;
+}
+.appstyle
+{
+    background-color: #c9c9c9;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #292b2c;
+}
+.agk 
+{
+    margin-bottom: 1.5rem !important;
+}
+.rp 
+{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+.ahy 
+{
+    padding-top: 1.5rem !important;
+}
+.by 
+{
+    width: 1230px;
+    max-width: 100%;
+    width: 990px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dq {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.bqq .rv 
+{
+    height: 150px;
+    background-size: cover;
 }
