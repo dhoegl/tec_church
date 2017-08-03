@@ -1,5 +1,11 @@
 <?php 
 session_start();
+if(!$_SESSION['logged in']) {
+	session_destroy();
+	header("location:ofc_welcome.php");
+	exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +14,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>TEST - Welcome to OurFamilyConnections</title>
+    <title>TEST - OurFamilyConnections Home</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -63,8 +69,6 @@ session_start();
             }
             else
             {
-                header("location:ofc_home.php");
-
                 echo '<ul class="nav navbar-nav navbar-right nav-pills">';
                 echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
                 echo '<li role="presentation"><a href="#">Directory</a></li>';
@@ -87,7 +91,7 @@ session_start();
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-body bg-info">
-                <h1 class="text-center">TEST SITE</h1>
+                <h1 class="text-center">PROFILE HOME PAGE</h1>
             </div>
         </div>
             <div class="col-sm-12">
