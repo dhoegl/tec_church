@@ -13,6 +13,10 @@ body
     background-color: #f5f8fa;
     margin: 0;
 }
+.church_logo
+{
+    background-image: url('../images/trinity_logo_web.png');
+}
 .pad-left
 {
     padding-left: 50px;
