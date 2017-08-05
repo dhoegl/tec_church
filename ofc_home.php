@@ -94,12 +94,26 @@ if(!$_SESSION['logged in']) {
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-      </div>
-        <div class="col-md-offset-1 col-md-3 church_logo">
-            <p>Hello1</p>
         </div>
-        <div class="col-md-offset-1 col-md-3 church_logo">
-            <p>Hello1</p>
+        <div class="col-md-offset-1 col-md-3">
+            <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
+                <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
+                <div class="card-block">
+                    <h2 class="card-title">Card title</h2>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
+                <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
+                <div class="card-block">
+                    <h2 class="card-title">Card title</h2>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
 
     </div>
