@@ -5,6 +5,15 @@ if(!$_SESSION['logged in']) {
 	header("location:ofc_welcome.php");
 	exit();
 }
+ else {
+    if(isset($_GET['id']) ) {
+        $profileID = $_GET['id'];
+    }
+    else {
+        session_destroy();
+        header("location:ofc_welcome.php");
+        exit();
+    }
 
 ?>
 <!DOCTYPE html>
@@ -48,6 +57,22 @@ if(!$_SESSION['logged in']) {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
+    <script type="text/javascript">
+        var $profile_id = <?php echo '$profileID'; ?>;
+        $(document).ready(function(){
+
+            // Call script to pull profile data....
+            var request = $.ajax({
+		url: 'services/ofc_get_profile.php',
+		type: 'POST',
+		dataType: 'json',
+		data: { profile_id: $profile_id}
+                console_log('Profile ID = ' + $profile_id);
+            });
+ 	});
+        
+    </script>
 
   </head>
   <body>
