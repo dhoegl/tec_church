@@ -23,14 +23,14 @@ if(!$_SESSION['logged in']) {
 
     <title>TEST - OurFamilyConnections Home</title>
 
-    <!-- Bootstrap 3 CSS -->
+    <!-- Bootstrap 3 CSS 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+-->
 
-
-    <!-- Bootstrap 4 ALPHA 6 CSS
+    <!-- Bootstrap 4 ALPHA 6 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    -->
+
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -50,42 +50,36 @@ if(!$_SESSION['logged in']) {
 
 
   </head>
-  <body class="appstyle">
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">OurFamilyConnections</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <?php
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">OurFamilyConnections</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <?php
             if(!$_SESSION['logged in']) {
                 session_destroy();
             }
             else
             {
-                echo '<ul class="nav navbar-nav navbar-right nav-pills">';
-                echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
-                echo '<li role="presentation"><a href="#">Directory</a></li>';
-                echo '<li role="presentation"><a href="#">Calendar</a></li>';
-                echo '<li role="presentation"><a href="#">Prayer</a></li>';
-                echo '<li role="presentation"><a href="#">Events</a></li>';
-                echo '<li role="presentation"><a href="ofc_logout.php">Logout</a></li>';
+                echo '<ul class="navbar-nav navbar-right mr-auto">';
+                echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
                 echo '</ul>';
-//                echo '<ul class="nav navbar-nav navbar-right">';
-//                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
-//                echo '<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-//                echo '</ul>';
             }
             ?>
-        </div><!--/.navbar-collapse -->
       </div>
     </nav>
+
+      
+      
 
 <div class="container-fluid">
 <!--    <div class="by ahy">
