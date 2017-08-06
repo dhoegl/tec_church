@@ -52,52 +52,44 @@ if(!$_SESSION['logged in']) {
   </head>
   <body>
 
-    <nav class="navbar navbar-fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">OurFamilyConnections</a>
+    <div class="nav-header">
+        <nav class="navbar navbar-sticky-top navbar-toggleable-md navbar-inverse bg-inverse">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">OurFamilyConnections</a>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <?php
-            if(!$_SESSION['logged in']) {
-                session_destroy();
-            }
-            else
-            {
-                echo '<ul class="navbar-nav navbar-right mr-auto">';
-                echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
-                echo '</ul>';
-            }
-            ?>
-      </div>
-    </nav>
-
-      
-      
-
-<div class="container-fluid">
-<!--    <div class="by ahy">
-        <div class="dq">
-            <div class="fh">
-                <div class="rp bqq agk">
-                    <div class="rv" style="background-image: url(images/trinity_logo_web.png);"></div>
-                </div>
+                if(!$_SESSION['logged in']) {
+                    session_destroy();
+                }
+                else
+                {
+                    echo '<ul class="navbar-nav navbar-right mr-auto">';
+                    echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
+                    echo '</ul>';
+                }
+                ?>
             </div>
-        </div>
-    </div>-->
+        </nav>
+    </div>
+      
+      
+
+<div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
+            <div class="card text-center" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">This is a card with text center div.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
