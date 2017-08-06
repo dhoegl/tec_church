@@ -63,7 +63,8 @@ session_start();
             }
             else
             {
-                header("location:ofc_home.php");
+                $homeurl = "location:ofc_home.php?id=" . $_SESSION['idDirectory'];
+                header($homeurl);
 
                 echo '<ul class="nav navbar-nav navbar-right nav-pills">';
                 echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
