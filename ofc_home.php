@@ -74,7 +74,7 @@ if(!$_SESSION['logged in']) {
       </div>
     </nav>
 
-<div class="container">
+<div class="container-fluid">
 <!--    <div class="by ahy">
         <div class="dq">
             <div class="fh">
@@ -85,7 +85,7 @@ if(!$_SESSION['logged in']) {
         </div>
     </div>-->
     <div class="row">
-        <div class="col-md-offset-1 col-md-3">
+        <div class="col-sm-4">
             <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
@@ -95,8 +95,8 @@ if(!$_SESSION['logged in']) {
                 </div>
             </div>
         </div>
-        <div class="col-md-offset-1 col-md-3">
-            <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
+        <div class="col-sm-4">
+            <div class="card w-100 h-100 text-center card-outline-danger" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
@@ -105,12 +105,16 @@ if(!$_SESSION['logged in']) {
                 </div>
             </div>
         </div>
-        <div class="col-md-offset-1 col-md-3">
+        <div class="col-sm-4">
             <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
+                </div>
+                <div class="card-block">
+                    <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-block">
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
