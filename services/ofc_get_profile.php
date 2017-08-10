@@ -6,11 +6,13 @@ if(!$_SESSION['logged in']) {
 }
    require_once('ofc_dbconnect.php');
 
-// 	if (isset($_GET['action']) ) 
-//	{
-/*Query unapproved prayer listing: visible = 3 (all) and status = 0 */
-		$unapprovedprayerquery = "SELECT p.create_date AS prayerupdatedate, p.name AS fullname, m.Name_1 AS firsthim, m.Name_2 AS firsther, m.Surname AS last, p.prayer_id AS prayerid, p.title AS prayertitle, p.prayer_text AS prayertext, p.pray_praise AS praypraise, p.updated AS updatereq FROM " . $_SESSION['prayertable'] . " p INNER JOIN " . $_SESSION['dirtablename'] . " m on m.idDirectory = p.owner_id WHERE p.visible = '3' and p.status = '1' and p.approved='0' ORDER BY p.create_date DESC";
-		$unapprovedprayerresult = @mysql_query($unapprovedprayerquery) or die(" SQL query error at select active prayers. Error:" . mysql_errno() . " " . mysql_error());
+ 	if (isset($_POST['profile_id']) ) 
+	{
+            $profileID = $_POST['profile_id'];
+        }
+/*Query Directory for profile info */
+		$profilequery = $mysql->query("SELECT * FROM $dir_tbl_name WHERE idDirectory = '" . $profileID . "'");
+		$profilequeryresult = @mysql_query($unapprovedprayerquery) or die(" SQL query error at select active prayers. Error:" . mysql_errno() . " " . mysql_error());
 		$unapprovedprayercount = @mysql_num_rows($unapprovedprayerresult);
 
 		$listarray = array();
