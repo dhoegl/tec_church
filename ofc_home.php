@@ -78,7 +78,7 @@ else {
             
             // The ajax call succeeded.  Do something useful. 
             request.done(function(data) {
-                console.log('Profile Info Zip = ' + data.zip);
+                console.log('Profile Info Zip = ' + data.zip)
             });
             
             // The ajax call failed
