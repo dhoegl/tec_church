@@ -82,9 +82,12 @@ else {
             });
             
             // The ajax call failed
-            request.fail(function(data) {
-            // You can find this funciton in error_handler.js
-//                reportError(data);
+            request.fail(function(xhr, status, errorThrown) {
+                console.log('Profile Info Failed');
+                console.log( "Error: " + errorThrown );
+                console.log( "Status: " + status );
+
+
             });
 
  	});

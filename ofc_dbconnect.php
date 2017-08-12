@@ -34,7 +34,4 @@ session_start();
             echo 'Unable to establish connection to database';
             echo 'Error #: ' . $mysql->connect_errno . ' Description: ' . $mysql->connect_error;
         }
-        else {
-            echo 'All is good - connected to DB';
-        }
         ?>
