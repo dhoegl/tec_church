@@ -63,14 +63,6 @@ else {
     
     <script type="text/javascript">
         var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
-        var $lastname = <?php echo "'" . $_SESSION['lastname'] . "'"; ?>;
-        var $hisname = <?php echo "'" . $_SESSION['hisname'] . "'"; ?>;
-        var $hername = <?php echo "'" . $_SESSION['hername'] . "'"; ?>;
-        var $addr1 = <?php echo "'" . $_SESSION['addr1'] . "'"; ?>;
-        var $addr2 = <?php echo "'" . $_SESSION['addr2'] . "'"; ?>;
-        var $city = <?php echo "'" . $_SESSION['city'] . "'"; ?>;
-        var $state = <?php echo "'" . $_SESSION['state'] . "'"; ?>;
-        var $zip = <?php echo "'" . $_SESSION['zip'] . "'"; ?>;
         var $fullname = <?php echo "'" . $_SESSION['fullname'] . "'"; ?>;
         var $idDirectory = <?php echo "'" . $_SESSION['idDirectory'] . "'"; ?>;
         var jQ05 = jQuery.noConflict();
@@ -83,17 +75,18 @@ else {
 		dataType: 'json',
 		data: { profile_id: $profile_id}
             });
-            console.log('Profile ID = ' + $profile_id);
-            console.log('Last Name = ' + $lastname);
-            console.log('His Name = ' + $hisname);
-            console.log('Her Name = ' + $hername);
-            console.log('Address1 = ' + $addr1);
-            console.log('Address2 = ' + $addr2);
-            console.log('City = ' + $city);
-            console.log('State = ' + $state);
-            console.log('Zip = ' + $zip);
-            console.log('Full Name = ' + $fullname);
-            console.log('Directory ID = ' + $idDirectory);
+            
+            // The ajax call succeeded.  Do something useful. 
+            request.done(function(data) {
+                console.log('Profile Info Zip = ' + data.zip);
+            });
+            
+            // The ajax call failed
+            request.fail(function(data) {
+            // You can find this funciton in error_handler.js
+//                reportError(data);
+            });
+
  	});
         
     </script>
