@@ -76,9 +76,9 @@ else {
 		data: { profile_id: $profile_id}
             });
             
-            // The ajax call succeeded.  Do something useful. 
+            // The ajax call succeeded. 
             request.done(function(data) {
-                console.log('Profile Info Zip = ' + data.zip)
+                console.log('Profile Info Zip = ' + data[0].zip);
             });
             
             // The ajax call failed
@@ -86,7 +86,7 @@ else {
                 console.log('Profile Info Failed');
                 console.log( "Error: " + errorThrown );
                 console.log( "Status: " + status );
-
+                alert('Failed to obtain profile data. Please re-load page.');
 
             });
 
@@ -112,12 +112,13 @@ else {
                 else
                 {
                     echo '<ul class="navbar-nav navbar-right mr-auto">';
-                    echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
-                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
+                    include '/includes/ofc_menu.php';
+//                    echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
+//                    echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
+//                    echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
+//                    echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
+//                    echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+//                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
                     echo '</ul>';
                 }
                 ?>
