@@ -31,7 +31,7 @@
 //}
 // ?>
 
-<li><a href='/ofc_calendar.php'>Calendar</a></li>
+<!--<li><a href='/ofc_calendar.php'>Calendar</a></li>-->
 
 //<?php
 //if($_SESSION['accesslevel'] == '3'){ // Authorized User
@@ -39,7 +39,7 @@
 //}
 ?>
 
-<li><a href='/ofc_logout.php'>Logout</a></li>
+<!--<li><a href='/ofc_logout.php'>Logout</a></li>-->
 	
 
 
