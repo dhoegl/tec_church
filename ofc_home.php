@@ -38,9 +38,14 @@ else {
 -->
 
     <!-- Bootstrap 4 ALPHA 6 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
 
+<!-- Initialize jquery js script -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
+<!-- Bootstrap 4 BETA CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -57,8 +62,6 @@ else {
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Initialize jquery js script -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
     
     <script type="text/javascript">
@@ -97,12 +100,12 @@ else {
   </head>
   <body>
 
-    <div class="nav-header">
-        <nav class="navbar navbar-sticky-top navbar-toggleable-md navbar-inverse bg-inverse">
+<!--    <div class="nav-header">-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
+          <a class="navbar-brand" href="#">OurFamilyConnections</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">OurFamilyConnections</a>
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <?php
@@ -113,26 +116,30 @@ else {
                 {
                     echo '<ul class="navbar-nav navbar-right mr-auto">';
                     include '/includes/ofc_menu.php';
-//                    echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
-//                    echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
-//                    echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
-//                    echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
-//                    echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
-//                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
                     echo '</ul>';
                 }
                 ?>
             </div>
         </nav>
-    </div>
+<!--    </div>-->
       
       
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card text-center" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
+        <div class="col-md-4">
+            <div class="card card-outline-primary mt-3" style="width: 20rem;">
+                <div class="card-block">
+                    <img class="card-img-top" src="images/trinity_logo_web.png" height="auto" alt="Card image cap">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center mt-3" style="background-color: #FFFFFF">
+                <img class="card-img-top" height="100px" width="auto" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
                     <p class="card-text">This is a card with text center div.</p>
@@ -140,18 +147,8 @@ else {
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card w-100 h-100 text-center card-outline-danger" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
-                <div class="card-block">
-                    <h2 class="card-title">Card title</h2>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card w-100 h-100 text-center" style="background-color: #FFFFFF">
+        <div class="col-md-4">
+            <div class="card w-100 h-100 text-center mt-3" style="background-color: #FFFFFF">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
                 </div>
@@ -164,7 +161,6 @@ else {
                 </div>
             </div>
         </div>
-
     </div>
 </div> <!--container-->
 
