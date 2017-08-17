@@ -100,9 +100,9 @@ else {
   <body>
 
 <!--    <div class="nav-header">-->
-        <nav class="navbar navbar-inverse bg-inverse">
+        <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-warning">
             <a class="navbar-brand" href="#">OurFamilyConnections</a>
-            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -113,7 +113,9 @@ else {
                 }
                 else
                 {
-                    echo '<ul class="navbar-nav navbar-right mr-auto">';
+
+                    echo '<ul class="navbar-nav mr-auto mt-md-0">';
+//                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
                     include '/includes/ofc_menu.php';
                     echo '</ul>';
                 }
