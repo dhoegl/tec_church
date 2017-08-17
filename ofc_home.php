@@ -103,7 +103,8 @@ else {
 <!--    <div class="nav-header">-->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
           <a class="navbar-brand" href="#">OurFamilyConnections</a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<!--          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">-->
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
@@ -128,9 +129,10 @@ else {
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <div class="card card-outline-primary mt-3" style="width: 20rem;">
+<!--            <div class="card card-outline-primary mt-3" style="width: 20rem;">-->
+            <div class="card card-outline-primary mt-3">
+                <img class="card-img-top" src="images/trinity_logo_web.png" width="auto" alt="Card image cap">
                 <div class="card-block">
-                    <img class="card-img-top" src="images/trinity_logo_web.png" height="auto" alt="Card image cap">
                     <h4 class="card-title">Card title</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -139,7 +141,7 @@ else {
         </div>
         <div class="col-md-4">
             <div class="card text-center mt-3" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100px" width="auto" src="images/tfcbanner3.png" alt="Card image cap">
+                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-block">
                     <h2 class="card-title">Card title</h2>
                     <p class="card-text">This is a card with text center div.</p>
