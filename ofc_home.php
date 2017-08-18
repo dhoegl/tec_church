@@ -80,7 +80,16 @@ else {
             
             // The ajax call succeeded. 
             request.done(function(data) {
+                profileinfo = [];
+                profilepic = [];
                 console.log('Profile Info Zip = ' + data[0].zip);
+                console.log('Picture file = ' + data[0].piclink2);
+                jQ05("#profile_card").empty();
+                profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
+                profilepic.push('src = "profile_img/' + data[0].piclink2 + '"');
+                jQ05("#profile_card").append(profileinfo.join(''));
+                jQ05("#profile_pic").append(profilepic.join(''));
+                
             });
             
             // The ajax call failed
@@ -100,7 +109,7 @@ else {
   <body>
 
 <!--    <div class="nav-header">-->
-        <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-inverse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#">OurFamilyConnections</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -124,12 +133,23 @@ else {
         </nav>
 <!--    </div>-->
       
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-4">
+            <div class="card bg-light border-primary m-3">
+<!--                <img class="card-img-top" id="profile_pic" src="profile_img/20-14.jpg" style="width: 75%; align-self: center" alt="Card image cap">-->
+                <img class="card-img-top" id="profile_pic" src="<?php echo '$var_profile_pic'; ?>" style="width: 75%; align-self: center" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title text-center" id="profile_card">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
             <div class="card m-3">
-                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 300px; width: 100%" alt="Card image cap">
-                <div class="card-block">
+                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
+                <div class="card-body">
                     <h4 class="card-title">Card title</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -138,18 +158,8 @@ else {
         </div>
         <div class="col-md-4">
             <div class="card m-3">
-                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 300px; width: 100%" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-3">
-                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 300px; width: 100%" alt="Card image cap">
-                <div class="card-block">
+                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
+                <div class="card-body">
                     <h4 class="card-title">Card title</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -165,7 +175,7 @@ else {
 <!--            <div class="card card-outline-primary mt-3" style="width: 20rem;">-->
             <div class="card card-outline-primary mt-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" width="auto" alt="Card image cap">
-                <div class="card-block">
+                <div class="card-body">
                     <h4 class="card-title">Card title</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -175,7 +185,7 @@ else {
         <div class="col-md-4">
             <div class="card text-center mt-3" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
-                <div class="card-block">
+                <div class="card-body">
                     <h2 class="card-title">Card title</h2>
                     <p class="card-text">This is a card with text center div.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -184,7 +194,7 @@ else {
         </div>
         <div class="col-md-4">
             <div class="card w-100 h-100 text-center mt-3" style="background-color: #FFFFFF">
-                <div class="card-block">
+                <div class="card-body">
                     <h2 class="card-title">Card title</h2>
                 </div>
                 <div class="card-block">
