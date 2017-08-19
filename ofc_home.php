@@ -86,9 +86,12 @@ else {
                 console.log('Picture file = ' + data[0].piclink2);
                 jQ05("#profile_card").empty();
                 profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
-                profilepic.push('src = "profile_img/' + data[0].piclink2 + '"');
+//                $pro_pic = "profile_img/" + data[0].piclink2;
                 jQ05("#profile_card").append(profileinfo.join(''));
-                jQ05("#profile_pic").append(profilepic.join(''));
+//                var $pro_pic = document.getElementByID("profile_pic");
+                jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
+                jQ05("#profile_email_him").html(data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a>");
+                jQ05("#profile_email_her").html(data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a>");
                 
             });
             
@@ -133,15 +136,21 @@ else {
         </nav>
 <!--    </div>-->
       
-<div class="container">
+<div class="container-fluid profile_bg">
     <div class="row">
         <div class="col-md-4">
             <div class="card bg-light border-primary m-3">
 <!--                <img class="card-img-top" id="profile_pic" src="profile_img/20-14.jpg" style="width: 75%; align-self: center" alt="Card image cap">-->
-                <img class="card-img-top" id="profile_pic" src="<?php echo '$var_profile_pic'; ?>" style="width: 75%; align-self: center" alt="Card image cap">
+                <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title text-center" id="profile_card">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h3 class="card-title text-center" id="profile_card">Card title</h3>
+                    <h4 class="card-text text-center">Contact Info</h4>
+                    <h6 class="card-text">Email:</h6>
+                    <p class="card-text" id="profile_email_him"></p>
+                    <p class="card-text" id="profile_email_her"></p>
+                    <h6 class="card-text">Phone:</h6>
+                    <p class="card-text" id="profile_home_him"></p>
+                    <p class="card-text" id="profile_home_her"></p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
