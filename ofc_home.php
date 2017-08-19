@@ -92,6 +92,11 @@ else {
                 jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
                 jQ05("#profile_email_him").html(data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a>");
                 jQ05("#profile_email_her").html(data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a>");
+                jQ05("#profile_phone_home").html("Home: " + data[0].phonehome);
+                jQ05("#profile_cell_him").html(data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a>");
+                jQ05("#profile_cell_her").html(data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a>");
+                jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+               
                 
             });
             
@@ -145,12 +150,15 @@ else {
                 <div class="card-body">
                     <h3 class="card-title text-center" id="profile_card">Card title</h3>
                     <h4 class="card-text text-center">Contact Info</h4>
-                    <h6 class="card-text">Email:</h6>
+                    <h5 class="card-text">Email:</h5>
                     <p class="card-text" id="profile_email_him"></p>
                     <p class="card-text" id="profile_email_her"></p>
-                    <h6 class="card-text">Phone:</h6>
-                    <p class="card-text" id="profile_home_him"></p>
-                    <p class="card-text" id="profile_home_her"></p>
+                    <h5 class="card-text">Phone:</h5>
+                    <p class="card-text" id="profile_phone_home"></p>
+                    <p class="card-text" id="profile_cell_him"></p>
+                    <p class="card-text" id="profile_cell_her"></p>
+                    <h5 class="card-text">Home Address:</h5>
+                    <p class="card-text" id="profile_addr"></p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
