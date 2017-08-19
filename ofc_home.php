@@ -129,7 +129,7 @@ else {
             </div>
         </nav>
       
-<div class="container-fluid profile_bg">
+<div class="container profile_bg">
     <div class="row">
         <div class="col-md-4">
             <div class="card bg-light border-primary m-3">
@@ -165,13 +165,41 @@ else {
                 <div class="card-body">
                     <h4 class="card-title">Our Children</h4>
                     <div class="card-text">
-                        <table id="profiletablechildren" border="0">
-                            <tr valign="top">
-                                <td class="strong">Name</td>
-                                <td class="strong">Birthdate</td>
-                                <td class="strong">Gender</td>
-                                <td class="strong">Age</td>
-                        	<?php
+                        <table class="table table-striped" id="profiletablechildren" border="0">
+                            <thead>
+                                <tr>
+                                    <th class="strong">Name</th>
+                                    <th class="strong">Birthdate</th>
+                                    <th class="strong">Gender</th>
+                                    <th class="strong">Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><?php echo $recordChild_1_Name ?></td>
+                                    <td>
+                                        <?php
+                                            if($recordChild_1_BDay) {
+                                            $Tformat = 'Y-m-d';
+                                            $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_1_BDay);
+                                            $DateSQLFormat = $DateWhole->format('M d, Y');
+                                            echo $DateSQLFormat;
+                                            }
+                                        ?>
+                                    </td>
+                                    <td><?php echo $recordChild_1_Gender ?></td>
+                                    <td>
+                                        <?php
+                                            if($recordChild_1_BDay) {
+                                            $childage = date_diff(date_create($recordChild_1_BDay), date_create('now'))->y;
+                                            echo $childage;
+                                            }
+                                        ?>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+<!--                        	<?php
                         	if($MyView == "Y" || $AdminView == "Y"){
                 		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
                         	}
@@ -352,7 +380,7 @@ else {
                                         }
                                     ?>
                                 </td>
-                            </tr>
+                            </tr>-->
                         </table>
 
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
