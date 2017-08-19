@@ -33,15 +33,8 @@ else {
 
     <title>TEST - OurFamilyConnections Home</title>
 
-    <!-- Bootstrap 3 CSS 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
--->
 <!-- Initialize jquery js script -->
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-
-    <!-- Bootstrap 4 ALPHA 6 CSS -->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
-
 
 <!-- Bootstrap 4 BETA CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -86,9 +79,7 @@ else {
                 console.log('Picture file = ' + data[0].piclink2);
                 jQ05("#profile_card").empty();
                 profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
-//                $pro_pic = "profile_img/" + data[0].piclink2;
                 jQ05("#profile_card").append(profileinfo.join(''));
-//                var $pro_pic = document.getElementByID("profile_pic");
                 jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
                 jQ05("#profile_email_him").html(data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a>");
                 jQ05("#profile_email_her").html(data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a>");
@@ -116,7 +107,6 @@ else {
   </head>
   <body>
 
-<!--    <div class="nav-header">-->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#">OurFamilyConnections</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,20 +122,17 @@ else {
                 {
 
                     echo '<ul class="navbar-nav mr-auto mt-md-0">';
-//                    echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
                     include '/includes/ofc_menu.php';
                     echo '</ul>';
                 }
                 ?>
             </div>
         </nav>
-<!--    </div>-->
       
 <div class="container-fluid profile_bg">
     <div class="row">
         <div class="col-md-4">
             <div class="card bg-light border-primary m-3">
-<!--                <img class="card-img-top" id="profile_pic" src="profile_img/20-14.jpg" style="width: 75%; align-self: center" alt="Card image cap">-->
                 <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h3 class="card-title text-center" id="profile_card">Card title</h3>
@@ -174,10 +161,200 @@ else {
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card m-3">
-                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
+            <div class="card bg-light border-primary m-3">
                 <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
+                    <h4 class="card-title">Our Children</h4>
+                    <div class="card-text">
+                        <table id="profiletablechildren" border="0">
+                            <tr valign="top">
+                                <td class="strong">Name</td>
+                                <td class="strong">Birthdate</td>
+                                <td class="strong">Gender</td>
+                                <td class="strong">Age</td>
+                        	<?php
+                        	if($MyView == "Y" || $AdminView == "Y"){
+                		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
+                        	}
+                        	?>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_1_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_1_BDay) {
+                			$Tformat = 'Y-m-d';
+                                	$DateWhole = DateTime::createFromFormat($Tformat, $recordChild_1_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_1_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_1_BDay) {
+                                        $childage = date_diff(date_create($recordChild_1_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_2_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_2_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_2_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_2_Gender ?></td>
+                                <td>
+                                        <?php
+                                                if($recordChild_2_BDay) {
+                                                        $childage = date_diff(date_create($recordChild_2_BDay), date_create('now'))->y;
+                                                        echo $childage;
+                                                        }
+                                        ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_3_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_3_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_3_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_3_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_3_BDay) {
+                                        $childage = date_diff(date_create($recordChild_3_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_4_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_4_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_4_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_4_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_4_BDay) {
+                                        $childage = date_diff(date_create($recordChild_4_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_5_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_5_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_5_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_5_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_5_BDay) {
+                                        $childage = date_diff(date_create($recordChild_5_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_6_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_6_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_6_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_6_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_6_BDay) {
+                                        $childage = date_diff(date_create($recordChild_6_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_7_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_7_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_7_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_7_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_7_BDay) {
+                                        $childage = date_diff(date_create($recordChild_7_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td><?php echo $recordChild_8_Name ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_8_BDay) {
+                                        $Tformat = 'Y-m-d';
+                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_8_BDay);
+                                        $DateSQLFormat = $DateWhole->format('M d, Y');
+                                        echo $DateSQLFormat;
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $recordChild_8_Gender ?></td>
+                                <td>
+                                    <?php
+                                        if($recordChild_8_BDay) {
+                                        $childage = date_diff(date_create($recordChild_8_BDay), date_create('now'))->y;
+                                        echo $childage;
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                        </table>
+
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -189,7 +366,6 @@ else {
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-<!--            <div class="card card-outline-primary mt-3" style="width: 20rem;">-->
             <div class="card card-outline-primary mt-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" width="auto" alt="Card image cap">
                 <div class="card-body">
@@ -229,11 +405,7 @@ else {
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    -->
 <!--Include all compiled plugins (below), or include individual files as needed
-    <script src="js/bootstrap.min.js"></script>-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
