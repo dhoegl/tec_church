@@ -55,7 +55,14 @@ else {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
+    <script type="text/javascript">
+        function calculate_age(dob) 
+        {
+            var diff_ms = Date.now() - dob.getTime();
+            var age_dt = new Date(diff_ms);
+            return Math.abs(age_dt.getUTCFullYear() - 1970);
+        }
+    </script>
     <script type="text/javascript">
         var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
         var $fullname = <?php echo "'" . $_SESSION['fullname'] . "'"; ?>;
@@ -73,8 +80,10 @@ else {
             
             // The ajax call succeeded. 
             request.done(function(data) {
+                var $c1a = "";
+                var years;
                 profileinfo = [];
-                profilepic = [];
+                profilechildren = [];
                 console.log('Profile Info Zip = ' + data[0].zip);
                 console.log('Picture file = ' + data[0].piclink2);
                 jQ05("#profile_card").empty();
@@ -87,7 +96,87 @@ else {
                 jQ05("#profile_cell_him").html(data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a>");
                 jQ05("#profile_cell_her").html(data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
-               
+                //
+//******************* CHILD DATA ***********
+                    // Child 1
+                    if(data[0].child_1_name)
+                    {
+                        jQ05("#c1n").html(data[0].child_1_name);
+                        jQ05("#c1b").html(data[0].child_1_bday);
+                        jQ05("#c1g").html(data[0].child_1_gender);
+                        var age2 = calculate_age(new Date(data[0].child_1_bday));
+                        jQ05("#c1a").html(age2);
+                    }
+
+                    // Child 2
+                    if(data[0].child_2_name)
+                    {
+                        jQ05("#c2n").html(data[0].child_2_name);
+                        jQ05("#c2b").html(data[0].child_2_bday);
+                        jQ05("#c2g").html(data[0].child_2_gender);
+                        var age2 = calculate_age(new Date(data[0].child_2_bday));
+                        jQ05("#c2a").html(age2);
+                    }
+
+                    // Child 3
+                    if(data[0].child_3_name)
+                    {
+                        jQ05("#c3n").html(data[0].child_3_name);
+                        jQ05("#c3b").html(data[0].child_3_bday);
+                        jQ05("#c3g").html(data[0].child_3_gender);
+                        var age2 = calculate_age(new Date(data[0].child_3_bday));
+                        jQ05("#c3a").html(age2);
+                    }
+
+                    // Child 4
+                    if(data[0].child_4_name)
+                    {
+                        jQ05("#c4n").html(data[0].child_4_name);
+                        jQ05("#c4b").html(data[0].child_4_bday);
+                        jQ05("#c4g").html(data[0].child_4_gender);
+                        var age2 = calculate_age(new Date(data[0].child_4_bday));
+                        jQ05("#c4a").html(age2);
+                    }
+
+                    // Child 5
+                    if(data[0].child_5_name)
+                    {
+                        jQ05("#c5n").html(data[0].child_5_name);
+                        jQ05("#c5b").html(data[0].child_5_bday);
+                        jQ05("#c5g").html(data[0].child_5_gender);
+                        var age2 = calculate_age(new Date(data[0].child_5_bday));
+                        jQ05("#c5a").html(age2);
+                    }
+
+                    // Child 6
+                    if(data[0].child_6_name)
+                    {
+                        jQ05("#c6n").html(data[0].child_6_name);
+                        jQ05("#c6b").html(data[0].child_6_bday);
+                        jQ05("#c6g").html(data[0].child_6_gender);
+                        var age2 = calculate_age(new Date(data[0].child_6_bday));
+                        jQ05("#c6a").html(age2);
+                    }
+
+                    // Child 7
+                    if(data[0].child_7_name)
+                    {
+                        jQ05("#c7n").html(data[0].child_7_name);
+                        jQ05("#c7b").html(data[0].child_7_bday);
+                        jQ05("#c7g").html(data[0].child_7_gender);
+                        var age2 = calculate_age(new Date(data[0].child_7_bday));
+                        jQ05("#c7a").html(age2);
+                    }
+
+                    // Child 8
+                    if(data[0].child_8_name)
+                    {
+                        jQ05("#c8n").html(data[0].child_8_name);
+                        jQ05("#c8b").html(data[0].child_8_bday);
+                        jQ05("#c8g").html(data[0].child_8_gender);
+                        var age2 = calculate_age(new Date(data[0].child_8_bday));
+                        jQ05("#c8a").html(age2);
+                    }
                 
             });
             
@@ -131,36 +220,33 @@ else {
       
 <div class="container profile_bg">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-7">
             <div class="card bg-light border-primary m-3">
-                <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
-                    <h3 class="card-title text-center" id="profile_card">Card title</h3>
-                    <h4 class="card-text text-center">Contact Info</h4>
-                    <h5 class="card-text">Email:</h5>
-                    <p class="card-text" id="profile_email_him"></p>
-                    <p class="card-text" id="profile_email_her"></p>
+                    <table class="table">
+                        <tr>
+
+                            <td>
+                                <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
+                            </td>
+                            <td>
+                                <h4 class="card-title text-center" id="profile_card">Card title</h4>
+                                <p class="card-text" id="profile_addr"></p>
+                            </td>
+                        </tr>
+                    </table>
                     <h5 class="card-text">Phone:</h5>
                     <p class="card-text" id="profile_phone_home"></p>
                     <p class="card-text" id="profile_cell_him"></p>
                     <p class="card-text" id="profile_cell_her"></p>
-                    <h5 class="card-text">Home Address:</h5>
-                    <p class="card-text" id="profile_addr"></p>
+                    <h5 class="card-text">Email:</h5>
+                    <p class="card-text" id="profile_email_him"></p>
+                    <p class="card-text" id="profile_email_her"></p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card m-3">
-                <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
                     <h4 class="card-title">Our Children</h4>
@@ -176,7 +262,54 @@ else {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><?php echo $recordChild_1_Name ?></td>
+                                    <td id="c1n"></td>
+                                    <td id="c1b"></td>
+                                    <td id="c1g"></td>
+                                    <td id="c1a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c2n"></td>
+                                    <td id="c2b"></td>
+                                    <td id="c2g"></td>
+                                    <td id="c2a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c3n"></td>
+                                    <td id="c3b"></td>
+                                    <td id="c3g"></td>
+                                    <td id="c3a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c4n"></td>
+                                    <td id="c4b"></td>
+                                    <td id="c4g"></td>
+                                    <td id="c4a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c5n"></td>
+                                    <td id="c5b"></td>
+                                    <td id="c5g"></td>
+                                    <td id="c5a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c6n"></td>
+                                    <td id="c6b"></td>
+                                    <td id="c6g"></td>
+                                    <td id="c6a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c7n"></td>
+                                    <td id="c7b"></td>
+                                    <td id="c7g"></td>
+                                    <td id="c7a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c8n"></td>
+                                    <td id="c8b"></td>
+                                    <td id="c8g"></td>
+                                    <td id="c8a"></td>
+                                </tr>
+<!--                                    <td><?php echo $recordChild_1_Name ?></td>
                                     <td>
                                         <?php
                                             if($recordChild_1_BDay) {
@@ -195,7 +328,7 @@ else {
                                             echo $childage;
                                             }
                                         ?>
-                                    </td>
+                                    </td>-->
                                 </tr>
                             </tbody>
                         </table>
@@ -204,183 +337,7 @@ else {
                 		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
                         	}
                         	?>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_1_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_1_BDay) {
-                			$Tformat = 'Y-m-d';
-                                	$DateWhole = DateTime::createFromFormat($Tformat, $recordChild_1_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_1_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_1_BDay) {
-                                        $childage = date_diff(date_create($recordChild_1_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_2_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_2_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_2_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_2_Gender ?></td>
-                                <td>
-                                        <?php
-                                                if($recordChild_2_BDay) {
-                                                        $childage = date_diff(date_create($recordChild_2_BDay), date_create('now'))->y;
-                                                        echo $childage;
-                                                        }
-                                        ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_3_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_3_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_3_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_3_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_3_BDay) {
-                                        $childage = date_diff(date_create($recordChild_3_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_4_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_4_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_4_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_4_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_4_BDay) {
-                                        $childage = date_diff(date_create($recordChild_4_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_5_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_5_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_5_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_5_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_5_BDay) {
-                                        $childage = date_diff(date_create($recordChild_5_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_6_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_6_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_6_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_6_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_6_BDay) {
-                                        $childage = date_diff(date_create($recordChild_6_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_7_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_7_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_7_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_7_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_7_BDay) {
-                                        $childage = date_diff(date_create($recordChild_7_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr valign="top">
-                                <td><?php echo $recordChild_8_Name ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_8_BDay) {
-                                        $Tformat = 'Y-m-d';
-                                        $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_8_BDay);
-                                        $DateSQLFormat = $DateWhole->format('M d, Y');
-                                        echo $DateSQLFormat;
-                                        }
-                                    ?>
-                                </td>
-                                <td><?php echo $recordChild_8_Gender ?></td>
-                                <td>
-                                    <?php
-                                        if($recordChild_8_BDay) {
-                                        $childage = date_diff(date_create($recordChild_8_BDay), date_create('now'))->y;
-                                        echo $childage;
-                                        }
-                                    ?>
-                                </td>
-                            </tr>-->
+-->
                         </table>
 
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -389,6 +346,17 @@ else {
             </div>
         </div>
     </div>
+<!--    <div class="col-md-3">
+        <div class="card m-3">
+            <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>-->
+
 </div>      
 
 <div class="container-fluid">
