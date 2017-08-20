@@ -66,18 +66,6 @@ session_start();
                 $homeurl = "location:ofc_home.php?id=" . $_SESSION['idDirectory'];
                 header($homeurl);
 
-                echo '<ul class="nav navbar-nav navbar-right nav-pills">';
-                echo '<li role="presentation" class="active"><a href="#">Home</a></li>';
-                echo '<li role="presentation"><a href="#">Directory</a></li>';
-                echo '<li role="presentation"><a href="#">Calendar</a></li>';
-                echo '<li role="presentation"><a href="#">Prayer</a></li>';
-                echo '<li role="presentation"><a href="#">Events</a></li>';
-                echo '<li role="presentation"><a href="ofc_logout.php">Logout</a></li>';
-                echo '</ul>';
-//                echo '<ul class="nav navbar-nav navbar-right">';
-//                echo '<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
-//                echo '<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-//                echo '</ul>';
             }
             ?>
         </div><!--/.navbar-collapse -->
