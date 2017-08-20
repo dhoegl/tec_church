@@ -1,6 +1,6 @@
 <?php
-    echo '<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php">My Profile</a></li>';
+    echo '<li class="nav-item active"><a class="nav-link" href="ofc_home.php">Home</a></li>';
+    echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
     echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
     echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
     echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';

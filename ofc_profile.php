@@ -90,11 +90,11 @@ else {
                 profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
                 jQ05("#profile_card").append(profileinfo.join(''));
                 jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
-                jQ05("#profile_email_him").html(data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a>");
-                jQ05("#profile_email_her").html(data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a>");
-                jQ05("#profile_phone_home").html("Home: " + data[0].phonehome);
-                jQ05("#profile_cell_him").html(data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a>");
-                jQ05("#profile_cell_her").html(data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a>");
+                jQ05("#profile_email_him").html("<h6>" + data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a></h6>");
+                jQ05("#profile_email_her").html("<h6>" + data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a></h6>");
+                jQ05("#profile_phone_home").html("<h6>Home phone: " + data[0].phonehome) + "</h6>";
+                jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
+                jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
                 //
 //******************* CHILD DATA ***********
@@ -218,23 +218,22 @@ else {
             </div>
         </nav>
       
-<div class="container profile_bg">
+<div class="container-fluid profile_bg">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-sm-5">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
-                    <table class="table">
-                        <tr>
-
-                            <td>
-                                <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
-                            </td>
-                            <td>
-                                <h4 class="card-title text-center" id="profile_card">Card title</h4>
-                                <p class="card-text" id="profile_addr"></p>
-                            </td>
-                        </tr>
-                    </table>
+                    <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
+                    <h4 class="card-title text-center" id="profile_card">Name</h4>
+                    <p class="card-text" id="profile_addr"></p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card bg-light border-primary m-3">
+                <div class="card-body">
+                    <h4 class="card-text text-center text-capitalize">Contact Information</h4>
                     <h5 class="card-text">Phone:</h5>
                     <p class="card-text" id="profile_phone_home"></p>
                     <p class="card-text" id="profile_cell_him"></p>
@@ -246,12 +245,14 @@ else {
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
                     <h4 class="card-title">Our Children</h4>
                     <div class="card-text">
-                        <table class="table table-striped" id="profiletablechildren" border="0">
+                        <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
                             <thead>
                                 <tr>
                                     <th class="strong">Name</th>
@@ -340,12 +341,12 @@ else {
 -->
                         </table>
 
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 <!--    <div class="col-md-3">
         <div class="card m-3">
             <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
@@ -357,46 +358,10 @@ else {
         </div>
     </div>-->
 
-</div>      
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card card-outline-primary mt-3">
-                <img class="card-img-top" src="images/trinity_logo_web.png" width="auto" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-center mt-3" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
-                <div class="card-body">
-                    <h2 class="card-title">Card title</h2>
-                    <p class="card-text">This is a card with text center div.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card w-100 h-100 text-center mt-3" style="background-color: #FFFFFF">
-                <div class="card-body">
-                    <h2 class="card-title">Card title</h2>
-                </div>
-                <div class="card-block">
-                    <img class="card-img-top" height="100px" src="images/tfcbanner3.png" alt="Card image cap">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-block">
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
     </div>
-</div> <!--container-->
+</div>
+
+
 
 
 

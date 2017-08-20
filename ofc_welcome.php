@@ -63,7 +63,7 @@ session_start();
             }
             else
             {
-                $homeurl = "location:ofc_home.php?id=" . $_SESSION['idDirectory'];
+                $homeurl = "location:ofc_home.php";
                 header($homeurl);
 
             }
