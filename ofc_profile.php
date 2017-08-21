@@ -225,7 +225,6 @@ else {
                 <div class="card-body">
                     <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
                     <h4 class="card-title text-center" id="profile_card">Name</h4>
-                    <p class="card-text" id="profile_addr"></p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
@@ -233,25 +232,17 @@ else {
         <div class="col-sm-5">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
-                    <h4 class="card-text text-center text-capitalize">Contact Information</h4>
-                    <h5 class="card-text">Phone:</h5>
+                    <h4 class="card-title text-center text-capitalize">Contact Information</h4>
+                    <h5 class="card-text"><u>Address</u></h5>
+                    <h6 class="card-text" id="profile_addr"></h6>
+                    <h5 class="card-text"><u>Phone</u></h5>
                     <p class="card-text" id="profile_phone_home"></p>
                     <p class="card-text" id="profile_cell_him"></p>
                     <p class="card-text" id="profile_cell_her"></p>
-                    <h5 class="card-text">Email:</h5>
+                    <h5 class="card-text"><u>Email</u></h5>
                     <p class="card-text" id="profile_email_him"></p>
                     <p class="card-text" id="profile_email_her"></p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-10">
-            <div class="card bg-light border-primary m-3">
-                <div class="card-body">
-                    <h4 class="card-title">Our Children</h4>
-                    <div class="card-text">
+                    <h4 class="card-title text-center text-capitalize">Children</h4>
                         <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
                             <thead>
                                 <tr>
@@ -310,28 +301,29 @@ else {
                                     <td id="c8g"></td>
                                     <td id="c8a"></td>
                                 </tr>
-<!--                                    <td><?php echo $recordChild_1_Name ?></td>
-                                    <td>
-                                        <?php
-                                            if($recordChild_1_BDay) {
-                                            $Tformat = 'Y-m-d';
-                                            $DateWhole = DateTime::createFromFormat($Tformat, $recordChild_1_BDay);
-                                            $DateSQLFormat = $DateWhole->format('M d, Y');
-                                            echo $DateSQLFormat;
-                                            }
-                                        ?>
-                                    </td>
-                                    <td><?php echo $recordChild_1_Gender ?></td>
-                                    <td>
-                                        <?php
-                                            if($recordChild_1_BDay) {
-                                            $childage = date_diff(date_create($recordChild_1_BDay), date_create('now'))->y;
-                                            echo $childage;
-                                            }
-                                        ?>
-                                    </td>-->
-                                </tr>
                             </tbody>
+                        </table>
+
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="card bg-light border-primary m-3">
+                <div class="card-body">
+                    <h4 class="card-title">Our Children</h4>
+                    <div class="card-text">
+                        <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
+                            <thead>
+                                <tr>
+                                    <th class="strong">Name</th>
+                                    <th class="strong">Birthdate</th>
+                                    <th class="strong">Gender</th>
+                                    <th class="strong">Age</th>
+                                </tr>
+                            </thead>
                         </table>
 <!--                        	<?php
                         	if($MyView == "Y" || $AdminView == "Y"){
