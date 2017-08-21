@@ -64,6 +64,7 @@ if(!$_SESSION['logged in']) {
                 {
 
                     echo '<ul class="navbar-nav mr-auto mt-md-0">';
+                    $activeparam = '1';
                     include '/includes/ofc_menu.php';
                     echo '</ul>';
                 }
