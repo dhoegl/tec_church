@@ -243,7 +243,7 @@ else {
 <div class="container-fluid profile_bg">
     <div class="row">
         <div class="col-sm-4">
-            <div class="card bg-light border-primary m-3">
+            <div class="card bg-light m-3">
                 <div class="card-body">
                     <img class="card-img-top" id="profile_pic" style="width: 100%; align-self: center" alt="Card image cap">
                     <h4 class="card-title text-center" id="profile_card">Name</h4>
@@ -251,7 +251,7 @@ else {
             </div>
         </div>
         <div class="col-sm-5">
-            <div class="card bg-light border-primary m-3">
+            <div class="card bg-light m-3">
                 <div class="card-body">
                     <h4 class="card-title text-center text-capitalize">Contact Information</h4>
                     <h5 class="card-text"><u>Address</u></h5>
@@ -331,31 +331,20 @@ else {
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-9">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
-                    <h4 class="card-title">Our Children</h4>
+                    <h4 class="card-title">Pray With Us</h4>
                     <div class="card-text">
-                        <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
-                            <thead>
-                                <tr>
-                                    <th class="strong">Name</th>
-                                    <th class="strong">Birthdate</th>
-                                    <th class="strong">Gender</th>
-                                    <th class="strong">Age</th>
-                                </tr>
-                            </thead>
-                        </table>
 <!--                        	<?php
                         	if($MyView == "Y" || $AdminView == "Y"){
                 		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
                         	}
                         	?>
 -->
-                        </table>
 
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Prayer Requests go here.</p>
+                        <a href="#" class="btn btn-primary">See More</a>
                     </div>
                 </div>
             </div>
