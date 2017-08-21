@@ -232,6 +232,7 @@ else {
                 {
 
                     echo '<ul class="navbar-nav mr-auto mt-md-0">';
+                    $activeparam = '2';
                     include '/includes/ofc_menu.php';
                     echo '</ul>';
                 }
