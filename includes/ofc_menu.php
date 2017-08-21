@@ -1,10 +1,52 @@
 <?php
-    echo '<li class="nav-item active"><a class="nav-link" href="ofc_home.php">Home</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
-    echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+    if($activeparam == '1')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="ofc_home.php">Home</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_home.php">Home</a></li>';
+    }
+    if($activeparam == '2')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
+    }
+    if($activeparam == '3')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="#">Directory</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
+    }
+    if($activeparam == '4')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="#">Calendar</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
+    }
+    if($activeparam == '5')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="#">Prayer</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
+    }
+    if($activeparam == '6')
+    {
+        echo '<li class="nav-item active"><a class="nav-link" href="#">Events</a></li>';
+    }
+    else
+    {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+    }
     echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
 ?>
 <!--<li><a href='/ofc_family.php'>Family Directory</a></li>-->
