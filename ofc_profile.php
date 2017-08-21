@@ -63,6 +63,19 @@ else {
             return Math.abs(age_dt.getUTCFullYear() - 1970);
         }
     </script>
+    
+    <script type="text/javascript">
+        function dateConvert(dateval)
+        {
+            var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            var curr_date = dateval.getUTCDate();
+            var curr_month = dateval.getMonth();
+            var curr_year = dateval.getFullYear();
+            var newdateval = m_names[curr_month] + " " + curr_date + ", " + curr_year;
+            return newdateval;
+        }
+    </script>
+    
     <script type="text/javascript">
         var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
         var $fullname = <?php echo "'" . $_SESSION['fullname'] . "'"; ?>;
@@ -102,7 +115,8 @@ else {
                     if(data[0].child_1_name)
                     {
                         jQ05("#c1n").html(data[0].child_1_name);
-                        jQ05("#c1b").html(data[0].child_1_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_1_bday));
+                        jQ05("#c1b").html(dob2);
                         jQ05("#c1g").html(data[0].child_1_gender);
                         var age2 = calculate_age(new Date(data[0].child_1_bday));
                         jQ05("#c1a").html(age2);
@@ -112,7 +126,8 @@ else {
                     if(data[0].child_2_name)
                     {
                         jQ05("#c2n").html(data[0].child_2_name);
-                        jQ05("#c2b").html(data[0].child_2_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_2_bday));
+                        jQ05("#c2b").html(dob2);
                         jQ05("#c2g").html(data[0].child_2_gender);
                         var age2 = calculate_age(new Date(data[0].child_2_bday));
                         jQ05("#c2a").html(age2);
@@ -122,7 +137,8 @@ else {
                     if(data[0].child_3_name)
                     {
                         jQ05("#c3n").html(data[0].child_3_name);
-                        jQ05("#c3b").html(data[0].child_3_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_3_bday));
+                        jQ05("#c3b").html(dob2);
                         jQ05("#c3g").html(data[0].child_3_gender);
                         var age2 = calculate_age(new Date(data[0].child_3_bday));
                         jQ05("#c3a").html(age2);
@@ -132,7 +148,8 @@ else {
                     if(data[0].child_4_name)
                     {
                         jQ05("#c4n").html(data[0].child_4_name);
-                        jQ05("#c4b").html(data[0].child_4_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_4_bday));
+                        jQ05("#c4b").html(dob2);
                         jQ05("#c4g").html(data[0].child_4_gender);
                         var age2 = calculate_age(new Date(data[0].child_4_bday));
                         jQ05("#c4a").html(age2);
@@ -142,7 +159,8 @@ else {
                     if(data[0].child_5_name)
                     {
                         jQ05("#c5n").html(data[0].child_5_name);
-                        jQ05("#c5b").html(data[0].child_5_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_5_bday));
+                        jQ05("#c5b").html(dob2);
                         jQ05("#c5g").html(data[0].child_5_gender);
                         var age2 = calculate_age(new Date(data[0].child_5_bday));
                         jQ05("#c5a").html(age2);
@@ -152,7 +170,8 @@ else {
                     if(data[0].child_6_name)
                     {
                         jQ05("#c6n").html(data[0].child_6_name);
-                        jQ05("#c6b").html(data[0].child_6_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_6_bday));
+                        jQ05("#c6b").html(dob2);
                         jQ05("#c6g").html(data[0].child_6_gender);
                         var age2 = calculate_age(new Date(data[0].child_6_bday));
                         jQ05("#c6a").html(age2);
@@ -162,7 +181,8 @@ else {
                     if(data[0].child_7_name)
                     {
                         jQ05("#c7n").html(data[0].child_7_name);
-                        jQ05("#c7b").html(data[0].child_7_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_7_bday));
+                        jQ05("#c7b").html(dob2);
                         jQ05("#c7g").html(data[0].child_7_gender);
                         var age2 = calculate_age(new Date(data[0].child_7_bday));
                         jQ05("#c7a").html(age2);
@@ -172,7 +192,8 @@ else {
                     if(data[0].child_8_name)
                     {
                         jQ05("#c8n").html(data[0].child_8_name);
-                        jQ05("#c8b").html(data[0].child_8_bday);
+                        var dob2 = dateConvert(new Date(data[0].child_8_bday));
+                        jQ05("#c8b").html(dob2);
                         jQ05("#c8g").html(data[0].child_8_gender);
                         var age2 = calculate_age(new Date(data[0].child_8_bday));
                         jQ05("#c8a").html(age2);
@@ -220,12 +241,11 @@ else {
       
 <div class="container-fluid profile_bg">
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-4">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
-                    <img class="card-img-top" id="profile_pic" style="width: 75%; align-self: center" alt="Card image cap">
+                    <img class="card-img-top" id="profile_pic" style="width: 100%; align-self: center" alt="Card image cap">
                     <h4 class="card-title text-center" id="profile_card">Name</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
