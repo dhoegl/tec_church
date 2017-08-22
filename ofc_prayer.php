@@ -259,7 +259,7 @@ jQ9(document).ready(function () {
 <div class="container-fluid profile_bg">
 
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             <div class="card bg-light border-primary text-center m-3">
                 <div class="card-body">
                     <h4 class="card-title">How do I use this prayer list</h4>
@@ -271,52 +271,55 @@ jQ9(document).ready(function () {
                     </ul>
                 </div>
             </div>
-        </div> <!-- col-sm-4 -->
+        </div> <!-- col-sm-6 -->
+    </div> <!-- row -->
+    <div class="row">
+        <div class="col-sm-12">
 
-<div id="prayerlogleft">
-			<br>
-			<h2>Active Prayer Requests</h2>
-			<hr>
+            <div id="prayerlogleft">
+                <br>
+                <h2>Active Prayer Requests</h2>
+                <hr>
+            </div>
 
-
-
-
-<table id="activeprayertable" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Opened</th>
-                <th>Family Member</th>
-                <th>Type</th>
-                <th>Answered</th>
-                <th>Quick Glance</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>id</th>
-                <th>Opened</th>
-                <th>Family Member</th>
-                <th>Type</th>
-                <th>Answered</th>
-                <th>Quick Glance</th>
-                <th>Details</th>
-            </tr>
-        </tfoot>
-    </table>
-<p></p>
-<p></p>
-<p></p>
+            <!--<table id="activeprayertable" class="display table table-sm table-responsive" cellspacing="0" width="100%">-->
+            <table id="activeprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Opened</th>
+                            <th>Family Member</th>
+                            <th>Type</th>
+                            <th>Answered</th>
+                            <th>Quick Glance</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>id</th>
+                            <th>Opened</th>
+                            <th>Family Member</th>
+                            <th>Type</th>
+                            <th>Answered</th>
+                            <th>Quick Glance</th>
+                            <th>Details</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <div id="footerline"></div>
+            
 </div>
-	<div id="footerline"></div>
-	</div>
 	
 <?php
 //	require_once('/tecfooter.php');
 ?>
 
-</div>
 
 
 <!-- ************************************* -->
