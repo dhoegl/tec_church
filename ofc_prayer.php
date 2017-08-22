@@ -20,7 +20,7 @@ if(!$_SESSION['logged in']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>TEC - Active Prayer Log</title>
+    <title>Active Prayer Log</title>
 
 <!-- Initialize jquery js script -->
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
@@ -72,14 +72,14 @@ if(!$_SESSION['logged in']) {
 		console.log("prayerFollow button was pressed for " + $clickbuttonid + ": I am this user " + $loggedusername + " with ID = " + $loggedidDirectory);
 		var $followselect = 'follow';
 		var request = jQ20.ajax({
-		url: 'tec_update_follow_table.php',
+		url: 'ofc_update_follow_table.php',
 		type: 'POST',
 		dataType: 'json',
 		data: { followselect: $followselect, followprayerID: $clickbuttonid, followprayerWho : $loggedusername, followprayerDir : $loggedidDirectory}
 		});
 
 // Check if prayer is being followed by user - Show/Hide the Follow/Unfollow buttons
-		var checkfollow = 'tec_check_follow_table.php';
+		var checkfollow = 'ofc_check_follow_table.php';
 			jQ20.getJSON(checkfollow, {followprayerID: $clickbuttonid, followprayerWho : $loggedusername, followprayerDir : $loggedidDirectory
 			}, function (data) {
 				console.log(data);
@@ -105,14 +105,14 @@ if(!$_SESSION['logged in']) {
 		console.log("prayerFollow button was pressed for " + $clickbuttonid + ": I am this user " + $loggedusername + " with ID = " + $loggedidDirectory);
 		var $followselect = 'unfollow';
 		var request = jQ20.ajax({
-		url: 'tec_update_follow_table.php',
+		url: 'ofc_update_follow_table.php',
 		type: 'POST',
 		dataType: 'json',
 		data: { followselect: $followselect, followprayerID: $clickbuttonid, followprayerWho : $loggedusername, followprayerDir : $loggedidDirectory}
 		});
 
 // Check if prayer is being followed by user - Show/Hide the Follow/Unfollow buttons
-		var checkfollow = 'tec_check_follow_table.php';
+		var checkfollow = 'ofc_check_follow_table.php';
 			jQ20.getJSON(checkfollow, {followprayerID: $clickbuttonid, followprayerWho : $loggedusername, followprayerDir : $loggedidDirectory
 			}, function (data) {
 				console.log(data);
@@ -141,10 +141,10 @@ if(!$_SESSION['logged in']) {
 	jQ30(document).ready(function() {
 
 // Send Email using client email application
-// NOTE: If nothing is returned from tec_get_prayer_email_address, script will fail - temporarily 'by design' until conditions are established to disable or hide Send Mail button
+// NOTE: If nothing is returned from ofc_get_prayer_email_address, script will fail - temporarily 'by design' until conditions are established to disable or hide Send Mail button
 	jQ30("#sendMail").click(function () {
 		console.log("Send Email button clicked");
-		var sendaddress = 'tec_get_prayer_email_address.php';
+		var sendaddress = 'ofc_get_prayer_email_address.php';
 		jQ30.getJSON(sendaddress, {prayerID: $clickbuttonid
 		}, function (data) {
 			console.log(data);
@@ -186,7 +186,7 @@ jQ9(document).ready(function () {
 			console.log("followprayerID = " + $clickbuttonid);
 			console.log("followprayerWho = " + $loggedusername);
 			console.log("followprayerDir = " + $loggedidDirectory);
-			var checkfollow = 'tec_check_follow_table.php';
+			var checkfollow = 'ofc_check_follow_table.php';
 				jQ9.getJSON(checkfollow, {followprayerID: $clickbuttonid, followprayerWho : $loggedusername, followprayerDir : $loggedidDirectory
 				}, function (data) {
 					console.log(data);
