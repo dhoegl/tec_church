@@ -33,11 +33,11 @@
     }
     if($activeparam == '5')
     {
-        echo '<li class="nav-item active"><a class="nav-link" href="#">Prayer</a></li>';
+        echo '<li class="nav-item active"><a class="nav-link" href="ofc_prayer.php">Prayer</a></li>';
     }
     else
     {
-        echo '<li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_prayer.php">Prayer</a></li>';
     }
     if($activeparam == '6')
     {

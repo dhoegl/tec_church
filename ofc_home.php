@@ -75,11 +75,16 @@ if(!$_SESSION['logged in']) {
 <div class="container-fluid profile_bg">
     <div class="row">
         <div class="col-md-4">
-            <div class="card bg-light border-primary m-3">
+            <div class="card bg-light border-primary text-center m-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">What's Happening</h4>
                     <p class="card-text">Check out the latest things going on at Trinity Evangel Church.</p>
+                    <div class="list-group">
+                        <a href="http://www.trinityevangel.org" class="list-group-item list-group-item-action bg-light border-primary" target="_blank">Trinity Evangel Church website</a>
+                        <a href="http://evangelcs.org" class="list-group-item list-group-item-action bg-light border-primary" target="_blank">Evangel Classical School</a>
+                        <a href="http://www.trinityevangel.org/livestream" class="list-group-item list-group-item-action bg-light border-primary" target="_blank">Watch the live stream of our service or search the archive</a>
+                    </div>
                 </div>
             </div>
         </div>
