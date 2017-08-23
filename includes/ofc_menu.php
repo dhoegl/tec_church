@@ -17,11 +17,11 @@
     }
     if($activeparam == '3')
     {
-        echo '<li class="nav-item active"><a class="nav-link" href="#">Directory</a></li>';
+        echo '<li class="nav-item active"><a class="nav-link" href="ofc_family.php">Directory</a></li>';
     }
     else
     {
-        echo '<li class="nav-item"><a class="nav-link" href="#">Directory</a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_family.php">Directory</a></li>';
     }
     if($activeparam == '4')
     {
