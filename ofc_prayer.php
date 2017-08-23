@@ -260,9 +260,10 @@ jQ9(document).ready(function () {
 
     <div class="row">
         <div class="col-sm-12">
-            <div class="card bg-light border-primary text-center m-3">
+            <div class="card bg-light border-primary m-3">
                 <div class="card-body">
                     <h4 class="card-title">How do I use this prayer list</h4>
+                    <p class="card-text text-info"><strong>Best viewed in landscape mode on mobile device</strong></p>
                     <p class="card-text">Click on &quotDetails&quot to</p>
                     <ul>
                         <li>View more details about this prayer request</li>

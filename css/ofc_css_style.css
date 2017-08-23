@@ -96,3 +96,484 @@ body
     height: 150px;
     background-size: cover;
 }
+
+/******************** Button Styles *************************/
+/******************** Button Styles *************************/
+.button_flat_green {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+}
+.button_flat_green_small {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+}
+.button_flat_blue {
+    background-color: #0800ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+
+}
+.button_flat_blue_small {
+    background-color: #0800ff;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+}
+.button_flat_blue_tiny {
+    background-color: #0800ff;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+}
+.button_flat_red_small {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+	-webkit-appearance:square-button;
+}
+
+/********************** Style for POPUP OVERLAY ***************************/
+	#my_popup {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+#my_popup_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup,
+#my_popup_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup2 OVERLAY */
+	#my_popup2 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup2 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup2 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+#my_popup2_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup2,
+#my_popup2_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup2 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup2 {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup3 OVERLAY */
+	#my_popup3 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup3 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup3 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+	#my_popup3 h4 {
+	color: darkgreen;
+	font-size:14px;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+/*border: 1px solid black;*/
+	}	
+#my_popup3_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup3,
+#my_popup3_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup3 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup3 {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup4 OVERLAY */
+	#my_popup4 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup4 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup4 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+	#my_popup4 h4 {
+	color: darkgreen;
+	font-size:14px;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+/*border: 1px solid black;*/
+	}	
+#my_popup4_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup4,
+#my_popup4_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup4 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup4 {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup5 OVERLAY */
+	#my_popup5 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup5 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup5 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+	#my_popup5 h4 {
+	color: darkgreen;
+	font-size:14px;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+/*border: 1px solid black;*/
+	}	
+#my_popup5_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup5,
+#my_popup5_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup5 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup5 {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup6 OVERLAY */
+	#my_popup6 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup6 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup6 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+	#my_popup6 h4 {
+	color: darkgreen;
+	font-size:14px;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+/*border: 1px solid black;*/
+	}	
+#my_popup6_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup6,
+#my_popup6_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup6 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup6 {
+  transform: translateX(0) translateY(0);
+}
+
+/* style for Popup6 OVERLAY */
+	#my_popup7 {
+		background-color: #EBECFF;
+		display:none;
+		width:450px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:1.0;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+
+	#my_popup7 h2 {
+		background:url(/images/trinity_logo.png) 0 50% no-repeat;
+		color: black;		
+		margin:0px;
+		padding:10px 0 10px 45px;
+/*		border-bottom:1px solid #333;*/
+		font-size:20px;
+	}
+	#my_popup7 a {
+		background-color:#FFF;
+		display:none;
+		width:350px;
+		padding:15px;
+		text-align:left;
+		border:2px solid #333;
+	
+		opacity:0.8;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-box-shadow: 0 0 50px #ccc;
+		-webkit-box-shadow: 0 0 50px #ccc;
+	}
+	#my_popup7 h4 {
+	color: darkgreen;
+	font-size:14px;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+/*border: 1px solid black;*/
+	}	
+#my_popup7_background {
+  transition: all 0.3s 0.3s;
+}
+#my_popup7,
+#my_popup7_wrapper {
+  transition: all 0.3s ease-out;
+}
+#my_popup7 {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #my_popup7 {
+  transform: translateX(0) translateY(0);
+}

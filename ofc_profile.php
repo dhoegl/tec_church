@@ -250,7 +250,7 @@ else {
                 </div>
             </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-8">
             <div class="card bg-light m-3">
                 <div class="card-body">
                     <h4 class="card-title text-center text-capitalize">Contact Information</h4>
