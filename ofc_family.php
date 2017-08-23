@@ -47,17 +47,20 @@ if(!$_SESSION['logged in']) {
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
 	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
+<!-- jQuery functions & scripts -->
 
 <?php
-//Query for family information
-    $sqlquery = $mysql->query("SELECT * FROM $dir_tbl_name WHERE Status = 1") or die(" SQL query error on table directory. Error:" . mysql_errno() . " " . mysql_error()); //Status=1 identifies user is an active participant at TEC 
-    $count = $sqlquery->num_rows;
+
+   
 ?>
 
 
+
+
 <script type="text/javascript" charset="utf-8">
-        $(document).ready(function() {
-                $('#table_id').DataTable({
+    var jQ06 = jQuery.noConflict();
+        jQ06(document).ready(function() {
+                jQ06('#table_id').DataTable({
                                         "order": [[ 1, 'asc' ], [ 2, 'asc' ]],	"scrollY": "600px", "scrollCollapse": true, "paging": false
 
                                         });
@@ -129,43 +132,9 @@ if(!$_SESSION['logged in']) {
 	</thead>
 	<tbody>
 <?php
-	if ($count == 0)
-	{
-		echo "no data";
-		exit();
-	}
-        while($row = $sqlquery->fetch_assoc())
-                {
-//		echo "<tr><td><img src=imageview.php width='25' height='25'>"."</td>";
-		if(!$row['Internet_Restrict']){
-			echo "<tr><td>" . "<a href='/ofc_famview.php?id=" . $row['idDirectory'] . "'>view</a>"."</td>";
-			}
-			else {
-				echo "<tr><td>" . "view" . "</td>";
-				}
-//		echo "<tr><td>" . "<a href='ofcwelcome.php" . "'>back</a>"."</td>";
-		echo "<td>" . $row['Surname']."</td>";
-		echo "<td>" . $row['Name_1'] . "<br>" . $row['Name_2'] . "</td>";
-		if(!$row['Internet_Restrict']){
-			if($row['City'] && $row['State']){
-				$address = $row['Address'] . $row['Address2'] . "<br>" . $row['City'] . ", " . substr($row['State'],0,2) . " " . $row['Zip'];
-				}
-				else {
-					$address = $row['Address'] . $row['Address2'] . "<br>" . $row['City'] . substr($row['State'],0,2) . " " . $row['Zip'];
-					}
-					$phone_detail = "H " . $row['Phone_Home'] . "<br>" . "M " . $row['Phone_Cell1'] . "<br>" . "W " . $row['Phone_Cell2'];
-					$email_detail = "<br><a href='mailto:" . $row['Email_1'] . "'>" . $row['Email_1'] . "</a><br>" . "<a href='mailto:" . $row['Email_2'] . "'>" . $row['Email_2'] . "</a>";
-					}
-					else {
-						$address = "";
-						$phone_detail = "H<br>M<br>W";
-						$email_detail = "<br><br>";
-						}
-		echo "<td>" . $address."</td>";
-		echo "<td>" . $phone_detail."</td>";
-		echo "<td>" . $email_detail."</td></tr>";
+// Get Active Family List
+   include('/includes/ofc_getfamilylist.php');
 
-		}
 ?>	
 	</tbody>
 	<tfoot>
