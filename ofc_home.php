@@ -39,11 +39,26 @@ if(!$_SESSION['logged in']) {
     <!-- Extended styles for this page -->
     <link href="css/ofc_css_style.css" rel="stylesheet">
 
+    <!--*******************************DataTables stylesheet data**************************************-->
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+<!-- jQuery functions & scripts -->
+
+<?php
+// Get Recent Prayer List
+   include('/includes/ofc_view_recentprayerlist.php');
+   
+// Get Recent Prayer jQuery
+   include('/includes/ofc_get_recentprayer_jquery.php');
+   
+?>
 
 
   </head>
@@ -93,7 +108,22 @@ if(!$_SESSION['logged in']) {
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title">Latest prayer requests</h2>
-                    <p class="card-text">Prayer Requests placeholder.</p>
+                    <table id="recentprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Opened</th>
+                                <th>Family Member</th>
+                                <th>Quick Glance</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Opened</th>
+                                <th>Family Member</th>
+                                <th>Quick Glance</th>
+                        </tr>
+                    </tfoot>
+                </table>
                     <a href="#" class="btn btn-primary">View More</a>
                 </div>
             </div>
