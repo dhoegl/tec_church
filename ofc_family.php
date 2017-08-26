@@ -47,13 +47,6 @@ if(!$_SESSION['logged in']) {
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
 	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
-<!-- jQuery functions & scripts -->
-
-<?php
-
-   
-?>
-
 
 
 
@@ -61,11 +54,12 @@ if(!$_SESSION['logged in']) {
     var jQ06 = jQuery.noConflict();
         jQ06(document).ready(function() {
                 jQ06('#table_id').DataTable({
-                                        "order": [[ 1, 'asc' ], [ 2, 'asc' ]],	"scrollY": "600px", "scrollCollapse": true, "paging": false
+                                        "order": [[ 1, 'asc' ], [ 2, 'asc' ]]
 
                                         });
         });
 
+// , "columnDefs": [    { "width": "5%", "targets": 0 }, { "width": "5%", "targets": 1 }, { "width": "5%", "targets": 2 }, { "width": "20%", "targets": 3 }, { "width": "15%", "targets": 4 }]
 //			$(document).ready(function() {    $('#table_id').DataTable( {
 //				 "bJQueryUI": true, "sScrollY": "600px", "bPaginate": true, "aaSorting": [[ 1, "asc" ]], "iDisplayLength": 100, "bLengthChange": false, "bFilter": true, "bSort": true, "bInfo": false, "bAutoWidth": true, "sWrapper": "25px"} );} );
 </script>
@@ -112,19 +106,19 @@ if(!$_SESSION['logged in']) {
             </div> <!-- col-sm-12 -->
         </div> <!-- row -->
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <div id="prayerlogleft">
                     <br>
                     <h2>Our Church Family</h2>
                     <hr>
                 </div>
 
-<table id="table_id" class="table table-sm table-striped dt-responsive" cellpadding="0" cellspacing="0" width="100%">
+<table id="table_id" class="table table-sm table-striped dt-responsive" width="100%">
 	<thead>
 		<tr>
 			<th>Profile</th>
-			<th>Last Name</th>
-			<th>First Name</th>
+<!--			<th>Last Name</th>-->
+			<th>Name</th>
 			<th>Address</th>
 			<th>Phone Numbers **</th>
 			<th>Email Address</th>
@@ -140,8 +134,8 @@ if(!$_SESSION['logged in']) {
 	<tfoot>
 		<tr>
 			<th>Profile</th>
-			<th>Last Name</th>
-			<th>First Name</th>
+<!--			<th>Last Name</th>-->
+			<th>Name</th>
 			<th>Address</th>
 			<th>Phone Numbers **</th>
 			<th>Email Address</th>

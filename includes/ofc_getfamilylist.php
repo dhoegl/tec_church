@@ -27,8 +27,8 @@ if(!$_SESSION['logged in']) {
 				echo "<tr><td>" . "view" . "</td>";
 				}
 //		echo "<tr><td>" . "<a href='ofcwelcome.php" . "'>back</a>"."</td>";
-		echo "<td>" . $activerow['Surname']."</td>";
-		echo "<td>" . $activerow['Name_1'] . "<br>" . $activerow['Name_2'] . "</td>";
+//		echo "<td>" . $activerow['Surname']."</td>";
+		echo "<td><strong>" . $activerow['Surname'] . "</strong><br>$nbsp" . $activerow['Name_1'] . "<br>$nbsp" . $activerow['Name_2'] . "</td>";
 		if(!$activerow['Internet_Restrict']){
 			if($activerow['City'] && $activerow['State']){
 				$address = $activerow['Address'] . $activerow['Address2'] . "<br>" . $activerow['City'] . ", " . substr($activerow['State'],0,2) . " " . $activerow['Zip'];
