@@ -9,7 +9,7 @@ if(!$_SESSION['logged in']) {
 // 	if (isset($_GET['action']) ) 
 //	{
 /*Query active prayer listing: visible = 3 (all) and status = 1 */
-    $activeprayerquery = $mysql->query("SELECT p.create_date AS prayerupdatedate, p.name AS fullname, m.Name_1 AS firsthim, m.Name_2 AS firsther, m.Surname AS last, p.title AS prayertitle, p.prayer_text AS prayertext, p.updated AS updatereq FROM " . $_SESSION['prayertable'] . " p INNER JOIN " . $_SESSION['dirtablename'] . " m on m.idDirectory = p.owner_id WHERE p.visible = '3' and p.status = '1' and p.approved='1' ORDER BY p.create_date DESC") or die(" SQL query error at select active prayers. Error:" . mysql_errno() . " " . mysql_error());
+    $activeprayerquery = $mysql->query("SELECT p.prayer_id AS prayerid, p.create_date AS prayerupdatedate, p.name AS fullname, m.Name_1 AS firsthim, m.Name_2 AS firsther, m.Surname AS last, p.title AS prayertitle, p.prayer_text AS prayertext, p.updated AS updatereq FROM " . $_SESSION['prayertable'] . " p INNER JOIN " . $_SESSION['dirtablename'] . " m on m.idDirectory = p.owner_id WHERE p.visible = '3' and p.status = '1' and p.approved='1' ORDER BY p.create_date DESC LIMIT 5") or die(" SQL query error at select active prayers. Error:" . mysql_errno() . " " . mysql_error());
     $activeprayercount = $activeprayerquery->num_rows;
 
 		$listarray = array();
@@ -19,6 +19,7 @@ if(!$_SESSION['logged in']) {
 			echo "no prayer data";
 		}
 		while($activerow = $activeprayerquery->fetch_assoc()) {
+                                $prayerID = $activerow['prayerid'];
 				$prayerupdate = date("M-d-Y", strtotime($activerow['prayerupdatedate']));
 				$prayer_title = $activerow['prayertitle'];
 				$prayer_text = $activerow['prayertext'];
@@ -27,7 +28,7 @@ if(!$_SESSION['logged in']) {
 
 				// Stores each database record to an array 
 //					$buildjson = array('prayerdate' => $prayerupdate, 'id' => $prayerid, 'title' => $prayer_title, 'prayertext' => $prayer_text, 'fullname' => $fullname, 'glance' => $glance); 
-					$buildjson = array($prayerupdate, $fullname, $glance, $prayer_text); 
+					$buildjson = array($prayerupdate, $fullname, $glance, $prayerID, $prayer_text); 
  					// Adds each array into the container array 
  					array_push($listarray, $buildjson); 
 			}
