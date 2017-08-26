@@ -56,7 +56,7 @@ if(!$_SESSION['logged in']) {
    include('/includes/ofc_view_recentprayerlist.php');
    
 // Get Recent Prayer jQuery
-   include('/includes/ofc_get_recentprayer_jquery.php');
+//   include('/includes/ofc_get_recentprayer_jquery.php');
    
 ?>
 
@@ -108,6 +108,9 @@ if(!$_SESSION['logged in']) {
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title">Latest prayer requests</h2>
+                <div class="card-block">
+                    <a href="ofc_prayer.php" class="btn btn-primary">View More</a>
+                </div>
                     <table id="recentprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -124,7 +127,7 @@ if(!$_SESSION['logged in']) {
                         </tr>
                     </tfoot>
                 </table>
-                    <a href="#" class="btn btn-primary">View More</a>
+                    <a href="ofc_prayer.php" class="btn btn-primary">View More</a>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ if(!$_SESSION['logged in']) {
 				$prayer_title = $activerow['prayertitle'];
 				$prayer_text = $activerow['prayertext'];
 				$fullname = $activerow['fullname'];				
-				$glance = "<strong>" . $prayer_title . " </strong><br />" . substr($activerow['prayertext'],0,50) . "...";
+				$glance = "<strong>" . $prayer_title . " </strong><br />" . substr($activerow['prayertext'],0,100) . "...";
 
 				// Stores each database record to an array 
 //					$buildjson = array('prayerdate' => $prayerupdate, 'id' => $prayerid, 'title' => $prayer_title, 'prayertext' => $prayer_text, 'fullname' => $fullname, 'glance' => $glance); 

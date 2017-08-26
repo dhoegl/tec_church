@@ -10,7 +10,7 @@ jQ8(document).ready(function() {
 //			"bPaginate": true,
 //			"aaSorting": [[ 1, "asc" ]],
 //			"ordering": true,
-			"order": [[ 0, 'desc' ]],
+			"order": [[ 3, 'desc' ]],
 //			"iDisplayLength": 100,
 //			"bLengthChange": false,
 //			"bFilter": true,
@@ -28,13 +28,18 @@ jQ8(document).ready(function() {
 			{
 //        		className: "prayer_who",
         		className: "fullname",
-        		"targets": [ 2 ] 
+        		"targets": [ 1 ] 
                         },
 			{
 //        		className: "prayer_title",
         		className: "glance",
-        		"targets": [ 3 ] 
+        		"targets": [ 2 ] 
+                        },
+                        			{
+                        className: "prayerid", "visible": false,
+                        "targets": [ 3 ] 
                         }
+
                     ]
 
     });
