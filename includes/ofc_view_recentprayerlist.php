@@ -19,6 +19,7 @@ jQ8(document).ready(function() {
 //			"bAutoWidth": true,
 //			"sWrapper": "25px",
 //			"orderClasses": false,
+                        "responsive": true,
 			"columnDefs": [
 			{
 //                        className: "prayer_update",
@@ -27,17 +28,21 @@ jQ8(document).ready(function() {
                         },
 			{
 //        		className: "prayer_who",
-        		className: "fullname",
+        		className: "fullname", responsivePriority: "2", "visible": false,
         		"targets": [ 1 ] 
                         },
 			{
 //        		className: "prayer_title",
-        		className: "glance",
+        		className: "glance", responsivePriority: "1",
         		"targets": [ 2 ] 
                         },
-                        			{
+                        {
                         className: "prayerid", "visible": false,
                         "targets": [ 3 ] 
+                        },
+                        {
+                        className: "prayertext", "visible": false,
+                        "targets": [ 4 ] 
                         }
 
                     ]

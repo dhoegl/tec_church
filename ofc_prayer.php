@@ -22,33 +22,40 @@ if(!$_SESSION['logged in']) {
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Active Prayer Log</title>
 
-<!-- Initialize jquery js script -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
 <!-- Bootstrap 4 BETA CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
 <!--    <link href="css/signin.css" rel="stylesheet">-->
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- Datatables Bootstrap CSS script -->
+
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css">
+
+    <!--*******************************DataTables stylesheet data**************************************-->
+<!--	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+        <link href="css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet">-->
+    
     <!-- Extended styles for this page -->
     <link href="css/ofc_css_style.css" rel="stylesheet">
 
-<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
-<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
-<!--*******************************DataTables stylesheet data**************************************-->
-	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
-	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
 
 <!-- jQuery functions & scripts -->
 <!-- jQuery functions & scripts -->
 <!-- jQuery functions & scripts -->
-
+<!-- Initialize jquery js script -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<!--    <script language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js" type="text/javascript"></script>-->
+    
 <?php
 // Get User Login details
    include('/includes/ofc_get_loggedinuser.php');
@@ -388,10 +395,18 @@ jQ9(document).ready(function () {
 
 </div>
 
+    
+<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
+<!--    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>-->
+        
+<!-- Datatables Bootstrap 4 javascript -->    
+<!--    <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap4.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>-->
+
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

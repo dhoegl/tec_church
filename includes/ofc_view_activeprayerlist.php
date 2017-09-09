@@ -19,6 +19,7 @@ jQ8(document).ready(function() {
 //			"bAutoWidth": true,
 //			"sWrapper": "25px",
 //			"orderClasses": false,
+                        "dt-responsive": true,
 			"columnDefs": [ 
 			{
             "targets": -2,
@@ -31,10 +32,12 @@ jQ8(document).ready(function() {
         	},
 			{
        		className: "prayer_update",
+                "responsivePriority": [ 1 ],
        		"targets": [ 1 ] 
        	},
 			{
         		className: "prayer_who",
+                        "responsivePriority": [ 1 ],
         		"targets": [ 2 ] 
         	},
 			{
@@ -47,6 +50,7 @@ jQ8(document).ready(function() {
         	},
 			{
         		className: "prayer_title",
+                        "responsivePriority": [ 1 ],
         		"targets": [ 5 ] 
         	},
 			{

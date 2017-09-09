@@ -105,6 +105,20 @@ if(!$_SESSION['logged in']) {
         </div>
         <div class="col-md-4">
             <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
+                <div class="card-body">
+                    <h2 class="card-title">Upcoming Events</h2>
+                </div>
+                <div class="card-block">
+                    <p class="card-text">Upcoming Events placeholder.</p>
+                </div>
+                <div class="card-block">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-4">
+            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title">Latest prayer requests</h2>
@@ -131,20 +145,6 @@ if(!$_SESSION['logged in']) {
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
-                <div class="card-body">
-                    <h2 class="card-title">Upcoming Events</h2>
-                </div>
-                <div class="card-block">
-                    <p class="card-text">Upcoming Events placeholder.</p>
-                </div>
-                <div class="card-block">
-                    <a href="#" class="btn btn-primary">View More</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div> <!--container-->
 
 
@@ -159,7 +159,8 @@ if(!$_SESSION['logged in']) {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+<!--    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script> -->
+    
 
     
     
