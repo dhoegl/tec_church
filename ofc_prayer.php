@@ -39,8 +39,8 @@ if(!$_SESSION['logged in']) {
 
     <!--*******************************DataTables stylesheet data**************************************-->
 <!--	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
-        <link href="css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">
-        <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet">-->
+        <link href="css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">-->
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet">
     
     <!-- Extended styles for this page -->
     <link href="css/ofc_css_style.css" rel="stylesheet">
@@ -291,7 +291,7 @@ jQ9(document).ready(function () {
             </div>
 
             <!--<table id="activeprayertable" class="display table table-sm table-responsive" cellspacing="0" width="100%">-->
-            <table id="activeprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
+    <table id="activeprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>id</th>
