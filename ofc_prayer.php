@@ -319,6 +319,7 @@ jQ9(document).ready(function () {
                             <th>Answered</th>
                             <th>Quick Glance</th>
                             <th>Details</th>
+                            <th>Smack</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -330,6 +331,7 @@ jQ9(document).ready(function () {
                             <th>Answered</th>
                             <th>Quick Glance</th>
                             <th>Details</th>
+                            <th>Smack</th>
                         </tr>
                     </tfoot>
                 </table>

@@ -19,7 +19,7 @@ jQ8(document).ready(function() {
 //			"bAutoWidth": true,
 //			"sWrapper": "25px",
 //			"orderClasses": false,
-//                        "responsive": true,
+                        "responsive": true,
 			"columnDefs": [ 
 			{
             "targets": -2,
