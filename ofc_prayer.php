@@ -15,35 +15,53 @@ if(!$_SESSION['logged in']) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 -->
-<!-- BOOTSTRAP 4 ALPHA - Required meta tags -->
+<!-- BOOTSTRAP 4 - Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Active Prayer Log</title>
 
+<!--Test CSS Scripts for Datatables Bootstrap 4 Responsive functions    -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
 
-<!-- Bootstrap 4 BETA CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<!-- Custom styles for this template -->
+<link href="css/jumbotron.css" rel="stylesheet">
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Extended styles for this page -->
+<link href="css/ofc_css_style.css" rel="stylesheet">
+
+
+<!--Test JS Scripts for Datatables Bootstrap 4 Responsive functions    -->
+<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js">
+	</script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js">
+	</script>        
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js">
+	</script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js">
+	</script>        
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap4.min.js">
+	</script>
+        
+<!-- Bootstrap 4 BETA CSS -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
 
     <!-- Custom styles for this template -->
 <!--    <link href="css/signin.css" rel="stylesheet">-->
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
     <!-- Datatables Bootstrap CSS script -->
 
-<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
-<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css">
+<!--<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css">-->
 
     <!--*******************************DataTables stylesheet data**************************************-->
 <!--	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
         <link href="css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">-->
-<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet">
+<!--<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css" rel="stylesheet">-->
     
-    <!-- Extended styles for this page -->
-    <link href="css/ofc_css_style.css" rel="stylesheet">
 
 
 
@@ -52,8 +70,8 @@ if(!$_SESSION['logged in']) {
 <!-- jQuery functions & scripts -->
 <!-- jQuery functions & scripts -->
 <!-- Initialize jquery js script -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>-->
 <!--    <script language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js" type="text/javascript"></script>-->
     
 <?php
