@@ -32,12 +32,12 @@ jQ8(document).ready(function() {
         	},
 			{
            		className: "prayer_update",
-                "responsivePriority": [ 1 ],
+                        "responsivePriority": [ 3 ],
            		"targets": [ 1 ] 
            	},
 			{
         		className: "prayer_who",
-                        "responsivePriority": [ 1 ],
+                        "responsivePriority": [ 2 ],
         		"targets": [ 2 ] 
         	},
 			{
@@ -55,6 +55,7 @@ jQ8(document).ready(function() {
         	},
 			{
         		className: "detailscolumn",
+                        "responsivePriority": [ 1 ],
         		"targets": [ 6 ] 
         	},
 			{
