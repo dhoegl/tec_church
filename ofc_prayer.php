@@ -41,7 +41,9 @@ if(!$_SESSION['logged in']) {
 	</script>        
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap4.min.js">
 	</script>
-        
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>        
     
 <?php
 // Get User Login details
@@ -252,20 +254,36 @@ jQ9(document).ready(function () {
 <div class="container-fluid profile_bg">
 
     <div class="row">
-        <div class="col-sm-12">
-            <div class="card bg-light border-primary m-3">
-                <div class="card-body">
-                    <h4 class="card-title">How do I use this prayer list</h4>
-                    <p class="card-text">Click on &quotDetails&quot to</p>
-                    <ul>
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                How do I use this prayer list
+            </button>
+        </p>
+    </div> <!-- row -->
+    <div class="collapse" id="collapseExample">
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title">Sorting, Searching, and Paging</h4>
+                        <ul class="card-text">
+                            <li>Click on a header arrow to sort columns ascending or descending</li>
+                            <li>Use the Search box to find someone or a specific prayer request</li>
+                            <li>Navigate pages using the Page Selector at the bottom of the page</li>
+                        </ul>
+                    </div>
+            </div> <!-- col-sm-6 -->
+            <div class="col-sm-6">
+                <div class="card card-body">
+                    <h4 class="card-title">Click on &quotDetails&quot to</h4>
+                    <ul class="card-text">
                         <li>View more details about this prayer request</li>
                         <li>Follow this prayer request to receive updates and/or answers to it in email</li>
                         <li>Let the person know you care by sending an email</li>
                     </ul>
                 </div>
-            </div>
-        </div> <!-- col-sm-6 -->
-    </div> <!-- row -->
+            </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+    </div> <!-- collapse --> 
     <div class="row">
         <div class="col-sm-12">
 
@@ -386,13 +404,6 @@ jQ9(document).ready(function () {
 <!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
-<!--    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>-->
-        
-<!-- Datatables Bootstrap 4 javascript -->    
-<!--    <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap4.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>-->
-
-<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
 
 
 </body>
