@@ -8,6 +8,13 @@ if(!$_SESSION['logged in']) {
 else {
         if(isset($_GET['id']) ) {
             $profileID = $_GET['id'];
+            if($_SESSION['idDirectory'] == $profileID) {
+		$MyView = 'Y';
+            }
+            else {
+		$MyView = 'N';
+            }
+
     }
         
     else {
@@ -241,6 +248,13 @@ else {
         </nav>
       
 <div class="container-fluid profile_bg">
+<?php
+    if($MyView == 'Y')
+    {
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">New Photo</a><a class="dropdown-item" href="#">Contact Info</a><a class="dropdown-item" href="#">Children</a><a class="dropdown-item" href="#">Birthday/Anniversary</a></div></div></div>';
+    }
+?>
+
     <div class="row">
         <div class="col-sm-4">
             <div class="card bg-light m-3">
