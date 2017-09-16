@@ -43,6 +43,7 @@ else {
 <!-- Initialize jquery js script -->
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
+
 <!-- Bootstrap 4 BETA CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     
@@ -221,6 +222,54 @@ else {
         
     </script>
 
+<!-- Detect and perform profile 'Edit' actions -->
+<script type="text/javascript" >
+var jQ53 = jQuery.noConflict();
+	jQ53(document).ready(function() {
+		jQ53("#contactEdit").click(function () {
+			jQ53("#my_popup4").popup({
+				background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
+			});		
+		});
+		jQ53("#calendarEdit").click(function () {
+			jQ53("#my_popup5").popup({
+				background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
+			});		
+		});
+		jQ53("#childrenEdit").click(function () {
+			jQ53("#my_popup6").popup({
+				background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
+			});
+				jQ53('#child1select').css('background-color', '#8FBC8F');
+				jQ53('#child1edit').css('display', 'inline-block');
+				jQ53('#child2edit').css('display', 'none');
+				jQ53('#child3edit').css('display', 'none');
+				jQ53('#child4edit').css('display', 'none');
+				jQ53('#child5edit').css('display', 'none');
+				jQ53('#child6edit').css('display', 'none');
+				jQ53('#child7edit').css('display', 'none');
+				jQ53('#child8edit').css('display', 'none');
+		});
+		jQ53("#NewPhotoXX").click(function () {
+			jQ53("#my_popup7").popup({
+			background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
+		});
+	});
+});
+</script>
+
+<!-- TEST POPUP -->
+<script type="text/javascript" >
+var jQ55 = jQuery.noConflict();
+	jQ55(document).ready(function() {
+		jQ55("#NewPhoto").click(function () {
+			jQ55("#my_popup7").popup({
+			background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
+		});
+	});
+});
+</script>
+
   </head>
   <body>
 
@@ -251,7 +300,7 @@ else {
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">New Photo</a><a class="dropdown-item" href="#">Contact Info</a><a class="dropdown-item" href="#">Children</a><a class="dropdown-item" href="#">Birthday/Anniversary</a></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button id="NewPhoto" class="dropdown-item" type="button">New Photo</button><button class="dropdown-item" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
     }
 ?>
 
@@ -374,10 +423,48 @@ else {
         </div>
     </div>-->
 
-    </div>
+    </div> <!-- Row -->
+</div> <!-- Container -->
+
+
+<!--***************************** Edit Picture POPUP ***********************************-->
+<!--***************************** Edit Picture POPUP ***********************************-->
+<!--***************************** Edit Picture POPUP ***********************************-->
+<div id="my_popup7">
+	<h2>Upload New Family Photo</h2>
+	<br />
+	<br />
+	<h3>Upload new photo - click <strong>Save</strong> when done.</h3>
+	<hr>
+	<p><strong>NOTE:</strong> Photo must be less than 2MB, and in one of the following formats:</p> 
+	<table>
+		<tr>
+			<td width='40px'></td>
+			<td align='left'>
+				<ul>
+					<li>
+						.bmp; .jpg; .png
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<br />
+	<hr>
+<!--		<form enctype="multipart/form-data" action="imageverify.php" method="post">
+ 		<form enctype="multipart/form-data" action="/includes/tec_featurenotavail.php" method="post">
+ -->
+		<form id="uploadImage" enctype="multipart/form-data" action="" method="post">
+			<div id="image_preview"><img id="previewing" width="200" height="auto" <?php echo "src=$imagesource"; ?> /></div>
+			<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+            <input name="file" type="file" id="file" required />
+            <input type="submit" class="button_flat_blue_small" value="Upload Image" />
+				<input type="reset" class="my_popup7_close button_flat_blue_small" name="cancel" value="Cancel" />
+        </form>
+		<div id="message">
+			
+		</div>
 </div>
-
-
 
 
 
@@ -387,11 +474,14 @@ else {
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
 
+
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
+	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
     
     
