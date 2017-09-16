@@ -44,6 +44,10 @@ else {
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
 
+<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
+	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
+
 <!-- Bootstrap 4 BETA CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     
@@ -250,11 +254,6 @@ var jQ53 = jQuery.noConflict();
 				jQ53('#child7edit').css('display', 'none');
 				jQ53('#child8edit').css('display', 'none');
 		});
-		jQ53("#NewPhotoXX").click(function () {
-			jQ53("#my_popup7").popup({
-			background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
-		});
-	});
 });
 </script>
 
@@ -262,9 +261,11 @@ var jQ53 = jQuery.noConflict();
 <script type="text/javascript" >
 var jQ55 = jQuery.noConflict();
 	jQ55(document).ready(function() {
+            console.log('At jQ55');
 		jQ55("#NewPhoto").click(function () {
+                        console.log('NewPhoto Click invoked');
 			jQ55("#my_popup7").popup({
-			background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
+			background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
 		});
 	});
 });
@@ -476,12 +477,9 @@ var jQ55 = jQuery.noConflict();
 
 
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
-	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
     
     
