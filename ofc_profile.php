@@ -311,7 +311,7 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button id="NewPhoto" class="dropdown-item" type="button">New Photo</button><button class="dropdown-item" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button id="NewPhoto" class="dropdown-item my_popup7_open" type="button">New Photo</button><button class="dropdown-item" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
     }
 ?>
 
