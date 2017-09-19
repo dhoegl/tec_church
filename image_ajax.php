@@ -36,7 +36,7 @@
 							//echo "<b>Temp file:</b> " . $_FILES["file"]["tmp_name"] . "<br>";
 							$dirpicupdate = "UPDATE " . $_SESSION['dirtablename'] . " SET ProfilePhoto_New = '" . $targetfile . "' WHERE idDirectory = '" . $_SESSION["Famview_Profile"] . "'";	
 							//$dirquery = "SELECT ProfilePhoto_New FROM $dir_tbl_name WHERE idDirectory = '" . $_SESSION['Famview_Profile'] . "'";
-							$dirresult = @mysql_query($dirpicupdate) or die(" SQL query error on profile image_ajax Directory update. Error:" . mysql_errno() . " " . mysql_error());
+							$dirresult = $mysql->query($dirpicupdate) or die(" SQL query error on profile image_ajax Directory update. Error:" . mysql_errno() . " " . mysql_error());
 							//$count = @mysql_num_rows($dirresult);
 							//$dirrow = @mysql_fetch_assoc($dirresult);
 							//$profilephoto = $dirrow['ProfilePhoto_New'];

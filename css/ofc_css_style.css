@@ -519,7 +519,7 @@ body
   transform: translateX(0) translateY(0);
 }
 
-/* style for Popup6 OVERLAY */
+/* style for Popup7 OVERLAY */
 	#my_popup7 {
 		background-color: #EBECFF;
 		display:none;
@@ -576,4 +576,12 @@ body
 }
 .popup_visible #my_popup7 {
   transform: translateX(0) translateY(0);
+}
+
+#ModalContactInfo .modal-header h5 {
+    background:url(/images/trinity_logo.png) 0 50% no-repeat;
+    color: black;		
+    margin:0px;
+    padding:10px 0 10px 45px;
+    font-size:20px;
 }
