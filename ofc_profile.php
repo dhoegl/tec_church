@@ -78,6 +78,7 @@ else {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
     <script type="text/javascript">
         function calculate_age(dob) 
         {
@@ -118,6 +119,7 @@ else {
             request.done(function(data) {
                 var $c1a = "";
                 var years;
+                var $profile_pic_img = "src=profile_img/" + data[0].piclink2;
                 profileinfo = [];
                 profilechildren = [];
                 console.log('Profile Info Zip = ' + data[0].zip);
@@ -126,12 +128,26 @@ else {
                 profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
                 jQ05("#profile_card").append(profileinfo.join(''));
                 jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
+                jQ05("#profile_pic_edit").attr("src", "profile_img/" + data[0].piclink2);
                 jQ05("#profile_email_him").html("<h6>" + data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a></h6>");
                 jQ05("#profile_email_her").html("<h6>" + data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a></h6>");
                 jQ05("#profile_phone_home").html("<h6>Home phone: " + data[0].phonehome) + "</h6>";
                 jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
                 jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+                jQ05("#hisfirstname").attr("value",data[0].hisname);
+                jQ05("#herfirstname").attr("value",data[0].hername);
+                jQ05("#mylastname").attr("value",data[0].lastname);
+                jQ05("#myaddr1").attr("value",data[0].addr1);
+                jQ05("#myaddr2").attr("value",data[0].addr2);
+                jQ05("#mycity").attr("value",data[0].city);
+                jQ05("#mystate").attr("value",data[0].state);
+                jQ05("#myzip").attr("value",data[0].zip);
+                jQ05("#myhomephone").attr("value",data[0].phonehome);
+                jQ05("#hiscell").attr("value",data[0].hiscell);
+                jQ05("#hercell").attr("value",data[0].hercell);
+                jQ05("#hisemail").html("<h6>" + data[0].email1 + "</h6>");
+                jQ05("#heremail").html("<h6>" + data[0].email2 + "</h6>");
                 //
 //******************* CHILD DATA ***********
                     // Child 1
@@ -312,7 +328,7 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button id="NewPhoto" class="dropdown-item my_popup7_open" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info Modal</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info Modal</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
     }
 ?>
 
@@ -439,9 +455,47 @@ var jQ55 = jQuery.noConflict();
 </div> <!-- Container -->
 
 
-<!--***************************** Edit Picture POPUP ***********************************-->
-<!--***************************** Edit Picture POPUP ***********************************-->
-<!--***************************** Edit Picture POPUP ***********************************-->
+<!--***************************** Edit Picture MODAL ***********************************-->
+<!--***************************** Edit Picture MODAL ***********************************-->
+<!--***************************** Edit Picture MODAL ***********************************-->
+
+<div class="modal fade" id="ModalProfilePic" tabindex="-1" role="dialog" aria-labelledby="ModalProfilePicLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalProfilePicLabel">Upload New Family Photo<br>Click <strong>Save Changes</strong> when done.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	<p><strong>NOTE:</strong> Photo must be less than 2MB, and in one of the following formats:</p> 
+            <ul>
+                <li>
+                    .bmp; .jpg; .png
+                </li>
+            </ul>
+        <hr>
+                <form id="uploadImage" enctype="multipart/form-data" action="" method="post">
+                    <div id="image_preview">
+                        <img id="profile_pic_edit" width="200" height="auto" />
+                    </div>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+                    <input name="file" type="file" id="file" required />
+                </form>
+            <div id="message">
+
+            </div>
+      </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--***************************** Edit Picture OLD POPUP ***********************************-->
 <div id="my_popup7">
 	<h2>Upload New Family Photo</h2>
 	<br />
@@ -463,22 +517,29 @@ var jQ55 = jQuery.noConflict();
 	</table>
 	<br />
 	<hr>
+        
 <!--		<form enctype="multipart/form-data" action="imageverify.php" method="post">
  		<form enctype="multipart/form-data" action="/includes/tec_featurenotavail.php" method="post">
  -->
-		<form id="uploadImage" enctype="multipart/form-data" action="" method="post">
-			<div id="image_preview"><img id="previewing" width="200" height="auto" <?php echo "src=$imagesource"; ?> /></div>
+                    <form id="uploadImage" enctype="multipart/form-data" action="" method="post">
+<!--			<div id="image_preview"><img id="previewing" width="200" height="auto" <?php echo "src=$imagesource"; ?> /></div>-->
+			<div id="image_preview">
+<!--                            <img id="profile_pic_edit" width="200" height="auto" />-->
+                        </div>
 			<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
-            <input name="file" type="file" id="file" required />
-            <input type="submit" class="button_flat_blue_small" value="Upload Image" />
-				<input type="reset" class="my_popup7_close button_flat_blue_small" name="cancel" value="Cancel" />
-        </form>
+                        <input name="file" type="file" id="file" required />
+                        <input type="submit" class="button_flat_blue_small" value="Upload Image" />
+			<input type="reset" class="my_popup7_close button_flat_blue_small" name="cancel" value="Cancel" />
+                    </form>
 		<div id="message">
 			
 		</div>
 </div>
 
-<!-- Modal dialog - Contact Info -->
+<!--***************************** Edit Contact Info MODAL ***********************************-->
+<!--***************************** Edit Contact Info MODAL ***********************************-->
+<!--***************************** Edit Contact Info MODAL ***********************************-->
+
 <div class="modal fade" id="ModalContactInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -489,7 +550,6 @@ var jQ55 = jQuery.noConflict();
         </button>
       </div>
       <div class="modal-body">
-        ...
             <p id="editProfile" class="my_popup4title"> </p>
             <form name='editcontact' method='post' action='/services/ofc_profile_contact_update.php'> 		
                     <table id="editprofiletable" border='0' align='center' cellpadding='0' cellspacing='1' >
@@ -498,15 +558,9 @@ var jQ55 = jQuery.noConflict();
 
                                     <table width='100%' border='0' cellpadding='3' cellspacing='1' >
                                             <tr>
-                                                    <td><br /></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><br /></td>
-                                            </tr>
-                                            <tr>
                                                     <td width='350' align='right'>His First Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='hisfirstname' type='text' id='hisfirstname' value="<?php echo $recordFirstHim; ?>"></td>
+                                                    <td width='294'><input name='hisfirstname' type='text' id='hisfirstname'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>Her First Name</td>
@@ -591,22 +645,22 @@ var jQ55 = jQuery.noConflict();
                                         <tr>
                                                 <td width='350' align='right'>His Email address</td>
                                                 <td width='6'>:</td>
-                                                <td width='294'><?php echo "<strong>" . $recordEmail1 . "</strong>" ?></td>
+                                                <td width='294' id="hisemail"></td>
                                         </tr>
                                         <tr>
                                                 <td width='350' align='right'>Her Email address</td>
                                                 <td width='6'>:</td>
-                                                <td width='294'><?php echo "<strong>" . $recordEmail2 . "</strong>" ?></td>
+                                                <td width='294' id="heremail"></td>
                                         </tr>
                                         <tr>
                                                 <td><br /></td>
                                         </tr>
-                                        <tr>
+<!--                                        <tr>
                                                 <td>&nbsp</td>
                                                 <td>&nbsp</td>
                                                 <td><input type="submit" class="button_flat_blue_small" name='submitcontact' value='Save'></td>
                                                 <td><input type="reset" class="my_popup4_close button_flat_blue_small" name="cancel" value="Cancel" /></td>
-                                        </tr>
+                                        </tr>-->
                                         </table>
                                         <p>
                                         <p>
