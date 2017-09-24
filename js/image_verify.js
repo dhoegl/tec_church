@@ -1,5 +1,5 @@
 //validates profile image upload during profile edit
-//Called from ofc_famview
+//Called from ofc_profile
 	var jQ200 = jQuery.noConflict();
 	jQ200(document).ready(function (e) {
 		jQ200("#uploadImage").on('submit',(function(e)
@@ -34,7 +34,7 @@ jQ200(function() {
 		console.log("Made it to image_verify change function");
 		if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]) || (imagefile==match[3])))
 		{
-			jQ200('#previewing').attr('src','/profile_img/x.jpg');
+			jQ200('#profile_pic_edit').attr('src','/profile_img/x.jpg');
 			jQ200("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only bmp, jpg and png Images type allowed</span>");
 			return false;
 			}
@@ -51,8 +51,9 @@ function imageIsLoaded(e) {
 	jQ200("#file").css("color","green");
 	console.log("Made it to image_verify imageIsLoaded function");
 	jQ200('#image_preview').css("display", "block");
-	jQ200('#previewing').attr('src', e.target.result);
-	jQ200('#previewing').attr('width', '200px');
-	jQ200('#previewing').attr('height', '133px');
+	jQ200('#profile_pic_edit').attr('src', e.target.result);
+	jQ200('#profile_pic_edit').attr('width', '200px');
+//	jQ200('#profile_pic_edit').attr('height', '133px');
+	jQ200('#profile_pic_edit').attr('height', 'auto');
 	};
 });

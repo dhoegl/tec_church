@@ -8,6 +8,7 @@ if(!$_SESSION['logged in']) {
 else {
         if(isset($_GET['id']) ) {
             $profileID = $_GET['id'];
+            $_SESSION["Famview_Profile"] = $profileID;
             if($_SESSION['idDirectory'] == $profileID) {
 		$MyView = 'Y';
             }
@@ -69,7 +70,7 @@ else {
 <!--	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>-->
 
 <!-- Call Image Verify jQuery script -->
-<!--<script src="/js/image_verify.js"></script>-->
+<script src="/js/image_verify.js"></script>
 
 
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -124,6 +125,7 @@ else {
                 profilechildren = [];
                 console.log('Profile Info Zip = ' + data[0].zip);
                 console.log('Picture file = ' + data[0].piclink2);
+                // Load Profile Page Contact Data
                 jQ05("#profile_card").empty();
                 profileinfo.push(data[0].hisname + ' & ' + data[0].hername + ' ' + data[0].lastname);
                 jQ05("#profile_card").append(profileinfo.join(''));
@@ -135,6 +137,7 @@ else {
                 jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
                 jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+                // Load Contact Edit Modsl
                 jQ05("#hisfirstname").attr("value",data[0].hisname);
                 jQ05("#herfirstname").attr("value",data[0].hername);
                 jQ05("#mylastname").attr("value",data[0].lastname);
@@ -150,6 +153,7 @@ else {
                 jQ05("#heremail").html("<h6>" + data[0].email2 + "</h6>");
                 //
 //******************* CHILD DATA ***********
+                // Load Profile Page Children Data
                     // Child 1
                     if(data[0].child_1_name)
                     {
@@ -328,7 +332,7 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info Modal</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
     }
 ?>
 
@@ -482,59 +486,19 @@ var jQ55 = jQuery.noConflict();
                     </div>
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
                     <input name="file" type="file" id="file" required />
-                </form>
             <div id="message">
 
             </div>
       </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <input type="submit" class="btn btn-primary" value="Save changes" />
         </div>
+        </form>
     </div>
   </div>
 </div>
 
-<!--***************************** Edit Picture OLD POPUP ***********************************-->
-<div id="my_popup7">
-	<h2>Upload New Family Photo</h2>
-	<br />
-	<br />
-	<h3>Upload new photo - click <strong>Save</strong> when done.</h3>
-	<hr>
-	<p><strong>NOTE:</strong> Photo must be less than 2MB, and in one of the following formats:</p> 
-	<table>
-		<tr>
-			<td width='40px'></td>
-			<td align='left'>
-				<ul>
-					<li>
-						.bmp; .jpg; .png
-					</li>
-				</ul>
-			</td>
-		</tr>
-	</table>
-	<br />
-	<hr>
-        
-<!--		<form enctype="multipart/form-data" action="imageverify.php" method="post">
- 		<form enctype="multipart/form-data" action="/includes/tec_featurenotavail.php" method="post">
- -->
-                    <form id="uploadImage" enctype="multipart/form-data" action="" method="post">
-<!--			<div id="image_preview"><img id="previewing" width="200" height="auto" <?php echo "src=$imagesource"; ?> /></div>-->
-			<div id="image_preview">
-<!--                            <img id="profile_pic_edit" width="200" height="auto" />-->
-                        </div>
-			<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
-                        <input name="file" type="file" id="file" required />
-                        <input type="submit" class="button_flat_blue_small" value="Upload Image" />
-			<input type="reset" class="my_popup7_close button_flat_blue_small" name="cancel" value="Cancel" />
-                    </form>
-		<div id="message">
-			
-		</div>
-</div>
 
 <!--***************************** Edit Contact Info MODAL ***********************************-->
 <!--***************************** Edit Contact Info MODAL ***********************************-->
@@ -565,27 +529,27 @@ var jQ55 = jQuery.noConflict();
                                             <tr>
                                                     <td width='350' align='right'>Her First Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='herfirstname' type='text' id='herfirstname' value="<?php echo $recordFirstHer; ?>"></td>
+                                                    <td width='294'><input name='herfirstname' type='text' id='herfirstname'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>Last Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='mylastname' type='text' id='mylastname' value="<?php echo $recordLast; ?>"></td>
+                                                    <td width='294'><input name='mylastname' type='text' id='mylastname'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>Street Address</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='myaddr1' type='text' id='myaddr1' value="<?php echo $recordAddr1; ?>"></td>
+                                                    <td width='294'><input name='myaddr1' type='text' id='myaddr1'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>Apartment # or PO Box</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='myaddr2' type='text' id='myaddr2' value="<?php echo $recordAddr2; ?>"></td>
+                                                    <td width='294'><input name='myaddr2' type='text' id='myaddr2'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>City</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='mycity' type='text' id='mycity' value="<?php echo $recordCity; ?>"></td>
+                                                    <td width='294'><input name='mycity' type='text' id='mycity'></td>
                                             </tr>
                                             <tr>
                                                     <td width='350' align='right'>State/Province</td>
@@ -616,7 +580,7 @@ var jQ55 = jQuery.noConflict();
                                         <tr>
                                                 <td width='350' align='right'>Zip Code</td>
                                                 <td width='6'>:</td>
-                                                <td width='294'><input name='myzip' type='text' id='myzip' placeholder="98270" pattern="^\d{5}$" value="<?php echo $recordZip; ?>"></td>
+                                                <td width='294'><input name='myzip' type='text' id='myzip' placeholder="98270" pattern="^\d{5}$"></td>
                                         </tr>
                                         <tr>
                                                 <td><br /></td>
