@@ -631,13 +631,14 @@ var jQ55 = jQuery.noConflict();
                                 </td>
                         </tr>
                 </table>
-        </form>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
+      </form>
     </div>
   </div>
 </div>
