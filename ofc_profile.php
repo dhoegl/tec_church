@@ -24,6 +24,13 @@ else {
         header("location:ofc_welcome.php");
         exit();
     }
+    /*Query Directory for State - unorthodox method to extract State value to determine 'selected' on Modal popup */
+		$profilequery = $mysql->query("SELECT * FROM $dir_tbl_name WHERE idDirectory = '" . $profileID . "'");
+                while ($staterow = $profilequery->fetch_assoc())
+                {
+                    $recordState = $staterow['State'];
+                }
+
 }
 ?>
 <!DOCTYPE html>
