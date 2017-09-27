@@ -144,7 +144,10 @@ else {
                 jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
                 jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
-                // Load Contact Edit Modsl
+                jQ05("#myanniversary").attr("value",data[0].anniv);
+                jQ05("#hisbirthday").attr("value",data[0].hisbday);
+                jQ05("#herbirthday").attr("value",data[0].herbday);
+                // Load Contact Edit Modal
                 jQ05("#hisfirstname").attr("value",data[0].hisname);
                 jQ05("#herfirstname").attr("value",data[0].hername);
                 jQ05("#mylastname").attr("value",data[0].lastname);
@@ -158,7 +161,13 @@ else {
                 jQ05("#hercell").attr("value",data[0].hercell);
                 jQ05("#hisemail").html("<h6>" + data[0].email1 + "</h6>");
                 jQ05("#heremail").html("<h6>" + data[0].email2 + "</h6>");
-                //
+                // Load Calendar Edit Modal
+                jQ05("#myanniversary").attr("value",data[0].anniv);
+                jQ05("#hisbirthday").attr("value",data[0].hisbday);
+                jQ05("#herbirthday").attr("value",data[0].herbday);
+                jQ05("#lastnameforcalendar").attr("value",data[0].lastname);
+                
+
 //******************* CHILD DATA ***********
                 // Load Profile Page Children Data
                     // Child 1
@@ -339,7 +348,7 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" type="button">Birthday/Anniversary</button></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" type="button">Children</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button></div></div></div>';
     }
 ?>
 
@@ -515,13 +524,13 @@ var jQ55 = jQuery.noConflict();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Contact Info</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Contact Info<br>Click <strong>Save Changes</strong> when done.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div> <!-- modal-header -->
       <div class="modal-body">
-            <p id="editProfile" class="my_popup4title"> </p>
+<!--            <p id="editProfile" class="my_popup4title"> </p>-->
             <form name='editcontact' method='post' action='/services/ofc_profile_contact_update.php'> 		
                     <table id="editprofiletable" border='0' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
@@ -639,18 +648,87 @@ var jQ55 = jQuery.noConflict();
                         </tr>
                 </table>
 
-      </div>
+      </div> <!-- modal-body -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
 <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
-      </div>
+      </div> <!-- modal-footer -->
       </form>
-    </div>
-  </div>
-</div>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
 
+<!--***************************** Edit Calendar Info MODAL ***********************************-->
+<!--***************************** Edit Calendar Info MODAL ***********************************-->
+<!--***************************** Edit Calendar Info MODAL ***********************************-->
 
+<div class="modal fade" id="ModalCalendarInfo" tabindex="-1" role="dialog" aria-labelledby="ModalCalendar" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalCalendar">Edit Anniversary and Birthdays<br>Click <strong>Save Changes</strong> when done.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+<!--        <p id="editCalendar" class="my_popup5title"> </p>-->
+        <form name='editcalendar' method='post' action='services/ofc_profile_calendar_update.php'> 		
+            <table id="editcalendartable" border='0' align='center' cellpadding='0' cellspacing='1' >
+                        <tr> 		
+                            <td>
+
+                                <table width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                        <tr>
+                                                <td><br /></td>
+                                        </tr>
+                                        <tr>
+                                                <td><br /></td>
+                                        </tr>
+                                        <tr>
+                                                <td width='350' align='right'>Your Anniversary</td>
+                                                <td width='6'>:</td>
+                                                <td width='294'><input name='myanniversary' type='date' id='myanniversary'></td>
+                                        </tr>
+                                        <tr>
+                                                <td width='350' align='right'>His Birthday</td>
+                                                <td width='6'>:</td>
+                                                <td width='294'><input name='hisbirthday' type='date' id='hisbirthday'></td>
+                                        </tr>
+                                        <tr>
+                                                <td width='350' align='right'>Her Birthday</td>
+                                                <td width='6'>:</td>
+                                                <td width='294'><input name='herbirthday' type='date' id='herbirthday'></td>
+                                        </tr>
+                                        <tr>
+                                                <td><br /></td>
+                                        </tr>
+                                        <tr>
+                                                <td><br /></td>
+                                        </tr>
+                                        <tr>
+                                                <td>&nbsp</td>
+                                                <td>&nbsp</td>
+                                                <td><input type="hidden" name="lastname" id="lastnameforcalendar"></td>
+                                        </tr>
+                                    </table>
+                                    <p>
+                                    <p>
+                                </td>
+                            </tr>
+                        </table>
+            </div> <!-- modal-body -->
+          
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" name="submitcalendar" class="btn btn-primary" value="Save changes" />
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div> <!-- modal-footer -->
+        </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
 
 <!--Include all compiled plugins (below), or include individual files as needed
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
