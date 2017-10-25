@@ -287,20 +287,6 @@ var jQ53 = jQuery.noConflict();
 				background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
 			});		
 		});
-		jQ53("#childrenEdit").click(function () {
-			jQ53("#my_popup6").popup({
-				background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', autozindex: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2"
-			});
-				jQ53('#child1select').css('background-color', '#8FBC8F');
-				jQ53('#child1edit').css('display', 'inline-block');
-				jQ53('#child2edit').css('display', 'none');
-				jQ53('#child3edit').css('display', 'none');
-				jQ53('#child4edit').css('display', 'none');
-				jQ53('#child5edit').css('display', 'none');
-				jQ53('#child6edit').css('display', 'none');
-				jQ53('#child7edit').css('display', 'none');
-				jQ53('#child8edit').css('display', 'none');
-		});
 });
 </script>
 
@@ -309,6 +295,177 @@ var jQ53 = jQuery.noConflict();
 var jQ55 = jQuery.noConflict();
 	jQ55(document).ready(function() {
             console.log('At jQ55');
+                jQ55("#Children_Info_Click").click(function (){
+                        console.log('Children_Info_Click Click invoked');
+                        jQ55('#child1select').css('background-color', '#8FBC8F');
+			jQ55('#child2select').css('background-color', '#0800ff');
+			jQ55('#child3select').css('background-color', '#0800ff');
+			jQ55('#child4select').css('background-color', '#0800ff');
+			jQ55('#child5select').css('background-color', '#0800ff');
+			jQ55('#child6select').css('background-color', '#0800ff');
+			jQ55('#child7select').css('background-color', '#0800ff');
+			jQ55('#child8select').css('background-color', '#0800ff');
+			jQ55('#child1edit').css('display', 'inline-block');
+			jQ55('#child2edit').css('display', 'none');
+			jQ55('#child3edit').css('display', 'none');
+			jQ55('#child4edit').css('display', 'none');
+			jQ55('#child5edit').css('display', 'none');
+			jQ55('#child6edit').css('display', 'none');
+			jQ55('#child7edit').css('display', 'none');
+			jQ55('#child8edit').css('display', 'none');
+                });
+               		jQ55('.childselectbutton').on('click', function(){
+                            var childselected = jQ55(this).attr('name');
+                            console.log('childselectbutton ' + childselected + ' has been clicked');
+                            switch(childselected) {
+				case 'child1select':
+					jQ55('#child1select').css('background-color', '#8FBC8F');
+					jQ55('#child1edit').css('display', 'inline-block');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child2select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#8FBC8F');
+					jQ55('#child2edit').css('display', 'inline-block');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child3select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#8FBC8F');
+					jQ55('#child3edit').css('display', 'inline-block');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child4select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#8FBC8F');
+					jQ55('#child4edit').css('display', 'inline-block');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child5select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#8FBC8F');
+					jQ55('#child5edit').css('display', 'inline-block');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child6select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#8FBC8F');
+					jQ55('#child6edit').css('display', 'inline-block');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child7select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#8FBC8F');
+					jQ55('#child7edit').css('display', 'inline-block');
+					jQ55('#child8select').css('background-color', '#0800ff');
+					jQ55('#child8edit').css('display', 'none');
+					break;
+				case 'child8select':
+					jQ55('#child1select').css('background-color', '#0800ff');
+					jQ55('#child1edit').css('display', 'none');
+					jQ55('#child2select').css('background-color', '#0800ff');
+					jQ55('#child2edit').css('display', 'none');
+					jQ55('#child3select').css('background-color', '#0800ff');
+					jQ55('#child3edit').css('display', 'none');
+					jQ55('#child4select').css('background-color', '#0800ff');
+					jQ55('#child4edit').css('display', 'none');
+					jQ55('#child5select').css('background-color', '#0800ff');
+					jQ55('#child5edit').css('display', 'none');
+					jQ55('#child6select').css('background-color', '#0800ff');
+					jQ55('#child6edit').css('display', 'none');
+					jQ55('#child7select').css('background-color', '#0800ff');
+					jQ55('#child7edit').css('display', 'none');
+					jQ55('#child8select').css('background-color', '#8FBC8F');
+					jQ55('#child8edit').css('display', 'inline-block');
+					break;
+			}
+			jQ55(this).css('background-color', '#8FBC8F');
+		});
+
 		jQ55("#NewPhoto").click(function () {
                         console.log('NewPhoto Click invoked');
 			jQ55("#my_popup7").popup({
@@ -348,7 +505,7 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalChildrenInfo" type="button">Children</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button></div></div></div>';
+        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" data-toggle="modal" id="Children_Info_Click" data-target="#ModalChildrenInfo" type="button">Children</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button></div></div></div>';
     }
 ?>
 
@@ -745,24 +902,27 @@ var jQ55 = jQuery.noConflict();
       <div class="modal-body">
             <form name='editchildren' method='post' action='services/ofc_profile_children_update.php'>
 <!-- CHILD TABS -->
-                    <table width='100%' id='childselection' border='0' align='center' cellpadding='0' cellspacing='1' >
-                            <tr>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child1select' id='child1select' value='Child 1'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child2select' id='child2select' value='Child 2'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child3select' id='child3select' value='Child 3'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child4select' id='child4select' value='Child 4'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child5select' id='child5select' value='Child 5'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child6select' id='child6select' value='Child 6'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child7select' id='child7select' value='Child 7'></td>
-                                    <td><input type="button" class="childselectbutton button_flat_blue_tiny" name='child8select' id='child8select' value='Child 8'></td>
-                            </tr>
-                    </table> 		
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child1select' id='child1select' value='Child 1'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child2select' id='child2select' value='Child 2'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child3select' id='child3select' value='Child 3'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child4select' id='child4select' value='Child 4'></div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child5select' id='child5select' value='Child 5'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child6select' id='child6select' value='Child 6'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child7select' id='child7select' value='Child 7'></div>
+                <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child8select' id='child8select' value='Child 8'></div>
+            </div> <!-- row -->
+        </div> <!-- container-fluid -->
+
                     <table id="editchildrentable" border='0' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
 
 <!-- CHILD 1 EDIT -->
-                                    <table id="child1edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child1edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
