@@ -174,88 +174,192 @@ else {
                     if(data[0].child_1_name)
                     {
                         jQ05("#c1n").html(data[0].child_1_name);
+                        jQ05("#child1_name").attr("value",data[0].child_1_name);
                         var dob2 = dateConvert(new Date(data[0].child_1_bday));
                         jQ05("#c1b").html(dob2);
+                        jQ05("#child1_bday").attr("value",data[0].child_1_bday);
                         jQ05("#c1g").html(data[0].child_1_gender);
+                        jQ05("#child1_gender").attr("value",data[0].child_1_gender);
+                        if(data[0].child_1_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child1_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child1_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_1_bday));
                         jQ05("#c1a").html(age2);
+                        jQ05("#child1_email").attr("value",data[0].child_1_email);
                     }
 
                     // Child 2
                     if(data[0].child_2_name)
                     {
                         jQ05("#c2n").html(data[0].child_2_name);
+                        jQ05("#child2_name").attr("value",data[0].child_2_name);
                         var dob2 = dateConvert(new Date(data[0].child_2_bday));
                         jQ05("#c2b").html(dob2);
+                        jQ05("#child2_bday").attr("value",data[0].child_2_bday);
                         jQ05("#c2g").html(data[0].child_2_gender);
+                        jQ05("#child2_gender").attr("value",data[0].child_2_gender);
+                        if(data[0].child_2_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child2_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child2_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_2_bday));
                         jQ05("#c2a").html(age2);
+                        jQ05("#child2_email").attr("value",data[0].child_2_email);
+            
+//                        jQ05("#c2n").html(data[0].child_2_name);
+//                        jQ05("#child2_name").attr("value",data[0].child_1_name);
+//                        var dob2 = dateConvert(new Date(data[0].child_2_bday));
+//                        jQ05("#c2b").html(dob2);
+//                        jQ05("#c2g").html(data[0].child_2_gender);
+//                        var age2 = calculate_age(new Date(data[0].child_2_bday));
+//                        jQ05("#c2a").html(age2);
                     }
 
                     // Child 3
                     if(data[0].child_3_name)
                     {
                         jQ05("#c3n").html(data[0].child_3_name);
+                        jQ05("#child3_name").attr("value",data[0].child_3_name);
                         var dob2 = dateConvert(new Date(data[0].child_3_bday));
                         jQ05("#c3b").html(dob2);
+                        jQ05("#child3_bday").attr("value",data[0].child_3_bday);
                         jQ05("#c3g").html(data[0].child_3_gender);
+                        jQ05("#child3_gender").attr("value",data[0].child_3_gender);
+                        if(data[0].child_3_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child3_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child3_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_3_bday));
                         jQ05("#c3a").html(age2);
+                        jQ05("#child3_email").attr("value",data[0].child_3_email);
                     }
 
                     // Child 4
                     if(data[0].child_4_name)
                     {
                         jQ05("#c4n").html(data[0].child_4_name);
+                        jQ05("#child4_name").attr("value",data[0].child_4_name);
                         var dob2 = dateConvert(new Date(data[0].child_4_bday));
                         jQ05("#c4b").html(dob2);
+                        jQ05("#child4_bday").attr("value",data[0].child_4_bday);
                         jQ05("#c4g").html(data[0].child_4_gender);
+                        jQ05("#child4_gender").attr("value",data[0].child_4_gender);
+                        if(data[0].child_4_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child4_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child4_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_4_bday));
                         jQ05("#c4a").html(age2);
+                        jQ05("#child4_email").attr("value",data[0].child_4_email);
                     }
 
                     // Child 5
                     if(data[0].child_5_name)
                     {
                         jQ05("#c5n").html(data[0].child_5_name);
+                        jQ05("#child5_name").attr("value",data[0].child_5_name);
                         var dob2 = dateConvert(new Date(data[0].child_5_bday));
                         jQ05("#c5b").html(dob2);
+                        jQ05("#child5_bday").attr("value",data[0].child_5_bday);
                         jQ05("#c5g").html(data[0].child_5_gender);
+                        jQ05("#child5_gender").attr("value",data[0].child_5_gender);
+                        if(data[0].child_5_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child5_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child5_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_5_bday));
                         jQ05("#c5a").html(age2);
+                        jQ05("#child5_email").attr("value",data[0].child_5_email);
                     }
 
                     // Child 6
                     if(data[0].child_6_name)
                     {
                         jQ05("#c6n").html(data[0].child_6_name);
+                        jQ05("#child6_name").attr("value",data[0].child_6_name);
                         var dob2 = dateConvert(new Date(data[0].child_6_bday));
                         jQ05("#c6b").html(dob2);
+                        jQ05("#child6_bday").attr("value",data[0].child_6_bday);
                         jQ05("#c6g").html(data[0].child_6_gender);
+                        jQ05("#child6_gender").attr("value",data[0].child_6_gender);
+                        if(data[0].child_6_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child6_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child6_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_6_bday));
                         jQ05("#c6a").html(age2);
+                        jQ05("#child6_email").attr("value",data[0].child_6_email);
                     }
 
-                    // Child 7
+                    // Child 7a
                     if(data[0].child_7_name)
                     {
                         jQ05("#c7n").html(data[0].child_7_name);
+                        jQ05("#child7_name").attr("value",data[0].child_7_name);
                         var dob2 = dateConvert(new Date(data[0].child_7_bday));
                         jQ05("#c7b").html(dob2);
+                        jQ05("#child7_bday").attr("value",data[0].child_7_bday);
                         jQ05("#c7g").html(data[0].child_7_gender);
+                        jQ05("#child7_gender").attr("value",data[0].child_7_gender);
+                        if(data[0].child_7_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child7_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child7_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_7_bday));
                         jQ05("#c7a").html(age2);
+                        jQ05("#child7_email").attr("value",data[0].child_7_email);
                     }
 
                     // Child 8
                     if(data[0].child_8_name)
                     {
                         jQ05("#c8n").html(data[0].child_8_name);
+                        jQ05("#child8_name").attr("value",data[0].child_8_name);
                         var dob2 = dateConvert(new Date(data[0].child_8_bday));
                         jQ05("#c8b").html(dob2);
+                        jQ05("#child8_bday").attr("value",data[0].child_8_bday);
                         jQ05("#c8g").html(data[0].child_8_gender);
+                        jQ05("#child8_gender").attr("value",data[0].child_8_gender);
+                        if(data[0].child_8_gender == 'F'){
+                            var genval = 1;
+                            jQ05('#child8_gender > option').eq(genval).attr('selected','selected');
+                        } 
+                        else {
+                            var gentest = 0;
+                            jQ05('#child8_gender > option').eq(genval).attr('selected','selected');
+                        }
                         var age2 = calculate_age(new Date(data[0].child_8_bday));
                         jQ05("#c8a").html(age2);
+                        jQ05("#child8_email").attr("value",data[0].child_8_email);
                     }
                 
             });
@@ -689,7 +793,7 @@ var jQ55 = jQuery.noConflict();
       <div class="modal-body">
 <!--            <p id="editProfile" class="my_popup4title"> </p>-->
             <form name='editcontact' method='post' action='/services/ofc_profile_contact_update.php'> 		
-                    <table id="editprofiletable" border='0' align='center' cellpadding='0' cellspacing='1' >
+                    <table id="editprofiletable" border='1' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
 
@@ -832,7 +936,7 @@ var jQ55 = jQuery.noConflict();
       <div class="modal-body">
 <!--        <p id="editCalendar" class="my_popup5title"> </p>-->
         <form name='editcalendar' method='post' action='services/ofc_profile_calendar_update.php'> 		
-            <table id="editcalendartable" border='0' align='center' cellpadding='0' cellspacing='1' >
+            <table id="editcalendartable" border='1' align='center' cellpadding='0' cellspacing='1' >
                         <tr> 		
                             <td>
 
@@ -917,395 +1021,409 @@ var jQ55 = jQuery.noConflict();
             </div> <!-- row -->
         </div> <!-- container-fluid -->
 
-                    <table id="editchildrentable" border='0' align='center' cellpadding='0' cellspacing='1' >
+                    <table id="editchildrentable" width='100%' border='1' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
 
 <!-- CHILD 1 EDIT -->
                                     <table id="child1edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 1</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 1 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child1_name' type='text' id='child1_name' value="<?php echo $recordChild_1_Name; ?>"></td>
+                                                    <td><input name='child1_name' type='text' size="25" id='child1_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 1 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child1_bday' type='date' id='child1_bday' value="<?php echo $recordChild_1_BDay; ?>"></td>
+                                                    <td><input name='child1_bday' type='date' id='child1_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 1 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child1_gender" id="child1_gender">
-                                                                    <option value="M" <?php if ($recordChild_1_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_1_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 1 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child1_email' type='email' id='child1_email' value="<?php echo $recordChild_1_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child1_email' type='email' size="25" id='child1_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove1child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit1children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove1child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit1children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 2 EDIT -->
-                                    <table id="child2edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child2edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 2</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 2 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child2_name' type='text' id='child1_name' value="<?php echo $recordChild_2_Name; ?>"></td>
+                                                    <td><input name='child2_name' type='text' size="25" id='child2_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 2 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child2_bday' type='date' id='child2_bday' value="<?php echo $recordChild_2_BDay; ?>"></td>
+                                                    <td><input name='child2_bday' type='date' id='child2_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 2 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child2_gender" id="child2_gender">
-                                                                    <option value="M" <?php if ($recordChild_2_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_2_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 2 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child2_email' type='email' id='child2_email' value="<?php echo $recordChild_2_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child2_email' type='email' size="25" id='child2_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove2child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit2children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove2child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit2children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
 <!-- CHILD 3 EDIT -->
-                                    <table id="child3edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child3edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 3</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 3 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child3_name' type='text' id='child3_name' value="<?php echo $recordChild_3_Name; ?>"></td>
+                                                    <td><input name='child3_name' type='text' size="25" id='child3_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 3 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child3_bday' type='date' id='child3_bday' value="<?php echo $recordChild_3_BDay; ?>"></td>
+                                                    <td><input name='child3_bday' type='date' id='child3_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 3 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child3_gender" id="child3_gender">
-                                                                    <option value="M" <?php if ($recordChild_3_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_3_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 3 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child3_email' type='email' id='child3_email' value="<?php echo $recordChild_3_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child3_email' type='email' size="25" id='child3_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove3child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit3children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove3child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit3children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 4 EDIT -->
-                                    <table id="child4edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child4edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 4</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 4 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child4_name' type='text' id='child4_name' value="<?php echo $recordChild_4_Name; ?>"></td>
+                                                    <td><input name='child4_name' type='text' size="25" id='child4_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 4 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child4_bday' type='date' id='child4_bday' value="<?php echo $recordChild_4_BDay; ?>"></td>
+                                                    <td><input name='child4_bday' type='date' id='child4_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 4 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child4_gender" id="child4_gender">
-                                                                    <option value="M" <?php if ($recordChild_4_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_4_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 4 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child4_email' type='email' id='child4_email' value="<?php echo $recordChild_4_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child4_email' type='email' size="25" id='child4_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove4child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit4children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove4child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit4children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 5 EDIT -->
-                                    <table id="child5edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child5edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 5</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 5 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child5_name' type='text' id='child5_name' value="<?php echo $recordChild_5_Name; ?>"></td>
+                                                    <td><input name='child5_name' type='text' size="25" id='child5_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 5 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child5_bday' type='date' id='child5_bday' value="<?php echo $recordChild_5_BDay; ?>"></td>
+                                                    <td><input name='child5_bday' type='date' id='child5_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 5 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child5_gender" id="child5_gender">
-                                                                    <option value="M" <?php if ($recordChild_5_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_5_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 5 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child5_email' type='email' id='child5_email' value="<?php echo $recordChild_5_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child5_email' type='email' size="25" id='child5_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove5child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit5children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove5child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit5children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 6 EDIT -->
-                                    <table id="child6edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child6edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 6</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 6 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child6_name' type='text' id='child6_name' value="<?php echo $recordChild_6_Name; ?>"></td>
+                                                    <td><input name='child6_name' type='text' size="25" id='child6_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 6 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child6_bday' type='date' id='child6_bday' value="<?php echo $recordChild_6_BDay; ?>"></td>
+                                                    <td><input name='child6_bday' type='date' id='child6_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 6 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child6_gender" id="child6_gender">
-                                                                    <option value="M" <?php if ($recordChild_6_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_6_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 6 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child6_email' type='email' id='child6_email' value="<?php echo $recordChild_6_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child6_email' type='email' size="25" id='child6_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove6child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit6children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove6child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit6children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 7 EDIT -->
-                                    <table id="child7edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child7edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 7</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 7 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child7_name' type='text' id='child7_name' value="<?php echo $recordChild_7_Name; ?>"></td>
+                                                    <td><input name='child7_name' type='text' size="25" id='child7_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 7 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child7_bday' type='date' id='child7_bday' value="<?php echo $recordChild_7_BDay; ?>"></td>
+                                                    <td><input name='child7_bday' type='date' id='child7_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 7 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child7_gender" id="child7_gender">
-                                                                    <option value="M" <?php if ($recordChild_7_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_7_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 7 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child7_email' type='email' id='child7_email' value="<?php echo $recordChild_7_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child7_email' type='email' size="25" id='child7_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove7child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit7children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove7child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit7children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
 <!-- CHILD 8 EDIT -->
-                                    <table id="child8edit" width='100%' border='0' cellpadding='3' cellspacing='1' >
+                                    <table id="child8edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3"><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
+                                                <td colspan="3" align='center'><strong>Child 8</strong></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 8 Name</td>
+                                                    <td align='right'>Name</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child8_name' type='text' id='child8_name' value="<?php echo $recordChild_8_Name; ?>"></td>
+                                                    <td><input name='child8_name' type='text' size="25" id='child8_name'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 8 Birthday</td>
+                                                    <td align='right'>Birthday</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child8_bday' type='date' id='child8_bday' value="<?php echo $recordChild_8_BDay; ?>"></td>
+                                                    <td><input name='child8_bday' type='date' id='child8_bday'></td>
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 8 Gender</td>
+                                                    <td align='right'>Gender</td>
                                                     <td width='6'>:</td>
                                                     <td>
                                                             <select name="child8_gender" id="child8_gender">
-                                                                    <option value="M" <?php if ($recordChild_8_Gender == 'M') echo 'selected'; ?>>Male</option>
-                                                                    <option value="F"<?php if ($recordChild_8_Gender == 'F') echo 'selected'; ?>>Female</option>
+                                                                    <option value="M">Male</option>
+                                                                    <option value="F">Female</option>
                                                             </select>
-                                                    </td>
+                                                   </td>
 
                                             </tr>
                                             <tr>
-                                                    <td width='350' align='right'>Child 8 Email</td>
+                                                    <td align='right'>Email</td>
                                                     <td width='6'>:</td>
-                                                    <td width='294'><input name='child8_email' type='email' id='child8_email' value="<?php echo $recordChild_8_Email; ?>"></td>
+                                                    <td colspan="2"><input name='child8_email' type='email' size="25" id='child8_email'></td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td><br /></td>
                                             </tr>
                                             <tr>
-                                                    <td>&nbsp</td>
-                                                    <td>&nbsp</td>
-                                                    <td><input type="hidden" name="lastname" value="<?php echo $recordLast; ?>" />
-                                                    <td><input type="submit" class="button_flat_red_small" name='remove8child' value='Delete'></td>
-                                                    <td><input type="submit" class="button_flat_green_small" name='submit8children' value='Save'></td>
-                                                    <td><input type="reset" class="my_popup6_close button_flat_blue_small" name="cancel" value="  Exit   " /></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="3" align='right'>
+                                                    <input type="submit" name="remove8child" class="btn btn-danger" value="Delete Child" />
+                                                    <input type="submit" name="submit8children" class="btn btn-primary" value="Save changes" />
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </td>
                                             </tr>
                                             </table>
+
                                             <p>
                                             <p>
                                     </td>
@@ -1313,8 +1431,8 @@ var jQ55 = jQuery.noConflict();
                     </table>
     </div> <!-- modal-body -->
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <input type="submit" name="submitchildren" class="btn btn-primary" value="Save changes" />
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" name="submitchildren" class="btn btn-primary" value="Save changes" />-->
 <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div> <!-- modal-footer -->
         </form>

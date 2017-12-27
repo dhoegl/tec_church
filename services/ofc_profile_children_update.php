@@ -23,13 +23,13 @@ if(isset($_POST['submit1children']))
 	$child_email = stripslashes($_POST['child1_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_1_Name = '" . $child_name . "', Child_1_BDay_Date = '" . $child_bday . "', Child_1_Gender = '" . $child_gender . "', Child_1_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove1child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_1_Name = NULL, Child_1_BDay_Date = NULL, Child_1_Gender = NULL, Child_1_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 1 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 1 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit2children']))
@@ -44,13 +44,13 @@ elseif(isset($_POST['submit2children']))
 	$child_email = stripslashes($_POST['child2_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_2_Name = '" . $child_name . "', Child_2_BDay_Date = '" . $child_bday . "', Child_2_Gender = '" . $child_gender . "', Child_2_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove2child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_2_Name = NULL, Child_2_BDay_Date = NULL, Child_2_Gender = NULL, Child_2_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 2 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 2 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit3children']))
@@ -65,13 +65,13 @@ elseif(isset($_POST['submit3children']))
 	$child_email = stripslashes($_POST['child3_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_3_Name = '" . $child_name . "', Child_3_BDay_Date = '" . $child_bday . "', Child_3_Gender = '" . $child_gender . "', Child_3_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove3child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_3_Name = NULL, Child_3_BDay_Date = NULL, Child_3_Gender = NULL, Child_3_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 3 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 3 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit4children']))
@@ -86,13 +86,13 @@ elseif(isset($_POST['submit4children']))
 	$child_email = stripslashes($_POST['child4_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_4_Name = '" . $child_name . "', Child_4_BDay_Date = '" . $child_bday . "', Child_4_Gender = '" . $child_gender . "', Child_4_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove4child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_4_Name = NULL, Child_4_BDay_Date = NULL, Child_4_Gender = NULL, Child_4_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 4 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 4 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit5children']))
@@ -107,13 +107,13 @@ elseif(isset($_POST['submit5children']))
 	$child_email = stripslashes($_POST['child5_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_5_Name = '" . $child_name . "', Child_5_BDay_Date = '" . $child_bday . "', Child_5_Gender = '" . $child_gender . "', Child_5_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove5child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_5_Name = NULL, Child_5_BDay_Date = NULL, Child_5_Gender = NULL, Child_5_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 5 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 5 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit6children']))
@@ -128,13 +128,13 @@ elseif(isset($_POST['submit6children']))
 	$child_email = stripslashes($_POST['child6_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_6_Name = '" . $child_name . "', Child_6_BDay_Date = '" . $child_bday . "', Child_6_Gender = '" . $child_gender . "', Child_6_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove6child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_6_Name = NULL, Child_6_BDay_Date = NULL, Child_6_Gender = NULL, Child_6_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 6 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 6 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit7children']))
@@ -149,13 +149,13 @@ elseif(isset($_POST['submit7children']))
 	$child_email = stripslashes($_POST['child7_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_7_Name = '" . $child_name . "', Child_7_BDay_Date = '" . $child_bday . "', Child_7_Gender = '" . $child_gender . "', Child_7_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
-	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+//	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove7child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_7_Name = NULL, Child_7_BDay_Date = NULL, Child_7_Gender = NULL, Child_7_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 7 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 7 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['submit8children']))
@@ -170,13 +170,13 @@ elseif(isset($_POST['submit8children']))
 	$child_email = stripslashes($_POST['child8_email']);
 	
 	$childupdatequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_8_Name = '" . $child_name . "', Child_8_BDay_Date = '" . $child_bday . "', Child_8_Gender = '" . $child_gender . "', Child_8_Email = '" . $child_email . "'  WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childupdate = @mysql_query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childupdate = $mysql->query($childupdatequery) or die("A database error occurred when trying to update child info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 elseif(isset($_POST['remove8child'])) {
 	$namelast = $_POST['lastname'];
 	$childremovequery = "UPDATE " . $_SESSION['dirtablename'] . " SET Child_8_Name = NULL, Child_8_BDay_Date = NULL, Child_8_Gender = NULL, Child_8_Email = NULL WHERE idDirectory = '". $_SESSION['idDirectory'] . "'"; 
-	$childremove = @mysql_query($childremovequery) or die("A database error occurred when trying to update child 8 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
+	$childremove = $mysql->query($childremovequery) or die("A database error occurred when trying to update child 8 info. See tec_profile_children_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $namelast, 'Profile Update : Children : DirectoryID = ', $_SESSION['idDirectory']);
 }
 

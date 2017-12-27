@@ -179,6 +179,17 @@ body
 	-webkit-appearance:square-button;
 }
 
+/********************** Styles for Modal Popups ***************************/
+#editprofiletable {
+    background-color: #EBECFF;   
+}
+#editcalendartable {
+    background-color: #EBECFF;    
+}
+#editchildrentable {
+    background-color: #EBECFF;
+}
+
 /********************** Style for POPUP OVERLAY ***************************/
 	#my_popup {
 		background-color: #EBECFF;
