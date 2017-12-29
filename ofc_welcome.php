@@ -80,14 +80,18 @@ session_start();
             </div>
         </div>
             <div class="col-sm-12">
-                <img src="images/tfcbanner3.png" class="img-responsive center-block" alt=""/>
+                <img src="images/ourfamilyconnections2.png" class="img-responsive center-block" alt=""/>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body bg-success center-block">
-                    <h3 class="text-center">Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</h3>
+<!--                    <h3 class="text-center">Trinity Evangel Church is a community of Christians who worship a great God, who proclaim a potent gospel, and who love serving one another</h3>
                     <h4 align="center">We believe in the inerrancy and sufficiency of God&#39;s Word</h4>
                     <h4 align="center">We believe in the sovereignty of God&#39;s grace</h4>
-                    <h4 align="center">We believe in the priority of life-on-life discipleship</h4>
+                    <h4 align="center">We believe in the priority of life-on-life discipleship</h4>-->
+                    <h3 class="text-center">Your connection to Church Family and Friends</h3>
+                    <h4 align="center">And he said to him, "You shall love the Lord your God with all your heart and with all your soul and with all your mind.This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself. Matt 22:36-40 (ESV)</h4>
+                    <h4 align="center">A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another. By this all people will know that you are my disciples, if you have love for one another. John 13:34-35 (ESV)</h4>
+                    <h4 align="center">Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you. 1 Thess 5:16-18 (ESV)</h4>
                 </div>
             </div>
         </div> <!--row-->

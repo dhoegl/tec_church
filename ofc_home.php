@@ -93,8 +93,8 @@ if(!$_SESSION['logged in']) {
             <div class="card bg-light border-primary text-center m-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title">What's Happening</h4>
-                    <p class="card-text">Check out the latest things going on at Trinity Evangel Church.</p>
+                    <h4 class="card-title">Our Church</h4>
+                    <p class="card-text">Check out the latest information about Trinity Evangel Church.</p>
                     <div class="list-group">
                         <a href="http://www.trinityevangel.org" class="list-group-item list-group-item-action bg-light border-primary" target="_blank">Trinity Evangel Church website</a>
                         <a href="http://evangelcs.org" class="list-group-item list-group-item-action bg-light border-primary" target="_blank">Evangel Classical School</a>
@@ -102,24 +102,10 @@ if(!$_SESSION['logged in']) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!--col-md-4-->
         <div class="col-md-4">
             <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
-                <div class="card-body">
-                    <h2 class="card-title">Upcoming Events</h2>
-                </div>
-                <div class="card-block">
-                    <p class="card-text">Upcoming Events placeholder.</p>
-                </div>
-                <div class="card-block">
-                    <a href="#" class="btn btn-primary">View More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-        <div class="col-md-4">
-            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" alt="Card image cap">
+                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title">Latest prayer requests</h2>
                 <div class="card-block">
@@ -144,7 +130,22 @@ if(!$_SESSION['logged in']) {
                     <a href="ofc_prayer.php" class="btn btn-primary">View More</a>
                 </div>
             </div>
-        </div>
+        </div> <!--col-md-4-->
+        <div class="col-md-4">
+            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
+                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Upcoming Events</h2>
+                </div>
+                <div class="card-block">
+                    <p class="card-text">Upcoming Events placeholder.</p>
+                </div>
+                <div class="card-block">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div> <!--col-md-4-->
+    </div> <!-- row -->
 </div> <!--container-->
 
 
