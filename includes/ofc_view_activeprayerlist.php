@@ -24,7 +24,8 @@ jQ8(document).ready(function() {
 			{
             "targets": -2,
             "data": null,
-            "defaultContent": "<button class='my_popup_open button_flat_green_small'>Details</button>"
+//            "defaultContent": "<button class='my_popup_open button_flat_green_small'>Details</button>"
+            "defaultContent": "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#ModalPrayerInfo'>Details</button>"
 			},
 			{
         		className: "indexcol",

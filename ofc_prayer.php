@@ -400,8 +400,67 @@ jQ9(document).ready(function () {
 
 </div>
 
+<!--***************************** View Prayer Info MODAL ***********************************-->
+<!--***************************** View Prayer Info MODAL ***********************************-->
+<!--***************************** View Prayer Info MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerInfo" tabindex="-1" role="dialog" aria-labelledby="ModalPrayer" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalPrayer">Prayer Request Details<br>Click <strong>Close</strong> when done.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+	<form name='form1' method='post' action=''> 		
+	<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+        	<tr class="praytable_even">
+                    <td colspan="1"><strong>Type: </strong></td>
+                    <td colspan="2" class="praypraise"> </td>
+                    <td align="right" colspan="1"><strong>Answered: </strong></td>
+                    <td align="center" colspan="1" class="prayanswer"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Date: </strong></td>
+                    <td colspan="4" class="praydate"> </td>
+		</tr>
+		<tr class="praytable_even">
+                    <td colspan="1"><strong>From: </strong></td>
+                    <td colspan="4" class="praywho"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Title: </strong></td>
+                    <td colspan="4" class="praytitle"> </td>
+		</tr>
+		<tr>
+                    <td colspan="5">
+                        <hr />
+                    </td>
+		</tr>
+	</table>
+            <table id="praycontent" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+		<tr class="praytable_text">
+                    <td colspan="4">
+                        <div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                    </td>
+ 		</tr>
+	</table>
+    </div> <!-- modal-body -->
+    <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div> <!-- modal-footer -->
+    </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
+
     
-<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
 

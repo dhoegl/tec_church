@@ -144,9 +144,6 @@ else {
                 jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
                 jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
                 jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
-                jQ05("#myanniversary").attr("value",data[0].anniv);
-                jQ05("#hisbirthday").attr("value",data[0].hisbday);
-                jQ05("#herbirthday").attr("value",data[0].herbday);
                 // Load Contact Edit Modal
                 jQ05("#hisfirstname").attr("value",data[0].hisname);
                 jQ05("#herfirstname").attr("value",data[0].hername);
@@ -162,9 +159,9 @@ else {
                 jQ05("#hisemail").html("<h6>" + data[0].email1 + "</h6>");
                 jQ05("#heremail").html("<h6>" + data[0].email2 + "</h6>");
                 // Load Calendar Edit Modal
-                jQ05("#myanniversary").attr("value",data[0].anniv);
-                jQ05("#hisbirthday").attr("value",data[0].hisbday);
-                jQ05("#herbirthday").attr("value",data[0].herbday);
+                jQ05("#myanniversary").val(data[0].anniv);
+                jQ05("#hisbirthday").val(data[0].hisbday);
+                jQ05("#herbirthday").val(data[0].herbday);
                 jQ05("#lastnameforcalendar").attr("value",data[0].lastname);
                 
 
@@ -177,7 +174,7 @@ else {
                         jQ05("#child1_name").attr("value",data[0].child_1_name);
                         var dob2 = dateConvert(new Date(data[0].child_1_bday));
                         jQ05("#c1b").html(dob2);
-                        jQ05("#child1_bday").attr("value",data[0].child_1_bday);
+                        jQ05("#child1_bday").val(data[0].child_1_bday);
                         jQ05("#c1g").html(data[0].child_1_gender);
                         jQ05("#child1_gender").attr("value",data[0].child_1_gender);
                         if(data[0].child_1_gender == 'F'){
@@ -200,7 +197,7 @@ else {
                         jQ05("#child2_name").attr("value",data[0].child_2_name);
                         var dob2 = dateConvert(new Date(data[0].child_2_bday));
                         jQ05("#c2b").html(dob2);
-                        jQ05("#child2_bday").attr("value",data[0].child_2_bday);
+                        jQ05("#child2_bday").val(data[0].child_2_bday);
                         jQ05("#c2g").html(data[0].child_2_gender);
                         jQ05("#child2_gender").attr("value",data[0].child_2_gender);
                         if(data[0].child_2_gender == 'F'){
@@ -214,14 +211,6 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_2_bday));
                         jQ05("#c2a").html(age2);
                         jQ05("#child2_email").attr("value",data[0].child_2_email);
-            
-//                        jQ05("#c2n").html(data[0].child_2_name);
-//                        jQ05("#child2_name").attr("value",data[0].child_1_name);
-//                        var dob2 = dateConvert(new Date(data[0].child_2_bday));
-//                        jQ05("#c2b").html(dob2);
-//                        jQ05("#c2g").html(data[0].child_2_gender);
-//                        var age2 = calculate_age(new Date(data[0].child_2_bday));
-//                        jQ05("#c2a").html(age2);
                     }
 
                     // Child 3
@@ -231,7 +220,7 @@ else {
                         jQ05("#child3_name").attr("value",data[0].child_3_name);
                         var dob2 = dateConvert(new Date(data[0].child_3_bday));
                         jQ05("#c3b").html(dob2);
-                        jQ05("#child3_bday").attr("value",data[0].child_3_bday);
+                        jQ05("#child3_bday").val(data[0].child_3_bday);
                         jQ05("#c3g").html(data[0].child_3_gender);
                         jQ05("#child3_gender").attr("value",data[0].child_3_gender);
                         if(data[0].child_3_gender == 'F'){
@@ -254,7 +243,7 @@ else {
                         jQ05("#child4_name").attr("value",data[0].child_4_name);
                         var dob2 = dateConvert(new Date(data[0].child_4_bday));
                         jQ05("#c4b").html(dob2);
-                        jQ05("#child4_bday").attr("value",data[0].child_4_bday);
+                        jQ05("#child4_bday").val(data[0].child_4_bday);
                         jQ05("#c4g").html(data[0].child_4_gender);
                         jQ05("#child4_gender").attr("value",data[0].child_4_gender);
                         if(data[0].child_4_gender == 'F'){
@@ -277,7 +266,7 @@ else {
                         jQ05("#child5_name").attr("value",data[0].child_5_name);
                         var dob2 = dateConvert(new Date(data[0].child_5_bday));
                         jQ05("#c5b").html(dob2);
-                        jQ05("#child5_bday").attr("value",data[0].child_5_bday);
+                        jQ05("#child5_bday").val(data[0].child_5_bday);
                         jQ05("#c5g").html(data[0].child_5_gender);
                         jQ05("#child5_gender").attr("value",data[0].child_5_gender);
                         if(data[0].child_5_gender == 'F'){
@@ -300,7 +289,7 @@ else {
                         jQ05("#child6_name").attr("value",data[0].child_6_name);
                         var dob2 = dateConvert(new Date(data[0].child_6_bday));
                         jQ05("#c6b").html(dob2);
-                        jQ05("#child6_bday").attr("value",data[0].child_6_bday);
+                        jQ05("#child6_bday").val(data[0].child_6_bday);
                         jQ05("#c6g").html(data[0].child_6_gender);
                         jQ05("#child6_gender").attr("value",data[0].child_6_gender);
                         if(data[0].child_6_gender == 'F'){
@@ -323,7 +312,7 @@ else {
                         jQ05("#child7_name").attr("value",data[0].child_7_name);
                         var dob2 = dateConvert(new Date(data[0].child_7_bday));
                         jQ05("#c7b").html(dob2);
-                        jQ05("#child7_bday").attr("value",data[0].child_7_bday);
+                        jQ05("#child7_bday").val(data[0].child_7_bday);
                         jQ05("#c7g").html(data[0].child_7_gender);
                         jQ05("#child7_gender").attr("value",data[0].child_7_gender);
                         if(data[0].child_7_gender == 'F'){
@@ -346,7 +335,7 @@ else {
                         jQ05("#child8_name").attr("value",data[0].child_8_name);
                         var dob2 = dateConvert(new Date(data[0].child_8_bday));
                         jQ05("#c8b").html(dob2);
-                        jQ05("#child8_bday").attr("value",data[0].child_8_bday);
+                        jQ05("#child8_bday").val(data[0].child_8_bday);
                         jQ05("#c8g").html(data[0].child_8_gender);
                         jQ05("#child8_gender").attr("value",data[0].child_8_gender);
                         if(data[0].child_8_gender == 'F'){
@@ -1431,9 +1420,6 @@ var jQ55 = jQuery.noConflict();
                     </table>
     </div> <!-- modal-body -->
     <div class="modal-footer">
-<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <input type="submit" name="submitchildren" class="btn btn-primary" value="Save changes" />-->
-<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div> <!-- modal-footer -->
         </form>
     </div> <!-- modal-content -->
