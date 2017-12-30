@@ -14,14 +14,14 @@
             echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
         }
         else {
-            echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">Family Profile</a></li>';
+            echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
             }
     }
     else
     {
         echo '<li class="nav-item"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
     }
-    if($activeparam == '3')
+    if($activeparam == '3' || ($activeparam == '2' && $MyView == 'N'))
     {
         echo '<li class="nav-item active"><a class="nav-link" href="ofc_family.php">Directory</a></li>';
     }
@@ -31,11 +31,11 @@
     }
     if($activeparam == '4')
     {
-        echo '<li class="nav-item active"><a class="nav-link" href="#">Calendar</a></li>';
+        echo '<li class="nav-item active"><a class="nav-link" href="ofc_calendar.php">Calendar</a></li>';
     }
     else
     {
-        echo '<li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_calendar.php">Calendar</a></li>';
     }
     if($activeparam == '5')
     {
@@ -52,6 +52,12 @@
     else
     {
         echo '<li class="nav-item"><a class="nav-link" href="#">Events</a></li>';
+    }
+    if($_SESSION['reg_admin'] == '1') {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Registration Admin</a></li>';
+    }
+    if($_SESSION['pray_admin'] == '1') {
+        echo '<li class="nav-item"><a class="nav-link" href="#">Prayer Admin</a></li>';
     }
     echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
 ?>

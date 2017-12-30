@@ -107,6 +107,17 @@ else {
             return newdateval;
         }
     </script>
+    <script type="text/javascript">
+        function dateConvertNoYear(dateval)
+        {
+            var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            var curr_date = dateval.getUTCDate();
+            var curr_month = dateval.getMonth();
+            var curr_year = dateval.getFullYear();
+            var newdatevalnoyear = m_names[curr_month] + " " + curr_date;
+            return newdatevalnoyear;
+        }
+    </script>
     
     <script type="text/javascript">
         var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
@@ -138,12 +149,39 @@ else {
                 jQ05("#profile_card").append(profileinfo.join(''));
                 jQ05("#profile_pic").attr("src", "profile_img/" + data[0].piclink2);
                 jQ05("#profile_pic_edit").attr("src", "profile_img/" + data[0].piclink2);
-                jQ05("#profile_email_him").html("<h6>" + data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a></h6>");
-                jQ05("#profile_email_her").html("<h6>" + data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a></h6>");
-                jQ05("#profile_phone_home").html("<h6>Home phone: " + data[0].phonehome) + "</h6>";
-                jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
-                jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
-                jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+                if(data[0].hisname){
+                    jQ05("#profile_email_him").html("<h6>" + data[0].hisname + " (or both): " + "<a href='mailto:" + data[0].email1 + "'>" + data[0].email1 + "</a></h6>");
+                }
+                if(data[0].hername){
+                    jQ05("#profile_email_her").html("<h6>" + data[0].hername + ": <a href='mailto:" + data[0].email2 + "'>" + data[0].email2 + "</a></h6>");
+                }
+                if(data[0].phonehome){
+                    jQ05("#profile_phone_home").html("<h6>Home phone: " + data[0].phonehome) + "</h6>";
+                }
+                if(data[0].hisname){
+                    jQ05("#profile_cell_him").html("<h6>" + data[0].hisname + " cell: <a href='tel:" + data[0].hiscell + "'>" + data[0].hiscell + "</a></h6>");
+                }
+                if(data[0].hername){
+                    jQ05("#profile_cell_her").html("<h6>" + data[0].hername + " cell: <a href='tel:" + data[0].hercell + "'>" + data[0].hercell + "</a></h6>");
+                }
+                if(data[0].addr1 && data[0].addr2){
+                    jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].addr2 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+                }
+                if(data[0].addr1 && !data[0].addr2){
+                    jQ05("#profile_addr").html(data[0].addr1 + "\r\n" + data[0].city + ", " + data[0].state + " " + data[0].zip);
+                }
+                if(data[0].anniv) {
+                    var myanniv = dateConvert(new Date(data[0].anniv));
+                    jQ05("#profile_anniv").html("<h6>Anniversary: " + myanniv + "</h6>");
+                }
+                if(data[0].hisbday){
+                    var hisbday2 = dateConvertNoYear(new Date(data[0].hisbday));
+                    jQ05("#profile_hisbday").html("<h6>" + data[0].hisname + "'s Birthday: " + hisbday2 + "</h6>");
+                }
+                if(data[0].herbday){
+                    var herbday2 = dateConvertNoYear(new Date(data[0].herbday));
+                    jQ05("#profile_herbday").html("<h6>" + data[0].hername + "'s Birthday: " + herbday2 + "</h6>");
+                }
                 // Load Contact Edit Modal
                 jQ05("#hisfirstname").attr("value",data[0].hisname);
                 jQ05("#herfirstname").attr("value",data[0].hername);
@@ -153,7 +191,9 @@ else {
                 jQ05("#mycity").attr("value",data[0].city);
                 jQ05("#mystate").attr("value",data[0].state);
                 jQ05("#myzip").attr("value",data[0].zip);
-                jQ05("#myhomephone").attr("value",data[0].phonehome);
+                if(data[0].phonehome){
+                    jQ05("#myhomephone").attr("value",data[0].phonehome);
+                }
                 jQ05("#hiscell").attr("value",data[0].hiscell);
                 jQ05("#hercell").attr("value",data[0].hercell);
                 jQ05("#hisemail").html("<h6>" + data[0].email1 + "</h6>");
@@ -305,7 +345,7 @@ else {
                         jQ05("#child6_email").attr("value",data[0].child_6_email);
                     }
 
-                    // Child 7a
+                    // Child 7
                     if(data[0].child_7_name)
                     {
                         jQ05("#c7n").html(data[0].child_7_name);
@@ -613,84 +653,102 @@ var jQ55 = jQuery.noConflict();
         </div>
         <div class="col-sm-8">
             <div class="card bg-light m-3">
-                <div class="card-body">
-                    <h4 class="card-title text-center text-capitalize">Contact Information</h4>
-                    <h5 class="card-text"><u>Address</u></h5>
-                    <h6 class="card-text" id="profile_addr"></h6>
-                    <h5 class="card-text"><u>Phone</u></h5>
-                    <p class="card-text" id="profile_phone_home"></p>
-                    <p class="card-text" id="profile_cell_him"></p>
-                    <p class="card-text" id="profile_cell_her"></p>
-                    <h5 class="card-text"><u>Email</u></h5>
-                    <p class="card-text" id="profile_email_him"></p>
-                    <p class="card-text" id="profile_email_her"></p>
-                    <h4 class="card-title text-center text-capitalize">Children</h4>
-                        <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
-                            <thead>
-                                <tr>
-                                    <th class="strong">Name</th>
-                                    <th class="strong">Birthdate</th>
-                                    <th class="strong">Gender</th>
-                                    <th class="strong">Age</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td id="c1n"></td>
-                                    <td id="c1b"></td>
-                                    <td id="c1g"></td>
-                                    <td id="c1a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c2n"></td>
-                                    <td id="c2b"></td>
-                                    <td id="c2g"></td>
-                                    <td id="c2a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c3n"></td>
-                                    <td id="c3b"></td>
-                                    <td id="c3g"></td>
-                                    <td id="c3a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c4n"></td>
-                                    <td id="c4b"></td>
-                                    <td id="c4g"></td>
-                                    <td id="c4a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c5n"></td>
-                                    <td id="c5b"></td>
-                                    <td id="c5g"></td>
-                                    <td id="c5a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c6n"></td>
-                                    <td id="c6b"></td>
-                                    <td id="c6g"></td>
-                                    <td id="c6a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c7n"></td>
-                                    <td id="c7b"></td>
-                                    <td id="c7g"></td>
-                                    <td id="c7a"></td>
-                                </tr>
-                                <tr>
-                                    <td id="c8n"></td>
-                                    <td id="c8b"></td>
-                                    <td id="c8g"></td>
-                                    <td id="c8a"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="card-body">
+                            <h4 class="card-title text-center text-capitalize">Contact Information</h4>
+                            <h5 class="card-text"><u>Address</u></h5>
+                            <h6 class="card-text" id="profile_addr"></h6>
+                            <h5 class="card-text"><u>Phone</u></h5>
+                            <p class="card-text" id="profile_phone_home"></p>
+                            <p class="card-text" id="profile_cell_him"></p>
+                            <p class="card-text" id="profile_cell_her"></p>
+                            <h5 class="card-text"><u>Email</u></h5>
+                            <p class="card-text" id="profile_email_him"></p>
+                            <p class="card-text" id="profile_email_her"></p>
+                        </div> <!-- card-body -->
+                    </div> <!-- col-sm-5 -->
+                    <div class="col-sm-5">
+                        <div class="card-body">
+                            <h4 class="card-title text-center text-capitalize">Celebrate with Us</h4>
+                            <h5 class="card-text"><u>Anniversary</u></h5>
+                            <p class="card-text" id="profile_anniv"></p>
+                            <h5 class="card-text"><u>Birthdays</u></h5>
+                            <p class="card-text" id="profile_hisbday"></p>
+                            <p class="card-text" id="profile_herbday"></p>
+                        </div> <!-- card-body -->
+                    </div> <!-- col-sm-5 -->
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="card-body">
+                        <h4 class="card-title text-center text-capitalize">Children</h4>
+                            <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
+                                <thead>
+                                    <tr>
+                                        <th class="strong">Name</th>
+                                        <th class="strong">Birthdate</th>
+                                        <th class="strong">Gender</th>
+                                        <th class="strong">Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="c1n"></td>
+                                        <td id="c1b"></td>
+                                        <td id="c1g"></td>
+                                        <td id="c1a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c2n"></td>
+                                        <td id="c2b"></td>
+                                        <td id="c2g"></td>
+                                        <td id="c2a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c3n"></td>
+                                        <td id="c3b"></td>
+                                        <td id="c3g"></td>
+                                        <td id="c3a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c4n"></td>
+                                        <td id="c4b"></td>
+                                        <td id="c4g"></td>
+                                        <td id="c4a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c5n"></td>
+                                        <td id="c5b"></td>
+                                        <td id="c5g"></td>
+                                        <td id="c5a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c6n"></td>
+                                        <td id="c6b"></td>
+                                        <td id="c6g"></td>
+                                        <td id="c6a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c7n"></td>
+                                        <td id="c7b"></td>
+                                        <td id="c7g"></td>
+                                        <td id="c7a"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="c8n"></td>
+                                        <td id="c8b"></td>
+                                        <td id="c8g"></td>
+                                        <td id="c8a"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div> <!-- card-body -->
+                </div> <!-- row -->
+            </div> <!-- card -->
+        </div> <!-- col-sm-8 -->
+    </div> <!-- row -->
     <div class="row">
         <div class="col-sm-9">
             <div class="card bg-light border-primary m-3">
