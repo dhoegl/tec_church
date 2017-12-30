@@ -9,7 +9,13 @@
     }
     if($activeparam == '2')
     {
-        echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
+        if($MyView == 'Y')
+        {
+            echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">My Profile</a></li>';
+        }
+        else {
+            echo '<li class="nav-item active"><a class="nav-link" href="ofc_profile.php?id=' . $_SESSION['idDirectory'] . '">Family Profile</a></li>';
+            }
     }
     else
     {
