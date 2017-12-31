@@ -59,7 +59,39 @@ $count = $result->num_rows;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-    <link href="css/ofc_css_style.css" rel="stylesheet" type="text/css" />
+    
+<!-- BOOTSTRAP 4 ALPHA - Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Church Calendar</title>
+
+<!-- Bootstrap 4 BETA CSS -->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+<!--    <link href="css/signin.css" rel="stylesheet">-->
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- Extended styles for this page -->
+    <link href="css/ofc_css_style.css" rel="stylesheet">
+    
+<!-- Initialize jquery js script -->
+<!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
+    <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
 <!--*****************************EDIT FULLCALENDAR Script***********************************-->
 <link rel='stylesheet' type='text/css' href='/js/fullcalendar-1.5.4/fullcalendar/fullcalendar.css' />
 <script type='text/javascript' src='/js/fullcalendar-1.5.4/jquery/jquery-1.8.1.min.js'></script>
@@ -101,37 +133,70 @@ $count = $result->num_rows;
 
 <!--*****************************EDIT FULLCALENDAR Script***********************************-->
 
-<title>TEC - Directory Event Calendar</title>
-
 
 </head>
 
 <body>
 
-<div id="container">
-	<div id="header">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">OurFamilyConnections</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-		<div id="header_text">
-			<p>Bringing</p>
-			<p>our Family</p>
-			<p>Together</p>
-		</div>
-		<ul>
-			<li> <a href='/tecwelcome.php'>Home</a></li>
-<?php
-	require_once('tecmenu.php');
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <?php
+                if(!$_SESSION['logged in']) {
+                    session_destroy();
+                }
+                else
+                {
 
-?>
-		</ul>
-	</div>
+                    echo '<ul class="navbar-nav mr-auto mt-md-0">';
+                    $activeparam = '4';
+                    include '/includes/ofc_menu.php';
+                    echo '</ul>';
+                }
+                ?>
+            </div>
+        </nav>
 
-
-<div id="content">
-<!--*****************************Calendar***********************************
--->
-			<br>
-			<h2>Events, Birthdays, Anniversaries</h2>
-			<hr>
+<div class="container-fluid profile_bg">
+    <div class="row">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                How do I use this prayer list
+            </button>
+        </p>
+    </div> <!-- row -->
+    <div class="collapse" id="collapseExample">
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title">Sorting, Searching, and Paging</h4>
+                        <ul class="card-text">
+                            <li>Click on a header arrow to sort columns ascending or descending</li>
+                            <li>Use the Search box to find someone or a specific prayer request</li>
+                            <li>Navigate pages using the Page Selector at the bottom of the page</li>
+                        </ul>
+                    </div>
+            </div> <!-- col-sm-6 -->
+            <div class="col-sm-6">
+                <div class="card card-body">
+                    <h4 class="card-title">Click on &quotDetails&quot to</h4>
+                    <ul class="card-text">
+                        <li>View more details about this prayer request</li>
+                        <li>Follow this prayer request to receive updates and/or answers to it in email</li>
+                        <li>Let the person know you care by sending an email</li>
+                    </ul>
+                </div>
+            </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+    </div> <!-- collapse --> 
+    <div class="row">
+        <div class="col-sm-12">
+    
+<!--*****************************Calendar***********************************-->
 <table id="detailheading">
 
 <tr>
@@ -158,52 +223,13 @@ Click on an item for more information
 	Events are highlighted in <span style="background-color:blue; font-weight: bold; color:white;">BLUE</span>
 	</td>
 </tr>
-<tr>
-<td class="header">
-</td>
-<td class="header">
-Download our Family Directory</td>
-</tr>
-<tr>
-<td class="content">
-</td>
-<td class="content">
-includes birthday/anniversary calendar details</a>
-</td>
-</tr>
-<tr>
-<td class="content">
-</td>
-<td class="content">
-<strong>Coming Soon</strong></a>
-
-<!-- <a href="/Documents/TEC_Family_Directory_Sep_23_2012_Internet.pdf">Directory Download (PDF 1.8MB)</a>
--->
-</td>
-</tr>
 </table>
 	<div id='calendar' style='margin:3em 0;font-size:13px'></div>
 
+        </div> <!-- col-sm-12 --> 
+    </div> <!-- row -->
+</div> <!-- container -->
 
-
-<!--****************************Footer***********************************
--->
-
-<div id="footerline"></div>
-</div>
-	
-<?php
-	require_once('/tecfooter.php');
-?>
-</div>
-
-
-
-
-<!--*****************************EDIT OVERLAY to select new Profile Picture***********************************-->
-
-<!--*****************************TEST Script***********************************-->
-<!--*****************************TEST Script***********************************-->
 
 
 </body>
