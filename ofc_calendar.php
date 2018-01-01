@@ -113,10 +113,10 @@ $count = $result->num_rows;
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay'
+                                titleFormat: 'MMM D',
+				right: 'month,basicWeek'
 			},
 			events: '/includes/ofc_get_calendar_data.php',
-//			events: '/tec_get_calendar_event_data.php',
 			
 			eventClick: function(event) {
 				if(event.url) {
@@ -165,7 +165,7 @@ $count = $result->num_rows;
     <div class="row">
         <p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                How do I use this prayer list
+                How do I use this calendar
             </button>
         </p>
     </div> <!-- row -->
@@ -173,59 +173,33 @@ $count = $result->num_rows;
         <div class="row">
             <div class="col-sm-6">
                     <div class="card card-body">
-                        <h4 class="card-title">Sorting, Searching, and Paging</h4>
+                        <h4 class="card-title">Navigation</h4>
                         <ul class="card-text">
-                            <li>Click on a header arrow to sort columns ascending or descending</li>
-                            <li>Use the Search box to find someone or a specific prayer request</li>
-                            <li>Navigate pages using the Page Selector at the bottom of the page</li>
+                            <li>Use Banner Arrow buttons to navigate between months</li>
+                            <li>Use Month, Week, Day Banner Buttons to change views</li>
+                            <li>Click on an item to view the family's Directory information</li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+        <div class="row">
             <div class="col-sm-6">
-                <div class="card card-body">
-                    <h4 class="card-title">Click on &quotDetails&quot to</h4>
-                    <ul class="card-text">
-                        <li>View more details about this prayer request</li>
-                        <li>Follow this prayer request to receive updates and/or answers to it in email</li>
-                        <li>Let the person know you care by sending an email</li>
-                    </ul>
-                </div>
+                    <div class="card card-body">
+                        <h4 class="card-title">Color Definition</h4>
+                        <ul class="card-text">
+                            <li>Anniversaries are highlighted in <span style="background-color:green; font-weight: bold; color:white;">GREEN</span></li>
+                            <li>Adults' Birthdays are highlighted in <span style="background-color:red; font-weight: bold; color:white;">RED</span></li>
+                            <li>Kids' Birthdays are highlighted in <span style="background-color:yellow; font-weight: bold; color:black;">YELLOW</span></li>
+                            <li>Events are highlighted in <span style="background-color:blue; font-weight: bold; color:white;">BLUE</span></li>
+                        </ul>
+                    </div>
             </div> <!-- col-sm-6 -->
         </div> <!-- row -->
     </div> <!-- collapse --> 
-    <div class="row">
-        <div class="col-sm-12">
-    
 <!--*****************************Calendar***********************************-->
-<table id="detailheading">
-
-<tr>
-<td class="header">
-Click on an item for more information
-</td>
-<td class="header">
-Click on an item for more information
-</td>
-</tr>
-<tr>
-	<td class="content">
-	Adults' Birthdays are highlighted in <span style="background-color:red; font-weight: bold; color:white;">RED</span>
-	</td>
-	<td class="content">
-	Anniversaries are highlighted in <span style="background-color:green; font-weight: bold; color:white;">GREEN</span>
-	</td>
-</tr>
-<tr>
-	<td class="content">
-	Kids' Birthdays are highlighted in <span style="background-color:yellow; font-weight: bold; color:black;">YELLOW</span>
-	</td>
-	<td class="content">
-	Events are highlighted in <span style="background-color:blue; font-weight: bold; color:white;">BLUE</span>
-	</td>
-</tr>
-</table>
-	<div id='calendar' style='margin:3em 0;font-size:13px'></div>
-
+    <div class="row justify-content-center">
+        <div class="col-sm-10 bg-light">
+            <div id='calendar' style='margin:3em 0;font-size:13px'></div>
         </div> <!-- col-sm-12 --> 
     </div> <!-- row -->
 </div> <!-- container -->

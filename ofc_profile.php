@@ -743,14 +743,14 @@ var jQ55 = jQuery.noConflict();
                                 </tbody>
                             </table>
 
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+<!--                        <a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div> <!-- card-body -->
                 </div> <!-- row -->
             </div> <!-- card -->
         </div> <!-- col-sm-8 -->
     </div> <!-- row -->
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-12">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
                     <h4 class="card-title">Pray With Us</h4>

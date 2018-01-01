@@ -5,9 +5,9 @@ if(!$_SESSION['logged in']) {
 	exit();
 }
 
-   require_once('ofc_dbconnect.php');
+   require_once('../ofc_dbconnect.php');
 
-$sqlquery = "SELECT idDirectory, Name_1, Name_2, Surname, BDay_1_Date, BDay_2_Date, Anniv_Date, Child_1_Name, Child_1_Bday_Date, Child_2_Name, Child_2_Bday_Date, Child_3_Name, Child_3_Bday_Date, Child_4_Name, Child_4_Bday_Date, Child_5_Name, Child_5_Bday_Date, Child_6_Name, Child_6_Bday_Date, Child_7_Name, Child_7_Bday_Date, Child_8_Name, Child_8_Bday_Date FROM $dir_tbl_name WHERE Internet_Restrict IS NULL";
+$sqlquery = "SELECT idDirectory, Name_1, Name_2, Surname, BDay_1_Date, BDay_2_Date, Anniv_Date, Child_1_Name, Child_1_Bday_Date, Child_2_Name, Child_2_Bday_Date, Child_3_Name, Child_3_Bday_Date, Child_4_Name, Child_4_Bday_Date, Child_5_Name, Child_5_Bday_Date, Child_6_Name, Child_6_Bday_Date, Child_7_Name, Child_7_Bday_Date, Child_8_Name, Child_8_Bday_Date FROM $dir_tbl_name WHERE Status = '1' AND Internet_Restrict IS NULL";
 $result = $mysql->query($sqlquery) or die(" SQL query error Directory table. Error:" . mysql_errno() . " " . mysql_error());
 
 $count = $result->num_rows;
