@@ -112,9 +112,7 @@ $count = $result->num_rows;
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
-				center: 'title',
-                                titleFormat: 'MMM D',
-				right: 'month,basicWeek'
+				right: 'title'
 			},
 			events: '/includes/ofc_get_calendar_data.php',
 			
@@ -176,8 +174,8 @@ $count = $result->num_rows;
                         <h4 class="card-title">Navigation</h4>
                         <ul class="card-text">
                             <li>Use Banner Arrow buttons to navigate between months</li>
-                            <li>Use Month, Week, Day Banner Buttons to change views</li>
-                            <li>Click on an item to view the family's Directory information</li>
+                            <li>Click on a <span style="background-color:red; color:white;">Birthday</span>/<span style="background-color:green; color:white;">Anniversary</span> item to view the family's Directory information</li>
+                            <li>Click on an <span style="background-color:blue; color:white;">Event</span> item to view the event information</li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
@@ -187,10 +185,10 @@ $count = $result->num_rows;
                     <div class="card card-body">
                         <h4 class="card-title">Color Definition</h4>
                         <ul class="card-text">
-                            <li>Anniversaries are highlighted in <span style="background-color:green; font-weight: bold; color:white;">GREEN</span></li>
-                            <li>Adults' Birthdays are highlighted in <span style="background-color:red; font-weight: bold; color:white;">RED</span></li>
-                            <li>Kids' Birthdays are highlighted in <span style="background-color:yellow; font-weight: bold; color:black;">YELLOW</span></li>
-                            <li>Events are highlighted in <span style="background-color:blue; font-weight: bold; color:white;">BLUE</span></li>
+                            <li>Anniversaries are highlighted in <span style="background-color:green; color:white;">GREEN</span></li>
+                            <li>Adults' Birthdays are highlighted in <span style="background-color:red; color:white;">RED</span></li>
+                            <li>Kids' Birthdays are highlighted in <span style="background-color:yellow; color:black;">YELLOW</span></li>
+                            <li>Events are highlighted in <span style="background-color:blue; color:white;">BLUE</span></li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->

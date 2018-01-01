@@ -408,7 +408,7 @@ jQ9(document).ready(function () {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalPrayer">Prayer Request Details<br>Click <strong>Close</strong> when done.</h5>
+          <h5 class="modal-title" id="ModalPrayer">Prayer Request Details<br></h5><h6>Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

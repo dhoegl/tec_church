@@ -5,7 +5,7 @@ if(!$_SESSION['logged in']) {
 	exit();
 }
 /* Get email address of selected prayer owner - called from tecprayer.php */
-    require_once('ofc_dbconnect.php');
+    require_once('../ofc_dbconnect.php');
     
 	if ( !isset($_GET['prayerID'])) {
 		 echo 'Required data is missing';
