@@ -139,7 +139,7 @@ if(!$_SESSION['logged in']) {
 // NOTE: If nothing is returned from ofc_get_prayer_email_address, script will fail - temporarily 'by design' until conditions are established to disable or hide Send Mail button
 	jQ30("#sendMail").click(function () {
 		console.log("Send Email button clicked");
-		var sendaddress = 'ofc_get_prayer_email_address.php';
+		var sendaddress = '/includes/ofc_get_prayer_email_address.php';
 		jQ30.getJSON(sendaddress, {prayerID: $clickbuttonid
 		}, function (data) {
 			console.log(data);
@@ -215,12 +215,12 @@ jQ9(document).ready(function () {
 	});
 // Launch Active Prayer Popup
 // http://dev.vast.com/jquery-popup-overlay/
-	jQ4("#my_popup").popup({
-		background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
-		onopen: function () {
-			var prayerDate = jQ4(this).closest('tr').find(".prayer_update").html();
-		}
-		});
+//	jQ4("#my_popup").popup({
+//		background: true, focusdelay: 400, transition: 'all 0.3s', vertical: 'top', outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
+//		onopen: function () {
+//			var prayerDate = jQ4(this).closest('tr').find(".prayer_update").html();
+//		}
+//		});
 
  });
 </script>
@@ -384,10 +384,10 @@ jQ9(document).ready(function () {
 				</table>
 				<table width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
 					<tr class="praytable_buttons" style="border: 1px;">
-   		 			<td align="left"><input type="button" class="button_flat_blue_small" id="sendMail" name="sendMail" value="Send Email" /></td>
+<!--   		 			<td align="left"><input type="button" class="button_flat_blue_small" id="sendMail" name="sendMail" value="Send Email" /></td>
    		 			<td align="left"><input type="button" class="button_flat_blue_small" id="unfollow_button" name="unfollow" value="Unfollow" /></td>
    		 			<td align="left"><input type="button" class="button_flat_blue_small" id="follow_button" name="follow" value="Follow" /></td>
-   		 			<td align="right"><input type="button" class="my_popup_close button_flat_blue_small" name="cancel" value="Close" /></td>
+   		 			<td align="right"><input type="button" class="my_popup_close button_flat_blue_small" name="cancel" value="Close" /></td>-->
   		 		 	</tr>
  		 		 	<tr>
  		 		 	</tr>
@@ -453,7 +453,8 @@ jQ9(document).ready(function () {
 	</table>
     </div> <!-- modal-body -->
     <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="sendMail">Send Email</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
     </div> <!-- modal-footer -->
     </form>
     </div> <!-- modal-content -->
