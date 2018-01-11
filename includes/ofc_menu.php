@@ -57,7 +57,7 @@
         echo '<li class="nav-item"><a class="nav-link" href="#">Registration Admin</a></li>';
     }
     if($_SESSION['pray_admin'] == '1') {
-        echo '<li class="nav-item"><a class="nav-link" href="#">Prayer Admin</a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="ofc_prayeradmin.php">Prayer Admin</a></li>';
     }
     echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
 ?>

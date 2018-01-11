@@ -14,9 +14,9 @@ function newprayernotify ($prayer_id, $recordID, $prayerdate, $prayerfrom, $pray
 	$praymailheaders = "From:" . $praymailfrom . "\r\n" . "Bcc:" . $praymailfrom;
 	$praymaillink = "http://ofctest.ourfamilyconnections.org";								
 	$prayernotifyquery = "SELECT email_addr FROM " . $_SESSION['logintablename'] . " WHERE new_prayer_notify = '1'";			
-	$prayernotifyresult = @mysql_query($prayernotifyquery)or die("Prayer Notify function failed at db SELECT. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
-	$prayernotifyresultcount = @mysql_num_rows($prayernotifyresult);
-	while($prayernotifyrow = @mysql_fetch_assoc($prayernotifyresult)) {
+	$prayernotifyresult = $mysql->query($prayernotifyquery)or die("Prayer Notify function failed at db SELECT. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
+	$prayernotifyresultcount = $prayernotifyresult->num_rows;
+	while($prayernotifyrow = $prayernotifyresult->fetch_assoc()) {
 		$praymailheaders .= ', ' . $prayernotifyrow['email_addr'];
 		}
 	$praymailsubject = "New Prayer Request from " . $prayerfrom ."\n..";

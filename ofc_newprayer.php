@@ -1,11 +1,11 @@
 <?php 
 session_start();
 if(!$_SESSION['logged in']) {
-	header("location:tecwelcome.php");
+	header("location:ofc_welcome.php");
 	exit();
 }
 
-require_once('tec_dbconnect.php');
+require_once('ofc_dbconnect.php');
 
 
 
@@ -28,8 +28,8 @@ if($prayer_onbehalfof) {
 	$prayer_name = $prayer_onbehalfof;
 }
 	
-$newprayerquery = @mysql_query("INSERT INTO " . $_SESSION['prayertable'] . "(owner_id, name, title, pray_praise, visible, prayer_text) VALUES ('$prayer_owner','$prayer_name','$prayer_title','$prayer_praise','$prayer_visible','$prayer_text')") or die(" New Prayer Insert query error. Error:" . mysql_errno() . " " . mysql_error());		
-$newprayerID = @mysql_insert_id();
+$newprayerquery = $mysql->query("INSERT INTO " . $_SESSION['prayertable'] . "(owner_id, name, title, pray_praise, visible, prayer_text) VALUES ('$prayer_owner','$prayer_name','$prayer_title','$prayer_praise','$prayer_visible','$prayer_text')") or die(" New Prayer Insert query error. Error:" . mysql_errno() . " " . mysql_error());		
+$newprayerID = $mysql->insert_id();
 
 
 if(!$newprayerquery)
@@ -42,9 +42,9 @@ if(!$newprayerquery)
 			{
 			/* send prayer request email to administrators for approval */
 //			$praymailadmins = @mysql_query("SELECT admin_email FROM " . $_SESSION['admintablename'] . " WHERE prayernotify = '1'");
-			$praymailadmins = @mysql_query("SELECT email_addr FROM " . $_SESSION['logintablename'] . " WHERE admin_praynotify = '1'");
+			$praymailadmins = $mysql->query("SELECT email_addr FROM " . $_SESSION['logintablename'] . " WHERE admin_praynotify = '1'");
 			$praymaillink = "http://trinityevangel.ourfamilyconnections.org";								
-			while($praymailrow = @mysql_fetch_assoc($praymailadmins))
+			while($praymailrow = $praymailadmins->fetch_assoc())
 				{
 					$praymailtest = $praymailrow['email_addr'];									
 					$praymailto = $praymailtest . " , " . $praymailto;
@@ -80,9 +80,9 @@ if(!$newprayerquery)
 				{
 			/* send prayer request to all Elders */
 			/* ************************** CHANGE 'MEMBER' to 'ELDER' before go-live ************************************ */
-			$elderpraymail = @mysql_query("SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE Member = '1'");
+			$elderpraymail = $mysql->query("SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE Member = '1'");
 			$elderpraylink = "http://trinityevangel.ourfamilyconnections.org";								
-			while($elderprayrow = @mysql_fetch_assoc($elderpraymail))
+			while($elderprayrow = $elderpraymail->fetch_assoc())
 				{
 					$elderpraytest = $elderprayrow['Email_1'];									
 					$elderprayto = $elderpraytest . " , " . $elderprayto;
@@ -101,7 +101,7 @@ if(!$newprayerquery)
 
 
 
-header("location:tecfamview.php?id=" . $prayer_owner);
+header("location:ofc_profile.php?id=" . $prayer_owner);
 ?>
 
 

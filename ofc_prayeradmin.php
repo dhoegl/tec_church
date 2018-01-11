@@ -371,9 +371,6 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 		<div id="footerline"></div>
 	</div>
 	
-<?php
-	require_once('/ofc_footer.php');
-?>
 </div>
 
 <!--***************************** Create new Prayer Request POPUP ***********************************-->
@@ -386,7 +383,7 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
         <h3>Enter details about this prayer request and click Send</h3>
         <br />
         <br />
-		<form name='newprayerform' method='post' action='tecnewprayer.php'> 		
+		<form name='newprayerform' method='post' action='ofc_newprayer.php'> 		
         <table id="praytable" style="border: 3px solid powderblue;" width="100%" align="left" cellpadding="0" cellspacing="1" border="0">
  		 		 <tr>
  		 		 	<td><input type="hidden" name='visible' value='3'></input></td>

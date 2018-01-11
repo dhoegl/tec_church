@@ -13,9 +13,9 @@ include_once('/includes/newprayernotify.php');
 $prayer_id = $_GET['prayerid'];
 
 $newprayerquery = "SELECT * FROM $prayer_tbl_name p INNER JOIN $dir_tbl_name d on p.owner_id = d.idDirectory WHERE p.prayer_id = '$prayer_id' AND d.Status=1";
-$newprayerresult = @mysql_query($newprayerquery) or die(" Prayer query error. Error:" . mysql_errno() . " " . mysql_error());
+$newprayerresult = $mysql->query($newprayerquery) or die(" Prayer query error. Error:" . mysql_errno() . " " . mysql_error());
 
-$row = @mysql_fetch_assoc($newprayerresult);
+$row = $newprayerresult->fetch_assoc();
 	if($row['approved']==0)
 	{
 
@@ -159,9 +159,6 @@ if($clear)
 		<div id="footerline"></div>
 	</div>
 	
-<?php
-	require_once('/ofc_footer.php');
-?>
 
 </div>
 </body>

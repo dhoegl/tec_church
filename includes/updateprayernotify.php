@@ -3,7 +3,8 @@
 
 function updateprayernotify ($prayer_ID, $prayer_name, $prayer_answered, $prayer_title, $update_text){
 	$praymaillink = "http://ofctest.ourfamilyconnections.org";								
-	$prayernotifyquery = "SELECT l.email_addr AS emailaddr FROM " . $_SESSION['logintablename'] . " l INNER JOIN " . $_SESSION['prayerfollow'] . " f ON l.login_ID = f.login_id WHERE f.prayer_id = '" . $prayer_ID . "'";			
+//	$prayernotifyquery = "SELECT l.email_addr AS emailaddr FROM " . $_SESSION['logintablename'] . " l INNER JOIN " . $_SESSION['prayerfollow'] . " f ON l.login_ID = f.login_id WHERE f.prayer_id = '" . $prayer_ID . "'";			
+	$prayernotifyquery = "SELECT l.email_addr AS emailaddr FROM " . $_SESSION['logintablename'] . " l WHERE l.update_prayer_notify = '1'";
 	$prayernotifyresult = @mysql_query($prayernotifyquery)or die("Prayer Notify function failed at db SELECT. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
 	$prayernotifyresultcount = @mysql_num_rows($prayernotifyresult);
 	if($prayernotifyresultcount > 0) {	
