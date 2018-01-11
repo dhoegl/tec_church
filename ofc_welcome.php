@@ -79,8 +79,11 @@ session_start();
                 <h1 class="text-center">TEST SITE</h1>
             </div>
         </div>
-            <div class="col-sm-12">
+            <div class="col-sm-6 bg-warning">
                 <img src="images/ourfamilyconnections4.png" class="img-responsive center-block" alt=""/>
+            </div>
+            <div class="col-sm-6 bg-warning">
+                <h2 class="text-center">Info goes here...</h2>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body bg-warning center-block">
@@ -88,8 +91,8 @@ session_start();
                     <h4 align="center">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</h4>
                     <h4 align="center">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</h4>
                     <h4 align="center">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</h4>
-                </div>
-            </div>
+                </div> <!--panel-body-->
+            </div> <!--panel-->
         </div> <!--row-->
     </div> <!--container-->
 
