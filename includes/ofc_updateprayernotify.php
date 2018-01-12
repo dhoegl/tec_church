@@ -1,7 +1,7 @@
 <?php
 /* Send email to members with 'prayer_follow = '1' for the updated prayer'; called from 'tecupdateprayer.php */
 
-function updateprayernotify ($prayer_ID, $prayer_name, $prayer_answered, $prayer_title, $update_text){
+function ofc_updateprayernotify ($prayer_ID, $prayer_name, $prayer_answered, $prayer_title, $update_text){
 	$praymaillink = "http://ofctest.ourfamilyconnections.org";								
 //	$prayernotifyquery = "SELECT l.email_addr AS emailaddr FROM " . $_SESSION['logintablename'] . " l INNER JOIN " . $_SESSION['prayerfollow'] . " f ON l.login_ID = f.login_id WHERE f.prayer_id = '" . $prayer_ID . "'";			
 	$prayernotifyquery = "SELECT l.email_addr AS emailaddr FROM " . $_SESSION['logintablename'] . " l WHERE l.update_prayer_notify = '1'";

@@ -19,7 +19,7 @@ require_once('tec_dbconnect.php');
 	$prayer_title = mb_convert_encoding($prayer_title, "UTF-8"); // convert to ensure copy/paste doesn't expose special characters
 	$update_text = mb_convert_encoding($update_text, "UTF-8"); // convert to ensure copy/paste doesn't expose special characters
 
-include_once('/includes/updateprayernotify.php');
+include_once('/includes/ofc_updateprayernotify.php');
 
 $updateprayerqueryselect = "INSERT INTO " . $_SESSION['prayerupdate'] . "(prayer_id, idDirectory, name, update_text) VALUES ('$prayer_ID', '$prayer_owner', '$prayer_name', '$update_text')";
 $updateprayerquery = @mysql_query($updateprayerqueryselect) or die(" Prayer Update error into Prayer_Update table. Error:" . mysql_errno() . " " . mysql_error());		
@@ -42,7 +42,7 @@ if(!$updateprayerqueryupdate)
 		die("A database error has occurred when attempting to modify Prayer table after update. Please notify your administrator with the following. Error : ".mysql_errno().mysql_error());
 	}
 
-updateprayernotify($prayer_ID, $prayer_name, $prayer_answered, $prayer_title, $update_text);
+ofc_updateprayernotify($prayer_ID, $prayer_name, $prayer_answered, $prayer_title, $update_text);
 
 
 header("location:tecfamview.php?id=" . $prayer_owner);
