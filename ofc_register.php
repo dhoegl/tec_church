@@ -1,177 +1,191 @@
 <?php 
 session_start();
-session_destroy();
-
-require_once('ofc_dbconnect.php');
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link href="css/ofc_style.css" rel="stylesheet" type="text/css" />
-<title>Please Register to access Trinity Family Connections</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Please Register</title>
 
-<!--Set Focus on User Name Entry textbox-->
-<script type="text/javascript">
-function focus_on_start()
- {
- document.form1.username.focus();
- }
-</script>
-<!-- Initialize jQuery scripts -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <!-- Password Strength Check script -->
 <script type="text/javascript" src="js/password_check.js"></script>
 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"></link>-->
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+<!--    <link href="css/signin.css" rel="stylesheet">-->
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- Extended styles for this page -->
+    <link href="css/ofc_css_style.css" rel="stylesheet">
+
+
 </head>
 
-<body onLoad="focus_on_start()";>
-<div id="container">
-	<div id="header">
-
-		<div id="header_text">
-			<p>Bringing</p>
-			<p>our Family</p>
-			<p>Together</p>
-		</div>
-		<ul>
-			<li><a href="/ofc_totrinity.php">Back to Trinity Home</a></li>
-
-		</ul>
-	</div>
-	<div id="content">
-
-	<div id="left">
-			<h2>Please Register to access</h2>
+  <body>
 <?php
-		$firstname = "";
-		$lastname = "";
-		$gender = "";
-		$emailaddr = "";
-		$repeatemailaddr = "";
-		$username = "";
-		$password = "";
-		$repeatpassword = "";
+    $firstname = "";
+    $lastname = "";
+    $gender = "";
+    $emailaddr = "";
+    $repeatemailaddr = "";
+    $username = "";
+    $password = "";
+    $repeatpassword = "";
 ?>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+<!--              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>-->
+                <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <p>This is a test</p>
+            </div> <!-- Collapse Navbar -->
+        </div> <!-- container -->
+  </nav>
+<div class="container-fluid profile_bg">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-light border-primary text-center m-3">
+                <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Please Register to access</h4>
+                    <p class="card-text">All fields must be filled in.</p>
+                    <p class="card-text"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, contain one lowercase letter, and one number (0-9) or one special character.</p>
 
-<form name='form1' id="register" action='' method="POST">
-	<table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
-		<tr>
-                    <td>
-                        <p></p>
-                    </td>
-		</tr>
-		<tr>
-                    <td>
-                        All fields must be filled in
-                    </td>
-		</tr>
-        	<tr>
-                    <td colspan="2"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, contain one lowercase letter, and one number (0-9) or one special character.
-                    </td>
-                </tr>
-		<tr>
-                    <td>
-                        <p></p>
-                    </td>
-		</tr>
-		<tr>
-			<td align="right">
-			Select a User Name:
-			</td>
-			<td>
-			<input type='text' name='username' value="<?php echo $username; ?>">
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Choose a Password:
-			</td>
-			<td>
-                        <input name="password" id="password" type="password"/>
-                        <span id="register_result"></span>
-<!--			<input type='password' name='password'>-->
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Re-enter your Password:
-			</td>
-			<td>
-			<input type='password' name='repeatpassword'>
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Your First Name:
-			</td>
-			<td>
-			<input type='text' name='firstname' value="<?php echo $firstname; ?>">
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Your Last Name:
-			</td>
-			<td>
-			<input type='text' name='lastname' value="<?php echo $lastname; ?>">
-			</td>
-		</tr>
-		<tr>
-			<td align="right">Gender:</td>
-			<td><input type='radio' name='gender' value="M">M</td>
-		</tr>
-		<tr>
-			<td width="50%">&nbsp</td>
-			<td ><input type='radio' name='gender' value="F">F</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Your email address:
-			</td>
-			<td>
-			<input type='text' name='emailaddr' value="<?php echo $emailaddr; ?>">
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-			Re-enter your email address:
-			</td>
-			<td>
-			<input type='text' name='repeatemailaddr' value="<?php echo $repeatemailaddr; ?>">
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				<table>
-				<tr>
-					<td>
-						<input type='submit' id="register_submit" name='submit' value='Register'>
-					</td>
-					<td>
-						<input type='submit' name='clear' value='Clear'>
-					</td>
-				</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<p>
-	<br />
-	
+                    <form name='form1' id="register" action='' method="POST">
+                            <table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
+                                    <tr>
+                                        <td>
+                                            <p></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Select a User Name:
+                                            </td>
+                                            <td>
+                                            <input type='text' name='username' value="<?php echo $username; ?>">
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Choose a Password:
+                                            </td>
+                                            <td>
+                                            <input name="password" id="password" type="password"/>
+                                            <span id="register_result"></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Re-enter your Password:
+                                            </td>
+                                            <td>
+                                            <input type='password' name='repeatpassword'>
+                                            </td>
+                                    </tr>
+<!--                                    <tr>
+                                            <td align="right">
+                                            Your First Name:
+                                            </td>
+                                            <td>
+                                            <input type='text' name='firstname' value="<?php echo $firstname; ?>">
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Your Last Name:
+                                            </td>
+                                            <td>
+                                            <input type='text' name='lastname' value="<?php echo $lastname; ?>">
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">Gender:</td>
+                                            <td><input type='radio' name='gender' value="M">M</td>
+                                    </tr>
+                                    <tr>
+                                            <td width="50%">&nbsp</td>
+                                            <td ><input type='radio' name='gender' value="F">F</td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Your email address:
+                                            </td>
+                                            <td>
+                                            <input type='text' name='emailaddr' value="<?php echo $emailaddr; ?>">
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td align="right">
+                                            Re-enter your email address:
+                                            </td>
+                                            <td>
+                                            <input type='text' name='repeatemailaddr' value="<?php echo $repeatemailaddr; ?>">
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                    <table>
+                                                    <tr>
+                                                            <td>
+                                                                    <input type='submit' id="register_submit" name='submit' value='Register'>
+                                                            </td>
+                                                            <td>
+                                                                    <input type='submit' name='clear' value='Clear'>
+                                                            </td>
+                                                    </tr>
+                                                    </table>
+                                            </td>
+                                    </tr>
+-->                            </table>
+                            <p>
+                            <br />
+                    </form>
+                </div> <!-- card-body -->
+            </div> <!-- card -->
 
-</form>
-                        
-<!--<form id="register">
-    <label for="password">Password_Test:</label>
-    <input name="password" id="password" type="password"/>
-    <span id="register_result"></span>
-</form>-->
+        </div> <!-- col-md-4 -->
+        
+        <div class="col-md-4">
+            <div class="card bg-light border-primary text-center m-3">
+                <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">What happens next</h4>
+                    <p>After completing the entry form at the left, our administrators will verify and approve your request to access our site.</p>
+                    <p>You will be notified via email (using the address at left) that your access has been granted.</p>
+                    <p>If you don't receive an email notification within 48 hours <strong>(don't forget to check your Junk Mail folder)</strong>, please contact one of our church elders for assistance.</p>
+		</div> <!-- card-body -->
+            </div> <!-- card -->
+        </div> <!-- col-md-4 -->
+    </div> <!-- row -->
+</div> <!-- container -->
+
 <?php
 		
 	$submit = $_POST['submit'];
@@ -219,25 +233,25 @@ if($clear)
 						
 
 						$regentryquery = "SELECT username from " . $_SESSION['logintablename'] . " WHERE username = '" . $username . "'";
-						$regentryexist = @mysql_query($regentryquery) or die("A database error has occurred. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
+						$regentryexist = $mysql->query($regentryquery) or die("A database error has occurred. Please notify your administrator with the following. Error : " . mysql_errno() . mysql_error());
 
-						$regentrynumrows = @mysql_num_rows($regentryexist);
+						$regentrynumrows = $regentryexist->num_rows();
 						if($regentrynumrows == 0)
 						{
 							if($gender == 'M') 
 							{
-								$regquery = @mysql_query("INSERT INTO " . $_SESSION['dirtablename'] . " (Name_1, Surname, Email_1, Picture_Link, Picture_Taken) VALUES ('$firstname','$lastname','$emailaddr', 'x', 'N')") or die("Unable to create new user record in directory. Error : " . mysql_errno() . mysql_error());
+								$regquery = $mysql->query("INSERT INTO " . $_SESSION['dirtablename'] . " (Name_1, Surname, Email_1, Picture_Link, Picture_Taken) VALUES ('$firstname','$lastname','$emailaddr', 'x', 'N')") or die("Unable to create new user record in directory. Error : " . mysql_errno() . mysql_error());
 							}
 							else //$gender = 'F'
 							{
-								$regquery = @mysql_query("INSERT INTO " . $_SESSION['dirtablename'] . " (Name_2, Surname, Email_2, Picture_Link, Picture_Taken) VALUES ('$firstname','$lastname','$emailaddr', 'x', 'N')") or die("Unable to create new user record in directory. Error : " . mysql_errno() . mysql_error());
+								$regquery = $mysql->query("INSERT INTO " . $_SESSION['dirtablename'] . " (Name_2, Surname, Email_2, Picture_Link, Picture_Taken) VALUES ('$firstname','$lastname','$emailaddr', 'x', 'N')") or die("Unable to create new user record in directory. Error : " . mysql_errno() . mysql_error());
 							}
-							$regInsertID = @mysql_insert_id();
-							$reglogliquery = @mysql_query("INSERT INTO " . $_SESSION['logintablename'] . " (username, password, idDirectory, firstname, lastname, gender, email_addr) VALUES ('$username','$password','$regInsertID','$firstname','$lastname','$gender','$emailaddr')") or die("Unable to create new login record in directory. Error : " . mysql_errno() . mysql_error());
+							$regInsertID = $mysql->insert_id();
+							$reglogliquery = $mysql->query("INSERT INTO " . $_SESSION['logintablename'] . " (username, password, idDirectory, firstname, lastname, gender, email_addr) VALUES ('$username','$password','$regInsertID','$firstname','$lastname','$gender','$emailaddr')") or die("Unable to create new login record in directory. Error : " . mysql_errno() . mysql_error());
 							if(!$regquery)
 								{
 
-									if (@mysql_errno()==1062) //unable to add Directory entry due to duplicate username record in logintable
+									if ($mysql->errno==1062) //unable to add Directory entry due to duplicate username record in logintable
 									{
 										echo "<strong><font color='Red'>Someone else with that Username is already a member.</font> Please retry</strong>";
 									}
@@ -248,9 +262,9 @@ if($clear)
 								}
 								else 
 								{
-									$regmailadmins = @mysql_query("SELECT email_addr FROM " . $_SESSION['logintablename'] . " WHERE admin_regnotify = '1'");
+									$regmailadmins = $mysql->query("SELECT email_addr FROM " . $_SESSION['logintablename'] . " WHERE admin_regnotify = '1'");
 									$regmaillink = "http://ofctest.ourfamilyconnections.org";								
-									while($regmailrow = @mysql_fetch_assoc($regmailadmins))
+									while($regmailrow = $regmailadmins->fetch_assoc())
 									{
 										$regmailtest = $regmailrow['email_addr'];									
 										$regmailto = $regmailtest . " , " . $regmailto;
@@ -289,20 +303,8 @@ if($clear)
 		}
 	}
 ?>
-</div>
-
-	<div id="right">
-		<h2>What happens next</h2>
-		<p>After completing the entry form at the left, our administrators will verify and approve your request to access our site.</p>
-		<p>You will be notified via email (using the address at left) that your access has been granted.</p>
-		<p>If you don't receive an email notification within 48 hours <strong>(don't forget to check your Junk Mail folder)</strong>, please contact one of our church elders for assistance.</p>
-		</div>
-		<div id="footerline"></div>
-	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	
-<?php
-	require_once('/ofc_footer.php');
-?>
-</div>
 </body>
 </html>

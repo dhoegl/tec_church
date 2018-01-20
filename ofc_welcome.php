@@ -12,6 +12,7 @@ session_start();
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"></link>-->
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -41,7 +42,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">OurFamilyConnections</a>
+            <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <?php
@@ -54,10 +55,15 @@ session_start();
                 echo '<div class="form-group">';
                 echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE">';
                 echo '</div>';
-                echo '<button type="submit" class="btn btn-success">Sign in</button>';
-                echo '<div class="btn-group pad-left">';
-                    echo '<button type="button" class="btn btn-primary">Register</button>';
-                echo '</div>';
+//                echo '<div class="btn-group mr-4" role="group" aria-label="First group">';
+                echo '<button type="submit" class="btn btn-success margin-left">Sign in</button>';
+//                echo '</div>';
+//                echo '<div class="btn-group pad-left">';
+//                echo '<div class="btn-group mr-4" role="group" aria-label="Second group">';
+                echo '<a type="button" class="btn btn-primary margin-left" href="ofc_register.php">Register</a>';
+//                echo '</div>';
+                echo '<button type="button" class="btn btn-danger margin-left">Forgot Password</button>';
+//                echo '</div>';
                 echo '</form>';
 
             }
@@ -69,7 +75,7 @@ session_start();
             }
             ?>
         </div><!--/.navbar-collapse -->
-      </div>
+      </div> <!-- container -->
     </nav>
 
 <div class="container">
@@ -83,7 +89,7 @@ session_start();
                 <img src="images/ourfamilyconnections4.png" class="img-responsive center-block" alt=""/>
             </div>
             <div class="col-sm-6 bg-warning">
-                <h2 class="text-center">Info goes here...</h2>
+                <h2 class="text-center">WELCOME</h2>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body bg-warning center-block">

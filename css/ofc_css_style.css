@@ -23,6 +23,10 @@ body
   background-color: #222;
   border-color: #080808;
 }
+.navbar-brand a
+{
+    text-decoration: none;
+}
 .bg-inverse
 {
     color: #fff;
@@ -34,6 +38,10 @@ body
 .pad-left
 {
     padding-left: 50px;
+}
+.margin-left
+{
+    margin-left: 25px;
 }
 .well
 {
