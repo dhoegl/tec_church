@@ -17,7 +17,10 @@ require_once 'ofc_dbconnect.php';
 
 
 <!-- Password Strength Check script -->
-<script type="text/javascript" src="js/password_check.js"></script>
+<script type="text/javascript" src="js/ofc_password_check.js"></script>
+
+<!-- Registration church code confirmation script -->
+<script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -68,8 +71,39 @@ require_once 'ofc_dbconnect.php';
         <div class="col-sm-6 bg-warning">
             <h2 class="text-center">WELCOME</h2>
                 <h3 class="text-center">Please Register</h3>
-                <h4 align="center">All fields MUST be filled in</h4>
+                <h4 align="center"><strong><font color="red">* All fields MUST be filled in</font></strong></h4>
                 <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="confirmhcode">I received a church Confirmation Code:</label>
+                        <div class="form-check form-check-inline churchcodecheck">
+                            <input class="form-check-input" type="radio" name="confirmcode" id="codeyes" value="YES" checked>
+                                <label class="form-check-label" for="codeyes">YES</label>
+                        </div>
+                        <div class="form-check form-check-inline churchcodecheck">
+                            <input class="form-check-input" type="radio" name="confirmcode" id="codeno" value="NO">
+                                <label class="form-check-label" for="codeno">NO</label>
+                        </div>
+                        <label id="churchcodelabel" for="churchcode">Enter the Confirmation Code received from your church's administrator: <strong><font color="red">*</font></strong></label>
+                        <input type="text" class="form-control" id="churchcode" aria-describedby="churchcode" placeholder="confirmation code">
+                        </input>
+                        <label for="username">Select a User Name: <strong><font color="red">*</font></strong></label>
+                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="UserName">
+                        </input>
+                        <label for="password">Choose a Password: <strong><font color="red">*</font></strong></label>
+                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="StrongPassword">
+                        </input>
+                        <label for="repeatpassword">Re-enter your Password: <strong><font color="red">*</font></strong></label>
+                        <input type="password" class="form-control" id="repeatpassword" aria-describedby="emailHelp" placeholder="StrongPassword">
+                        </input>
+                        <label for="firstname">Your First Name: <strong><font color="red">*</font></strong></label>
+                        <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="First Name">
+                        </input>
+                        <label for="lastname">Your Last Name: <strong><font color="red">*</font></strong></label>
+                        <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Last Name">
+                        </input>
+                    </div>
+                </form>
                 <form name='form1' id="register" action='' method="POST">
                     <table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
                         <tr>
@@ -82,7 +116,7 @@ require_once 'ofc_dbconnect.php';
                                 <p></p>
                             </td>
                         </tr>
-                        <tr>
+<!--                        <tr>
                                 <td align="right">
                                 Select a User Name:
                                 </td>
@@ -146,7 +180,7 @@ require_once 'ofc_dbconnect.php';
                                 <td>
                                 <input type='email' name='repeatemailaddr' value="<?php echo $repeatemailaddr; ?>">
                                 </td>
-                        </tr>
+                        </tr>-->
                         <tr>
                             <td>
                             </td>
@@ -176,7 +210,7 @@ require_once 'ofc_dbconnect.php';
                     <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
                     <div class="card-body">
                         <h3 class="card-title">What happens next</h3>
-                        <p>After completing the entry form at the left, our administrators will verify and approve your request to access our site.</p>
+                        <p>After completing this entry form, our administrators will verify and approve your request to access our site.</p>
                         <p>You will be notified via email (using the address at left) that your access has been granted.</p>
                         <p>If you don't receive an email notification within 48 hours <strong>(don't forget to check your Junk Mail folder)</strong>, please contact one of our church elders for assistance.</p>
                     </div> <!-- card-body -->
