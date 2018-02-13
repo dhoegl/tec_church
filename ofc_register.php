@@ -19,6 +19,9 @@ require_once 'ofc_dbconnect.php';
 <!-- Password Strength Check script -->
 <script type="text/javascript" src="js/ofc_password_check.js"></script>
 
+<!-- Password Match Check script -->
+<script type="text/javascript" src="js/ofc_password_match.js"></script>
+
 <!-- Registration church code confirmation script -->
 <script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
 
@@ -73,7 +76,7 @@ require_once 'ofc_dbconnect.php';
                 <h3 class="text-center">Please Register</h3>
                 <h4 align="center"><strong><font color="red">* All fields MUST be filled in</font></strong></h4>
                 <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>
-                <form>
+                <form id="register">
                     <div class="form-group">
                         <label for="confirmhcode">I received a church Confirmation Code:</label>
                         <div class="form-check form-check-inline churchcodecheck">
@@ -90,10 +93,10 @@ require_once 'ofc_dbconnect.php';
                         <label for="username">Select a User Name: <strong><font color="red">*</font></strong></label>
                         <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="UserName">
                         </input>
-                        <label for="password">Choose a Password: <strong><font color="red">*</font></strong></label>
+                        <label for="password">Choose a Password: <strong><font color="red">*   </font></strong><span id="register_result"></span></label>
                         <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="StrongPassword">
                         </input>
-                        <label for="repeatpassword">Re-enter your Password: <strong><font color="red">*</font></strong></label>
+                        <label for="repeatpassword">Re-enter your Password: <strong><font color="red">*   </font></strong><span id="password_match"></span></label>
                         <input type="password" class="form-control" id="repeatpassword" aria-describedby="emailHelp" placeholder="StrongPassword">
                         </input>
                         <label for="firstname">Your First Name: <strong><font color="red">*</font></strong></label>

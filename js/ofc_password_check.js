@@ -14,7 +14,7 @@
 
 $(document).ready(function()
 {
-    $('#register_submit').prop('disabled', true);
+//    $('#register_submit').prop('disabled', true);
     $('#password').keyup(function(){
     $('#register_result').html(checkStrength($('#password').val()));
     });
@@ -25,7 +25,7 @@ $(document).ready(function()
     if (password.length < 6) { 
         $('#register_result').removeClass(); 
         $('#register_result').addClass('short'); 
-        $('#register_submit').prop('disabled', true);
+//        $('#register_submit').prop('disabled', true);
         return 'Too short'; 
     } 
     //length is ok, lets continue. 
@@ -49,19 +49,19 @@ $(document).ready(function()
         if (strength < 2 ) {
             $('#register_result').removeClass(); 
             $('#register_result').addClass('weak');
-            $('#register_submit').prop('disabled', true);
+//            $('#register_submit').prop('disabled', true);
             return 'Weak'; 
         } 
         else if (strength == 2 ) { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('good'); 
-            $('#register_submit').prop('disabled', false);
+//            $('#register_submit').prop('disabled', false);
             return 'Good'; 
         } 
         else { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('strong'); 
-            $('#register_submit').prop('disabled', false);
+//            $('#register_submit').prop('disabled', false);
             return 'Strong'; 
         }; 
     };
