@@ -22,6 +22,9 @@ require_once 'ofc_dbconnect.php';
 <!-- Password Match Check script -->
 <script type="text/javascript" src="js/ofc_password_match.js"></script>
 
+<!-- Register Fields Check script -->
+<script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
+
 <!-- Registration church code confirmation script -->
 <script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
 
@@ -106,8 +109,12 @@ require_once 'ofc_dbconnect.php';
                         <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Last Name">
                         </input>
                     </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-secondary" value="Clear" />
+                        <input type="submit" class="btn btn-primary" id="register_submit" value="Register" />
+                    </div>
                 </form>
-                <form name='form1' id="register" action='' method="POST">
+<!--                <form name='form1' id="register1" action='' method="POST">
                     <table class="ofc_content" width="550" border="0" cellpadding="1" cellspacing="1" >
                         <tr>
                             <td>
@@ -118,7 +125,7 @@ require_once 'ofc_dbconnect.php';
                             <td>
                                 <p></p>
                             </td>
-                        </tr>
+                        </tr>-->
 <!--                        <tr>
                                 <td align="right">
                                 Select a User Name:
@@ -184,7 +191,7 @@ require_once 'ofc_dbconnect.php';
                                 <input type='email' name='repeatemailaddr' value="<?php echo $repeatemailaddr; ?>">
                                 </td>
                         </tr>-->
-                        <tr>
+<!--                        <tr>
                             <td>
                             </td>
                             <td>
@@ -203,7 +210,7 @@ require_once 'ofc_dbconnect.php';
                  </table>
                     <p>
                     <br />
-                </form>
+                </form>-->
             </div> <!--col-sm-6-->
 <!--        </div> row
 
