@@ -111,7 +111,7 @@ require_once 'ofc_dbconnect.php';
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-secondary" value="Clear" />
-                        <input type="submit" class="btn btn-primary" id="register_submit" value="Register" />
+                        <input type="submit" class="btn btn-primary disabled" id="register_submit" value="Register" />
                     </div>
                 </form>
 <!--                <form name='form1' id="register1" action='' method="POST">

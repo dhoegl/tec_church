@@ -13,13 +13,11 @@ $(document).ready(function()
     if (repeatpassword == password) { 
         $('#password_match').removeClass(); 
         $('#password_match').addClass('match'); 
-//        $('#register_submit').prop('disabled', true);
         return 'Match'; 
     } 
     else { 
         $('#password_match').removeClass(); 
         $('#password_match').addClass('nomatch'); 
-//        $('#register_submit').prop('disabled', false);
         return 'No Match'; 
     }; 
     };

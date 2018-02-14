@@ -16,7 +16,7 @@ $(document).ready(function()
 {
 //    $('#register_submit').prop('disabled', true);
     $('#password').keyup(function(){
-    $('#register_result').html(checkStrength($('#password').val()));
+        $('#register_result').html(checkStrength($('#password').val()));
     });
     function checkStrength(password){
     //initial strength 
@@ -49,19 +49,16 @@ $(document).ready(function()
         if (strength < 2 ) {
             $('#register_result').removeClass(); 
             $('#register_result').addClass('weak');
-//            $('#register_submit').prop('disabled', true);
             return 'Weak'; 
         } 
         else if (strength == 2 ) { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('good'); 
-//            $('#register_submit').prop('disabled', false);
             return 'Good'; 
         } 
         else { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('strong'); 
-//            $('#register_submit').prop('disabled', false);
             return 'Strong'; 
         }; 
     };
