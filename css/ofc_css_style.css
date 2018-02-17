@@ -672,6 +672,18 @@ body
     font-weight: bold;
     color:#006400;
 }
+#register .available
+{
+    margin-left:5px;
+    font-weight: bold;
+    color:#006400;
+}
+#register .used
+{
+    margin-left:5px;
+    font-weight: bold;
+    color:#0000FF;
+}
 /********************** Register Notify *********************************/
 #register_content {
 	background-color: lightblue;

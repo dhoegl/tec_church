@@ -16,6 +16,10 @@ $(document).ready(function()
 {
 //    $('#register_submit').prop('disabled', true);
     $('#password').keyup(function(){
+        $('#repeatpassword').val(""); 
+        $('#password_match').removeClass(); 
+        $('#password_match').addClass('nomatch'); 
+        $('#password_match').html('No Match'); 
         $('#register_result').html(checkStrength($('#password').val()));
     });
     function checkStrength(password){

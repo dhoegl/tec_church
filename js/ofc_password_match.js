@@ -4,7 +4,7 @@ $(document).ready(function()
 {
 //    $('#register_submit').prop('disabled', true);
     $('#repeatpassword').keyup(function(){
-    $('#password_match').html(checkMatch($('#repeatpassword').val(), $('#password').val()));
+        $('#password_match').html(checkMatch($('#repeatpassword').val(), $('#password').val()));
     });
     function checkMatch(repeatpassword, password){
     //initial check 

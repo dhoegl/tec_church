@@ -16,6 +16,9 @@ require_once 'ofc_dbconnect.php';
 <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
 
+<!-- Username Check script -->
+<script type="text/javascript" src="js/ofc_username_check.js"></script>
+
 <!-- Password Strength Check script -->
 <script type="text/javascript" src="js/ofc_password_check.js"></script>
 
@@ -28,7 +31,10 @@ require_once 'ofc_dbconnect.php';
 <!-- Registration church code confirmation script -->
 <script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
 
-    <!-- Bootstrap -->
+<!-- Email Match Check script -->
+<script type="text/javascript" src="js/ofc_email_match.js"></script>
+
+<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"></link>-->
     
@@ -93,7 +99,7 @@ require_once 'ofc_dbconnect.php';
                         <label id="churchcodelabel" for="churchcode">Enter the Confirmation Code received from your church's administrator: <strong><font color="red">*</font></strong></label>
                         <input type="text" class="form-control" id="churchcode" aria-describedby="churchcode" placeholder="confirmation code">
                         </input>
-                        <label for="username">Select a User Name: <strong><font color="red">*</font></strong></label>
+                        <label for="username">Select a User Name: <strong><font color="red">*</font></strong><span id="unique_user"></span></label>
                         <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="UserName">
                         </input>
                         <label for="password">Choose a Password: <strong><font color="red">*   </font></strong><span id="register_result"></span></label>
@@ -107,6 +113,12 @@ require_once 'ofc_dbconnect.php';
                         </input>
                         <label for="lastname">Your Last Name: <strong><font color="red">*</font></strong></label>
                         <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Last Name">
+                        </input>
+                        <label for="emailaddress">Your Email Address: <strong><font color="red">*</font></strong><span id="email_choose"></span></label>
+                        <input type="email" class="form-control" id="emailaddress" aria-describedby="emailHelp" placeholder="Email Address">
+                        </input>
+                        <label for="repeatemailaddress">Re-enter your Email Address: <strong><font color="red">*</font></strong><span id="email_match"></span></label>
+                        <input type="email" class="form-control" id="repeatemailaddress" aria-describedby="emailHelp" placeholder="Email Address">
                         </input>
                     </div>
                     <div class="form-group">
