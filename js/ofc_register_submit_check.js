@@ -10,8 +10,9 @@ $(document).ready(function()
     var repeatpasswordset = 'N';
     var firstnameset = 'N';
     var lastnameset = 'N';
+    var emailset = 'N';
+    var repeatemailset = 'N';
     $('.churchcodecheck').click(function(){
-//    $('#lastname').keyup(function(){
         if($('input[name=confirmcode]').prop('checked') == true){
             churchcodeset = 'Y';
             console.log("churchcodecheck = YES");
@@ -24,7 +25,7 @@ $(document).ready(function()
             console.log("churchcodeset = " + churchcodeset);
             console.log("churchcodelen = " + churchcodelen);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
@@ -32,39 +33,38 @@ $(document).ready(function()
         }
     });
     $('#churchcode').keyup(function(){
-        var cchtml = $('#churchcode').val();
-        var cclen = cchtml.length;
-        if(cclen == 5){
+        var churchcode = $('#churchcode').val();
+        var confirm_code_len = $('#confirm_code_len').html();
+        console.log("churchcode = " + churchcode);
+        if($('#confirm_code_len').html() == 'Code Available') {
             churchcodelen = 'Y';
-            console.log("cchtml = " + cchtml);
-            console.log("cclen = " + cclen);
+            console.log('confirm_code_len = ' + confirm_code_len);
             console.log("churchcodelen = " + churchcodelen);
         }
         else {
             churchcodelen = 'N';
-            console.log("cchtml = " + cchtml);
-            console.log("cclen = " + cclen);
+            console.log('confirm_code_len = ' + confirm_code_len);
             console.log("churchcodelen = " + churchcodelen);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
             $('#register_submit').addClass('disabled'); 
         }
     });
-    $('#username').keyup(function(){
-        var unhtml = $('#username').val();
-        var unlen = unhtml.length;
-        if(unlen > 2){
+    $('#username').focusout(function(){
+        var unique_user = $('#unique_user').html();
+        console.log("unique_user = " + unique_user);
+        if($('#unique_user').html() == 'Username available') {
             usernameset = 'Y';
-            console.log("unlen = " + unlen);
+            console.log("usernameset = " + usernameset);
         }
         else {
             usernameset = 'N';
-            console.log("unlen = " + unlen);
+            console.log("usernameset = " + usernameset);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
@@ -73,16 +73,15 @@ $(document).ready(function()
     });
     $('#password').keyup(function(){
         if($('#register_result').html() == 'Good' || $('#register_result').html() == 'Strong') {
-//          $('#register_submit').prop('disabled', false);
             passwordset = 'Y';
-            console.log("Password Good or Strong");
+            console.log("passwordset = " + passwordset);
         }
         else
         {
             passwordset = 'N';
-            console.log("Password Too Short or Weak");
+            console.log("passwordset = " + passwordset);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
@@ -91,16 +90,15 @@ $(document).ready(function()
     });
     $('#repeatpassword').keyup(function(){
         if($('#password_match').html() == 'Match') {
-//          $('#register_submit').prop('disabled', false);
             repeatpasswordset = 'Y';
-            console.log("Register Match");
+            console.log("repeatpasswordset = " + repeatpasswordset);
         }
         else
         {
             repeatpasswordset = 'N';
-            console.log("Register NoMatch");
+            console.log("repeatpasswordset = " + repeatpasswordset);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
@@ -110,15 +108,15 @@ $(document).ready(function()
     $('#firstname').keyup(function(){
         var fnhtml = $('#firstname').val();
         var fnlen = fnhtml.length;
-        if(fnlen > 2){
+        if(fnlen > 0){
             firstnameset = 'Y';
-            console.log("fnlen = " + fnlen);
+            console.log("firstnameset = " + firstnameset);
         }
         else {
             firstnameset = 'N';
-            console.log("fnlen = " + fnlen);
+            console.log("firstnameset = " + firstnameset);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
@@ -128,19 +126,54 @@ $(document).ready(function()
     $('#lastname').keyup(function(){
         var lnhtml = $('#lastname').val();
         var lnlen = lnhtml.length;
-        if(lnlen > 2){
+        if(lnlen > 0){
             lastnameset = 'Y';
-            console.log("lnlen = " + lnlen);
+            console.log("lastnameset = " + lastnameset);
         }
         else {
             lastnameset = 'N';
-            console.log("lnlen = " + lnlen);
+            console.log("lastnameset = " + lastnameset);
         }
-        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y'){
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
             $('#register_submit').removeClass('disabled'); 
         }
         else {
             $('#register_submit').addClass('disabled'); 
         }
     });
+    $('#emailaddress').keyup(function(){
+        if($('#email_choose').html() == 'Email Accepted') {
+            emailset = 'Y';
+            console.log("emailset = " + emailset);
+        }
+        else
+        {
+            emailset = 'N';
+            console.log("emailset = " + emailset);
+        }
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            $('#register_submit').removeClass('disabled'); 
+        }
+        else {
+            $('#register_submit').addClass('disabled'); 
+        }
+    });
+    $('#repeatemailaddress').keyup(function(){
+        if($('#email_match').html() == 'Match') {
+            repeatemailset = 'Y';
+            console.log("repeatemailset = " + repeatemailset);
+        }
+        else
+        {
+            repeatemailset = 'N';
+            console.log("repeatemailset = " + repeatemailset);
+        }
+        if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            $('#register_submit').removeClass('disabled'); 
+        }
+        else {
+            $('#register_submit').addClass('disabled'); 
+        }
+    });
+
 });

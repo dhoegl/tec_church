@@ -17,7 +17,7 @@ if(isset($_POST['username']) )
             $response->username_status = "NAME_USED";
 	} 
         else {
-            $response->username_status = "ADDRESS_AVAILABLE";
+            $response->username_status = "USERNAME_AVAILABLE";
             }
 }
 $responseJSON = json_encode($response);

@@ -16,6 +16,9 @@ require_once 'ofc_dbconnect.php';
 <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
 
+<!-- Confirmation Code Check script -->
+<script type="text/javascript" src="js/ofc_confirmcode_check.js"></script>
+
 <!-- Username Check script -->
 <script type="text/javascript" src="js/ofc_username_check.js"></script>
 
@@ -31,8 +34,14 @@ require_once 'ofc_dbconnect.php';
 <!-- Registration church code confirmation script -->
 <script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
 
+<!-- Email Check script -->
+<script type="text/javascript" src="js/ofc_email_check.js"></script>
+
 <!-- Email Match Check script -->
 <script type="text/javascript" src="js/ofc_email_match.js"></script>
+
+<!-- Registration submission check script -->
+<script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
 
 <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -96,7 +105,7 @@ require_once 'ofc_dbconnect.php';
                             <input class="form-check-input" type="radio" name="confirmcode" id="codeno" value="NO">
                                 <label class="form-check-label" for="codeno">NO</label>
                         </div>
-                        <label id="churchcodelabel" for="churchcode">Enter the Confirmation Code received from your church's administrator: <strong><font color="red">*</font></strong></label>
+                        <label id="churchcodelabel" for="churchcode">Enter your 5-digit Confirmation Code: <strong><font color="red">*</font></strong><span id="confirm_code_len"></span></label>
                         <input type="text" class="form-control" id="churchcode" aria-describedby="churchcode" placeholder="confirmation code">
                         </input>
                         <label for="username">Select a User Name: <strong><font color="red">*</font></strong><span id="unique_user"></span></label>

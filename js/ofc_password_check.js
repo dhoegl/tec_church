@@ -15,12 +15,18 @@
 $(document).ready(function()
 {
 //    $('#register_submit').prop('disabled', true);
-    $('#password').keyup(function(){
+    $('#password').keyup(function(e){
+        var code = e.keyCode || e.which; //Check for Tab key - don't call checkStrength until actual key is pressed
+        if(code == '9'){
+            console.log('Tab Key Pressed');
+        }
+        else {
         $('#repeatpassword').val(""); 
         $('#password_match').removeClass(); 
         $('#password_match').addClass('nomatch'); 
         $('#password_match').html('No Match'); 
         $('#register_result').html(checkStrength($('#password').val()));
+    }
     });
     function checkStrength(password){
     //initial strength 

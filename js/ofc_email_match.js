@@ -3,8 +3,14 @@
 $(document).ready(function()
 {
 //    $('#register_submit').prop('disabled', true);
-    $('#repeatemailaddress').keyup(function(){
-        $('#email_match').html(checkMatch($('#repeatemailaddress').val(), $('#emailaddress').val()));
+    $('#repeatemailaddress').keyup(function(e){
+        var code = e.keyCode || e.which; //Check for Tab key - don't call checkStrength until actual key is pressed
+        if(code == '9'){
+            console.log('Tab Key Pressed');
+        }
+        else {
+            $('#email_match').html(checkMatch($('#repeatemailaddress').val(), $('#emailaddress').val()));
+        }
     });
     function checkMatch(repeatemailaddress, emailaddress){
     //initial check 

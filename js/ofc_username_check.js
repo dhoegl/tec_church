@@ -10,6 +10,7 @@ $(document).ready(function()
     if (username.length < 4) { 
         $('#unique_user').removeClass(); 
         $('#unique_user').addClass('short'); 
+        $('#username').val("");
         return 'Username must contain at least 4 characters'; 
     }
     else {
@@ -28,6 +29,7 @@ $(document).ready(function()
 			$('#unique_user').removeClass(); 
 			$('#unique_user').addClass('used');
                         $('#unique_user').html('Username taken');
+                        $('#username').val("");
 			return 'Username taken'; 
 		}
 		else {
