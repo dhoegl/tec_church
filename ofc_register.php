@@ -17,28 +17,26 @@ require_once 'ofc_dbconnect.php';
 
 
 <!-- Confirmation Code Check script -->
-<script type="text/javascript" src="js/ofc_confirmcode_check.js"></script>
+<!--<script type="text/javascript" src="js/ofc_confirmcode_check.js"></script>-->
 
 <!-- Username Check script -->
-<script type="text/javascript" src="js/ofc_username_check.js"></script>
+<!--<script type="text/javascript" src="js/ofc_username_check.js"></script>-->
 
 <!-- Password Strength Check script -->
-<script type="text/javascript" src="js/ofc_password_check.js"></script>
+<!--<script type="text/javascript" src="js/ofc_password_check.js"></script>-->
 
 <!-- Password Match Check script -->
-<script type="text/javascript" src="js/ofc_password_match.js"></script>
+<!--<script type="text/javascript" src="js/ofc_password_match.js"></script>-->
 
-<!-- Register Fields Check script -->
-<script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
 
 <!-- Registration church code confirmation script -->
-<script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>
+<!--<script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>-->
 
 <!-- Email Check script -->
-<script type="text/javascript" src="js/ofc_email_check.js"></script>
+<!--<script type="text/javascript" src="js/ofc_email_check.js"></script>-->
 
 <!-- Email Match Check script -->
-<script type="text/javascript" src="js/ofc_email_match.js"></script>
+<!--<script type="text/javascript" src="js/ofc_email_match.js"></script>-->
 
 <!-- Registration submission check script -->
 <script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
