@@ -57,7 +57,7 @@ $count = $result->num_rows;
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<html lang="en">
 <head>
     
 <!-- BOOTSTRAP 4 ALPHA - Required meta tags -->
@@ -179,20 +179,18 @@ $count = $result->num_rows;
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
-        </div> <!-- row -->
-        <div class="row">
             <div class="col-sm-6">
                     <div class="card card-body">
                         <h4 class="card-title">Color Definition</h4>
                         <ul class="card-text">
                             <li>Anniversaries are highlighted in <span style="background-color:green; color:white;">GREEN</span></li>
-                            <li>Adults' Birthdays are highlighted in <span style="background-color:red; color:white;">RED</span></li>
-                            <li>Kids' Birthdays are highlighted in <span style="background-color:yellow; color:black;">YELLOW</span></li>
+                            <li>Adults' Birthdays highlighted in <span style="background-color:red; color:white;">RED</span>; Kids' Birthdays highlighted in <span style="background-color:yellow; color:black;">YELLOW</span></li>
                             <li>Events are highlighted in <span style="background-color:blue; color:white;">BLUE</span></li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
         </div> <!-- row -->
+        <br>
     </div> <!-- collapse --> 
 <!--*****************************Calendar***********************************-->
     <div class="row justify-content-center">

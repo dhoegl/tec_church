@@ -3,45 +3,30 @@ session_start();
 require_once 'ofc_dbconnect.php';
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Please Register</title>
 <!-- Initialize jQuery scripts -->
-<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
+<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- *** jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 
-<!-- Confirmation Code Check script -->
-<!--<script type="text/javascript" src="js/ofc_confirmcode_check.js"></script>-->
-
-<!-- Username Check script -->
-<!--<script type="text/javascript" src="js/ofc_username_check.js"></script>-->
-
-<!-- Password Strength Check script -->
-<!--<script type="text/javascript" src="js/ofc_password_check.js"></script>-->
-
-<!-- Password Match Check script -->
-<!--<script type="text/javascript" src="js/ofc_password_match.js"></script>-->
-
-
-<!-- Registration church code confirmation script -->
-<!--<script type="text/javascript" src="js/ofc_register_confirmcode.js"></script>-->
-
-<!-- Email Check script -->
-<!--<script type="text/javascript" src="js/ofc_email_check.js"></script>-->
-
-<!-- Email Match Check script -->
-<!--<script type="text/javascript" src="js/ofc_email_match.js"></script>-->
-
+    
 <!-- Registration submission check script -->
 <script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
 
 <!-- Bootstrap -->
+<!--    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"></link>-->
     
@@ -58,7 +43,7 @@ require_once 'ofc_dbconnect.php';
 
 </head>
 
-  <body>
+<body>
 <?php
     $firstname = "";
     $lastname = "";
@@ -69,29 +54,69 @@ require_once 'ofc_dbconnect.php';
     $password = "";
     $repeatpassword = "";
 ?>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<!--    <div class="container">-->
+        <div class="navbar-header">
 <!--              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>-->
-                <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <p>This is a test</p>
-            </div> <!-- Collapse Navbar -->
-        </div> <!-- container -->
-  </nav>
-<div class="container">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>-->
+            <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
+        </div>
+<!--        <div id="navbar" class="navbar-collapse collapse">
+            <p>This is a test</p>
+        </div>  Collapse Navbar -->
+<!--    </div>  container -->
+</nav>
+<div class="container-fluid profile_bg">
+    <div class="row">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                How do I register
+            </button>
+        </p>
+    </div> <!-- row -->
+    <div class="collapse" id="collapseExample">
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title">Confirmation Code</h4>
+                        <ul class="card-text">
+                            <li>Your church administrator may have provided a Code for you</li>
+                            <li>Select Yes and enter the 5-digit Confirmation Code</li>
+                        </ul>
+                        <h4 class="card-title">User Name</h4>
+                        <ul class="card-text">
+                            <li>Select a unique User Name for your registration</li>
+                            <li>User Name must be 5 or more characters</li>
+                        </ul>
+                        <h4 class="card-title">Password</h4>
+                        <ul class="card-text">
+                            <li>Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</li>
+                        </ul>
+                    </div>
+            </div> <!-- col-sm-6 -->
+            <div class="col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title">Color Definition</h4>
+                        <ul class="card-text">
+                            <li>Anniversaries are highlighted in <span style="background-color:green; color:white;">GREEN</span></li>
+                            <li>Adults' Birthdays highlighted in <span style="background-color:red; color:white;">RED</span>; Kids' Birthdays highlighted in <span style="background-color:yellow; color:black;">YELLOW</span></li>
+                            <li>Events are highlighted in <span style="background-color:blue; color:white;">BLUE</span></li>
+                        </ul>
+                    </div>
+            </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+        <br>
+    </div> <!-- collapse --> 
     <div class="row">
         <div class="col-sm-6 bg-warning">
             <h2 class="text-center">WELCOME</h2>
                 <h3 class="text-center">Please Register</h3>
                 <h4 align="center"><strong><font color="red">* All fields MUST be filled in</font></strong></h4>
-                <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>
+<!--                <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>-->
                 <form id="register">
                     <div class="form-group">
                         <label for="confirmhcode">I received a church Confirmation Code:</label>
