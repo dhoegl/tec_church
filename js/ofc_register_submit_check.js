@@ -1,8 +1,11 @@
+/* global all_req_fields */
+
 //Check that all Registration fields have been correctly filled in
 
 $(document).ready(function()
 {
-    var all_reg_fields = 0;
+    var required_fields = 'N';
+    var all_req_fields = 'N';
     var churchcodeset = 'Y';
     var churchcodelen = 'N';
     var usernameset = 'N';
@@ -16,6 +19,7 @@ $(document).ready(function()
     $('.churchcodecheck').click(function(){
         if($('input[name=confirmcode]').prop('checked') == true){
             console.log('YES Clicked');
+            console.log('all_req_fields = ' + all_req_fields);
             $('#churchcodelabel').show(); 
             $('#churchcode').show(); 
             churchcodeset = 'Y';
@@ -25,6 +29,7 @@ $(document).ready(function()
         }
         else{
             console.log('NO Clicked');
+            console.log('all_req_fields = ' + all_req_fields);
             $('#churchcodelabel').hide(); 
             $('#churchcode').hide(); 
             churchcodeset = 'N';
@@ -36,6 +41,7 @@ $(document).ready(function()
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     });
@@ -43,6 +49,7 @@ $(document).ready(function()
     $('#churchcode').show(); 
 
 // </editor-fold>
+
 // <editor-fold desc="Check for church registration code - from ofc_register_confirmcode.js">
 //    $('.churchcodecheck').click(function(){
 //        console.log("Confirm Code Selection clicked");
@@ -76,17 +83,21 @@ $(document).ready(function()
             console.log('churchcodeset = ' + churchcodeset);
             console.log('confirm_code_len = ' + confirm_code_len);
             console.log("churchcodelen = " + churchcodelen);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         else {
             churchcodelen = 'N';
             console.log('churchcodeset = ' + churchcodeset);
             console.log('confirm_code_len = ' + confirm_code_len);
             console.log("churchcodelen = " + churchcodelen);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
         function checkCode(churchcode){
@@ -113,19 +124,22 @@ $(document).ready(function()
         var unique_user = $('#unique_user').html();
         $('#unique_user').html(checkAvail($('#username').val()));
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
         function checkAvail(username){
-        if (username.length < 4) { 
+        if (username.length < 5) { 
             $('#unique_user').removeClass(); 
             $('#unique_user').addClass('short'); 
             $('#username').val("");
             usernameset = 'S';
             console.log("usernameset = " + usernameset);
-            return 'Username must contain at least 4 characters'; 
+            console.log('all_req_fields = ' + all_req_fields);
+            return 'Username must contain at least 5 characters'; 
         }
         else {
     //length is ok, lets continue. 
@@ -146,6 +160,7 @@ $(document).ready(function()
                         $('#username').val("");
                         usernameset = 'N';
                         console.log("usernameset = " + usernameset);
+                        console.log('all_req_fields = ' + all_req_fields);
 			return 'Username taken'; 
 		}
 		else {
@@ -155,6 +170,7 @@ $(document).ready(function()
                         $('#unique_user').html('Username available');
                         usernameset = 'Y';
                         console.log("usernameset = " + usernameset);
+                        console.log('all_req_fields = ' + all_req_fields);
 			return 'Username available'; 
 		}
             });
@@ -196,16 +212,20 @@ $(document).ready(function()
         if($('#register_result').html() == 'Good' || $('#register_result').html() == 'Strong') {
             passwordset = 'Y';
             console.log("passwordset = " + passwordset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         else
         {
             passwordset = 'N';
             console.log("passwordset = " + passwordset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
 
@@ -241,16 +261,19 @@ $(document).ready(function()
         if (strength < 2 ) {
             $('#register_result').removeClass(); 
             $('#register_result').addClass('weak');
+            console.log('all_req_fields = ' + all_req_fields);
             return 'Weak'; 
         } 
         else if (strength == 2 ) { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('good'); 
+            console.log('all_req_fields = ' + all_req_fields);
             return 'Good'; 
         } 
         else { 
             $('#register_result').removeClass(); 
             $('#register_result').addClass('strong'); 
+            console.log('all_req_fields = ' + all_req_fields);
             return 'Strong'; 
         }; 
     };
@@ -277,6 +300,7 @@ $(document).ready(function()
                 $('#password_match').addClass('match'); 
                 repeatpasswordset = 'Y';
                 console.log("repeatpasswordset = " + repeatpasswordset);
+                console.log('all_req_fields = ' + all_req_fields);
                 return 'Match'; 
             } 
             else { 
@@ -284,14 +308,17 @@ $(document).ready(function()
                 $('#password_match').addClass('nomatch'); 
                 repeatpasswordset = 'N';
                 console.log("repeatpasswordset = " + repeatpasswordset);
-                return 'No Match'; 
+                console.log('all_req_fields = ' + all_req_fields);
+            return 'No Match'; 
             }; 
         };
 
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     });
@@ -306,15 +333,19 @@ $(document).ready(function()
         if(fnlen > 0){
             firstnameset = 'Y';
             console.log("firstnameset = " + firstnameset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         else {
             firstnameset = 'N';
             console.log("firstnameset = " + firstnameset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     });
@@ -327,15 +358,19 @@ $(document).ready(function()
         if(lnlen > 0){
             lastnameset = 'Y';
             console.log("lastnameset = " + lastnameset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         else {
             lastnameset = 'N';
             console.log("lastnameset = " + lastnameset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     });
@@ -361,16 +396,20 @@ $(document).ready(function()
         if($('#email_choose').html() == 'Email Accepted') {
             emailset = 'Y';
             console.log("emailset = " + emailset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         else
         {
             emailset = 'N';
             console.log("emailset = " + emailset);
+            console.log('all_req_fields = ' + all_req_fields);
         }
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     
@@ -382,12 +421,14 @@ $(document).ready(function()
                 $('#email_choose').removeClass(); 
                 $('#email_choose').addClass('available'); 
                 $('#email_choose').html == 'Email Accepted'; 
+                console.log('all_req_fields = ' + all_req_fields);
                 return 'Email Accepted'; 
             }
             else {
                 $('#email_choose').removeClass(); 
                 $('#email_choose').addClass('short'); 
                 $('#email_choose').html == 'Incorrect Email Format'; 
+                console.log('all_req_fields = ' + all_req_fields);
                 return 'Incorrect Email Format'; 
             }
         };
@@ -414,6 +455,7 @@ $(document).ready(function()
                 $('#email_match').addClass('match'); 
                 repeatemailset = 'Y';
                 console.log("repeatemailset = " + repeatemailset);
+                console.log('all_req_fields = ' + all_req_fields);
                 return 'Match'; 
             } 
             else { 
@@ -421,14 +463,17 @@ $(document).ready(function()
                 $('#email_match').addClass('nomatch'); 
                 repeatemailset = 'N';
                 console.log("repeatemailset = " + repeatemailset);
-                return 'No Match'; 
+                console.log('all_req_fields = ' + all_req_fields);
+            return 'No Match'; 
             }; 
         };
 
         if((churchcodeset == 'N' || (churchcodeset == 'Y' && churchcodelen == 'Y')) && usernameset == 'Y' && passwordset == 'Y' && repeatpasswordset == 'Y' && firstnameset == 'Y' && lastnameset == 'Y' && emailset == 'Y' && repeatemailset == 'Y'){
+            all_reg_fields = 'Y';
             $('#register_submit').removeClass('disabled'); 
         }
         else {
+            all_reg_fields = 'N';
             $('#register_submit').addClass('disabled'); 
         }
     });
