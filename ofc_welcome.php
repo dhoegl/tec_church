@@ -48,7 +48,7 @@ session_start();
             <?php
             if(!$_SESSION['logged in']) {
                 session_destroy();
-                echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin.php">';
+                echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin2.php">';
                 echo '<div class="form-group">';
                 echo '<input type="text" placeholder="username" name="myusername" class="form-control" required="TRUE" autofocus="TRUE">';
                 echo '</div>';

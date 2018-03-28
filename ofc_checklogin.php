@@ -9,8 +9,8 @@ echo "<script type='text/javascript' src='http://code.jquery.com/jquery-latest.m
 $myusername=$_POST['myusername']; 
 $mypassword=$_POST['mypassword']; 
 
-$mysql_cstat = @mysql_connect($host, $username, $password)or die("cannot connect. Error #" . mysql_errno() . " " . mysql_error()); 
-$mysql_sstat = @mysql_select_db($db_name)or die("cannot select DB. Error:" . mysql_errno() . " " . mysql_error());
+//$mysql_cstat = @mysql_connect($host, $username, $password)or die("cannot connect. Error #" . mysql_errno() . " " . mysql_error()); 
+//$mysql_sstat = @mysql_select_db($db_name)or die("cannot select DB. Error:" . mysql_errno() . " " . mysql_error());
 
 
 // To protect MySQL injection
@@ -18,38 +18,66 @@ $myusername2 = stripslashes($myusername);
 $mypassword2 = stripslashes($mypassword);
 $myusername3 = @mysql_real_escape_string($myusername2);
 $mypassword3 = @mysql_real_escape_string(md5($mypassword2));
-
 // Get user details
-$sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = '$myusername3' AND password = '$mypassword3'");
-// $result = @mysql_query($sqlquery) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
-$count = $sqlquery->num_rows;
+// $sqlquery = $mysql->prepare("SELECT * FROM $login_tbl_name WHERE username = ? AND password = ?");
+// $sqlquery = $mysql->query("SELECT * FROM $login_tbl_name WHERE username = " + $myusername3 + " AND password = " + $mypassword3) or die(" SQL query error. Error:" . $mysql->errno() . " " . $mysql->error());
+$sqlquery = 'SELECT * FROM ' . $login_tbl_name . ' WHERE username = ' . $myusername3;
+if($user_cred_verify = mysqli_query($mysql, $sqlquery))
+{
+    $rowcount = mysqli_num_rows($user_cred_verify);
+    $row = mysqli_fetch_assoc($user_cred_verify);
+    mysqli_free_result($user_cred_verify);
+}
+mysqli_close($mysql);
+////     $rowval = $row[username];
+//     }
+// $user_cred_verify->free();
+// };
+// $user_cred_verify->close();
+
+// $sqlquery = $mysql->query("SELECT * FROM " + $login_tbl_name + " WHERE username = " + $myusername3);
+// $sqlquery->bind_param("ss", $myusername2, $mypassword2);
+// $sqlquery->execute();
+// $count = $sqlquery->num_rows;
+// $count = $mysql->num_rows($sqlquery);
+
 ?>
 
 <script type='text/javascript'>
- var $countval =  + <?php echo "'" . $count . "'"; ?>;
- var $myusernameval =  + <?php echo "'" . $myusername2 . "'"; ?>;
- var $mypasswordval =  + <?php echo "'" . $mypassword2 . "'"; ?>;
+// var $countval =  + <?php echo "'" . $count . "'"; ?>;
+// var $myusernameval =  + <?php echo "'" . $myusername . "'"; ?>;
+// var $mypasswordval =  + <?php echo "'" . $mypassword . "'"; ?>;
+// var $countval =  <?php echo "'" . $rowcount . "'"; ?>;
+// var $myusernameval =  <?php echo "'" . $myusername2 . "'"; ?>;
+// var $mypasswordval =  <?php echo "'" . $mypassword3 . "'"; ?>;
  var jQ3 = jQuery.noConflict();
                 jQ3(document).ready(function() {
-		console.log("Username and Password entered");
-                console.log("Count = " + $countval);
-                console.log("Username = " + $myusernameval);
-                console.log("Password = " + $mypasswordval);
-
+//		console.log("Username and Password entered");
+//                console.log("Count = " + $countval);
+//                console.log("Username = " + $myusernameval);
+//                console.log("Password = " + $mypasswordval);
 });
 </script>
 
 <?php
-if($count == 1)
+if($rowcount != 1)
 {
 // Login $myusername, $mypassword and redirect to file "login_success.php"
-	$row = $sqlquery->fetch_assoc();
+//	$row = $sqlquery->fetch_assoc();
 ?>
 <script type='text/javascript'>
      var $userIDval =  + <?php echo "'" . $row['user_id'] . "'"; ?>;
+     var $countval =  <?php echo "'" . $rowcount . "'"; ?>;
+     var $myusernameval =  <?php echo "'" . $myusername2 . "'"; ?>;
+     var $mypasswordval =  <?php echo $mypassword3 ?>;
         var jQ5 = jQuery.noConflict();
                 jQ5(document).ready(function() {
 		console.log("User ID = " + $userIDval);
+                console.log("Username and Password entered");
+                console.log("Count = " + $countval);
+                console.log("Username = " + $myusernameval);
+                console.log("Password = " + $mypasswordval);
+
 
 });
 
@@ -76,7 +104,7 @@ if($row['active']==1)
 	$client_browser = stripslashes($_SERVER['HTTP_USER_AGENT']);
 //	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
 //	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
-	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
+//	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
         if($accessquery->error){
             echo " SQL query access log entry error. Error:" . $accessquery->errno . " " . $accessquery->error;
         }

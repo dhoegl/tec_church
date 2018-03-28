@@ -20,7 +20,6 @@ if(isset($_POST['registersubmit']))
 //	$contactupdate = $mysql->query($contactupdatequery) or die("A database error occurred when trying to update contact info. See tec_profile_contact_update.php. Error : " . mysql_errno() . mysql_error());		
 //	eventLogUpdate('profile_update', $last_name, 'Profile Update : Contact : DirectoryID = ', $_SESSION['idDirectory']);
         echo "Got to RegisterSubmit";
-        echo "<p id='test1'>Arrived</p>";
         echo "<script language='javascript'>";
         echo "console.log('arrived at registersubmit - isset worked');";
         echo "alert('Arrived at RegisterSubmit - isset worked');";

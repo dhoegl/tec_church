@@ -32,6 +32,10 @@ session_start();
         $mysql = new mysqli($host, $username, $password, $db_name);
         if ($mysql->connect_error){
             echo 'Unable to establish connection to database';
-            echo 'Error #: ' . $mysql->connect_errno . ' Description: ' . $mysql->connect_error;
+            echo ' Error #: ' . $mysql->connect_errno . ' Description: ' . $mysql->connect_error;
         }
+//         else {
+//            echo 'PASSED MUSTER';
+//            echo 'Error #: ' . $mysql->connect_errno . ' Description: ' . $mysql->connect_error;
+//         }
         ?>
