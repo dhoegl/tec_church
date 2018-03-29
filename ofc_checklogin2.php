@@ -35,6 +35,72 @@ if($result->num_rows === 1)
         $rowcount = 1;
         $row = $result->fetch_assoc();
         $userID = $row[idDirectory];
+        
+        
+        if($row['active']==1)
+        {
+            $fullname = $row['firstname'] . " " . $row['lastname'];
+            $_SESSION['user_id'] = $row['login_ID'];
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['fullname'] = $fullname;		
+            $_SESSION['gender'] = $row['gender'];
+            $_SESSION['idDirectory'] = $row['idDirectory'];
+            $_SESSION['reg_admin'] = $row['admin_regnotify']; // Registration Administrator
+            $_SESSION['pray_admin'] = $row['admin_praynotify']; // Prayer Administrator
+            $_SESSION['super_admin'] = $row['admin_superuser']; // System SuperUser
+            $_SESSION['accesslevel'] = $row['access_level'];
+            $_SESSION['logged in'] = TRUE;
+
+        /*		Access Log entry  */
+            $client_ip = stripslashes($_SERVER['REMOTE_ADDR']);
+            $client_browser = stripslashes($_SERVER['HTTP_USER_AGENT']);
+        //	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
+        //	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
+        //	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
+            if($accessquery->error){
+                echo " SQL query access log entry error. Error:" . $accessquery->errno . " " . $accessquery->error;
+            }
+
+        /* Get user first name */
+        //    $namequery = $mysql->query("SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory']);
+            $namequery = "SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory'];
+            $result2 = $mysql->query($namequery);
+        //    if($namequery->error){
+            if($result2->error){
+                echo " Name Query error. Error:" . $namequery->errno . " " . $namequery->error;
+            }
+        //    $namerow = $namequery->fetch_assoc;
+            $namerow = $result2->fetch_assoc;
+            if($_SESSION['idDirectory'] <= 19999) //Shared Directory entries for generic users
+            {
+                if($_SESSION['gender'] == "M")
+                    {
+                        $_SESSION['firstname'] = $namerow['Name_1'];
+                    }
+                    elseif($_SESSION['gender'] == "F") 
+                    {
+                        $_SESSION['firstname'] = $namerow['Name_2'];
+                    }
+                    else 
+                {
+                    session_destroy();
+                    header("location:ofc_welcome.php");
+                    /* Enter Error Handler */
+                }
+            }
+            else 
+            {
+                    $_SESSION['firstname'] = $_SESSION['username'];
+            }
+            mysqli_close($mysql);
+            header("location:ofc_login_success.php");
+        }
+        else 
+        {
+            // Throw alert if user has not yet been activated 
+            mysqli_close($mysql);
+            include('/includes/ofc_credalert2.php');
+        }
     }
  else {
         $rowcount = 0;
@@ -49,17 +115,6 @@ if($rowcount != 1)
         $mysqlerror = mysqli_error($mysql);
         $mysqlerrno = mysqli_errno($mysql);
     }
-////     $rowval = $row[username];
-//     }
-// $user_cred_verify->free();
-// };
-// $user_cred_verify->close();
-
-// $sqlquery = $mysql->query("SELECT * FROM " + $login_tbl_name + " WHERE username = " + $myusername3);
-// $sqlquery->bind_param("ss", $myusername2, $mypassword2);
-// $sqlquery->execute();
-// $count = $sqlquery->num_rows;
-// $count = $mysql->num_rows($sqlquery);
 
 ?>
 
@@ -98,71 +153,3 @@ if($rowcount != 1)
 
 </script>
 
-
-
-<?php
-if($row['active']==1)
-{
-    $fullname = $row['firstname'] . " " . $row['lastname'];
-    $_SESSION['user_id'] = $row['login_ID'];
-    $_SESSION['username'] = $row['username'];
-    $_SESSION['fullname'] = $fullname;		
-    $_SESSION['gender'] = $row['gender'];
-    $_SESSION['idDirectory'] = $row['idDirectory'];
-    $_SESSION['reg_admin'] = $row['admin_regnotify']; // Registration Administrator
-    $_SESSION['pray_admin'] = $row['admin_praynotify']; // Prayer Administrator
-    $_SESSION['super_admin'] = $row['admin_superuser']; // System SuperUser
-    $_SESSION['accesslevel'] = $row['access_level'];
-    $_SESSION['logged in'] = TRUE;
-
-/*		Access Log entry  */
-    $client_ip = stripslashes($_SERVER['REMOTE_ADDR']);
-    $client_browser = stripslashes($_SERVER['HTTP_USER_AGENT']);
-//	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
-//	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
-//	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
-    if($accessquery->error){
-        echo " SQL query access log entry error. Error:" . $accessquery->errno . " " . $accessquery->error;
-    }
-
-/* Get user first name */
-//    $namequery = $mysql->query("SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory']);
-    $namequery = "SELECT * FROM " . $_SESSION['dirtablename'] . " WHERE idDirectory = " . $_SESSION['idDirectory'];
-    $result2 = $mysql->query($namequery);
-//    if($namequery->error){
-    if($result2->error){
-        echo " Name Query error. Error:" . $namequery->errno . " " . $namequery->error;
-    }
-//    $namerow = $namequery->fetch_assoc;
-    $namerow = $result2->fetch_assoc;
-    if($_SESSION['idDirectory'] <= 19999) //Shared Directory entries for generic users
-    {
-        if($_SESSION['gender'] == "M")
-            {
-                $_SESSION['firstname'] = $namerow['Name_1'];
-            }
-            elseif($_SESSION['gender'] == "F") 
-            {
-                $_SESSION['firstname'] = $namerow['Name_2'];
-            }
-            else 
-        {
-            session_destroy();
-            header("location:ofc_welcome.php");
-            /* Enter Error Handler */
-        }
-    }
-    else 
-    {
-            $_SESSION['firstname'] = $_SESSION['username'];
-    }
-    mysqli_close($mysql);
-    header("location:ofc_login_success.php");
-}
-else 
-{
-    // Throw alert if user has not yet been activated 
-    mysqli_close($mysql);
-    include('/includes/ofc_credalert2.php');
-}
-?>
