@@ -13,8 +13,6 @@ require_once 'ofc_dbconnect.php';
     <title>Please Register</title>
 
     <!-- Bootstrap 4 BETA CSS -->
-    <!--    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">-->
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -28,7 +26,6 @@ require_once 'ofc_dbconnect.php';
     <link href="css/ofc_css_style.css" rel="stylesheet">
     
 <!-- Initialize jquery js script -->
-<!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
     <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->

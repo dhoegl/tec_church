@@ -28,7 +28,7 @@ if(isset($_POST['registersubmit']))
 }
 else {
 	echo "isset didn't work";
-        echo "<p id='test1'>Arrived</p>";
+        echo "<p id='test1'>Arrived again</p>";
         echo "<script language='javascript'>";
         echo "console.log('arrived at registersubmit - isset DID NOT work');";
         echo "alert('Arrived at RegisterSubmit - isset DID NOT work');";

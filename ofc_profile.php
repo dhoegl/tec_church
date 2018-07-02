@@ -638,7 +638,34 @@ var jQ55 = jQuery.noConflict();
 <?php
     if($MyView == 'Y')
     {
-        echo '<div class="row"><div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button><button class="dropdown-item" data-toggle="modal" id="Children_Info_Click" data-target="#ModalChildrenInfo" type="button">Children</button><button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button></div></div></div>';
+        echo 
+            '<div class="row">'
+                . '<div class="col-sm-12">'
+                . '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">'
+                . '<div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">'
+                    . '<div class="dropdown">'
+                        . '<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button>'
+                        . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
+                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button>'
+                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button>'
+                            . '<button class="dropdown-item" data-toggle="modal" id="Children_Info_Click" data-target="#ModalChildrenInfo" type="button">Children</button>'
+                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button>'
+                        . '</div>' // dropdown-menu
+                    . '</div>' //dropdown
+                . '</div>' //btn-group
+                . '<div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">'
+                    //. '<button class="btn btn-success" type="button" data-toggle="modal" aria-expanded="false" data-target="#ModalPrayerNew">New Prayer Request</button>'
+                    . '<div class="dropdown">'
+                        . '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Prayer Requests</button>'
+                        . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
+                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">New Prayer Request</button>'
+                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>'
+                        . '</div>' // dropdown-menu
+                    . '</div>' //dropdown
+                . '</div>' //btn-group
+                . '</div>' //btn-toolbar
+                . '</div>' //class=col-sm
+            . '</div>'; //row
     }
 ?>
 
@@ -763,7 +790,8 @@ var jQ55 = jQuery.noConflict();
 -->
 
                         <p class="card-text">Prayer Requests go here.</p>
-                        <a href="#" class="btn btn-primary">See More</a>
+<!--                        <a href="#ModalPrayerNew" class="btn btn-primary">See More</a>-->
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalPrayerNew">New Prayer Request</button>
                     </div>
                 </div>
             </div>
@@ -1480,6 +1508,67 @@ var jQ55 = jQuery.noConflict();
     <div class="modal-footer">
       </div> <!-- modal-footer -->
         </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
+
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerNew" tabindex="-1" role="dialog" aria-labelledby="ModalPrayerNew" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="ModalPrayerNew">New Prayer Request<br></h5><h6>Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+	<form name='form1' method='post' action=''> 		
+	<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+        	<tr class="praytable_even">
+                    <td colspan="1"><strong>Type: </strong></td>
+                    <td colspan="2" class="praypraise"> </td>
+                    <td align="right" colspan="1"><strong>Answered: </strong></td>
+                    <td align="center" colspan="1" class="prayanswer"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Date: </strong></td>
+                    <td colspan="4" class="praydate"> </td>
+		</tr>
+		<tr class="praytable_even">
+                    <td colspan="1"><strong>From: </strong></td>
+                    <td colspan="4" class="praywho"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Title: </strong></td>
+                    <td colspan="4" class="praytitle"> </td>
+		</tr>
+		<tr>
+                    <td colspan="5">
+                        <hr />
+                    </td>
+		</tr>
+	</table>
+            <table id="praycontent" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+		<tr class="praytable_text">
+                    <td colspan="4">
+                        <div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                    </td>
+ 		</tr>
+	</table>
+    </div> <!-- modal-body -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="sendMail">Send Email</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div> <!-- modal-footer -->
+    </form>
     </div> <!-- modal-content -->
   </div> <!-- modal-dialog -->
 </div> <!-- modal-fade -->

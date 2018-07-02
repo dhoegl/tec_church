@@ -10,7 +10,7 @@ jQ8(document).ready(function() {
 //			"bPaginate": true,
 //			"aaSorting": [[ 1, "asc" ]],
 //			"ordering": true,
-			"order": [[ 3, 'desc' ]],
+//			"order": [[ 3, 'desc' ]], //TEMP COMMENTED
 //			"iDisplayLength": 100,
 //			"bLengthChange": false,
 //			"bFilter": true,

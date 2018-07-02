@@ -9,47 +9,38 @@ if(!$_SESSION['logged in']) {
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<!--
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
--->
-<!-- BOOTSTRAP 4 ALPHA - Required meta tags -->
+<head>
+<!-- BOOTSTRAP 4 - Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <title>TEST - OurFamilyConnections Home</title>
 
+<section> <!--initialization 20180630-->
 <!-- Initialize jquery js script -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 
-<!-- Bootstrap 4 BETA CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- Datatables Bootstrap 4 CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>-->
 
-    <!-- Custom styles for this template -->
-<!--    <link href="css/signin.css" rel="stylesheet">-->
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
-    <!-- Extended styles for this page -->
-    <link href="css/ofc_css_style.css" rel="stylesheet">
+</section>    <!--initialization 20180630-->
+<section> <!--initialization 20180630a-->
 
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/jumbotron.css" rel="stylesheet">
+<!-- Extended styles for this page -->
+<link href="css/ofc_css_style.css" rel="stylesheet">
+
+</section>    <!--initialization 20180630a-->
+
+ 
     <!--*******************************DataTables stylesheet data**************************************-->
-	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
-	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-
-     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<!-- jQuery functions & scripts -->
 
 <?php
 // Get Recent Prayer List
@@ -103,15 +94,15 @@ if(!$_SESSION['logged in']) {
                 </div>
             </div>
         </div> <!--col-md-4-->
-        <div class="col-md-4">
+        <div class="col-md-4"> <!--was col-md-4 -->
             <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title">Latest prayer requests</h2>
                 <div class="card-block">
-                    <a href="ofc_prayer.php" class="btn btn-primary">View More</a>
+                    <a href="ofc_prayer.php" class="btn btn-success">View More</a>
                 </div>
-                    <table id="recentprayertable" class="table table-sm table-striped dt-responsive" cellspacing="0" width="100%">
+                    <table id="recentprayertable" class="table table-striped table-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                 <th>Opened</th>
@@ -127,7 +118,7 @@ if(!$_SESSION['logged in']) {
                         </tr>
                     </tfoot>
                 </table>
-                    <a href="ofc_prayer.php" class="btn btn-primary">View More</a>
+                    <a href="ofc_prayer.php" class="btn btn-success">View More</a>
                 </div>
             </div>
         </div> <!--col-md-4-->
@@ -152,17 +143,16 @@ if(!$_SESSION['logged in']) {
 
 
 <!--Include all compiled plugins (below), or include individual files as needed
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
 
+   
+<!-- jQuery Datatables Bootstrap 4 JS -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<!--<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/responsive.bootstrap4.min.js"></script>-->
 
-<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<!--    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script> -->
-    
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     
     
   </body>

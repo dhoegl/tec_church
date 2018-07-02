@@ -16,7 +16,7 @@ jQ8(document).ready(function() {
 //			"bFilter": true,
 //			"bSort": true,
 //			"bInfo": false,
-//			"bAutoWidth": true,
+			"bAutoWidth": true,
 //			"sWrapper": "25px",
 //			"orderClasses": false,
                         "responsive": true,
@@ -33,12 +33,12 @@ jQ8(document).ready(function() {
         	},
 			{
            		className: "prayer_update",
-                        "responsivePriority": [ 3 ],
+                        "responsivePriority": [ 4 ],
            		"targets": [ 1 ] 
            	},
 			{
         		className: "prayer_who",
-                        "responsivePriority": [ 2 ],
+                        "responsivePriority": [ 3 ],
         		"targets": [ 2 ] 
         	},
 			{
@@ -56,7 +56,7 @@ jQ8(document).ready(function() {
         	},
 			{
         		className: "detailscolumn",
-                        "responsivePriority": [ 1 ],
+                        "responsivePriority": [ 2 ],
         		"targets": [ 6 ] 
         	},
 			{
