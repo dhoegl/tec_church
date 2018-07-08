@@ -24,7 +24,7 @@ if(!$_SESSION['logged in']) {
 				$prayer_title = $activerow['prayertitle'];
 				$prayer_text = $activerow['prayertext'];
 				$fullname = $activerow['fullname'];				
-				$glance = "<strong>" . $prayer_title . " </strong><br />" . substr($activerow['prayertext'],0,100) . "...";
+				$glance = "<a data-toggle='modal' data-target='#ModalPrayerInfo' class='faux_hyperlink'>" . $prayer_title . " </a><br />" . substr($activerow['prayertext'],0,100) . "...";
 				$praypraise = $activerow['praypraise'];
 				$prayanswer = $activerow['answered'];
 				if($activerow['prayanswer'] == '1') {

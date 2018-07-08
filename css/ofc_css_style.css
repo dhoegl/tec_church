@@ -118,7 +118,8 @@ body
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 0px;
 }
 .button_flat_green_small {
     background-color: #4CAF50;
@@ -691,4 +692,10 @@ body
 	width:210px;
 	padding: 0px 10px 10px 10px;
 	display:inline;
+}
+/******************* Mimic Hyperlink font-style - used for Prayer List Titles on small mobile devices *****************/
+.faux_hyperlink {
+    color: #0000FF !important; /*blue - IMPORTANT overrides all other CSS tags for this Class */
+    text-decoration: underline !important; /*IMPORTANT overrides all other CSS tags for this Class */
+    font-weight: bold;
 }

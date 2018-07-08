@@ -13,7 +13,7 @@
 			console.log("Details button clicked for Row " + $clickbuttonid);
 //			console.log(data);
 			if (data.prayerdata && data.prayerdata.length > 0) {
-				console.log("prayerdata exists at tec_get_activeprayer_jquery");
+				console.log("prayerdata exists at ofc_get_activeprayer_jquery");
 				jQ10.each(data.prayerdata, function (i, rep) {
 					if (rep.id === $clickbuttonid) { 
 //						console.log("$clickbuttonid = " + $clickbuttonid);

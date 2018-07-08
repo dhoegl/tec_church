@@ -269,11 +269,12 @@ jQ9(document).ready(function () {
             </div> <!-- col-sm-6 -->
             <div class="col-sm-6">
                 <div class="card card-body">
-                    <h4 class="card-title">Click on &quotDetails&quot to</h4>
+                    <h4 class="card-title">Click on the Quick Glance <span class="faux_hyperlink">Title</span> or the <span class="button_flat_green_small">Details</span> button to</h4>
                     <ul class="card-text">
                         <li>View more details about this prayer request</li>
                         <li>Follow this prayer request to receive updates and/or answers to it in email</li>
                         <li>Let the person know you care by sending an email</li>
+                        <li><strong>NOTE: </strong>On smaller mobile devices, the Quick Glance <span class="faux_hyperlink">Title</span> will be necessary for viewing prayer request details</li>
                     </ul>
                 </div>
             </div> <!-- col-sm-6 -->

@@ -22,10 +22,10 @@ jQ8(document).ready(function() {
                         "responsive": true,
 			"columnDefs": [ 
 			{
-            "targets": -2,
-            "data": null,
+//            "targets": -2,
+//            "data": null,
 //            "defaultContent": "<button class='my_popup_open button_flat_green_small'>Details</button>"
-            "defaultContent": "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#ModalPrayerInfo'>Details</button>"
+//            "defaultContent": "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#ModalPrayerInfo'>Details</button>"
 			},
 			{
         		className: "indexcol",
@@ -56,7 +56,9 @@ jQ8(document).ready(function() {
         	},
 			{
         		className: "detailscolumn",
+                        "data": null,
                         "responsivePriority": [ 2 ],
+                        "defaultContent": "<button type='button' class='btn btn-success' data-toggle='modal' data-target='#ModalPrayerInfo'>Details</button>",
         		"targets": [ 6 ] 
         	},
 			{

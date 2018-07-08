@@ -19,7 +19,7 @@ if(!$_SESSION['logged in']) {
 			echo "no prayer data";
 		}
 		while($activerow = $activeprayerquery->fetch_assoc()) {
-                                $prayerID = $activerow['prayerid'];
+                                $prayerid = $activerow['prayerid'];
 				$prayerupdate = date("M-d-Y", strtotime($activerow['prayerupdatedate']));
 				$prayer_title = $activerow['prayertitle'];
 				$prayer_text = $activerow['prayertext'];

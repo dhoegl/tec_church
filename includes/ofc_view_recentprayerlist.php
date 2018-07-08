@@ -10,38 +10,41 @@ jQ8(document).ready(function() {
 //			"bPaginate": true,
 //			"aaSorting": [[ 1, "asc" ]],
 //			"ordering": true,
-//			"order": [[ 3, 'desc' ]], //TEMP COMMENTED
+			"order": [[ 3, 'desc' ]],
 //			"iDisplayLength": 100,
 //			"bLengthChange": false,
 //			"bFilter": true,
 //			"bSort": true,
 //			"bInfo": false,
-//			"bAutoWidth": true,
+			"bAutoWidth": true,
 //			"sWrapper": "25px",
 //			"orderClasses": false,
                         "responsive": true,
 			"columnDefs": [
 			{
-//                        className: "prayer_update",
                         className: "prayerupdate",
+                        responsivePriority: "3",
                         "targets": [ 0 ] 
                         },
 			{
-//        		className: "prayer_who",
-        		className: "fullname", responsivePriority: "2", "visible": false,
+        		className: "fullname", 
+                        responsivePriority: "2",
+                        "visible": false,
         		"targets": [ 1 ] 
                         },
 			{
-//        		className: "prayer_title",
-        		className: "glance", responsivePriority: "1",
+        		className: "glance", 
+                        responsivePriority: "1",
         		"targets": [ 2 ] 
                         },
                         {
-                        className: "prayerid", "visible": false,
+                        className: "prayerid", 
+                        "visible": false,
                         "targets": [ 3 ] 
                         },
                         {
-                        className: "prayertext", "visible": false,
+                        className: "prayer_text", 
+                        "visible": false,
                         "targets": [ 4 ] 
                         }
 
