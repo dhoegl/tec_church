@@ -26,6 +26,7 @@ if(!$_SESSION['logged in']) {
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="../css/mdb.css">
 <!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">-->
 <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>-->
 <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>-->
@@ -86,14 +87,15 @@ if(!$_SESSION['logged in']) {
 <div class="container-fluid profile_bg">
     <div class="row">
         <div class="col-md-12">
-            <img class="card-img-top img-fluid church_home_banner" alt="TEC Logo Bkgnd">
+            <div class="card card-image" style="background-image: ../images/waterfall.jpg">
+            <img class="img-fluid church_home_banner" alt="TEC Logo Bkgnd">
 <!--            <img class="card-img-top img-fluid" src="../images/waterfall.jpg" style="width: 100%; align-self: center" alt="TEC Logo Bkgnd">-->
 <!--            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
                 <p class="white-text">strong overlay</p>
             </div>-->
-        </div>
-    </div>        
-    <div class="row">
+        </div> <!--col-md-12-->
+    </div> <!-- row -->
+<!--    <div class="row">
         <div class="col-md-4">
             <div class="card bg-light border-primary text-center m-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
@@ -107,19 +109,8 @@ if(!$_SESSION['logged in']) {
                     </div>
                 </div>
             </div>
-        </div> <!--col-md-4-->
-        <div class="col-md-4"> <!--was col-md-4 -->
-            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
-                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
-                <div class="card-body">
-                    <h2 class="card-title">News and Activities</h2>
-                    <div class="card-block">
-                        <a href="#" class="btn btn-success">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div> <!--col-md-4-->
-    </div> <!-- row -->
+        </div> col-md-4
+    </div>  row -->
 </div> <!--container-->
 
 
