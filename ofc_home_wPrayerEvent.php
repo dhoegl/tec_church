@@ -55,6 +55,14 @@ if(!$_SESSION['logged in']) {
  
     <!--*******************************DataTables stylesheet data**************************************-->
 
+<?php
+// Get Recent Prayer List
+   include('/includes/ofc_view_recentprayerlist.php');
+   
+// Get Recent Prayer jQuery
+   include('/includes/ofc_get_recentprayer_jquery.php');
+   
+?>
 
 
   </head>
@@ -85,15 +93,6 @@ if(!$_SESSION['logged in']) {
       
 <div class="container-fluid profile_bg">
     <div class="row">
-        <div class="col-md-12">
-            <img class="card-img-top img-fluid church_home_banner" alt="TEC Logo Bkgnd">
-<!--            <img class="card-img-top img-fluid" src="../images/waterfall.jpg" style="width: 100%; align-self: center" alt="TEC Logo Bkgnd">-->
-<!--            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-                <p class="white-text">strong overlay</p>
-            </div>-->
-        </div>
-    </div>        
-    <div class="row">
         <div class="col-md-4">
             <div class="card bg-light border-primary text-center m-3">
                 <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
@@ -112,10 +111,45 @@ if(!$_SESSION['logged in']) {
             <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
                 <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
-                    <h2 class="card-title">News and Activities</h2>
-                    <div class="card-block">
-                        <a href="#" class="btn btn-success">Details</a>
-                    </div>
+                    <h2 class="card-title">Latest prayer requests</h2>
+                <div class="card-block">
+                    <a href="ofc_prayer.php" class="btn btn-success">View More</a>
+                </div>
+                    <table id="recentprayertable" class="table table-striped table-responsive" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Opened</th>
+                                <th>Family Member</th>
+                                <th>Quick Glance</th>
+                                <th>ID</th>
+                                <th>Text</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Opened</th>
+                                <th>Family Member</th>
+                                <th>Quick Glance</th>
+                                <th>ID</th>
+                                <th>Text</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                    <a href="ofc_prayer.php" class="btn btn-success">View More</a>
+                </div>
+            </div>
+        </div> <!--col-md-4-->
+        <div class="col-md-4">
+            <div class="card bg-light border-primary text-center m-3" style="background-color: #FFFFFF">
+                <img class="card-img-top" height="100%" src="images/tfcbanner3.png" style="width: 75%; align-self: center" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Upcoming Events</h2>
+                </div>
+                <div class="card-block">
+                    <p class="card-text">Upcoming Events placeholder.</p>
+                </div>
+                <div class="card-block">
+                    <a href="#" class="btn btn-primary">View More</a>
                 </div>
             </div>
         </div> <!--col-md-4-->

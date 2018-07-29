@@ -35,6 +35,18 @@ body
 {
     background-image: url('../images/trinity_logo_web.png');
 }
+.church_home_banner
+{
+   width: 100%;
+}
+.church_home_banner
+{
+    background: url('../images/waterfall.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .pad-left
 {
     padding-left: 50px;
