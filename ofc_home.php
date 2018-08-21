@@ -5,7 +5,7 @@ if(!$_SESSION['logged in']) {
 	header("location:ofc_welcome.php");
 	exit();
 }
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en" class="full-height">
@@ -64,7 +64,8 @@ if(!$_SESSION['logged in']) {
         </nav>
 
             <!-- Intro Section -->
-            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">
+<!--            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">-->
+            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/images/Waterfall.jpg);">
                 <div class="full-bg-img">
                     <div class="container flex-center">
                         <div class="row pt-5 mt-3">
