@@ -16,9 +16,17 @@ if(!$_SESSION['logged in']) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>TEST - OurFamilyConnections Home</title>
+    
+    <script>
+        document.title = "Goodbye World!";
+    </script>
+    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
     <!-- Material Design Bootstrap -->
@@ -31,6 +39,8 @@ if(!$_SESSION['logged in']) {
     <link href="css/jumbotron.css" rel="stylesheet">
     <!-- Extended styles for this page -->
     <link href="css/ofc_css_style.css" rel="stylesheet">
+    <!-- Tenant-specific stylesheet -->
+    <link href="_tenant/css/tenant.css" rel="stylesheet">
 
 </head>
 
@@ -65,17 +75,17 @@ if(!$_SESSION['logged in']) {
 
             <!-- Intro Section -->
 <!--            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">-->
-            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/images/Waterfall.jpg);">
+            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/_tenant/images/cropped-ECS-2016-31.jpg);">
                 <div class="full-bg-img">
                     <div class="container flex-center">
                         <div class="row pt-5 mt-3">
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Minimalist intro</strong></h1>
+                                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Evangel Classical School</strong></h1>
                                     <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
-                                    <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Photography & design</strong></h5>
-                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
-                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+                                    <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>You are the Body of Christ</strong></h5>
+                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>
+                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About Us</a>
                                 </div>
                             </div>
                         </div>
@@ -95,15 +105,25 @@ if(!$_SESSION['logged in']) {
                 <div class="row py-5 mt-4">
 
                     <!--Grid column-->
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-12 text-left">
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        <p>We are a K-12 classical and Christian school in Marysville, Washington. We meet for classes from 9:00 AM to 3:00 PM Tuesday through Friday at 9015 44th Dr. NE. Come by or email to arrange a visit.</p>
+                        <h2>
+                            Our Mission:
+                        </h2>
+                        <p>
+                            <img data-attachment-id="1165" data-permalink="http://evangelcs.org/mission/attachment/mission1/" data-orig-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=1500%2C1500" data-orig-size="1500,1500" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="mission1" data-image-description="" data-medium-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=300%2C300" data-large-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=644%2C644" src="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=525%2C525" alt="" width="525" height="525" class="aligncenter size-large wp-image-1165" srcset="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=1024%2C1024 1024w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=150%2C150 150w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=300%2C300 300w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=768%2C768 768w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=100%2C100 100w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1500 1500w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1288 1288w" sizes="(max-width: 525px) 100vw, 525px">
+                        </p>
+                        <h2>
+                            At ECS:
+                        </h2>
+                        <ul>
+                            <li>we believe that submission to Christ is the starting point for education.</li>
+                            <li>we proclaim <a href="http://evangelcs.org/kuyper/">Christ’s sovereign lordship in every arena of life</a>.</li>  
+                            <li>we employ the <a href="http://evangelcs.org/vision/#trivium/">curriculum of the trivium</a>: the grammar, the logic, and the rhetoric.</li>
+                            <li>we help our students to understand and appreciate our position in Western Culture.</li>  
+                            <li>we embrace that Christians who are happy are the most useful for Christ, so <a href="http://evangelcs.org/laughter/">we laugh</a>…a lot.</li>
+                        </ul>
 
                     </div>
                     <!--Grid column-->
@@ -129,6 +149,9 @@ if(!$_SESSION['logged in']) {
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
