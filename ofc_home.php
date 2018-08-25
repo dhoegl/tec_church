@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
@@ -18,7 +18,7 @@ if(!$_SESSION['logged in']) {
     <title>TEST - OurFamilyConnections Home</title>
     
     <script>
-        document.title = "Goodbye World2!";
+        document.title = "Goodbye World!";
     </script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

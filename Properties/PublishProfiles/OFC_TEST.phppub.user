@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAC69rbyim0EKPDdJ3/SYhVwAAAAACAAAAAAADZgAAwAAAABAAAAAtIcborscbHcnWr0zLeq0UAAAAAASAAACgAAAAEAAAACyyRQ9Y6w2ioEJEqRXVHYwYAAAAoSSqmyYrlCtfD1WWD75wRBuTsubZLIsxFAAAAM/2QdqZl78nfdagmAKlHDIUg05X</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".gitignore">
+      <publishTime>03/03/2017 08:35:00</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist.zip">
+      <publishTime>08/18/2017 00:47:14</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.css">
+      <publishTime>08/18/2017 00:48:10</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.css.map">
+      <publishTime>08/18/2017 00:48:10</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css">
+      <publishTime>08/18/2017 00:48:10</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css.map">
+      <publishTime>08/18/2017 00:48:10</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-reboot.css">
+      <publishTime>08/18/2017 00:48:10</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-reboot.css.map">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-reboot.min.css">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap.css.map">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css.map">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/js/bootstrap.js">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="bootstrap 4/bootstrap-4.0.0-beta-dist/js/bootstrap.min.js">
+      <publishTime>08/18/2017 00:48:11</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>02/22/2017 22:47:03</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>02/22/2017 22:47:03</publishTime>
+    </File>
+    <File Include="css/dataTables.bootstrap.css">
+      <publishTime>09/09/2017 22:07:19</publishTime>
+    </File>
+    <File Include="css/dataTables.bootstrap4.css">
+      <publishTime>09/09/2017 16:26:52</publishTime>
+    </File>
+    <File Include="css/ie10-viewport-bug-workaround.css">
+      <publishTime>02/23/2017 00:12:06</publishTime>
+    </File>
+    <File Include="css/jumbotron.css">
+      <publishTime>02/23/2017 00:12:11</publishTime>
+    </File>
+    <File Include="css/mdb.min.css">
+      <publishTime>08/21/2018 03:18:40</publishTime>
+    </File>
+    <File Include="css/ofc_css_style.css">
+      <publishTime>08/19/2018 01:17:43</publishTime>
+    </File>
+    <File Include="css/ofc_style.css">
+      <publishTime>03/06/2017 21:52:36</publishTime>
+    </File>
+    <File Include="css/signin.css">
+      <publishTime>02/23/2017 00:12:12</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>08/21/2018 03:18:41</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Bold.woff">
+      <publishTime>08/22/2018 03:22:14</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Bold.woff2">
+      <publishTime>08/22/2018 04:04:18</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Light.woff">
+      <publishTime>08/21/2018 03:39:07</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Light.woff2">
+      <publishTime>08/22/2018 04:02:07</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Regular.woff">
+      <publishTime>08/22/2018 03:21:59</publishTime>
+    </File>
+    <File Include="font/roboto/Roboto-Regular.woff2">
+      <publishTime>08/22/2018 03:58:55</publishTime>
+    </File>
+    <File Include="images/content_bg.png">
+      <publishTime>10/05/2014 21:01:11</publishTime>
+    </File>
+    <File Include="images/cropped-ECS-2016-31.jpg">
+      <publishTime>08/22/2018 02:42:58</publishTime>
+    </File>
+    <File Include="images/cropped-ECS-2016-52.jpg">
+      <publishTime>08/22/2018 02:42:38</publishTime>
+    </File>
+    <File Include="images/img_400_300_blue.png">
+      <publishTime>08/17/2017 07:05:08</publishTime>
+    </File>
+    <File Include="images/ourfamilyconnections2.png">
+      <publishTime>12/29/2017 21:17:49</publishTime>
+    </File>
+    <File Include="images/ourfamilyconnections4.png">
+      <publishTime>12/30/2017 19:01:44</publishTime>
+    </File>
+    <File Include="images/tfcbanner3.png">
+      <publishTime>10/05/2014 21:01:16</publishTime>
+    </File>
+    <File Include="images/thumb.jpg">
+      <publishTime>07/22/2018 00:29:08</publishTime>
+    </File>
+    <File Include="images/trinity_logo.png">
+      <publishTime>10/05/2014 21:01:16</publishTime>
+    </File>
+    <File Include="images/trinity_logo_web.png">
+      <publishTime>10/05/2014 21:01:16</publishTime>
+    </File>
+    <File Include="images/Waterfall.jpg">
+      <publishTime>07/28/2018 17:58:57</publishTime>
+    </File>
+    <File Include="image_ajax.php">
+      <publishTime>09/19/2017 22:08:20</publishTime>
+    </File>
+    <File Include="includes/event_logs_update.php">
+      <publishTime>09/19/2017 02:20:09</publishTime>
+    </File>
+    <File Include="includes/newprayernotify.php">
+      <publishTime>01/03/2018 05:12:50</publishTime>
+    </File>
+    <File Include="includes/ofc_count_test.php">
+      <publishTime>09/19/2017 02:20:10</publishTime>
+    </File>
+    <File Include="includes/ofc_credalert2.php">
+      <publishTime>09/19/2017 02:20:10</publishTime>
+    </File>
+    <File Include="includes/ofc_credalerts.php">
+      <publishTime>03/19/2018 01:48:48</publishTime>
+    </File>
+    <File Include="includes/ofc_footer.php">
+      <publishTime>09/19/2017 02:20:11</publishTime>
+    </File>
+    <File Include="includes/ofc_getfamilylist.php">
+      <publishTime>09/19/2017 02:20:14</publishTime>
+    </File>
+    <File Include="includes/ofc_get_activeprayer_jquery.php">
+      <publishTime>07/03/2018 04:35:26</publishTime>
+    </File>
+    <File Include="includes/ofc_get_allprayer_jquery.php">
+      <publishTime>09/19/2017 02:20:12</publishTime>
+    </File>
+    <File Include="includes/ofc_get_calendar_data.php">
+      <publishTime>12/31/2017 05:58:01</publishTime>
+    </File>
+    <File Include="includes/ofc_get_loggedinuser.php">
+      <publishTime>09/19/2017 02:20:12</publishTime>
+    </File>
+    <File Include="includes/ofc_get_myprayer_jquery.php">
+      <publishTime>09/19/2017 02:20:13</publishTime>
+    </File>
+    <File Include="includes/ofc_get_prayer_email_address.php">
+      <publishTime>01/01/2018 07:22:19</publishTime>
+    </File>
+    <File Include="includes/ofc_get_recentprayer_jquery.php">
+      <publishTime>09/19/2017 02:20:13</publishTime>
+    </File>
+    <File Include="includes/ofc_get_unapprovedprayer_jquery.php">
+      <publishTime>09/19/2017 02:20:14</publishTime>
+    </File>
+    <File Include="includes/ofc_header.php">
+      <publishTime>09/19/2017 02:20:14</publishTime>
+    </File>
+    <File Include="includes/ofc_hidecred.php">
+      <publishTime>09/19/2017 02:20:15</publishTime>
+    </File>
+    <File Include="includes/ofc_menu.php">
+      <publishTime>01/03/2018 05:32:35</publishTime>
+    </File>
+    <File Include="includes/ofc_updateprayernotify.php">
+      <publishTime>01/12/2018 03:35:11</publishTime>
+    </File>
+    <File Include="includes/ofc_updateprayernotify_admin.php">
+      <publishTime>01/12/2018 03:35:45</publishTime>
+    </File>
+    <File Include="includes/ofc_view_activeprayerlist.php">
+      <publishTime>07/02/2018 05:18:34</publishTime>
+    </File>
+    <File Include="includes/ofc_view_allprayerlist.php">
+      <publishTime>09/19/2017 02:20:15</publishTime>
+    </File>
+    <File Include="includes/ofc_view_familylist.php">
+      <publishTime>08/23/2017 04:15:59</publishTime>
+    </File>
+    <File Include="includes/ofc_view_myprayerlist.php">
+      <publishTime>09/19/2017 02:20:16</publishTime>
+    </File>
+    <File Include="includes/ofc_view_recentprayerlist.php">
+      <publishTime>07/08/2018 05:11:20</publishTime>
+    </File>
+    <File Include="includes/ofc_view_unapprovedprayerlist.php">
+      <publishTime>09/19/2017 02:20:16</publishTime>
+    </File>
+    <File Include="includes/tec_credalert2.php">
+      <publishTime>09/19/2017 02:20:17</publishTime>
+    </File>
+    <File Include="includes/tec_credalerts.php">
+      <publishTime>09/19/2017 02:20:17</publishTime>
+    </File>
+    <File Include="index.php">
+      <publishTime>03/03/2017 23:35:28</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>08/21/2018 03:18:44</publishTime>
+    </File>
+    <File Include="js/dataTables.bootstrap4.js">
+      <publishTime>09/09/2017 16:08:06</publishTime>
+    </File>
+    <File Include="js/dataTables.bootstrap4.min.js">
+      <publishTime>09/09/2017 22:08:06</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/changelog.txt">
+      <publishTime>12/30/2017 06:11:43</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/agenda-views.html">
+      <publishTime>12/30/2017 06:11:43</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/basic-views.html">
+      <publishTime>12/30/2017 06:11:43</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/cupertino/theme.css">
+      <publishTime>12/30/2017 06:11:44</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/default.html">
+      <publishTime>12/30/2017 06:11:44</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/external-dragging.html">
+      <publishTime>12/30/2017 06:11:45</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/gcal.html">
+      <publishTime>12/30/2017 06:11:45</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/json-events.php">
+      <publishTime>12/30/2017 06:11:45</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/json.html">
+      <publishTime>12/30/2017 06:11:46</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/selectable.html">
+      <publishTime>12/30/2017 06:11:46</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/demos/theme.html">
+      <publishTime>12/30/2017 06:11:46</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/fullcalendar/fullcalendar.css">
+      <publishTime>12/30/2017 06:11:47</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/fullcalendar/fullcalendar.js">
+      <publishTime>12/30/2017 06:11:47</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/fullcalendar/fullcalendar.min.js">
+      <publishTime>12/30/2017 06:11:48</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/fullcalendar/fullcalendar.print.css">
+      <publishTime>12/30/2017 06:11:48</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/fullcalendar/gcal.js">
+      <publishTime>12/30/2017 06:11:48</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/GPL-LICENSE.txt">
+      <publishTime>12/30/2017 06:11:49</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/jquery/fullcalendar.min.js">
+      <publishTime>12/30/2017 06:11:49</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/jquery/jquery-1.8.1.min.js">
+      <publishTime>12/30/2017 06:11:50</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/jquery/jquery-ui-1.8.23.custom.min.js">
+      <publishTime>12/30/2017 06:11:50</publishTime>
+    </File>
+    <File Include="js/fullcalendar-1.5.4/MIT-LICENSE.txt">
+      <publishTime>12/30/2017 06:11:51</publishTime>
+    </File>
+    <File Include="js/ie-emulation-modes-warning.js">
+      <publishTime>02/23/2017 00:12:07</publishTime>
+    </File>
+    <File Include="js/ie10-viewport-bug-workaround.js">
+      <publishTime>02/23/2017 00:12:07</publishTime>
+    </File>
+    <File Include="js/image_verify.js">
+      <publishTime>09/24/2017 01:59:23</publishTime>
+    </File>
+    <File Include="js/jquery-3.3.1.min.js">
+      <publishTime>08/21/2018 03:18:44</publishTime>
+    </File>
+    <File Include="js/mdb.min.js">
+      <publishTime>08/21/2018 03:18:45</publishTime>
+    </File>
+    <File Include="js/ofc_new_prayer_accept_click.js">
+      <publishTime>03/09/2017 20:25:58</publishTime>
+    </File>
+    <File Include="js/ofc_new_prayer_click.js">
+      <publishTime>03/08/2017 04:03:18</publishTime>
+    </File>
+    <File Include="js/ofc_register_submit_check.js">
+      <publishTime>03/01/2018 04:23:29</publishTime>
+    </File>
+    <File Include="js/ofc_update_prayer_click.js">
+      <publishTime>03/08/2017 04:05:24</publishTime>
+    </File>
+    <File Include="js/ofc_which_update_button_click.js">
+      <publishTime>03/08/2017 04:08:33</publishTime>
+    </File>
+    <File Include="js/old_ofc_confirmcode_check.js">
+      <publishTime>02/23/2018 23:58:49</publishTime>
+    </File>
+    <File Include="js/old_ofc_email_check.js">
+      <publishTime>02/22/2018 06:10:23</publishTime>
+    </File>
+    <File Include="js/old_ofc_email_match.js">
+      <publishTime>02/22/2018 05:44:04</publishTime>
+    </File>
+    <File Include="js/old_ofc_password_check.js">
+      <publishTime>02/18/2018 04:36:58</publishTime>
+    </File>
+    <File Include="js/old_ofc_password_match.js">
+      <publishTime>02/18/2018 04:37:15</publishTime>
+    </File>
+    <File Include="js/old_ofc_register_confirmcode.js">
+      <publishTime>02/12/2018 04:34:50</publishTime>
+    </File>
+    <File Include="js/old_ofc_username_check.js">
+      <publishTime>02/24/2018 00:53:38</publishTime>
+    </File>
+    <File Include="js/popper.min.js">
+      <publishTime>08/21/2018 03:18:45</publishTime>
+    </File>
+    <File Include="nbproject/configs/OFCTEST.properties">
+      <publishTime>07/30/2017 21:03:36</publishTime>
+    </File>
+    <File Include="nbproject/private/config.properties">
+      <publishTime>07/30/2017 21:03:36</publishTime>
+    </File>
+    <File Include="nbproject/private/configs/OFCTEST.properties">
+      <publishTime>08/20/2018 01:28:08</publishTime>
+    </File>
+    <File Include="nbproject/private/private-Dan-PC.xml">
+      <publishTime>03/13/2017 00:16:03</publishTime>
+    </File>
+    <File Include="nbproject/private/private-dhoegl6.xml">
+      <publishTime>08/07/2017 23:42:18</publishTime>
+    </File>
+    <File Include="nbproject/private/private.properties">
+      <publishTime>07/30/2017 21:03:36</publishTime>
+    </File>
+    <File Include="nbproject/private/private.xml">
+      <publishTime>08/24/2018 23:12:04</publishTime>
+    </File>
+    <File Include="nbproject/project.properties">
+      <publishTime>08/24/2018 22:46:29</publishTime>
+    </File>
+    <File Include="nbproject/project.xml">
+      <publishTime>07/31/2017 01:08:52</publishTime>
+    </File>
+    <File Include="ofc_bootstrap.html">
+      <publishTime>03/04/2017 07:40:51</publishTime>
+    </File>
+    <File Include="ofc_bootstrap_jumbotron.php">
+      <publishTime>03/05/2017 22:00:27</publishTime>
+    </File>
+    <File Include="ofc_calendar.php">
+      <publishTime>02/25/2018 03:33:36</publishTime>
+    </File>
+    <File Include="ofc_checklogin.php">
+      <publishTime>03/27/2018 00:28:52</publishTime>
+    </File>
+    <File Include="ofc_checklogin2.php">
+      <publishTime>03/29/2018 04:59:43</publishTime>
+    </File>
+    <File Include="ofc_check_follow_table.php">
+      <publishTime>08/22/2017 04:08:26</publishTime>
+    </File>
+    <File Include="ofc_dbconnect.php">
+      <publishTime>03/26/2018 22:22:08</publishTime>
+    </File>
+    <File Include="ofc_family.php">
+      <publishTime>09/15/2017 00:21:44</publishTime>
+    </File>
+    <File Include="ofc_famview.php">
+      <publishTime>03/08/2017 04:10:43</publishTime>
+    </File>
+    <File Include="ofc_getactiveprayer.php">
+      <publishTime>07/03/2018 05:44:43</publishTime>
+    </File>
+    <File Include="ofc_getallprayer.php">
+      <publishTime>01/03/2018 05:05:26</publishTime>
+    </File>
+    <File Include="ofc_getrecentprayer.php">
+      <publishTime>07/06/2018 06:33:19</publishTime>
+    </File>
+    <File Include="ofc_getunapprovedprayer.php">
+      <publishTime>01/03/2018 06:07:35</publishTime>
+    </File>
+    <File Include="ofc_get_json_activeprayer.php">
+      <publishTime>08/23/2017 00:54:41</publishTime>
+    </File>
+    <File Include="ofc_get_json_allprayer.php">
+      <publishTime>01/03/2018 05:08:28</publishTime>
+    </File>
+    <File Include="ofc_get_json_recentprayer.php">
+      <publishTime>08/24/2017 04:49:17</publishTime>
+    </File>
+    <File Include="ofc_get_json_unapprovedprayer.php">
+      <publishTime>01/03/2018 06:00:20</publishTime>
+    </File>
+    <File Include="ofc_home.php">
+      <publishTime>08/25/2018 16:57:20</publishTime>
+    </File>
+    <File Include="ofc_home_old.php">
+      <publishTime>08/19/2018 01:24:41</publishTime>
+    </File>
+    <File Include="ofc_home_wPrayerEvent.php">
+      <publishTime>07/12/2018 03:56:27</publishTime>
+    </File>
+    <File Include="ofc_login_success.php">
+      <publishTime>03/04/2017 06:41:19</publishTime>
+    </File>
+    <File Include="ofc_logout.php">
+      <publishTime>08/02/2017 04:31:41</publishTime>
+    </File>
+    <File Include="ofc_newprayer.php">
+      <publishTime>01/03/2018 05:28:26</publishTime>
+    </File>
+    <File Include="ofc_newprayeraccept.php">
+      <publishTime>01/03/2018 05:17:32</publishTime>
+    </File>
+    <File Include="ofc_newprayerreject.php">
+      <publishTime>01/03/2018 05:17:43</publishTime>
+    </File>
+    <File Include="ofc_prayer.php">
+      <publishTime>07/04/2018 05:11:36</publishTime>
+    </File>
+    <File Include="ofc_prayeradmin-dhoegl6.php">
+      <publishTime>03/09/2017 21:36:10</publishTime>
+    </File>
+    <File Include="ofc_prayeradmin.php">
+      <publishTime>01/03/2018 05:44:44</publishTime>
+    </File>
+    <File Include="ofc_PrayerTest.php">
+      <publishTime>09/12/2017 04:05:03</publishTime>
+    </File>
+    <File Include="ofc_profile.php">
+      <publishTime>06/29/2018 23:13:39</publishTime>
+    </File>
+    <File Include="ofc_profilesetup.php">
+      <publishTime>03/05/2017 22:47:57</publishTime>
+    </File>
+    <File Include="ofc_profile_calendar_update.php">
+      <publishTime>02/27/2017 17:40:37</publishTime>
+    </File>
+    <File Include="ofc_profile_children_update.php">
+      <publishTime>02/27/2017 17:22:51</publishTime>
+    </File>
+    <File Include="ofc_profile_contact_update.php">
+      <publishTime>02/13/2017 01:16:37</publishTime>
+    </File>
+    <File Include="ofc_recover.php">
+      <publishTime>03/05/2017 22:46:37</publishTime>
+    </File>
+    <File Include="ofc_register.php">
+      <publishTime>04/04/2018 03:12:16</publishTime>
+    </File>
+    <File Include="ofc_registerexist.php">
+      <publishTime>03/07/2017 04:09:43</publishTime>
+    </File>
+    <File Include="ofc_registerlogin.php">
+      <publishTime>03/05/2017 22:00:27</publishTime>
+    </File>
+    <File Include="ofc_totrinity.php">
+      <publishTime>03/05/2017 22:06:54</publishTime>
+    </File>
+    <File Include="ofc_updateprayer.php">
+      <publishTime>01/12/2018 03:35:28</publishTime>
+    </File>
+    <File Include="ofc_updateprayer_admin.php">
+      <publishTime>01/12/2018 03:36:32</publishTime>
+    </File>
+    <File Include="ofc_update_follow_table.php">
+      <publishTime>08/22/2017 04:09:22</publishTime>
+    </File>
+    <File Include="ofc_welcome.php">
+      <publishTime>03/27/2018 00:52:33</publishTime>
+    </File>
+    <File Include="ofc_welcome_old.php">
+      <publishTime>03/02/2017 23:35:02</publishTime>
+    </File>
+    <File Include="ofc_welcome_testreg.php">
+      <publishTime>03/05/2017 22:10:36</publishTime>
+    </File>
+    <File Include="profile_img/-jim and Gail %282%29.jpg">
+      <publishTime>09/19/2017 22:06:18</publishTime>
+    </File>
+    <File Include="profile_img/1.jpg">
+      <publishTime>09/19/2017 22:06:18</publishTime>
+    </File>
+    <File Include="profile_img/10.jpg">
+      <publishTime>09/19/2017 22:06:19</publishTime>
+    </File>
+    <File Include="profile_img/11.jpg">
+      <publishTime>09/19/2017 22:06:19</publishTime>
+    </File>
+    <File Include="profile_img/12.jpg">
+      <publishTime>09/19/2017 22:06:20</publishTime>
+    </File>
+    <File Include="profile_img/13.jpg">
+      <publishTime>09/19/2017 22:06:20</publishTime>
+    </File>
+    <File Include="profile_img/14.jpg">
+      <publishTime>09/19/2017 22:06:20</publishTime>
+    </File>
+    <File Include="profile_img/15.jpg">
+      <publishTime>09/19/2017 22:06:21</publishTime>
+    </File>
+    <File Include="profile_img/157-350px-FAA_Phonetic_and_Morse_Chart2_svg.png">
+      <publishTime>09/19/2017 22:06:21</publishTime>
+    </File>
+    <File Include="profile_img/157-cerulean2.jpeg">
+      <publishTime>09/19/2017 22:06:21</publishTime>
+    </File>
+    <File Include="profile_img/157-Dilbert - Traveling Consultant.jpg">
+      <publishTime>09/19/2017 22:06:22</publishTime>
+    </File>
+    <File Include="profile_img/157-NCHMP Logo2 copy.jpg">
+      <publishTime>09/19/2017 22:06:22</publishTime>
+    </File>
+    <File Include="profile_img/157-Oreilly.PNG">
+      <publishTime>09/19/2017 22:06:23</publishTime>
+    </File>
+    <File Include="profile_img/157-RA_License.jpg">
+      <publishTime>09/19/2017 22:06:23</publishTime>
+    </File>
+    <File Include="profile_img/157-Rope Swing.PNG">
+      <publishTime>09/19/2017 22:06:24</publishTime>
+    </File>
+    <File Include="profile_img/157-santa.jpg">
+      <publishTime>09/19/2017 22:06:25</publishTime>
+    </File>
+    <File Include="profile_img/157-ThePriceIsRight.jpg">
+      <publishTime>09/19/2017 22:06:25</publishTime>
+    </File>
+    <File Include="profile_img/157-Therightwaytocelebrate.jpg">
+      <publishTime>09/19/2017 22:06:26</publishTime>
+    </File>
+    <File Include="profile_img/16.jpg">
+      <publishTime>09/19/2017 22:06:26</publishTime>
+    </File>
+    <File Include="profile_img/17.jpg">
+      <publishTime>09/19/2017 22:06:27</publishTime>
+    </File>
+    <File Include="profile_img/18.jpg">
+      <publishTime>09/19/2017 22:06:27</publishTime>
+    </File>
+    <File Include="profile_img/19.jpg">
+      <publishTime>09/19/2017 22:06:27</publishTime>
+    </File>
+    <File Include="profile_img/2.jpg">
+      <publishTime>09/19/2017 22:06:28</publishTime>
+    </File>
+    <File Include="profile_img/20-14.jpg">
+      <publishTime>09/19/2017 22:06:28</publishTime>
+    </File>
+    <File Include="profile_img/20.jpg">
+      <publishTime>09/19/2017 22:06:28</publishTime>
+    </File>
+    <File Include="profile_img/21.jpg">
+      <publishTime>09/19/2017 22:06:29</publishTime>
+    </File>
+    <File Include="profile_img/22.jpg">
+      <publishTime>09/19/2017 22:06:29</publishTime>
+    </File>
+    <File Include="profile_img/23.jpg">
+      <publishTime>09/19/2017 22:06:30</publishTime>
+    </File>
+    <File Include="profile_img/24.jpg">
+      <publishTime>09/19/2017 22:06:30</publishTime>
+    </File>
+    <File Include="profile_img/25.jpg">
+      <publishTime>09/19/2017 22:06:30</publishTime>
+    </File>
+    <File Include="profile_img/26.jpg">
+      <publishTime>09/19/2017 22:06:31</publishTime>
+    </File>
+    <File Include="profile_img/27.jpg">
+      <publishTime>09/19/2017 22:06:31</publishTime>
+    </File>
+    <File Include="profile_img/28.jpg">
+      <publishTime>09/19/2017 22:06:32</publishTime>
+    </File>
+    <File Include="profile_img/29-jim and Gail %284%29.jpg">
+      <publishTime>09/19/2017 22:06:32</publishTime>
+    </File>
+    <File Include="profile_img/29-jim and Gail %285%29.jpg">
+      <publishTime>09/19/2017 22:06:33</publishTime>
+    </File>
+    <File Include="profile_img/29.jpg">
+      <publishTime>09/19/2017 22:06:33</publishTime>
+    </File>
+    <File Include="profile_img/3.jpg">
+      <publishTime>09/19/2017 22:06:34</publishTime>
+    </File>
+    <File Include="profile_img/30-IMG_3403.JPG">
+      <publishTime>09/19/2017 22:06:34</publishTime>
+    </File>
+    <File Include="profile_img/30.jpg">
+      <publishTime>09/19/2017 22:06:35</publishTime>
+    </File>
+    <File Include="profile_img/31.jpg">
+      <publishTime>09/19/2017 22:06:35</publishTime>
+    </File>
+    <File Include="profile_img/32.jpg">
+      <publishTime>09/19/2017 22:06:35</publishTime>
+    </File>
+    <File Include="profile_img/33.jpg">
+      <publishTime>09/19/2017 22:06:36</publishTime>
+    </File>
+    <File Include="profile_img/34.jpg">
+      <publishTime>09/19/2017 22:06:36</publishTime>
+    </File>
+    <File Include="profile_img/35.jpg">
+      <publishTime>09/19/2017 22:06:37</publishTime>
+    </File>
+    <File Include="profile_img/36.jpg">
+      <publishTime>09/19/2017 22:06:37</publishTime>
+    </File>
+    <File Include="profile_img/37.jpg">
+      <publishTime>09/19/2017 22:06:37</publishTime>
+    </File>
+    <File Include="profile_img/38.jpg">
+      <publishTime>09/19/2017 22:06:38</publishTime>
+    </File>
+    <File Include="profile_img/39.jpg">
+      <publishTime>09/19/2017 22:06:38</publishTime>
+    </File>
+    <File Include="profile_img/4.jpg">
+      <publishTime>09/19/2017 22:06:39</publishTime>
+    </File>
+    <File Include="profile_img/40.jpg">
+      <publishTime>09/19/2017 22:06:39</publishTime>
+    </File>
+    <File Include="profile_img/41.jpg">
+      <publishTime>09/19/2017 22:06:40</publishTime>
+    </File>
+    <File Include="profile_img/42.jpg">
+      <publishTime>09/19/2017 22:06:40</publishTime>
+    </File>
+    <File Include="profile_img/43.jpg">
+      <publishTime>09/19/2017 22:06:40</publishTime>
+    </File>
+    <File Include="profile_img/44.jpg">
+      <publishTime>09/19/2017 22:06:41</publishTime>
+    </File>
+    <File Include="profile_img/45.jpg">
+      <publishTime>09/19/2017 22:06:41</publishTime>
+    </File>
+    <File Include="profile_img/46.jpg">
+      <publishTime>09/19/2017 22:06:41</publishTime>
+    </File>
+    <File Include="profile_img/47.jpg">
+      <publishTime>09/19/2017 22:06:42</publishTime>
+    </File>
+    <File Include="profile_img/48.jpg">
+      <publishTime>09/19/2017 22:06:42</publishTime>
+    </File>
+    <File Include="profile_img/49.jpg">
+      <publishTime>09/19/2017 22:06:43</publishTime>
+    </File>
+    <File Include="profile_img/5.jpg">
+      <publishTime>09/19/2017 22:06:43</publishTime>
+    </File>
+    <File Include="profile_img/50.jpg">
+      <publishTime>09/19/2017 22:06:43</publishTime>
+    </File>
+    <File Include="profile_img/51.jpg">
+      <publishTime>09/19/2017 22:06:44</publishTime>
+    </File>
+    <File Include="profile_img/52-Screenshot_20170513-215108.jpg">
+      <publishTime>09/19/2017 22:06:44</publishTime>
+    </File>
+    <File Include="profile_img/52.jpg">
+      <publishTime>09/19/2017 22:06:45</publishTime>
+    </File>
+    <File Include="profile_img/53.jpg">
+      <publishTime>09/19/2017 22:06:45</publishTime>
+    </File>
+    <File Include="profile_img/54.jpg">
+      <publishTime>09/19/2017 22:06:45</publishTime>
+    </File>
+    <File Include="profile_img/55.jpg">
+      <publishTime>09/19/2017 22:06:46</publishTime>
+    </File>
+    <File Include="profile_img/56.jpg">
+      <publishTime>09/19/2017 22:06:46</publishTime>
+    </File>
+    <File Include="profile_img/57.jpg">
+      <publishTime>09/19/2017 22:06:47</publishTime>
+    </File>
+    <File Include="profile_img/58.jpg">
+      <publishTime>09/19/2017 22:06:47</publishTime>
+    </File>
+    <File Include="profile_img/59.jpg">
+      <publishTime>09/19/2017 22:06:48</publishTime>
+    </File>
+    <File Include="profile_img/6.jpg">
+      <publishTime>09/19/2017 22:06:48</publishTime>
+    </File>
+    <File Include="profile_img/60.jpg">
+      <publishTime>09/19/2017 22:06:49</publishTime>
+    </File>
+    <File Include="profile_img/61.jpg">
+      <publishTime>09/19/2017 22:06:49</publishTime>
+    </File>
+    <File Include="profile_img/62.jpg">
+      <publishTime>09/19/2017 22:06:49</publishTime>
+    </File>
+    <File Include="profile_img/63.jpg">
+      <publishTime>09/19/2017 22:06:50</publishTime>
+    </File>
+    <File Include="profile_img/64-IMG_0854.JPG">
+      <publishTime>09/19/2017 22:06:51</publishTime>
+    </File>
+    <File Include="profile_img/64.jpg">
+      <publishTime>09/19/2017 22:06:51</publishTime>
+    </File>
+    <File Include="profile_img/65.jpg">
+      <publishTime>09/19/2017 22:06:52</publishTime>
+    </File>
+    <File Include="profile_img/66.jpg">
+      <publishTime>09/19/2017 22:06:53</publishTime>
+    </File>
+    <File Include="profile_img/67.jpg">
+      <publishTime>09/19/2017 22:06:53</publishTime>
+    </File>
+    <File Include="profile_img/68.jpg">
+      <publishTime>09/19/2017 22:06:53</publishTime>
+    </File>
+    <File Include="profile_img/69.jpg">
+      <publishTime>09/19/2017 22:06:54</publishTime>
+    </File>
+    <File Include="profile_img/7.jpg">
+      <publishTime>09/19/2017 22:06:54</publishTime>
+    </File>
+    <File Include="profile_img/70.jpg">
+      <publishTime>09/19/2017 22:06:55</publishTime>
+    </File>
+    <File Include="profile_img/71.jpg">
+      <publishTime>09/19/2017 22:06:55</publishTime>
+    </File>
+    <File Include="profile_img/72.jpg">
+      <publishTime>09/19/2017 22:06:55</publishTime>
+    </File>
+    <File Include="profile_img/73.jpg">
+      <publishTime>09/19/2017 22:06:56</publishTime>
+    </File>
+    <File Include="profile_img/74.jpg">
+      <publishTime>09/19/2017 22:06:56</publishTime>
+    </File>
+    <File Include="profile_img/75.jpg">
+      <publishTime>09/19/2017 22:06:57</publishTime>
+    </File>
+    <File Include="profile_img/76-Joey2wks-88.jpg">
+      <publishTime>09/19/2017 22:06:58</publishTime>
+    </File>
+    <File Include="profile_img/76.jpg">
+      <publishTime>09/19/2017 22:06:58</publishTime>
+    </File>
+    <File Include="profile_img/77.jpg">
+      <publishTime>09/19/2017 22:06:59</publishTime>
+    </File>
+    <File Include="profile_img/78.jpg">
+      <publishTime>09/19/2017 22:06:59</publishTime>
+    </File>
+    <File Include="profile_img/79.jpg">
+      <publishTime>09/19/2017 22:06:59</publishTime>
+    </File>
+    <File Include="profile_img/8.jpg">
+      <publishTime>09/19/2017 22:07:00</publishTime>
+    </File>
+    <File Include="profile_img/80.jpg">
+      <publishTime>09/19/2017 22:07:00</publishTime>
+    </File>
+    <File Include="profile_img/81.jpg">
+      <publishTime>09/19/2017 22:07:01</publishTime>
+    </File>
+    <File Include="profile_img/82.jpg">
+      <publishTime>09/19/2017 22:07:01</publishTime>
+    </File>
+    <File Include="profile_img/83.jpg">
+      <publishTime>09/19/2017 22:07:01</publishTime>
+    </File>
+    <File Include="profile_img/88-15111041_10211557198625229_494383189643073366_o.jpg">
+      <publishTime>09/19/2017 22:07:02</publishTime>
+    </File>
+    <File Include="profile_img/9.jpg">
+      <publishTime>09/19/2017 22:07:02</publishTime>
+    </File>
+    <File Include="profile_img/96-pic.PNG">
+      <publishTime>09/19/2017 22:07:03</publishTime>
+    </File>
+    <File Include="profile_img/x.jpg">
+      <publishTime>09/19/2017 22:07:03</publishTime>
+    </File>
+    <File Include="README.md">
+      <publishTime>03/03/2017 00:16:45</publishTime>
+    </File>
+    <File Include="services/csv_download.php">
+      <publishTime>09/15/2017 00:42:39</publishTime>
+    </File>
+    <File Include="services/ofc_get_profile.php">
+      <publishTime>09/15/2017 00:06:24</publishTime>
+    </File>
+    <File Include="services/ofc_profile_calendar_update.php">
+      <publishTime>09/27/2017 04:35:33</publishTime>
+    </File>
+    <File Include="services/ofc_profile_children_update.php">
+      <publishTime>12/27/2017 06:19:48</publishTime>
+    </File>
+    <File Include="services/ofc_profile_contact_update.php">
+      <publishTime>09/24/2017 06:25:20</publishTime>
+    </File>
+    <File Include="services/ofc_register_submit.php">
+      <publishTime>04/04/2018 03:12:16</publishTime>
+    </File>
+    <File Include="services/ofc_username_check.php">
+      <publishTime>02/24/2018 00:07:58</publishTime>
+    </File>
+    <File Include="TempPopupPHPFile.php">
+      <publishTime>09/19/2017 22:02:13</publishTime>
+    </File>
+    <File Include="_tenant/css/tenant.css">
+      <publishTime>08/24/2018 00:03:27</publishTime>
+    </File>
+    <File Include="_tenant/images/cropped-ECS-2016-31.jpg">
+      <publishTime>08/22/2018 02:42:58</publishTime>
+    </File>
+    <File Include="_tenant/images/cropped-ECS-2016-52.jpg">
+      <publishTime>08/22/2018 02:42:38</publishTime>
+    </File>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bootstrap 4/bootstrap-4.0.0-beta-dist" />
+    <Folder Include="font" />
+    <Folder Include="js/fullcalendar-1.5.4/demos/cupertino/images" />
+    <Folder Include="_tenant" />
+  </ItemGroup>
+</Project>
