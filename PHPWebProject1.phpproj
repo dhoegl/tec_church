@@ -329,4 +329,7 @@
     <Folder Include="_tenant\images" />
     <Folder Include="_tenant" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="_tenant\Config.xml" />
+  </ItemGroup>
 </Project>

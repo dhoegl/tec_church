@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <settings>
+    <customer>
+      <ID>
+        001
+      </ID>
+      <name>
+        Trinity Evangel Church
+      </name>
+      <nickname>
+        TEC
+      </nickname>
+      <title>
+        TEC Family Connections
+      </title>
+      <theme>
+        TEC
+      </theme>
+    </customer>
+  </settings>

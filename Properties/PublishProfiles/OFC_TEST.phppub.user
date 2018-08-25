@@ -431,7 +431,7 @@
       <publishTime>01/03/2018 06:00:20</publishTime>
     </File>
     <File Include="ofc_home.php">
-      <publishTime>08/25/2018 16:57:20</publishTime>
+      <publishTime>08/25/2018 17:03:44</publishTime>
     </File>
     <File Include="ofc_home_old.php">
       <publishTime>08/19/2018 01:24:41</publishTime>
@@ -853,6 +853,9 @@
     <File Include="TempPopupPHPFile.php">
       <publishTime>09/19/2017 22:02:13</publishTime>
     </File>
+    <File Include="_tenant/Config.xml">
+      <publishTime>08/25/2018 23:14:28</publishTime>
+    </File>
     <File Include="_tenant/css/tenant.css">
       <publishTime>08/24/2018 00:03:27</publishTime>
     </File>
@@ -867,6 +870,5 @@
     <Folder Include="bootstrap 4/bootstrap-4.0.0-beta-dist" />
     <Folder Include="font" />
     <Folder Include="js/fullcalendar-1.5.4/demos/cupertino/images" />
-    <Folder Include="_tenant" />
   </ItemGroup>
 </Project>
