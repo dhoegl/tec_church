@@ -11,5 +11,5 @@ $(document).ready(function () {
 });
 function xmlParser(xml) {
     //console.log(xml);
-    console.log($(xml).find('PricingModel').text());
+    console.log($(xml).find('title').text());
 }
