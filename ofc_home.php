@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
@@ -150,6 +150,8 @@ if(!$_SESSION['logged in']) {
     <script>
         new WOW().init();
     </script>
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
 </body>
 
 </html>
