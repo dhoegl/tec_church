@@ -330,6 +330,7 @@
     <Folder Include="_tenant" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\ofc_config_ajax_call.js" />
     <Content Include="_tenant\Config - TEC.xml" />
     <Content Include="_tenant\Config.xml" />
   </ItemGroup>
