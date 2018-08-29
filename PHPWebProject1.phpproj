@@ -333,5 +333,7 @@
     <Compile Include="js\ofc_config_ajax_call.js" />
     <Content Include="_tenant\Config - TEC.xml" />
     <Content Include="_tenant\Config.xml" />
+    <Content Include="_tenant\images\raggantssbs.png" />
+    <Content Include="_tenant\images\raggantssbs_or.png" />
   </ItemGroup>
 </Project>

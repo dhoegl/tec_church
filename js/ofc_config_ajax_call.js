@@ -1,5 +1,6 @@
 // JavaScript source code
 $(document).ready(function () {
+    var titletext;
     $.ajax({
         url: '../_tenant/Config.xml',
         type: 'Get',
@@ -10,6 +11,8 @@ $(document).ready(function () {
     });
 });
 function xmlParser(xml) {
-    //console.log(xml);
-    console.log($(xml).find('name').text());
+    var titletext;
+    titletext = ($(xml).find('title').text());
+    document.title = titletext;
+
 }

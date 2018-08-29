@@ -15,11 +15,11 @@ if(!$_SESSION['logged in']) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TEST - OurFamilyConnections Home</title>
+    <title>Home</title>
     
-    <script>
-        document.title = "Goodbye World!";
-    </script>
+    <!--<script>
+        document.title = "Online Family Connection";
+    </script>-->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
