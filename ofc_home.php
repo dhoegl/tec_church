@@ -17,9 +17,6 @@ if(!$_SESSION['logged in']) {
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Home</title>
     
-    <!--<script>
-        document.title = "Online Family Connection";
-    </script>-->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -49,7 +46,11 @@ if(!$_SESSION['logged in']) {
 
             <!--Navbar-->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
+            <a class="navbar-brand" href="ofc_welcome.php">
+                <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+                OurFamilyConnections
+            </a>
+            <!--<a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>-->
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -73,23 +74,28 @@ if(!$_SESSION['logged in']) {
 
             <!-- Intro Section -->
 <!--            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">-->
-            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/_tenant/images/cropped-ECS-2016-31.jpg);">
-                <div class="full-bg-img">
-                    <div class="container flex-center">
-                        <div class="row pt-5 mt-3">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Evangel Classical School</strong></h1>
-                                    <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
-                                    <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>You are the Body of Christ</strong></h5>
-                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>
-                                    <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About Us</a>
+            <!--<div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/_tenant/images/cropped-ECS-2016-31.jpg);">-->
+                <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
+                    <div class="full-bg-img">
+                        <div class="container flex-center">
+                            <div class="row pt-5 mt-3">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
+                                            <strong>Evangel Classical School</strong>
+                                        </h1>
+                                        <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
+                                        <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
+                                            <strong>tagline</strong>
+                                        </h5>
+                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>
+                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About Us</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
         </header>
         <!--Main Navigation-->

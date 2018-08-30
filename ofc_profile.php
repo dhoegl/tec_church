@@ -64,6 +64,9 @@ else {
     <link href="css/jumbotron.css" rel="stylesheet">
     <!-- Extended styles for this page -->
     <link href="css/ofc_css_style.css" rel="stylesheet">
+    <!-- Tenant-specific stylesheet -->
+    <link href="_tenant/css/tenant.css" rel="stylesheet">
+
     
 <!-- Initialize jquery js script -->
 <!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->

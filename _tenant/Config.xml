@@ -14,14 +14,17 @@
         ECS Family Connection
       </title>
       <banner>
-        
+        url('/_tenant/images/x.jpg')
       </banner>
       <backsplash>
-        cropped-ECS-2016-31.jpg
+        url('/_tenant/images/cropped-ECS-2016-31.jpg')
       </backsplash>
       <logo>
-        
+        url('/_tenant/images/raggantssbs_or.png')
       </logo>
+      <tagline>
+        Risus est bellum.
+      </tagline>
     </customer>
     <theme>
       ECS

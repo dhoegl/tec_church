@@ -285,9 +285,9 @@
     <Compile Include="ofc_PrayerTest.php" />
     <Compile Include="ofc_profile.php" />
     <Compile Include="ofc_profilesetup.php" />
-    <Compile Include="ofc_profile_calendar_update.php" />
-    <Compile Include="ofc_profile_children_update.php" />
-    <Compile Include="ofc_profile_contact_update.php" />
+    <Compile Include="old_ofc_profile_calendar_update.php" />
+    <Compile Include="old_ofc_profile_children_update.php" />
+    <Compile Include="old_ofc_profile_contact_update.php" />
     <Compile Include="ofc_recover.php" />
     <Compile Include="ofc_register.php" />
     <Compile Include="ofc_registerexist.php" />
@@ -331,9 +331,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="js\ofc_config_ajax_call.js" />
+    <Content Include="images\x.jpg" />
     <Content Include="_tenant\Config - TEC.xml" />
     <Content Include="_tenant\Config.xml" />
     <Content Include="_tenant\images\raggantssbs.png" />
     <Content Include="_tenant\images\raggantssbs_or.png" />
+    <Content Include="_tenant\images\x.jpg" />
   </ItemGroup>
 </Project>
