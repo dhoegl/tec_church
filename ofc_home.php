@@ -88,8 +88,8 @@ if(!$_SESSION['logged in']) {
                                         <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
                                             <strong>tagline</strong>
                                         </h5>
-                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>
-                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About Us</a>
+                                        <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
+                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
