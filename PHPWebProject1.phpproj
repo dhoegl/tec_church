@@ -137,6 +137,7 @@
     <Compile Include="nbproject\private\private.xml" />
     <Compile Include="nbproject\project.properties" />
     <Compile Include="nbproject\project.xml" />
+    <Compile Include="ofc_nav.php" />
     <Compile Include="profile_img\-jim and Gail (2).jpg" />
     <Compile Include="profile_img\1.jpg" />
     <Compile Include="profile_img\10.jpg" />

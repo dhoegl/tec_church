@@ -613,8 +613,12 @@ var jQ55 = jQuery.noConflict();
 
   </head>
   <body>
+        <!--Navbar-->
+            <?php
+            require_once('ofc_nav.php');
+            ?>
 
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <!--<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#">OurFamilyConnections</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -635,7 +639,7 @@ var jQ55 = jQuery.noConflict();
                 }
                 ?>
             </div>
-        </nav>
+        </nav>-->
       
 <div class="container-fluid profile_bg">
 <?php

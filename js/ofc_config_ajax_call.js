@@ -37,4 +37,5 @@ function xmlParser(xml) {
     console.log("backsplash = " + backsplashtext);
     console.log("backsplashimage = " + backsplashimage);
     document.getElementById("backsplash").style.backgroundImage = backsplashimage;
+    document.getElementById("backsplash").style.backgroundPosition = "center";
 }
