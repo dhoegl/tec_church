@@ -45,6 +45,7 @@ if(!$_SESSION['logged in']) {
         <header>
         <!--Navbar-->
             <?php
+                $activeparam = '1';
                 require_once('ofc_nav.php');
             ?>
 
@@ -53,7 +54,7 @@ if(!$_SESSION['logged in']) {
 <!--            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">-->
             <!--<div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/_tenant/images/cropped-ECS-2016-31.jpg);">-->
                 <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
-                    <div class="full-bg-img">
+                    <!--<div class="full-bg-img">-->
                         <div class="container flex-center">
                             <div class="row pt-5 mt-3">
                                 <div class="col-md-12">
@@ -62,7 +63,7 @@ if(!$_SESSION['logged in']) {
                                             <strong>Evangel Classical School</strong>
                                         </h1>
                                         <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
-                                        <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
+                                        <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
                                             <strong>tagline</strong>
                                         </h5>
                                         <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
@@ -71,7 +72,7 @@ if(!$_SESSION['logged in']) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!--</div>-->
                 </div>
 
         </header>
@@ -86,15 +87,15 @@ if(!$_SESSION['logged in']) {
                 <div class="row py-5 mt-4">
 
                     <!--Grid column-->
-                    <div class="col-md-12 text-left">
+                    <div class="col-sm-12 text-center">
 
                         <p>We are a K-12 classical and Christian school in Marysville, Washington. We meet for classes from 9:00 AM to 3:00 PM Tuesday through Friday at 9015 44th Dr. NE. Come by or email to arrange a visit.</p>
                         <h2>
                             Our Mission:
                         </h2>
-                        <p>
+                        <!--<p>
                             <img data-attachment-id="1165" data-permalink="http://evangelcs.org/mission/attachment/mission1/" data-orig-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=1500%2C1500" data-orig-size="1500,1500" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="mission1" data-image-description="" data-medium-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=300%2C300" data-large-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=644%2C644" src="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=525%2C525" alt="" width="525" height="525" class="aligncenter size-large wp-image-1165" srcset="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=1024%2C1024 1024w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=150%2C150 150w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=300%2C300 300w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=768%2C768 768w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=100%2C100 100w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1500 1500w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1288 1288w" sizes="(max-width: 525px) 100vw, 525px">
-                        </p>
+                        </p>-->
                         <h2>
                             At ECS:
                         </h2>

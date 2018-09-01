@@ -18,6 +18,7 @@
       </banner>
       <backsplash>
         url('/_tenant/images/cropped-ECS-2016-31.jpg')
+        <!--url('/_tenant/images/x.jpg')-->
       </backsplash>
       <logo>
         url('/_tenant/images/raggantssbs_or.png')

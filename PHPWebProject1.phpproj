@@ -335,6 +335,9 @@
     <Content Include="images\x.jpg" />
     <Content Include="_tenant\Config - TEC.xml" />
     <Content Include="_tenant\Config.xml" />
+    <Content Include="_tenant\images\cropped-ECS-2016-45.jpg" />
+    <Content Include="_tenant\images\cropped-ECS-2016-51.jpg" />
+    <Content Include="_tenant\images\cropped-ECS-2016-69.jpg" />
     <Content Include="_tenant\images\raggantssbs.png" />
     <Content Include="_tenant\images\raggantssbs_or.png" />
     <Content Include="_tenant\images\x.jpg" />

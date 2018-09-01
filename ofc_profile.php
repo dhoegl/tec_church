@@ -613,8 +613,9 @@ var jQ55 = jQuery.noConflict();
 
   </head>
   <body>
-        <!--Navbar-->
+  <!--Navbar-->
             <?php
+            $activeparam = '2';
             require_once('ofc_nav.php');
             ?>
 
@@ -623,6 +624,8 @@ var jQ55 = jQuery.noConflict();
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+  <!-- Intro Section -->
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <?php
