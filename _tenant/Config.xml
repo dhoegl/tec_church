@@ -17,15 +17,20 @@
         url('/_tenant/images/x.jpg')
       </banner>
       <backsplash>
-        url('/_tenant/images/cropped-ECS-2016-31.jpg')
-        <!--url('/_tenant/images/x.jpg')-->
+        url('/_tenant/images/cropped-ECS-2016-51.jpg')
       </backsplash>
       <logo>
         url('/_tenant/images/raggantssbs_or.png')
       </logo>
+      <nav_logo>
+        /_tenant/images/raggantssbs_or.png
+      </nav_logo>
       <tagline>
         Risus est bellum.
       </tagline>
+      <special1> <!--Home Page Mission Statement Image-->
+        url('/_tenant/images/Mission.png')
+      </special1>
       <contact>
         firebird@hoeglund.com
       </contact>

@@ -177,6 +177,8 @@ if(!$_SESSION['logged in']) {
 	
 </div> <!-- Container -->
     
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
 
 </body>
 </html>

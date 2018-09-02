@@ -445,6 +445,8 @@ jQ9(document).ready(function () {
     
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
 
 
 </body>

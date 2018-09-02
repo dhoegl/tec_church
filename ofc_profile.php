@@ -627,7 +627,7 @@ var jQ55 = jQuery.noConflict();
 
   <!-- Intro Section -->
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <?php
                 if(!$_SESSION['logged in']) {
                     session_destroy();
@@ -642,7 +642,7 @@ var jQ55 = jQuery.noConflict();
                 }
                 ?>
             </div>
-        </nav>-->
+        </nav>-->-->
       
 <div class="container-fluid profile_bg">
 <?php
@@ -1597,6 +1597,8 @@ var jQ55 = jQuery.noConflict();
 <!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
 	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
     
   </body>
 </html>

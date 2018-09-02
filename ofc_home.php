@@ -51,8 +51,6 @@ if(!$_SESSION['logged in']) {
 
 
             <!-- Intro Section -->
-<!--            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">-->
-            <!--<div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(/_tenant/images/cropped-ECS-2016-31.jpg);">-->
                 <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
                     <!--<div class="full-bg-img">-->
                         <div class="container flex-center">
@@ -93,18 +91,29 @@ if(!$_SESSION['logged in']) {
                         <h2>
                             Our Mission:
                         </h2>
-                        <!--<p>
-                            <img data-attachment-id="1165" data-permalink="http://evangelcs.org/mission/attachment/mission1/" data-orig-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=1500%2C1500" data-orig-size="1500,1500" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="mission1" data-image-description="" data-medium-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=300%2C300" data-large-file="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?fit=644%2C644" src="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=525%2C525" alt="" width="525" height="525" class="aligncenter size-large wp-image-1165" srcset="https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=1024%2C1024 1024w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=150%2C150 150w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=300%2C300 300w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=768%2C768 768w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?resize=100%2C100 100w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1500 1500w, https://i1.wp.com/evangelcs.org/wp-content/uploads/2018/02/mission1.jpg?w=1288 1288w" sizes="(max-width: 525px) 100vw, 525px">
-                        </p>-->
+                        <p>
+                            We commend the works of the Lord to another generation with the tools of classical education, weaponized laughter, and sacrificial labors so that they will carry and advance Christ-honoring culture. 
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-sm-12 text-left">
+
                         <h2>
                             At ECS:
                         </h2>
                         <ul>
-                            <li>we believe that submission to Christ is the starting point for education.</li>
-                            <li>we proclaim <a href="http://evangelcs.org/kuyper/">Christ’s sovereign lordship in every arena of life</a>.</li>  
-                            <li>we employ the <a href="http://evangelcs.org/vision/#trivium/">curriculum of the trivium</a>: the grammar, the logic, and the rhetoric.</li>
-                            <li>we help our students to understand and appreciate our position in Western Culture.</li>  
-                            <li>we embrace that Christians who are happy are the most useful for Christ, so <a href="http://evangelcs.org/laughter/">we laugh</a>…a lot.</li>
+                            <li> we believe that submission to Christ is the starting point for education.</li>
+                            <li> we proclaim <a href="http://evangelcs.org/kuyper/" target="_blank">Christ’s sovereign lordship in every arena of life</a>.</li>
+                            <li> we employ the <a href="http://evangelcs.org/vision/#trivium/" target="_blank">curriculum of the trivium</a>: the grammar, the logic, and the rhetoric.</li>
+                            <li> we help our students to understand and appreciate our position in Western Culture.</li>
+                            <li> we embrace that Christians who are happy are the most useful for Christ, so <a href="http://evangelcs.org/laughter/" target="_blank">we laugh</a>…a lot.</li>
                         </ul>
 
                     </div>
@@ -112,7 +121,6 @@ if(!$_SESSION['logged in']) {
 
                 </div>
                 <!--Grid row-->
-
             </div>
 
         </main>
