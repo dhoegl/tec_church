@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="ofc_welcome.php">
         <!--<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" />-->
         <!--<img src="/_tenant/images/raggantssbs_or.png" width="30" height="30" class="d-inline-block align-top" alt="" />-->
-        <img id="nav_logo" width="30" height="30" class="d-inline-block align-top" alt="X" />
+        <img id="nav_logo" width="30" height="30" class="d-inline-block align-top" alt="" />
         <!--OurFamilyConnections-->
         <span id="navbar_brand"></span>
     </a>

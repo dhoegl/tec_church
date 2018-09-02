@@ -84,7 +84,7 @@ $count = $result->num_rows;
     
 <!-- Initialize jquery js script -->
 <!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
-    <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

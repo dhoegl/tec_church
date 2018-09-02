@@ -15,7 +15,7 @@ if(!$_SESSION['logged in']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Active Prayer Log</title>
+    <title></title>
 
 <!--CSS Scripts for Datatables Bootstrap 4 Responsive functions    -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
