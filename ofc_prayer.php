@@ -23,11 +23,13 @@ if(!$_SESSION['logged in']) {
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
 
 <!-- Custom styles for this template -->
-<link href="css/jumbotron.css" rel="stylesheet">
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Extended styles for this page -->
-<link href="css/ofc_css_style.css" rel="stylesheet">
+    <link href="css/ofc_css_style.css" rel="stylesheet">
+    <!-- Tenant-specific stylesheet -->
+    <link href="_tenant/css/tenant.css" rel="stylesheet" />
 
 
 <!--JS Scripts for Datatables Bootstrap 4 Responsive functions    -->
@@ -234,11 +236,20 @@ jQ9(document).ready(function () {
 <div class="container-fluid profile_bg">
 
     <div class="row">
-        <p>
+        <div class="col-sm-12">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                How do I use this prayer list
+                Using this prayer list
             </button>
-        </p>
+            <div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Prayer Requests</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">New Prayer Request</button>
+                        <button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>
+                    </div> <!--dropdown-menu-->
+                </div> <!--dropdown-->
+            </div> <!--btn-group-->
+        </div> <!-- col sm-12 -->
     </div> <!-- row -->
     <div class="collapse" id="collapseExample">
         <div class="row">
@@ -389,7 +400,7 @@ jQ9(document).ready(function () {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-          <h5 class="modal-title" id="ModalPrayer">Prayer Request Details<br></h5><h6>Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h6>
+          <h5 class="modal-title" id="ModalPrayer">Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

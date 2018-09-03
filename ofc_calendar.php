@@ -64,7 +64,7 @@ $count = $result->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Church Calendar</title>
+    <title></title>
 
 <!-- Bootstrap 4 BETA CSS -->
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
@@ -96,18 +96,20 @@ $count = $result->num_rows;
 <script type='text/javascript' src='/js/fullcalendar-1.5.4/jquery/jquery-ui-1.8.23.custom.min.js'></script>
 <script type='text/javascript' src='/js/fullcalendar-1.5.4/fullcalendar/fullcalendar.min.js'></script>
 
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
 
-
+<!--Get Calendar Data from ofc_get_calendar_data-->
 <script type='text/javascript'>
-
-	$(document).ready(function() {
+    var getdataJQ = jQuery.noConflict();
+    getdataJQ(document).ready(function() {
 
 		var date = new Date();
 		var d = date.getDate();
 		var m = date.getMonth();
 		var y = date.getFullYear();
 
-		$('#calendar').fullCalendar({
+        getdataJQ('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				right: 'title'
@@ -143,11 +145,13 @@ $count = $result->num_rows;
     <!-- Intro Section -->
 <div class="container-fluid profile_bg">
     <div class="row">
-        <p>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                How do I use this calendar
-            </button>
-        </p>
+        <div class="col-sm-12">
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Using this calendar
+                </button>
+            </p>
+        </div> <!-- col sm-12 -->
     </div> <!-- row -->
     <div class="collapse" id="collapseExample">
         <div class="row">

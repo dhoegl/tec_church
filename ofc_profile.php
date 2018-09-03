@@ -619,30 +619,8 @@ var jQ55 = jQuery.noConflict();
             require_once('ofc_nav.php');
             ?>
 
-        <!--<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">OurFamilyConnections</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
   <!-- Intro Section -->
-
-            <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <?php
-                if(!$_SESSION['logged in']) {
-                    session_destroy();
-                }
-                else
-                {
-
-                    echo '<ul class="navbar-nav mr-auto mt-md-0">';
-                    $activeparam = '2';
-                    include '/includes/ofc_menu.php';
-                    echo '</ul>';
-                }
-                ?>
-            </div>
-        </nav>-->-->
       
 <div class="container-fluid profile_bg">
 <?php
@@ -666,7 +644,7 @@ var jQ55 = jQuery.noConflict();
                 . '<div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">'
                     //. '<button class="btn btn-success" type="button" data-toggle="modal" aria-expanded="false" data-target="#ModalPrayerNew">New Prayer Request</button>'
                     . '<div class="dropdown">'
-                        . '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Prayer Requests</button>'
+                        . '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Prayer Requests</button>'
                         . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
                             . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">New Prayer Request</button>'
                             . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>'
@@ -1530,49 +1508,68 @@ var jQ55 = jQuery.noConflict();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-          <h5 class="modal-title" id="ModalPrayerNew">New Prayer Request<br></h5><h6>Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h6>
+          <h5 class="modal-title" id="ModalPrayerNew">Enter details about your prayer request and click <strong>Send.</strong></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div> <!-- modal-header -->
       <div class="modal-body">
-	<form name='form1' method='post' action=''> 		
-	<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-        	<tr class="praytable_even">
-                    <td colspan="1"><strong>Type: </strong></td>
-                    <td colspan="2" class="praypraise"> </td>
-                    <td align="right" colspan="1"><strong>Answered: </strong></td>
-                    <td align="center" colspan="1" class="prayanswer"> </td>
-		</tr>
-		<tr class="praytable_odd">
-                    <td colspan="1"><strong>Date: </strong></td>
-                    <td colspan="4" class="praydate"> </td>
-		</tr>
-		<tr class="praytable_even">
-                    <td colspan="1"><strong>From: </strong></td>
-                    <td colspan="4" class="praywho"> </td>
-		</tr>
-		<tr class="praytable_odd">
-                    <td colspan="1"><strong>Title: </strong></td>
-                    <td colspan="4" class="praytitle"> </td>
-		</tr>
-		<tr>
-                    <td colspan="5">
-                        <hr />
-                    </td>
-		</tr>
-	</table>
-            <table id="praycontent" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-		<tr class="praytable_text">
-                    <td colspan="4">
-                        <div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
-                    </td>
-		</tr>
-		<tr>
-                    <td>
-                    </td>
- 		</tr>
-	</table>
+	    <form name='newprayerform' method='post' action='ofc_newprayer.php'>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 px-2">Visibility:</legend>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="visible" value="1">
+                            <label class="form-check-label" for="visible">
+                                Elders only
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="visible" value="3" checked>
+                            <label class="form-check-label" for="visible">
+                                Your church family (elder approval required)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 px-2">Praise:</legend>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="prayer" value="Prayer" checked>
+                            <label class="form-check-label" for="prayer">
+                                Elders only
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="prayer" value="Praise">
+                            <label class="form-check-label" for="prayer">
+                                Your church family (elder approval required)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 px-2">Title:</legend>
+                    <!--<label for="requesttitle" class="col-sm-3 col-form-label">Title:</label>-->
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="requesttitle" placeholder="Title">
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 px-2">Details:</legend>
+                    <!--<label for="requesttext" class="col-sm-3 col-form-label">Details:</label>-->
+                    <div class="col-sm-9">
+                        <textarea type="text" class="form-control" rows="6" id="requesttext" placeholder="Details"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div> <!-- modal-body -->
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="sendMail">Send Email</button>

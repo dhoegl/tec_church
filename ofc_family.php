@@ -103,11 +103,13 @@ if(!$_SESSION['logged in']) {
     <!-- Intro Section -->
     <div class="container-fluid profile_bg">
         <div class="row">
-            <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    How do I use this directory
-                </button>
-            </p>
+            <div class="col-sm-12">
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Using this directory
+                    </button>
+                </p>
+            </div><!-- col sm-12 -->
         </div> <!-- row -->
         <div class="collapse" id="collapseExample">
             <div class="row">
