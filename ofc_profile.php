@@ -774,7 +774,7 @@ var jQ55 = jQuery.noConflict();
                         	if($MyView == "Y" || $AdminView == "Y"){
                 		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
                         	}
-                        	?>
+                                ?>
 -->
 
                         <p class="card-text">Prayer Requests go here.</p>
@@ -831,8 +831,8 @@ var jQ55 = jQuery.noConflict();
             </div>
       </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <input type="submit" class="btn btn-primary" value="Save changes" />
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
         </form>
     </div>
@@ -974,8 +974,8 @@ var jQ55 = jQuery.noConflict();
 
       </div> <!-- modal-body -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div> <!-- modal-footer -->
       </form>
@@ -1044,8 +1044,8 @@ var jQ55 = jQuery.noConflict();
                         </table>
             </div> <!-- modal-body -->
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <input type="submit" name="submitcalendar" class="btn btn-primary" value="Save changes" />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
               </div> <!-- modal-footer -->
                 </form>
@@ -1518,7 +1518,7 @@ var jQ55 = jQuery.noConflict();
             <fieldset class="form-group">
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Visibility:</legend>
-                    <div class="col-sm-9">
+                    <div class="col-sm-8 ml-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="visible" value="1">
                             <label class="form-check-label" for="visible">
@@ -1536,7 +1536,7 @@ var jQ55 = jQuery.noConflict();
                 <hr />
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Praise:</legend>
-                    <div class="col-sm-9">
+                    <div class="col-sm-8 ml-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="prayer" value="Prayer" checked>
                             <label class="form-check-label" for="prayer">
@@ -1555,7 +1555,6 @@ var jQ55 = jQuery.noConflict();
                 <hr />
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Title:</legend>
-                    <!--<label for="requesttitle" class="col-sm-3 col-form-label">Title:</label>-->
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="requesttitle" placeholder="Title">
                     </div>
@@ -1563,16 +1562,15 @@ var jQ55 = jQuery.noConflict();
                 <hr />
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Details:</legend>
-                    <!--<label for="requesttext" class="col-sm-3 col-form-label">Details:</label>-->
                     <div class="col-sm-9">
                         <textarea type="text" class="form-control" rows="6" id="requesttext" placeholder="Details"></textarea>
                     </div>
                 </div>
             </fieldset>
-        </form>
+        <!--</form>-->
     </div> <!-- modal-body -->
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="sendMail">Send Email</button>
+        <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
     </div> <!-- modal-footer -->
     </form>
@@ -1580,18 +1578,8 @@ var jQ55 = jQuery.noConflict();
   </div> <!-- modal-dialog -->
 </div> <!-- modal-fade -->
 
-<!--Include all compiled plugins (below), or include individual files as needed
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<!--    <script src="js/ie10-viewport-bug-workaround.js"></script>-->
-
-
 
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
-<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
-
-<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
 	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     
     <!-- Tenant Configuration JavaScript Call -->
