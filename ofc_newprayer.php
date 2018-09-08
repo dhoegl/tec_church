@@ -9,7 +9,7 @@ require_once('ofc_dbconnect.php');
 
 
 
-/* Process new Prayer Request: Called from tecfamview.php and tecprayeradmin.php */
+/* Process new Prayer Request: Called from ofc_profile.php and ofc_prayeradmin.php */
    
 	$prayer_owner = $_POST['requestorID'];
 	$prayer_name = $_POST['fullname'];

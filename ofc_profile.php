@@ -832,7 +832,7 @@ var jQ55 = jQuery.noConflict();
       </div>
         <div class="modal-footer">
             <input type="submit" class="btn btn-primary" value="Save changes" />
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
         </form>
     </div>
@@ -975,7 +975,7 @@ var jQ55 = jQuery.noConflict();
       </div> <!-- modal-body -->
       <div class="modal-footer">
         <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div> <!-- modal-footer -->
       </form>
@@ -1045,7 +1045,7 @@ var jQ55 = jQuery.noConflict();
             </div> <!-- modal-body -->
               <div class="modal-footer">
                 <input type="submit" name="submitcalendar" class="btn btn-primary" value="Save changes" />
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
               </div> <!-- modal-footer -->
                 </form>
@@ -1133,7 +1133,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove1child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit1children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1183,7 +1183,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove2child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit2children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1232,7 +1232,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove3child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit3children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1282,7 +1282,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove4child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit4children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1332,7 +1332,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove5child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit5children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1382,7 +1382,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove6child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit6children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1432,7 +1432,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove7child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit7children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1482,7 +1482,7 @@ var jQ55 = jQuery.noConflict();
                                                 <td colspan="3" align='right'>
                                                     <input type="submit" name="remove8child" class="btn btn-danger" value="Delete Child" />
                                                     <input type="submit" name="submit8children" class="btn btn-primary" value="Save changes" />
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 </td>
                                             </tr>
                                             </table>
@@ -1521,14 +1521,14 @@ var jQ55 = jQuery.noConflict();
                     <div class="col-sm-8 ml-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="visible" value="1">
-                            <label class="form-check-label" for="visible">
-                                Elders only
+                            <label class="form-check-label" for="visible" id="Visibility1">
+                                
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="visible" value="3" checked>
-                            <label class="form-check-label" for="visible">
-                                Your church family (elder approval required)
+                            <label class="form-check-label" for="visible" id="Visibility2">
+                                
                             </label>
                         </div>
                     </div>
@@ -1540,13 +1540,13 @@ var jQ55 = jQuery.noConflict();
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="prayer" value="Prayer" checked>
                             <label class="form-check-label" for="prayer">
-                                Elders only
+                                Prayer Request
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="prayer" value="Praise">
                             <label class="form-check-label" for="prayer">
-                                Your church family (elder approval required)
+                                Praise
                             </label>
                         </div>
                     </div>
@@ -1570,8 +1570,9 @@ var jQ55 = jQuery.noConflict();
         <!--</form>-->
     </div> <!-- modal-body -->
     <div class="modal-footer">
-        <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <p id="newprayernotice"></p>
+            <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
     </div> <!-- modal-footer -->
     </form>
     </div> <!-- modal-content -->

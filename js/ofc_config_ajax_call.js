@@ -64,4 +64,21 @@ function xmlParser(xml) {
     //document.getElementById("special1").style.backgroundImage = special1image;
     //document.getElementById("special1").style.backgroundPosition = "center";
     //document.getElementById("special1").style.backgroundSize = "cover";
+
+    //Get prayer visibility text content (defines Elder or Board visibility) from config.xml
+    var visibility1text;
+    visibility1text = (navJQ(xml).find('visibility1').text());
+    var visibility1textcontent = document.getElementById("Visibility1");
+    visibility1textcontent.innerHTML = visibility1text;
+    //Get prayer visibility text content (defines Elder or Board visibility) from config.xml
+    var visibility2text;
+    visibility2text = (navJQ(xml).find('visibility2').text());
+    var visibility2textcontent = document.getElementById("Visibility2");
+    visibility2textcontent.innerHTML = visibility2text;
+
+    //Get prayer approval text content (defines prayer request approval) from config.xml
+    var prayerapprovaltext;
+    prayerapprovaltext = (navJQ(xml).find('prayerapproval').text());
+    var prayerapprovaltextcontent = document.getElementById("newprayernotice");
+    prayerapprovaltextcontent.innerHTML = prayerapprovaltext;
 }
