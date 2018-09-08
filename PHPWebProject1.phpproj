@@ -344,6 +344,8 @@
     <Content Include="_tenant\images\Mission.png" />
     <Content Include="_tenant\images\raggantssbs.png" />
     <Content Include="_tenant\images\raggantssbs_or.png" />
+    <Content Include="_tenant\images\TEC_splash.jpg" />
+    <Content Include="_tenant\images\trinity_logo.png" />
     <Content Include="_tenant\images\x.jpg" />
   </ItemGroup>
 </Project>

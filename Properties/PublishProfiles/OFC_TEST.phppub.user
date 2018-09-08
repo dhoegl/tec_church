@@ -865,6 +865,12 @@
     <File Include="TempPopupPHPFile.php">
       <publishTime>09/19/2017 22:02:13</publishTime>
     </File>
+    <File Include="_tenant/Config - 001.xml">
+      <publishTime>09/08/2018 21:57:11</publishTime>
+    </File>
+    <File Include="_tenant/Config - 002.xml">
+      <publishTime>09/08/2018 01:03:08</publishTime>
+    </File>
     <File Include="_tenant/Config - TEC.xml">
       <publishTime>08/25/2018 23:14:28</publishTime>
     </File>
@@ -897,6 +903,12 @@
     </File>
     <File Include="_tenant/images/raggantssbs_or.png">
       <publishTime>08/29/2018 00:05:49</publishTime>
+    </File>
+    <File Include="_tenant/images/TEC_splash.jpg">
+      <publishTime>09/08/2018 22:02:32</publishTime>
+    </File>
+    <File Include="_tenant/images/trinity_logo.png">
+      <publishTime>10/05/2014 21:01:16</publishTime>
     </File>
     <File Include="_tenant/images/x.jpg">
       <publishTime>08/21/2017 23:11:55</publishTime>
