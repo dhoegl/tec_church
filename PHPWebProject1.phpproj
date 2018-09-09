@@ -338,6 +338,7 @@
     <Content Include="_tenant\Config - 002.xml" />
     <Content Include="_tenant\Config - TEC.xml" />
     <Content Include="_tenant\Config.xml" />
+    <Content Include="_tenant\Config_old.xml" />
     <Content Include="_tenant\images\cropped-ECS-2016-45.jpg" />
     <Content Include="_tenant\images\cropped-ECS-2016-51.jpg" />
     <Content Include="_tenant\images\cropped-ECS-2016-69.jpg" />
