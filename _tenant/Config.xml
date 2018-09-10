@@ -10,6 +10,9 @@
       <nickname>
         TEC
       </nickname>
+      <domain>
+        ofctest.ourfamilyconnections.org
+      </domain>
       <title>
         TEC Family Connection
       </title>
@@ -42,7 +45,7 @@
         Church family will be notified as soon as it's approved.
       </prayerapproval>
       <contact>
-        firebird@hoeglund.com
+        mailto:firebird@hoeglund.com
       </contact>
     </customer>
     <theme>

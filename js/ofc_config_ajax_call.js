@@ -30,6 +30,14 @@ function xmlParser(xml) {
     if (document.getElementById("nav_logo")) {
         document.getElementById("nav_logo").src = navlogotext;
     }
+    //Get name from config.xml
+    var nametext;
+    nametext = (navJQ(xml).find('name').text());
+    //Add name to Pages
+    if (document.getElementById("custname")) {
+        var name_element = document.getElementById("custname");
+        name_element.innerHTML = nametext;
+    }
     //Get tagline from config.xml
     var taglinetext;
     taglinetext = (navJQ(xml).find('tagline').text());
@@ -37,6 +45,14 @@ function xmlParser(xml) {
     if (document.getElementById("TagLine")) {
         var element = document.getElementById("TagLine");
         element.innerHTML = taglinetext;
+    }
+    //Get domain name from config.xml
+    var domaintext;
+    domaintext = (navJQ(xml).find('domain').text());
+    //Add domain to Pages
+    if (document.getElementById("domainname")) {
+        var domain_element = document.getElementById("domainname");
+        domain_element.innerHTML = domaintext;
     }
     //Get banner image name from config.xml
     var bannertext;
@@ -68,17 +84,29 @@ function xmlParser(xml) {
     //Get prayer visibility text content (defines Elder or Board visibility) from config.xml
     var visibility1text;
     visibility1text = (navJQ(xml).find('visibility1').text());
-    var visibility1textcontent = document.getElementById("Visibility1");
-    visibility1textcontent.innerHTML = visibility1text;
+    if (document.getElementById("Visibility1")) {
+        var visibility1textcontent = document.getElementById("Visibility1");
+        visibility1textcontent.innerHTML = visibility1text;
+    }
     //Get prayer visibility text content (defines Elder or Board visibility) from config.xml
     var visibility2text;
     visibility2text = (navJQ(xml).find('visibility2').text());
-    var visibility2textcontent = document.getElementById("Visibility2");
-    visibility2textcontent.innerHTML = visibility2text;
+    if (document.getElementById("Visibility2")) {
+        var visibility2textcontent = document.getElementById("Visibility2");
+        visibility2textcontent.innerHTML = visibility2text;
+    }
 
     //Get prayer approval text content (defines prayer request approval) from config.xml
     var prayerapprovaltext;
     prayerapprovaltext = (navJQ(xml).find('prayerapproval').text());
-    var prayerapprovaltextcontent = document.getElementById("newprayernotice");
-    prayerapprovaltextcontent.innerHTML = prayerapprovaltext;
+    if (document.getElementById("newprayernotice")) {
+        var prayerapprovaltextcontent = document.getElementById("newprayernotice");
+        prayerapprovaltextcontent.innerHTML = prayerapprovaltext;
+    }
+    //Get contact text (the 'Contact Us' email address embedded at ofc_home) from config.xml
+    var contacttext;
+    contacttext = (navJQ(xml).find('contact').text());
+    if (document.getElementById("contactus")) {
+        document.getElementById("contactus").href = contacttext;
+    }
 }

@@ -1,1 +1,1 @@
-	<div id="footer">Copyright © 2017 OurFamilyConnections.org.  All rights reserved.</div>	
+	<div id="footer">Copyright &copy; 2018 OurFamilyConnections.org.  All rights reserved.</div>	

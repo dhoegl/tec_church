@@ -1,8 +1,8 @@
 /* Tenant-specific CSS File*/
-/* Customer 002 - ECS*/
+/* Customer 001 - TEC*/
 
 #ModalContactInfo .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;
@@ -14,7 +14,7 @@
 }*/
 
 #ModalCalendarInfo .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;
@@ -23,7 +23,7 @@
 }
 
 #ModalChildrenInfo .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;
@@ -32,7 +32,7 @@
 }
 
 #ModalProfilePic .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;
@@ -41,7 +41,7 @@
 }
 
 #ModalPrayerInfo .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;
@@ -49,7 +49,7 @@
     font-size: 20px;
 }
 #ModalPrayerNew .modal-header h5 {
-    background: url('/_tenant/images/raggantssbs_or.png') 0 50% no-repeat;
+    background: url('/_tenant/images/trinity_logo.png') 0 50% no-repeat;
     background-size: 20% auto;
     color: black;
     margin: 0px;

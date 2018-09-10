@@ -57,15 +57,26 @@ if(!$_SESSION['logged in']) {
                             <div class="row pt-5 mt-3">
                                 <div class="col-md-12">
                                     <div class="text-center">
-                                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s">
-                                            <strong>Evangel Classical School</strong>
+                                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s" id="custname">
+                                            <strong></strong>
                                         </h1>
                                         <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
                                         <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
                                             <strong>tagline</strong>
                                         </h5>
                                         <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
-                                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Contact Us</a>
+                                        <a class="btn btn-outline-black wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row fixed-bottom">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <p>
+                                            <?php
+                                            require_once('/includes/ofc_footer.php')
+                                            ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -78,50 +89,6 @@ if(!$_SESSION['logged in']) {
 
         <!--Main Layout-->
         <main>
-
-            <div class="container">
-
-                <!--Grid row-->
-                <div class="row py-5 mt-4">
-
-                    <!--Grid column-->
-                    <div class="col-sm-12 text-center">
-
-                        <p>We are a K-12 classical and Christian school in Marysville, Washington. We meet for classes from 9:00 AM to 3:00 PM Tuesday through Friday at 9015 44th Dr. NE. Come by or email to arrange a visit.</p>
-                        <h2>
-                            Our Mission:
-                        </h2>
-                        <p>
-                            We commend the works of the Lord to another generation with the tools of classical education, weaponized laughter, and sacrificial labors so that they will carry and advance Christ-honoring culture. 
-                        </p>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-sm-12 text-left">
-
-                        <h2>
-                            At ECS:
-                        </h2>
-                        <ul>
-                            <li> we believe that submission to Christ is the starting point for education.</li>
-                            <li> we proclaim <a href="http://evangelcs.org/kuyper/" target="_blank">Christ’s sovereign lordship in every arena of life</a>.</li>
-                            <li> we employ the <a href="http://evangelcs.org/vision/#trivium/" target="_blank">curriculum of the trivium</a>: the grammar, the logic, and the rhetoric.</li>
-                            <li> we help our students to understand and appreciate our position in Western Culture.</li>
-                            <li> we embrace that Christians who are happy are the most useful for Christ, so <a href="http://evangelcs.org/laughter/" target="_blank">we laugh</a>…a lot.</li>
-                        </ul>
-
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-            </div>
 
         </main>
         <!--Main Layout-->

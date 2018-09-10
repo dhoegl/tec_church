@@ -10,7 +10,7 @@ require_once('../ofc_dbconnect.php');
 
 
 
-/* Process profile update - CHILDREN (name, gender, birthdate, etc.) INFO: Called from tecfamview.php */
+/* Process profile update - CHILDREN (name, gender, birthdate, etc.) INFO: Called from ofc_profile.php */
 if(isset($_POST['submit1children']))
 	{   
 	$namelast = $_POST['lastname'];

@@ -453,6 +453,103 @@ jQ9(document).ready(function () {
   </div> <!-- modal-dialog -->
 </div> <!-- modal-fade -->
 
+
+
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerNew" tabindex="-1" role="dialog" aria-labelledby="ModalPrayerNew" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalPrayerNew">
+                    Enter details about your prayer request and click
+                    <strong>Send.</strong>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div><!-- modal-header -->
+            <div class="modal-body">
+                <form name='newprayerform' method='post' action='ofc_newprayer.php'>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Visibility:</legend>
+                            <div class="col-sm-8 ml-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visible" value="1" />
+                                    <label class="form-check-label" for="visible" id="Visibility1"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visible" value="3" checked />
+                                    <label class="form-check-label" for="visible" id="Visibility2"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Praise:</legend>
+                            <div class="col-sm-8 ml-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prayer" value="Prayer" checked />
+                                    <label class="form-check-label" for="prayer">
+                                        Prayer Request
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prayer" value="Praise" />
+                                    <label class="form-check-label" for="prayer">
+                                        Praise
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Title:</legend>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="requesttitle" id="requesttitle" placeholder="Title" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Details:</legend>
+                            <div class="col-sm-9">
+                                <textarea type="text" class="form-control" rows="6" name="requesttext" id="requesttext" placeholder="Details"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--</form>-->
+
+
+
+
+            </div><!-- modal-body -->
+            <div class="modal-footer">
+                <p id="newprayernotice"></p>
+                <?php
+                    //$fullname = $_SESSION['firstname'] . " " . $lastname;
+                    $fullname = $_SESSION['fullname'];
+                    echo "<input type='hidden' name='fullname' value= '" . $fullname . "' />";
+                    $email = $_SESSION['email'];
+                    echo "<input type='hidden' name='email_address' value= '" . $email . "' />";
+                    echo "<input type='hidden' name='requestorID' value= '" . $profileID . "' />";
+                ?>
+
+                <input type="hidden" name="Domain_Name" id="domainname" />
+                <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div><!-- modal-footer -->
+            </form>
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div><!-- modal-fade -->
+
+
+
+
     
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 

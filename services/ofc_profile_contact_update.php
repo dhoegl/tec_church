@@ -10,7 +10,7 @@ require_once('../ofc_dbconnect.php');
 
 
 
-/* Process profile update -CONTACT INFO: Called from tecfamview.php */
+/* Process profile update -CONTACT INFO: Called from ofc_profile.php */
 if(isset($_POST['submitcontact']))
 	{   
 	$his_first = filter_input(INPUT_POST, 'hisfirstname');

@@ -139,7 +139,7 @@ if(!$_SESSION['logged in']) {
             <div class="col-md-12">
                 <div id="prayerlogleft">
                     <br>
-                    <h2>Our Church Family</h2>
+                    <h2>Directory</h2>
                     <hr>
                 </div>
 

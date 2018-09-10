@@ -259,7 +259,7 @@
     <Compile Include="ofc_bootstrap.html" />
     <Compile Include="ofc_bootstrap_jumbotron.php" />
     <Compile Include="ofc_calendar.php" />
-    <Compile Include="ofc_checklogin.php" />
+    <Compile Include="ofc_checklogin_old.php" />
     <Compile Include="ofc_checklogin2.php" />
     <Compile Include="ofc_check_follow_table.php" />
     <Compile Include="ofc_dbconnect.php" />

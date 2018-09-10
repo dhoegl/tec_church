@@ -5,11 +5,11 @@ session_start();
 // Load the jquery libraries
 echo "<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>";
 
-// username and password sent from form 
-$myusername=$_POST['myusername']; 
-$mypassword=$_POST['mypassword']; 
+// username and password sent from form
+$myusername=$_POST['myusername'];
+$mypassword=$_POST['mypassword'];
 
-//$mysql_cstat = @mysql_connect($host, $username, $password)or die("cannot connect. Error #" . mysql_errno() . " " . mysql_error()); 
+//$mysql_cstat = @mysql_connect($host, $username, $password)or die("cannot connect. Error #" . mysql_errno() . " " . mysql_error());
 //$mysql_sstat = @mysql_select_db($db_name)or die("cannot select DB. Error:" . mysql_errno() . " " . mysql_error());
 
 
@@ -35,15 +35,16 @@ if($result->num_rows === 1)
         $rowcount = 1;
         $row = $result->fetch_assoc();
         $userID = $row[idDirectory];
-        
-        
+
+
         if($row['active']==1)
         {
             $fullname = $row['firstname'] . " " . $row['lastname'];
             $_SESSION['user_id'] = $row['login_ID'];
             $_SESSION['username'] = $row['username'];
-            $_SESSION['fullname'] = $fullname;		
+            $_SESSION['fullname'] = $fullname;
             $_SESSION['gender'] = $row['gender'];
+            $_SESSION['email'] = $row['email_addr'];
             $_SESSION['idDirectory'] = $row['idDirectory'];
             $_SESSION['reg_admin'] = $row['admin_regnotify']; // Registration Administrator
             $_SESSION['pray_admin'] = $row['admin_praynotify']; // Prayer Administrator
@@ -54,7 +55,7 @@ if($result->num_rows === 1)
         /*		Access Log entry  */
             $client_ip = stripslashes($_SERVER['REMOTE_ADDR']);
             $client_browser = stripslashes($_SERVER['HTTP_USER_AGENT']);
-        //	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";		
+        //	$accessquery = "INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')";
         //	$logresult = @mysql_query($accessquery) or die(" SQL query access log error. Error:" . mysql_errno() . " " . mysql_error());
         //	$accessquery = $mysql->query("INSERT INTO " . $_SESSION['accesslogtable'] . "(type, member_id, user_id, client_ip, client_browser) VALUES ('Login', '" . $_SESSION['idDirectory'] . "', '" . $_SESSION['username'] . "', '" . $client_ip . "', '" . $client_browser . "')");
             if($accessquery->error){
@@ -77,34 +78,34 @@ if($result->num_rows === 1)
                     {
                         $_SESSION['firstname'] = $namerow['Name_1'];
                     }
-                    elseif($_SESSION['gender'] == "F") 
+                    elseif($_SESSION['gender'] == "F")
                     {
                         $_SESSION['firstname'] = $namerow['Name_2'];
                     }
-                    else 
+                    else
                 {
                     session_destroy();
                     header("location:ofc_welcome.php");
                     /* Enter Error Handler */
                 }
             }
-            else 
+            else
             {
                     $_SESSION['firstname'] = $_SESSION['username'];
             }
             mysqli_close($mysql);
             header("location:ofc_login_success.php");
         }
-        else 
+        else
         {
-            // Throw alert if user has not yet been activated 
+            // Throw alert if user has not yet been activated
             mysqli_close($mysql);
             include('/includes/ofc_credalert2.php');
         }
     }
  else {
         $rowcount = 0;
-	// Throw alert if improper login credentials attempted 
+	// Throw alert if improper login credentials attempted
 	include('/includes/ofc_credalerts.php');
     }
 // mysqli_free_result($user_cred_verify);

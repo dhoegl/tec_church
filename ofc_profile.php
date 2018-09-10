@@ -10,10 +10,10 @@ else {
             $profileID = $_GET['id'];
             $_SESSION["Famview_Profile"] = $profileID;
             if($_SESSION['idDirectory'] == $profileID) {
-		$MyView = 'Y';
+        		$MyView = 'Y';
             }
             else {
-		$MyView = 'N';
+		        $MyView = 'N';
             }
             require_once('ofc_dbconnect.php');
 
@@ -1556,21 +1556,35 @@ var jQ55 = jQuery.noConflict();
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Title:</legend>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="requesttitle" placeholder="Title">
+                        <input type="text" class="form-control" name="requesttitle" id="requesttitle" placeholder="Title">
                     </div>
                 </div>
                 <hr />
                 <div class="row">
                     <legend class="col-form-label col-sm-3 px-2">Details:</legend>
                     <div class="col-sm-9">
-                        <textarea type="text" class="form-control" rows="6" id="requesttext" placeholder="Details"></textarea>
+                        <textarea type="text" class="form-control" rows="6" name="requesttext" id="requesttext" placeholder="Details"></textarea>
                     </div>
                 </div>
             </fieldset>
         <!--</form>-->
+
+
+
+
     </div> <!-- modal-body -->
     <div class="modal-footer">
         <p id="newprayernotice"></p>
+        <?php				
+            //$fullname = $_SESSION['firstname'] . " " . $lastname; 
+            $fullname = $_SESSION['fullname']; 
+            echo "<input type='hidden' name='fullname' value= '" . $fullname . "' />";
+            $email = $_SESSION['email'];
+            echo "<input type='hidden' name='email_address' value= '" . $email . "' />";
+            echo "<input type='hidden' name='requestorID' value= '" . $profileID . "' />";
+        ?>
+
+            <input type="hidden" name="Domain_Name" id="domainname" />
             <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
     </div> <!-- modal-footer -->

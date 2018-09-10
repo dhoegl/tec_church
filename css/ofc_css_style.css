@@ -118,6 +118,13 @@ body
     background-size: cover;
 }
 
+#footer 
+{
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
 /******************** Button Styles *************************/
 /******************** Button Styles *************************/
 .button_flat_green {
