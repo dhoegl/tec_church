@@ -45,7 +45,7 @@ if(!$_SESSION['logged in']) {
         <header>
         <!--Navbar-->
             <?php
-                $activeparam = '1';
+                $activeparam = '1'; // sets nav element highlight
                 require_once('ofc_nav.php');
             ?>
 
@@ -64,8 +64,9 @@ if(!$_SESSION['logged in']) {
                                         <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
                                             <strong>tagline</strong>
                                         </h5>
+                                        <a class="btn btn-outline-yellow wow fadeInDown" data-wow-delay="0.4s" id="gotosite">To Our Home Page</a>
                                         <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
-                                        <a class="btn btn-outline-black wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
+                                        <a class="btn btn-outline-yellow wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
                                     </div>
                                 </div>
                             </div>

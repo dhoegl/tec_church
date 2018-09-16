@@ -102,7 +102,7 @@ if(!$_SESSION['logged in']) {
     
     <!-- Intro Section -->
     <div class="container-fluid profile_bg">
-        <div class="row">
+        <div class="row pt-2">
             <div class="col-sm-12">
                 <p>
                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">

@@ -109,4 +109,11 @@ function xmlParser(xml) {
     if (document.getElementById("contactus")) {
         document.getElementById("contactus").href = contacttext;
     }
+    //Get homepage text (the 'Go To Home Page' link embedded at ofc_home) from config.xml
+    var homepagetext;
+    homepagetext = (navJQ(xml).find('homepage').text());
+    if (document.getElementById("gotosite")) {
+        document.getElementById("gotosite").href = homepagetext;
+        document.getElementById("gotosite").target = "_blank";
+    }
 }

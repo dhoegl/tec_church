@@ -5,6 +5,7 @@ if(!$_SESSION['logged in']) {
 	header("location:ofc_welcome.php");
 	exit();
 }
+$profileID = $_SESSION['idDirectory'];
 ?>
 
 <!DOCTYPE html>
@@ -227,15 +228,15 @@ jQ9(document).ready(function () {
 <body>
     <!--Navbar-->
     <?php
-    $activeparam = '5';
-    require_once('ofc_nav.php');
+        $activeparam = '5'; // sets nav element highlight
+        require_once('ofc_nav.php');
     ?>
 
 
     <!-- Intro Section -->
 <div class="container-fluid profile_bg">
 
-    <div class="row">
+    <div class="row pt-2">
         <div class="col-sm-12">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Using this prayer list
@@ -530,11 +531,17 @@ jQ9(document).ready(function () {
             <div class="modal-footer">
                 <p id="newprayernotice"></p>
                 <?php
-                    //$fullname = $_SESSION['firstname'] . " " . $lastname;
+                    //Hidden POST tags for ofc_newprayer
+                    ////// Identifies source page for correct RETURN
+                    echo "<input type='hidden' name='page' value= 'prayer' />";
+                    ////// Captured fullname for email notification
                     $fullname = $_SESSION['fullname'];
                     echo "<input type='hidden' name='fullname' value= '" . $fullname . "' />";
+                    ////// Captures email address of prayer request submitter
                     $email = $_SESSION['email'];
                     echo "<input type='hidden' name='email_address' value= '" . $email . "' />";
+                    ////// Captures profile ID of prayer request submitter
+                    $profileID = $_SESSION['idDirectory'];
                     echo "<input type='hidden' name='requestorID' value= '" . $profileID . "' />";
                 ?>
 

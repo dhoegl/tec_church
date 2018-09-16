@@ -9,9 +9,10 @@ require_once('ofc_dbconnect.php');
 
 
 
-/* Process new Prayer Request: Called from ofc_profile.php and ofc_prayeradmin.php */
+/* Process new Prayer Request: Called from ofc_profile.php, ofc_prayer.php, and ofc_prayeradmin.php */
 
-	$prayer_owner = $_POST['requestorID'];
+    $prayer_page_source = $_POST['page'];
+    $prayer_owner = $_POST['requestorID'];
 	$prayer_name = $_POST['fullname'];
 	$prayer_onbehalfof = addslashes($_POST['onbehalfof']);
 	$prayer_onbehalfof = mb_convert_encoding($prayer_onbehalfof, "UTF-8"); // convert to ensure copy/paste doesn't expose special characters
@@ -100,9 +101,17 @@ if(!$newprayerquery)
 			}
 		}
 
+// Return to calling page
+if($prayer_page_source == 'profile') {
+    header("location:ofc_profile.php?id=" . $prayer_owner);
+}
+if($prayer_page_source == 'prayer') {
+    header("location:ofc_prayer.php");
+}
+if($prayer_page_source == 'prayer_admin') {
+    header("location:ofc_prayeradmin.php");
+}
 
-
-header("location:ofc_profile.php?id=" . $prayer_owner);
 ?>
 
 

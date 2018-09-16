@@ -127,9 +127,8 @@ else {
         var $fullname = <?php echo "'" . $_SESSION['fullname'] . "'"; ?>;
         var $idDirectory = <?php echo "'" . $_SESSION['idDirectory'] . "'"; ?>;
         var jQ05 = jQuery.noConflict();
-        jQ05(document).ready(function(){
-
-            // Call script to pull profile data....
+        // Call script to pull profile data....
+        jQ05(document).ready(function() {
             var request = jQ05.ajax({
 		url: 'services/ofc_get_profile.php',
 		type: 'POST',
@@ -615,7 +614,7 @@ var jQ55 = jQuery.noConflict();
   <body>
   <!--Navbar-->
             <?php
-            $activeparam = '2';
+            $activeparam = '2'; // sets nav element highlight
             require_once('ofc_nav.php');
             ?>
 
@@ -629,29 +628,33 @@ var jQ55 = jQuery.noConflict();
         echo 
             '<div class="row">'
                 . '<div class="col-sm-12">'
-                . '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">'
-                . '<div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">'
-                    . '<div class="dropdown">'
-                        . '<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button>'
-                        . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
-                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button>'
-                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button>'
-                            . '<button class="dropdown-item" data-toggle="modal" id="Children_Info_Click" data-target="#ModalChildrenInfo" type="button">Children</button>'
-                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button>'
-                        . '</div>' // dropdown-menu
-                    . '</div>' //dropdown
-                . '</div>' //btn-group
-                . '<div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">'
-                    //. '<button class="btn btn-success" type="button" data-toggle="modal" aria-expanded="false" data-target="#ModalPrayerNew">New Prayer Request</button>'
-                    . '<div class="dropdown">'
-                        . '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Prayer Requests</button>'
-                        . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
-                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">New Prayer Request</button>'
-                            . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>'
-                        . '</div>' // dropdown-menu
-                    . '</div>' //dropdown
-                . '</div>' //btn-group
-                . '</div>' //btn-toolbar
+                    //. '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">'
+                    //    . 'Using this Test Button'
+                    //. '</button>'
+
+                    . '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">'
+                        . '<div class="btn-group mr-2 pt-2" role="group" aria-label="Button group with nested dropdown">'
+                            . '<div class="dropdown">'
+                                . '<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit Profile</button>'
+                                . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
+                                    . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalProfilePic" type="button">New Photo</button>'
+                                    . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalContactInfo" type="button">Contact Info</button>'
+                                    . '<button class="dropdown-item" data-toggle="modal" id="Children_Info_Click" data-target="#ModalChildrenInfo" type="button">Children</button>'
+                                    . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalCalendarInfo" type="button">Anniversary/Birthdays</button>'
+                                . '</div>' // dropdown-menu
+                            . '</div>' //dropdown
+                        . '</div>' //btn-group
+                        . '<div class="btn-group mr-2 pt-2" role="group" aria-label="Button group with nested dropdown">'
+                        //. '<button class="btn btn-success" type="button" data-toggle="modal" aria-expanded="false" data-target="#ModalPrayerNew">New Prayer Request</button>'
+                            . '<div class="dropdown">'
+                                . '<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Prayer Requests</button>'
+                                    . '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">'
+                                        . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">New Prayer Request</button>'
+                                        . '<button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>'
+                                .   '</div>' // dropdown-menu
+                            . '</div>' //dropdown
+                        . '</div>' //btn-group
+                    . '</div>' //btn-toolbar
                 . '</div>' //class=col-sm
             . '</div>'; //row
     }
@@ -660,17 +663,13 @@ var jQ55 = jQuery.noConflict();
     <div class="row">
         <div class="col-sm-4">
             <div class="card bg-light m-3">
-                <div class="card-body">
                     <img class="card-img-top" id="profile_pic" style="width: 100%; align-self: center" alt="Card image cap">
                     <h4 class="card-title text-center" id="profile_card">Name</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-8">
-            <div class="card bg-light m-3">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="card-body">
+            </div> <!-- card -->
+        </div> <!-- col-sm-4 -->
+        <div class="col-sm-4">
+            <div class="card bg-light m-3 px-2">
+                        <!--<div class="card-body">-->
                             <h4 class="card-title text-center text-capitalize">Contact Information</h4>
                             <h5 class="card-text"><u>Address</u></h5>
                             <h6 class="card-text" id="profile_addr"></h6>
@@ -681,88 +680,88 @@ var jQ55 = jQuery.noConflict();
                             <h5 class="card-text"><u>Email</u></h5>
                             <p class="card-text" id="profile_email_him"></p>
                             <p class="card-text" id="profile_email_her"></p>
-                        </div> <!-- card-body -->
-                    </div> <!-- col-sm-5 -->
-                    <div class="col-sm-5">
-                        <div class="card-body">
+                        <!-- </div>  card-body -->
+            </div> <!-- card -->
+        </div> <!-- col-sm-4 -->
+        <div class="col-sm-4">
+            <div class="card bg-light m-3 px-2">
                             <h4 class="card-title text-center text-capitalize">Celebrate with Us</h4>
                             <h5 class="card-text"><u>Anniversary</u></h5>
                             <p class="card-text" id="profile_anniv"></p>
                             <h5 class="card-text"><u>Birthdays</u></h5>
                             <p class="card-text" id="profile_hisbday"></p>
                             <p class="card-text" id="profile_herbday"></p>
-                        </div> <!-- card-body -->
-                    </div> <!-- col-sm-5 -->
-                </div> <!-- row -->
-                <div class="row">
-                    <div class="card-body">
-                        <h4 class="card-title text-center text-capitalize">Children</h4>
-                            <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
-                                <thead>
-                                    <tr>
-                                        <th class="strong">Name</th>
-                                        <th class="strong">Birthdate</th>
-                                        <th class="strong">Gender</th>
-                                        <th class="strong">Age</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td id="c1n"></td>
-                                        <td id="c1b"></td>
-                                        <td id="c1g"></td>
-                                        <td id="c1a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c2n"></td>
-                                        <td id="c2b"></td>
-                                        <td id="c2g"></td>
-                                        <td id="c2a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c3n"></td>
-                                        <td id="c3b"></td>
-                                        <td id="c3g"></td>
-                                        <td id="c3a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c4n"></td>
-                                        <td id="c4b"></td>
-                                        <td id="c4g"></td>
-                                        <td id="c4a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c5n"></td>
-                                        <td id="c5b"></td>
-                                        <td id="c5g"></td>
-                                        <td id="c5a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c6n"></td>
-                                        <td id="c6b"></td>
-                                        <td id="c6g"></td>
-                                        <td id="c6a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c7n"></td>
-                                        <td id="c7b"></td>
-                                        <td id="c7g"></td>
-                                        <td id="c7a"></td>
-                                    </tr>
-                                    <tr>
-                                        <td id="c8n"></td>
-                                        <td id="c8b"></td>
-                                        <td id="c8g"></td>
-                                        <td id="c8a"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-<!--                        <a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div> <!-- card-body -->
-                </div> <!-- row -->
             </div> <!-- card -->
-        </div> <!-- col-sm-8 -->
+        </div> <!-- col-sm-4 -->
+    </div> <!-- row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card bg-light m-3 px-2">
+                <div class="card-body">
+                    <h4 class="card-title text-center text-capitalize">Children</h4>
+                    <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
+                        <thead>
+                            <tr>
+                                <th class="strong">Name</th>
+                                <th class="strong">Birthdate</th>
+                                <th class="strong">Gender</th>
+                                <th class="strong">Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="c1n"></td>
+                                <td id="c1b"></td>
+                                <td id="c1g"></td>
+                                <td id="c1a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c2n"></td>
+                                <td id="c2b"></td>
+                                <td id="c2g"></td>
+                                <td id="c2a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c3n"></td>
+                                <td id="c3b"></td>
+                                <td id="c3g"></td>
+                                <td id="c3a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c4n"></td>
+                                <td id="c4b"></td>
+                                <td id="c4g"></td>
+                                <td id="c4a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c5n"></td>
+                                <td id="c5b"></td>
+                                <td id="c5g"></td>
+                                <td id="c5a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c6n"></td>
+                                <td id="c6b"></td>
+                                <td id="c6g"></td>
+                                <td id="c6a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c7n"></td>
+                                <td id="c7b"></td>
+                                <td id="c7g"></td>
+                                <td id="c7a"></td>
+                            </tr>
+                            <tr>
+                                <td id="c8n"></td>
+                                <td id="c8b"></td>
+                                <td id="c8g"></td>
+                                <td id="c8a"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- card-body -->
+            </div> <!-- card -->
+        </div> <!-- col-sm-12 -->
     </div> <!-- row -->
     <div class="row">
         <div class="col-sm-12">
@@ -780,10 +779,10 @@ var jQ55 = jQuery.noConflict();
                         <p class="card-text">Prayer Requests go here.</p>
 <!--                        <a href="#ModalPrayerNew" class="btn btn-primary">See More</a>-->
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalPrayerNew">New Prayer Request</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </div> <!-- card-text -->
+                </div> <!-- card-body -->
+            </div> <!-- card -->
+        </div> <!-- col-sm-12 -->
 <!--    <div class="col-md-3">
         <div class="card m-3">
             <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
@@ -1576,11 +1575,17 @@ var jQ55 = jQuery.noConflict();
     <div class="modal-footer">
         <p id="newprayernotice"></p>
         <?php				
-            //$fullname = $_SESSION['firstname'] . " " . $lastname; 
+            //Hidden POST tags for ofc_newprayer
+            ////// Identifies source page for correct RETURN
+            echo "<input type='hidden' name='page' value= 'profile' />";
+            //echo "<script type='text/javascript' >var pro01 = jQuery.noConflict();	pro01(document).ready(function() {console.log('At hidden page entry')});</script>";
+            ////// Captured fullname for email notification
             $fullname = $_SESSION['fullname']; 
             echo "<input type='hidden' name='fullname' value= '" . $fullname . "' />";
+            ////// Captures email address of prayer request submitter
             $email = $_SESSION['email'];
             echo "<input type='hidden' name='email_address' value= '" . $email . "' />";
+            ////// Captures profile ID of prayer request submitter
             echo "<input type='hidden' name='requestorID' value= '" . $profileID . "' />";
         ?>
 
