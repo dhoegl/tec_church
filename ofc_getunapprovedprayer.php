@@ -26,18 +26,21 @@ if(!$_SESSION['logged in']) {
 				$prayer_title = "<strong>" . $unapprovedrow['prayertitle'] . " </strong>";
 				$prayer_text = $unapprovedrow['prayertext'];
 				$fullname = $unapprovedrow['fullname'];
-				$glance = "<strong>" . $prayer_title . " </strong><br />" . substr($unapprovedrow['prayertext'],0,50) . "...";
+                $glance = "<a data-toggle='modal' data-target='#ModalPrayerInfo' class='faux_hyperlink'>" . $prayer_title . " </a><br />" . substr($unapprovedrow['prayertext'],0,50) . "...";
+                //$glance = "<strong>" . $prayer_title . " </strong><br />" . substr($unapprovedrow['prayertext'],0,50) . "...";
 				$praypraise = $unapprovedrow['praypraise'];
 				$approve_button = "Approve";
 				$reject_button = "Reject";
 				$view_button = "View";
-				
 
-				// Stores each database record to an array 
-//					$buildjson = array($prayerid, $approve_button, $reject_button, $prayerupdate, $praypraise, $fullname, $prayer_title, $prayer_text); 
-					$buildjson = array($prayerid, $approve_button, $reject_button, $prayerupdate, $praypraise, $fullname, $prayer_title, $view_button, $prayer_text); 
- 					// Adds each array into the container array 
- 					array_push($listarray, $buildjson); 
+
+				// Stores each database record to an array
+//					$buildjson = array($prayerid, $approve_button, $reject_button, $prayerupdate, $praypraise, $fullname, $prayer_title, $prayer_text);
+                    //$buildjson = array($prayerid, $approve_button, $reject_button, $prayerupdate, $praypraise, $fullname, $prayer_title, $view_button, $prayer_text);
+                // Sept 16 Test
+                $buildjson = array($prayerid, $prayerupdate, $praypraise, $fullname, $prayer_title, $view_button, $approve_button, $reject_button, $prayer_text);
+                    // Adds each array into the container array
+ 					array_push($listarray, $buildjson);
 			}
 		}
 			// Prepend array with parent element
@@ -45,7 +48,7 @@ if(!$_SESSION['logged in']) {
 
 
 	header('Content-type: application/json');
-	echo json_encode($listarray); 
+	echo json_encode($listarray);
 ?>
 
 

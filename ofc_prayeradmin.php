@@ -5,32 +5,54 @@ if(!$_SESSION['logged in']) {
 	header("location:ofc_welcome.php");
 	exit();
 }
-    require_once('ofc_dbconnect.php');
+$profileID = $_SESSION['idDirectory'];
+require_once('ofc_dbconnect.php');
 ?>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link href="css/ofc_style.css" rel="stylesheet" type="text/css" />
-<title>Prayer Request Admin - Our Family Connections</title>
+<!-- BOOTSTRAP 4 - Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
 
-<!-- Load the jquery libraries you want -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
-	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+<!--CSS Scripts for Datatables Bootstrap 4 Responsive functions    -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
+
+<!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Extended styles for this page -->
+    <link href="css/ofc_css_style.css" rel="stylesheet">
+    <!-- Tenant-specific stylesheet -->
+    <link href="_tenant/css/tenant.css" rel="stylesheet" />
 
 
-<!--*******************************DataTables stylesheet data**************************************-->
-	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
-	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<!--JS Scripts for Datatables Bootstrap 4 Responsive functions    -->
+<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>        
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>        
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap4.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>        
+
 
 <!-- jQuery functions & scripts -->
 <!-- jQuery functions & scripts -->
 <!-- jQuery functions & scripts -->
 
 <?php
+// Get User Login details
+    include('/includes/ofc_get_loggedinuser.php');
+
 // Get Unapproved Prayer List
    include('/includes/ofc_view_unapprovedprayerlist.php');
    
@@ -70,41 +92,63 @@ if(!$_SESSION['logged in']) {
 </script>
 
 
-<!-- Get Which Prayer Item's 'View' button was clicked -->
+<!-- ********************* Get Which Prayer Item's 'View/Approve/Reject' button was clicked ******************* -->
+<!-- ********************* Get Which Prayer Item's 'View/Approve/Reject' button was clicked ******************* -->
+<!-- ********************* Get Which Prayer Item's 'View/Approve/Reject' button was clicked ******************* -->
  <script type="text/javascript">
 var $clickbuttonid = "NA";
 var jQ9 = jQuery.noConflict();
 jQ9(document).ready(function () {
-//	jQ9("#unapprovedprayertable tbody").on("click", 'tr', function () {
-	jQ9("#unapprovedprayertable tbody").on("click", '.view_button', function () {
-		jQ9("tr.praytable_even").show();
-		jQ9("tr.praytable_odd").show();
-		jQ9("tr.praytable_text").show();
-		jQ9("#updatePrayer").show();
+	jQ9("#unapprovedprayertable tbody").on("click", 'tr', function () {
+	<!--//jQ9("#unapprovedprayertable tbody").on("click", '.view_button', function () {
+		//jq9("tr.praytable_even").show();
+		//jq9("tr.praytable_odd").show();
+		//jq9("tr.praytable_text").show();
+		//jq9("#updateprayer").show();
 		var prayerID = jQ9(this).closest('tr').find(".indexcol").text();
 		$clickbuttonid = prayerID;
-		console.log("View button - $prayerid clicked = " + $clickbuttonid);
+		console.log("View/Approve/Reject button - $prayerid clicked = " + $clickbuttonid);
 		var prayerDate = jQ9(this).closest('tr').find(".prayer_update").text();
 		var prayerWho = jQ9(this).closest('tr').find(".prayer_who").text();
 		var prayerTitle = jQ9(this).closest('tr').find(".prayer_title").text();
 		var prayerType = jQ9(this).closest('tr').find(".prayer_type").text();
 		var prayerText = jQ9(this).closest('tr').find(".full_text").text();
-// Launch Unapproved Prayer Popup
-	jQ9("#my_popup2").popup({
-		background: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
-		});
 	});
 });
 
 </script>
 
-<!-- Get Which Prayer Item's 'Approve' button was clicked -->
+<!-- Detect 'Details' button click -->
+<script type="text/javascript">
+ var jQ4 = jQuery.noConflict();
+    jQ4(document).ready(function () {
+        jQ4("#unapprovedprayertable").on("click", "button", function () {
+            var prayerDate = jQ4(this).closest('tr').find(".prayer_update").html();
+            var prayerWho = jQ4(this).closest('tr').find(".prayer_who").html();
+            console.log("Inside JQ4");
+        });
+    });
+
+
+
+// Launch Unapproved Prayer Popup
+//	jQ9("#my_popup2").popup({
+//		background: true, outline: true, keepfocus: true, blur: false, color: "#D1E0B2",
+//		});
+//	});
+//});
+
+</script>
+
+<!-- **************************** Get Which Prayer Item's 'Approve' button was clicked ******************** -->
+<!-- **************************** Get Which Prayer Item's 'Approve' button was clicked ******************** -->
+<!-- **************************** Get Which Prayer Item's 'Approve' button was clicked ******************** -->
  <script type="text/javascript">
 var $approveclickbuttonid = "NA";
 var $approveURL = "NA";
 var jQ10 = jQuery.noConflict();
 jQ10(document).ready(function () {
-	jQ10("#unapprovedprayertable tbody").on("click", '.prayer_approve_button', function () {
+	jQ10("#unapprovedprayertable tbody").on("click", '.prayer_approve', function () {
 		var prayerID = jQ10(this).closest('tr').find(".indexcol").text();
 		$approveclickbuttonid = prayerID;
 		console.log("$approve prayerid clicked = " + $approveclickbuttonid);
@@ -112,31 +156,33 @@ jQ10(document).ready(function () {
 		var prayerTitle = jQ10(this).closest('tr').find(".prayer_title").text();
 		$approveURL = "ofc_newprayeraccept.php?prayerid=" + $approveclickbuttonid;
 		console.log("Approve Button clicked");
-		console.log("approveURL = " + $approveURL);
+        console.log("approveURL = " + $approveURL);
+
 //		window.open($approveURL);
-		window.location.href = $approveURL;
+		//window.location.href = $approveURL;
 	});
 });
 
 </script>
 
-<!-- Get Which Prayer Item's 'Reject' button was clicked -->
+<!-- **************************** Get Which Prayer Item's 'Reject' button was clicked ******************** -->
+<!-- **************************** Get Which Prayer Item's 'Reject' button was clicked ******************** -->
+<!-- **************************** Get Which Prayer Item's 'Reject' button was clicked ******************** -->
  <script type="text/javascript">
 var $rejectclickbuttonid = "NA";
 var $rejectURL = "NA";
-var jQ11 = jQuery.noConflict();
-jQ11(document).ready(function () {
-	jQ11("#unapprovedprayertable tbody").on("click", '.prayer_reject_button', function () {
-		var prayerID = jQ11(this).closest('tr').find(".indexcol").text();
+var jQ10 = jQuery.noConflict();
+jQ10(document).ready(function () {
+	jQ10("#unapprovedprayertable tbody").on("click", '.prayer_reject', function () {
+		var prayerID = jQ10(this).closest('tr').find(".indexcol").text();
 		$rejectclickbuttonid = prayerID;
 		console.log("$reject prayerid clicked = " + $rejectclickbuttonid);
-		var prayerWho = jQ11(this).closest('tr').find(".prayer_who").text();
-		var prayerTitle = jQ11(this).closest('tr').find(".prayer_title").text();
-		$rejectURL = "ofc_newprayerreject.php?prayerid=" + $rejectclickbuttonid;
+		var prayerWho = jQ10(this).closest('tr').find(".prayer_who").text();
+		var prayerTitle = jQ10(this).closest('tr').find(".prayer_title").text();
+		$approveURL = "ofc_newprayerreject.php?prayerid=" + $rejectclickbuttonid;
 		console.log("Reject Button clicked");
-		console.log("rejectURL = " + $rejectURL);
-//		window.open($rejectURL);
-		window.location.href = $rejectURL;
+        console.log("rejectURL = " + $rejectURL);
+
 	});
 });
 
@@ -274,109 +320,408 @@ var jQ152 = jQuery.noConflict();
 </head>
 
 <body>
-<div id="container">
-	<div id="header">
+    <!--Navbar-->
+    <?php
+    $activeparam = '8'; // sets nav element highlight
+    require_once('ofc_nav.php');
+    ?>
+    <!-- Intro Section -->
+<div class="container-fluid profile_bg bottom-buffer">
 
-		<div id="header_text">
-			<p>Bringing</p>
-			<p>our Family</p>
-			<p>Together</p>
-		</div>
-		<ul>
-			<li> <a href='/ofc_welcome.php'>Welcome</a></li>
-<?php
-	require_once('ofc_menu.php');
+    <div class="row pt-2">
+        <div class="col-sm-12">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Using the Prayer Admin page
+            </button>
+            <div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administer Prayer Requests</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerNew" type="button">Prayer On Behalf</button>
+                        <button class="dropdown-item" data-toggle="modal" data-target="#ModalPrayerUpdate" type="button">Update Prayer Request</button>
+                    </div> <!--dropdown-menu-->
+                </div> <!--dropdown-->
+            </div> <!--btn-group-->
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#testalert" aria-expanded="false" aria-controls="testalert">
+                Test Alert
+            </button>
+            </div> <!-- col sm-12 -->
+    </div> <!-- row -->
+    <div class="collapse" id="collapseExample">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card card-body">
+                    <h4 class="card-title">Click on the <span class="btn btn-primary">View</span> button to review the prayer request</h4>
+                    <ul class="card-text">
+                        <li>You can send an email to the prayer request originator directly from the View popup</li>
+                    </ul>
+                </div> <!-- card -->
+            </div> <!-- col-sm-6 -->
+            <div class="col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title">Administering Prayer Requests</h4>
+                        <ul class="card-text">
+                            <li>As Prayer Administrator, you have the ability to submit new family prayer requests, as well as updating existing prayer requests.</li>
+                            <ul>
+                                <li>Click on the <span class="btn btn-success">Administer Prayer Requests</span> dropdown button.</li>
+                            </ul>
+                            <ul>
+                                <li>For new prayer requests, you will be submitting prayer requests on behalf of others. The 'Pray for' field <strong>must</strong> be filled in.</li>
+                                <li><strong>Note:</strong> Navigate to your own 'My Profile' page to submit your own family's prayer request.</li>
+                            </ul>
+                            <li>Updating existing prayer requests can be performed using the same 'Administer Prayer Requests' dropdown button.</li>
+                        </ul>
+                    </div> <!-- card -->
+            </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card card-body">
+                        <h4 class="card-title">Approving and Rejecting Prayer Requests</h4>
+                        <ul class="card-text">
+                            <li>Click on <span class="btn btn-success">Approve</span> to post the prayer request for family to see. Request will be immediately available on the website.</li>
+                            <li>Click on <span class="btn btn-danger">Reject</span> to reject the prayer request. Request will remain in our database, but not publicly visible.</li>
+                        </ul>
+                    </div> <!-- card -->
+            </div> <!-- col-sm-6 -->
+        </div> <!-- row -->
+    </div> <!-- collapse --> 
+    <div class="row">
+        <div class="col-sm-12">
 
-?>
-		</ul>
-	</div>
-	<div id="content">
+            <div id="prayerlogleft">
+                <br>
+                <h2>Prayer Request Administration</h2>
+                <hr>
+            </div> <!-- prayerlogleft -->
 
-			<h2>Prayer Request Administration</h2>
-<table id="detailheading" border="0">
 
-<tr>
-<td colspan="2" align="center">
-<h3>Approve or Reject Prayer Requests</h3>
-</td>
-<td colspan="2" class="popbox" align="center">
-<h3>All Church Prayer Mgmt.</h3>
-</td>
-</tr>
+        <table id="unapprovedprayertable" class="table table-sm table-striped dt-responsive" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <!--<table id="unapprovedprayertable" class="display table table-sm table-striped dt-responsive" cellspacing="0" width="100%">-->
 
-<tr>
-<td class="header">
-To Approve prayer request
-</td>
-<td class="header">
-To Reject prayer request
-</td>
-<td class="popbox">
-<button class='my_popup_open button_flat_green_small' id='prayer_new_button'>New request</button>
-</td>
-<td class="popbox">
-<button class='my_popup4_open button_flat_green_small' id='church_prayer_button'>Update prayer</button>
-</td>
-</tr>
-<tr>
-<td class="content">
-Click on '<u>approve</u>' to publicly post prayer request. Request will be immediately available on trinityevangel.ourfamilyconnections.org website.
-</td>
-<td class="content">
-Click on '<u>reject</u>' to reject the prayer request. Request will remain in our database, but not publicly visible.
-</td>
-</tr>
-
-<tr>
-<br />
-</tr>
-
-</table>
-
-<table id="unapprovedprayertable" class="display" cellpadding="0" cellspacing="0" border="0">
-
-<!--	<table width="500" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">-->
-
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Approve</th>
-			<th>Reject</th>
-			<th>Date</th>
-			<th>Type</th>
-			<th>From</th>
-			<th>Title</th>
-			<th>View</th>
-		</tr>
+        <!--	<table width="500" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">-->
+	        <thead>
+		        <tr>
+			        <th>ID</th>
+			        <th>Date</th>
+			        <th>Type</th>
+			        <th>From</th>
+			        <th>Title</th>
+			        <th>View</th>
+			        <th>Approve</th>
+			        <th>Reject</th>
+                    <th>Smack</th>
+		        </tr>
 	
-	</thead>
-	<tfoot>
-		<tr>
-			<th>ID</th>
-			<th>Approve</th>
-			<th>Reject</th>
-			<th>Date</th>
-			<th>Type</th>
-			<th>From</th>
-			<th>Title</th>
-			<th>View</th>
-		</tr>
-	</tfoot>
+	        </thead>
+	        <tfoot>
+		        <tr>
+			        <th>ID</th>
+			        <th>Date</th>
+			        <th>Type</th>
+			        <th>From</th>
+			        <th>Title</th>
+			        <th>View</th>
+			        <th>Approve</th>
+			        <th>Reject</th>
+                    <th>Smack</th>
+		        </tr>
+	        </tfoot>
 
-	</table>
+	    </table>
 
 
 
 
-		<div id="footerline"></div>
-	</div>
-	
+	    </div> <!-- content -->
+    </div> <!-- row -->
+    <div class="row fixed-bottom">
+        <div class="col-md-12">
+            <div class="text-center">
+                <?php
+                require_once('/includes/ofc_footer.php')
+                ?>
+            </div><!-- text -->
+        </div><!-- col-md-12 -->
+    </div><!-- Row -->
+</div> <!-- container -->
+
+<!--***************************** Test Alert Popup ***********************************-->
+<!--***************************** Test Alert Popup ***********************************-->
+<!--***************************** Test Alert Popup ***********************************-->
+<div class="modal fade" id="testalert">
+    <div class="alert alert-primary alert-dismissable" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        <button class="btn btn-primary close" data-dismiss="alert" aria-label="close">Close</button>
+    </div>
 </div>
 
+<!--***************************** View Prayer Info MODAL ***********************************-->
+<!--***************************** View Prayer Info MODAL ***********************************-->
+<!--***************************** View Prayer Info MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerInfo" tabindex="-1" role="dialog" aria-labelledby="ModalPrayer" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="ModalPrayer">Click <strong>Send Email</strong> to send an email to requestor.<br>Click <strong>Close</strong> when done.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+	<form name='form1' method='post' action=''> 		
+	<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+        	<tr class="praytable_even">
+                    <td colspan="1"><strong>Type: </strong></td>
+                    <td colspan="2" class="praypraise"> </td>
+                    <td align="right" colspan="1"><strong>Answered: </strong></td>
+                    <td align="center" colspan="1" class="prayanswer"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Date: </strong></td>
+                    <td colspan="4" class="praydate"> </td>
+		</tr>
+		<tr class="praytable_even">
+                    <td colspan="1"><strong>From: </strong></td>
+                    <td colspan="4" class="praywho"> </td>
+		</tr>
+		<tr class="praytable_odd">
+                    <td colspan="1"><strong>Title: </strong></td>
+                    <td colspan="4" class="praytitle"> </td>
+		</tr>
+	</table>
+    <table id="praycontent" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+		<tr class="praytable_text">
+                    <td colspan="4">
+                        <div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
+                    </td>
+		</tr>
+		<tr>
+                    <td>
+                    </td>
+ 		</tr>
+	</table>
+    </div> <!-- modal-body -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="sendMail">Send Email</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div> <!-- modal-footer -->
+    </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
+
+<!--***************************** Approve Prayer MODAL ***********************************-->
+<!--***************************** Approve Prayer MODAL ***********************************-->
+<!--***************************** Approve Prayer MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerApprove" tabindex="-1" role="dialog" aria-labelledby="ModalPrayer" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="ModalPrayer">Click <strong>Approve</strong> to approve the prayer request.<br>Click <strong>Cancel</strong> to return to the prayer requests.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+	    <form name='form1' method='post' action=''> 
+
+
+        <table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+        	<tr class="praytable_even">
+                    <td colspan="1"><strong>Type: </strong></td>
+                    <td colspan="4" class="praypraise"> </td>
+		    </tr>
+		    <tr class="praytable_odd">
+                    <td colspan="1"><strong>Date: </strong></td>
+                    <td colspan="4" class="praydate"> </td>
+		    </tr>
+		    <tr class="praytable_even">
+                    <td colspan="1"><strong>From: </strong></td>
+                    <td colspan="4" class="praywho"> </td>
+		    </tr>
+		    <tr class="praytable_odd">
+                    <td colspan="1"><strong>Title: </strong></td>
+                    <td colspan="4" class="praytitle"> </td>
+		    </tr>
+	    </table>
+
+      </div> <!-- modal-body -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="ApprovePrayerRequest">Approve</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div> <!-- modal-footer -->
+       </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
+
+
+<!--***************************** Reject Prayer MODAL ***********************************-->
+<!--***************************** Reject Prayer MODAL ***********************************-->
+<!--***************************** Reject Prayer MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerReject" tabindex="-1" role="dialog" aria-labelledby="ModalPrayer" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="ModalPrayer">Click <strong>Reject</strong> to reject the prayer request.<br>Click <strong>Cancel</strong> to return to the prayer requests.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+	    <form name='form1' method='post' action=''> 
+
+
+        <table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
+        	<tr class="praytable_even">
+                    <td colspan="1"><strong>Type: </strong></td>
+                    <td colspan="4" class="praypraise"> </td>
+		    </tr>
+		    <tr class="praytable_odd">
+                    <td colspan="1"><strong>Date: </strong></td>
+                    <td colspan="4" class="praydate"> </td>
+		    </tr>
+		    <tr class="praytable_even">
+                    <td colspan="1"><strong>From: </strong></td>
+                    <td colspan="4" class="praywho"> </td>
+		    </tr>
+		    <tr class="praytable_odd">
+                    <td colspan="1"><strong>Title: </strong></td>
+                    <td colspan="4" class="praytitle"> </td>
+		    </tr>
+	    </table>
+
+      </div> <!-- modal-body -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="RejectPrayerRequest">Reject</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div> <!-- modal-footer -->
+       </form>
+    </div> <!-- modal-content -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
+
+
+
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+<!--***************************** New Prayer Info MODAL ***********************************-->
+
+<div class="modal fade" id="ModalPrayerNew" tabindex="-1" role="dialog" aria-labelledby="ModalPrayerNew" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalPrayerNew">
+                    Enter details about your prayer request and click
+                    <strong>Send.</strong>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div><!-- modal-header -->
+            <div class="modal-body">
+                <form name='newprayerform' method='post' action='ofc_newprayer.php'>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Pray for:</legend>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="onbehalfof" id="onbehalfof" placeholder="Pray on behalf of whom?" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Visibility:</legend>
+                            <div class="col-sm-8 ml-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visible" value="1" />
+                                    <label class="form-check-label" for="visible" id="Visibility1"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="visible" value="3" checked />
+                                    <label class="form-check-label" for="visible" id="Visibility2"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Praise:</legend>
+                            <div class="col-sm-8 ml-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prayer" value="Prayer" checked />
+                                    <label class="form-check-label" for="prayer">
+                                        Prayer Request
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prayer" value="Praise" />
+                                    <label class="form-check-label" for="prayer">
+                                        Praise
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Title:</legend>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="requesttitle" id="requesttitle" placeholder="Title" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 px-2">Details:</legend>
+                            <div class="col-sm-9">
+                                <textarea type="text" class="form-control" rows="6" name="requesttext" id="requesttext" placeholder="Details"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--</form>-->
+
+
+
+
+            </div><!-- modal-body -->
+            <div class="modal-footer">
+                <p id="newprayernotice"></p>
+                <?php
+                //Hidden POST tags for ofc_newprayer
+                ////// Identifies source page for correct RETURN
+                echo "<input type='hidden' name='page' value= 'prayer_admin' />";
+                ////// Captured fullname for email notification
+                $fullname = $_SESSION['fullname'];
+                echo "<input type='hidden' name='fullname' value= '" . $fullname . "' />";
+                ////// Captures email address of prayer request submitter
+                $email = $_SESSION['email'];
+                echo "<input type='hidden' name='email_address' value= '" . $email . "' />";
+                ////// Captures profile ID of prayer request submitter
+                $profileID = $_SESSION['idDirectory'];
+                echo "<input type='hidden' name='requestorID' value= '" . $profileID . "' />";
+                ?>
+
+                <input type="hidden" name="Domain_Name" id="domainname" />
+                <input type="submit" class="btn btn-primary" name='submitrequest' value='Send' />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div><!-- modal-footer -->
+            </form>
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div><!-- modal-fade -->
+
+
+
+
 <!--***************************** Create new Prayer Request POPUP ***********************************-->
 <!--***************************** Create new Prayer Request POPUP ***********************************-->
 <!--***************************** Create new Prayer Request POPUP ***********************************-->
-<div id="my_popup">
+<!--<div id="my_popup">
 	<h2>New Prayer Request</h2>
         <br />
         <br />
@@ -433,15 +778,13 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 					{
 	 					echo "<td><input type='hidden' name='email' value= '" . $recordEmail1 . "' /></td>";
 	 				}
-	 				else //SESSION = F 
+	 				else
 	 				{
  						echo "<td><input type='hidden' name='email' value= '" . $recordEmail2 . "' /></td>";
  					}
 ?>
 	 			</tr>
 	 			<tr>
-<!-- 	 		 		<td>&nbsp</td>
- -->
 <?php	 		
  					
  					echo "<td><input type='hidden' name='requestorID' value= '" . $_SESSION['idDirectory'] . "' /></td>";
@@ -462,77 +805,13 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
  		 	</table>
 		</form>
 <br />
-</div>
-
-<!-- ************************************* -->
-<!-- View Prayer Details POPUP dialog            -->
-<!-- ************************************* -->
- <div id="my_popup2">
-	<h2>Prayer Request Details</h2>
-        <br />
-        <br />
-        <h3>View the details of this prayer request.</h3>
-        <br />
-        <hr>
-			<form name='form1' method='post' action=''> 		
-			<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-							<tr class="praytable_even">
-								<td colspan="1"><strong>Type: </strong></td>
-								<td colspan="2" class="praypraise"> </td>
-							</tr>
-							<tr class="praytable_odd">
-								<td colspan="1"><strong>Date: </strong></td>
-								<td colspan="2" class="praydate"> </td>
-							</tr>
-							<tr class="praytable_even">
-								<td colspan="1"><strong>From: </strong></td>
-								<td colspan="2" class="praywho"> </td>
-							</tr>
-							<tr class="praytable_odd">
-								<td colspan="1"><strong>Title: </strong></td>
-								<td colspan="2" class="praytitle"> </td>
-							</tr>
-							<tr>
-								<td colspan="3">
-									<hr />
-								</td>
-							</tr>
-			</table>
-			<table style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-							<tr class="praytable_text">
-								<td colspan="5">
-									<div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
- 								</td>
- 							</tr>
-			</table>
-	      <table width="100%" align="left" cellpadding="0" cellspacing="1" border="0">
- 		 		 			<tr class="praytable_buttons" style="border: 1px;">
-<!-- 		 		 		 		<td width="100"></td>
-  		 		 		 		<td width="100"></td>
- -->
-   		 		 		 		<td colspan="2" align="left"><input type="button" class="button_flat_blue_small" id="sendMail" name="sendMail" value="Send Email" /></td>
-   		 		 		 		<td colspan="2" align="right"><input type="button" class="my_popup2_close button_flat_blue_small" name="cancel" value="Close" /></td>
-  		 		 			</tr>
- 		 		 			<tr>
- 		 		 			</tr>
- 		 		 		<p>
- 		 		 		<p>
-			</table>
- 			</form>
-			
-			<br />
-
-</div>
+</div>-->
 
 
 <!--***************************** Update Prayer Request POPUP ***********************************-->
 <!--***************************** Update Prayer Request POPUP ***********************************-->
 <!--***************************** Update Prayer Request POPUP ***********************************-->
-<div id="my_popup3">
+<!--<div id="my_popup3">
 	<h2>Update Prayer Request</h2>
         <br />
         <br />
@@ -543,19 +822,13 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
         <p id="updateTitle" class="my_popup3title"> </p>
 		<form id="updateprayerform" name='updateprayerform' method='post' action=' '> 		
       	<table id="praytable" style="border: 3px solid powderblue;" width="100%" align="left" cellpadding="0" cellspacing="1" border="0">
-<!--      		<tr>
-      			<td align="right"><strong>Title : </strong></td>
-      			<td width="5%"></td>
-      			<td style="font-size: 14px" colspan="2" class="my_popup3title"></td>
-				</tr>
--->      		<tr>
+      		<tr>
       			<td width="25%">&nbsp</td>
-<!--      			<td colspan="2" class="my_popup3title"> </td>
--->      		</tr>
+	</tr>
       		<tr>
       			<td></td>
-      		</tr>
-      		<tr>
+      		</tr>-->
+      		<!--<tr>
 					<td align="right"><strong>Update : </strong></td>
 				</tr>
  		 		<tr>
@@ -570,9 +843,6 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 					<td>&nbsp</td>
 					<td>&nbsp</td>
 				</tr>
-<!--        </table>
-			<table width="100%" align="left" cellpadding="0" cellspacing="1" border="0" >
--->
 	 			<tr>
 	 		 		<td><br /></td>
 	 			</tr>
@@ -580,29 +850,19 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 	 		 		<td width='25%' align='right'><strong>Update Details:</strong></td>
 	 		 		<td colspan="2"><textarea id="updatetext" name="requesttext" rows="6" cols="40" ></textarea></td>
 	 			</tr>
-	 			<tr>
-	 				<td>&nbsp</td>
+	 			<tr>-->
+	 				<!--<td>&nbsp</td>-->
 <?php				
 					$fullname = $_SESSION['firstname'] . " " . $recordLast; 
  					echo "<td><input type='hidden' name='fullname' value= '" . $fullname . "' /></td>";
-//					if($_SESSION['gender'] == 'M') 
-//					{
-//	 					echo "<td><input type='hidden' name='email' value= '" . $recordEmail1 . "' /></td>";
-//	 				}
-//	 				else //SESSION = F 
-//	 				{
-// 						echo "<td><input type='hidden' name='email' value= '" . $recordEmail2 . "' /></td>";
-// 					}
 ?>
 	 			</tr>
 	 			<tr>
-<!-- 	 		 		<td>&nbsp</td>
- -->
  <?php	 		
  					
  					echo "<td><input type='hidden' name='requestorID' value= '" . $profileaddr . "' /></td>";
-?>
-				</tr>
+ ?>
+				<!--</tr>
 			</table>
 			<table width="100%" align="left" cellpadding="0" cellspacing="1" border="0" >
 	 		 	<tr>
@@ -615,12 +875,12 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
  		 	</table>
 		</form>
 <br />
-</div>
+</div>-->
 
 <!--***************************** Update Church Prayer Requests POPUP ***********************************-->
 <!--***************************** Update Church Prayer Requests POPUP ***********************************-->
 <!--***************************** Update Church Prayer Requests POPUP ***********************************-->
-<div id="my_popup4">
+<!--<div id="my_popup4">
 	<h2>All Church Prayer Requests</h2>
         <br />
         <br />
@@ -646,9 +906,9 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 						<th>Update</th>
             	</tr>
         		</tfoot>
-    	</table>
+    	</table>-->
 
-		<form name='myprayerform' method='post' action='ofc_churchprayer.php'> 		
+		<!--<form name='myprayerform' method='post' action='ofc_churchprayer.php'> 		
 			<table id="praytable" style="border: 3px solid powderblue;" width="100%" align="left" cellpadding="0" cellspacing="1" border="0" >
 							<tr class="praytable_even">
 								<td colspan="1"><strong>Type: </strong></td>
@@ -685,15 +945,15 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 								<td>
  								</td>
  							</tr>
-	 			<tr>
+	 			<tr>-->
 <!-- 	 		 		<td>&nbsp</td>
  -->
  <?php	 		
  					
  					echo "<td><input type='hidden' name='requestorID' value= '" . $profileaddr . "' /></td>";
-?>
-				</tr>        
-			</table>
+ ?>
+				</tr>
+			<!--</table>
 			<table width="100%" align="left" cellpadding="0" cellspacing="1" border="0" >
 				<tr>
 	 		 		<td align="right"><input type="button" class="my_popup3_open button_flat_blue_small" id="updatePrayer" name="update" value="Update" /></td>
@@ -708,9 +968,10 @@ Click on '<u>reject</u>' to reject the prayer request. Request will remain in ou
 	 			</tr>
  		 	</table>
 		</form>
-<br />
-</div>
+<br />-->
 
+    <!-- Tenant Configuration JavaScript Call -->
+    <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>
 
 
 </body>

@@ -1,5 +1,5 @@
 <?php
-    if($activeparam == '1')
+    if($activeparam == '1') // $activeparam sets nav element highlight on Nav bar - originates on all pages to identify (by 'Active' class and bold text) which page is being displayed
     {
         echo '<li class="nav-item active"><a class="nav-link" href="ofc_home.php">Home</a></li>';
     }
@@ -57,7 +57,13 @@
         echo '<li class="nav-item"><a class="nav-link" href="#">Registration Admin</a></li>';
     }
     if($_SESSION['pray_admin'] == '1') {
-        echo '<li class="nav-item"><a class="nav-link" href="ofc_prayeradmin.php">Prayer Admin</a></li>';
+        if($activeparam == '8')
+        {
+            echo '<li class="nav-item active"><a class="nav-link" href="ofc_prayeradmin.php">Prayer Admin</a></li>';
+        }
+        else {
+            echo '<li class="nav-item"><a class="nav-link" href="ofc_prayeradmin.php">Prayer Admin</a></li>';
+        }
     }
     echo '<li class="nav-item"><a class="nav-link" href="ofc_logout.php">Logout</a></li>';
 ?>

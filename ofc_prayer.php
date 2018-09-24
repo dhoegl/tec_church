@@ -234,7 +234,7 @@ jQ9(document).ready(function () {
 
 
     <!-- Intro Section -->
-<div class="container-fluid profile_bg">
+<div class="container-fluid profile_bg bottom-buffer">
 
     <div class="row pt-2">
         <div class="col-sm-12">
@@ -316,82 +316,19 @@ jQ9(document).ready(function () {
             <p></p>
             <p></p>
             <p></p>
-        </div>
-    </div>
-    <div id="footerline"></div>
-            
-</div>
+        </div> <!-- col-sm-12 -->
+    </div> <!-- Row -->
+    <div class="row fixed-bottom">
+        <div class="col-md-12">
+            <div class="text-center">
+                <?php
+                require_once('/includes/ofc_footer.php')
+                ?>
+            </div><!-- text -->
+        </div><!-- col-md-12 -->
+    </div><!-- Row -->
+</div> <!-- container -->
 	
-<?php
-//	require_once('/tecfooter.php');
-?>
-
-
-
-<!-- ************************************* -->
-<!-- View Prayer Details OVERLAY dialog            -->
-<!-- ************************************* -->
- <div id="my_popup">
-	<h2>View Prayer Request Details</h2>
-        <br />
-        <br />
-        <h3>View the details of this prayer request.</h3>
-        <br />
-        <hr>
-			<form name='form1' method='post' action=''> 		
-				<table id="praytable" style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-					<tr class="praytable_even">
-						<td colspan="1"><strong>Type: </strong></td>
-						<td colspan="2" class="praypraise"> </td>
-						<td align="right" colspan="1"><strong>Answered: </strong></td>
-						<td align="center" colspan="1" class="prayanswer"> </td>
-					</tr>
-					<tr class="praytable_odd">
-						<td colspan="1"><strong>Date: </strong></td>
-						<td colspan="4" class="praydate"> </td>
-					</tr>
-					<tr class="praytable_even">
-						<td colspan="1"><strong>From: </strong></td>
-						<td colspan="4" class="praywho"> </td>
-					</tr>
-					<tr class="praytable_odd">
-						<td colspan="1"><strong>Title: </strong></td>
-						<td colspan="4" class="praytitle"> </td>
-					</tr>
-					<tr>
-						<td colspan="5">
-						<hr />
-						</td>
-					</tr>
-				</table>
-				<table style="border: 3px solid powderblue;" width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-					<tr class="praytable_text">
-						<td colspan="4">
-							<div class="praytext" style="height: 200px; overflow: auto; white-space: pre-wrap;"></div>
-						</td>
-					</tr>
-					<tr>
-						<td>
- 						</td>
- 					</tr>
-				</table>
-				<table width="100%" align='left' cellpadding='0' cellspacing='1' border="0">
-					<tr class="praytable_buttons" style="border: 1px;">
-<!--   		 			<td align="left"><input type="button" class="button_flat_blue_small" id="sendMail" name="sendMail" value="Send Email" /></td>
-   		 			<td align="left"><input type="button" class="button_flat_blue_small" id="unfollow_button" name="unfollow" value="Unfollow" /></td>
-   		 			<td align="left"><input type="button" class="button_flat_blue_small" id="follow_button" name="follow" value="Follow" /></td>
-   		 			<td align="right"><input type="button" class="my_popup_close button_flat_blue_small" name="cancel" value="Close" /></td>-->
-  		 		 	</tr>
- 		 		 	<tr>
- 		 		 	</tr>
-	 		 		 	<p>
- 			 		 	<p>
-				</table>
- 			</form>
-			
-			<br />
-
-</div>
 
 <!--***************************** View Prayer Info MODAL ***********************************-->
 <!--***************************** View Prayer Info MODAL ***********************************-->

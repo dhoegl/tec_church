@@ -75,6 +75,7 @@
     <Compile Include="includes\ofc_get_unapprovedprayer_jquery.php" />
     <Compile Include="includes\ofc_header.php" />
     <Compile Include="includes\ofc_hidecred.php" />
+    <Compile Include="includes\ofc_mail_out.php" />
     <Compile Include="includes\ofc_menu.php" />
     <Compile Include="includes\ofc_updateprayernotify.php" />
     <Compile Include="includes\ofc_updateprayernotify_admin.php" />

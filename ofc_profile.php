@@ -621,7 +621,7 @@ var jQ55 = jQuery.noConflict();
 
   <!-- Intro Section -->
       
-<div class="container-fluid profile_bg">
+<div class="container-fluid profile_bg bottom-buffer">
 <?php
     if($MyView == 'Y')
     {
@@ -795,7 +795,18 @@ var jQ55 = jQuery.noConflict();
     </div>-->
 
     </div> <!-- Row -->
+    <div class="row fixed-bottom">
+        <div class="col-md-12">
+            <div class="text-center">
+                <?php
+                require_once('/includes/ofc_footer.php')
+                ?>
+            </div> <!-- text -->
+        </div> <!-- col-md-12 -->
+    </div> <!-- Row -->
+
 </div> <!-- Container -->
+
 
 
 <!--***************************** Edit Picture MODAL ***********************************-->
@@ -810,7 +821,7 @@ var jQ55 = jQuery.noConflict();
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div> <!-- modal-header -->
       <div class="modal-body">
 	<p><strong>NOTE:</strong> Photo must be less than 2MB, and in one of the following formats:</p> 
             <ul>
@@ -827,16 +838,16 @@ var jQ55 = jQuery.noConflict();
                     <input name="file" type="file" id="file" required />
             <div id="message">
 
-            </div>
-      </div>
+            </div> <!-- message -->
+      </div> <!-- modal-body -->
         <div class="modal-footer">
             <input type="submit" class="btn btn-primary" value="Save changes" />
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        </div>
+        </div> <!-- modal-footer -->
         </form>
-    </div>
-  </div>
-</div>
+    </div> <!-- modal-header -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal-fade -->
 
 
 <!--***************************** Edit Contact Info MODAL ***********************************-->
@@ -1081,6 +1092,7 @@ var jQ55 = jQuery.noConflict();
                 <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child7select' id='child7select' value='Child 7'></div>
                 <div class="col-3"><input type="button" class="childselectbutton button_flat_blue_small" name='child8select' id='child8select' value='Child 8'></div>
             </div> <!-- row -->
+
         </div> <!-- container-fluid -->
 
                     <table id="editchildrentable" width='100%' border='1' align='center' cellpadding='0' cellspacing='1' >

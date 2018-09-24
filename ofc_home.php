@@ -53,37 +53,35 @@ if(!$_SESSION['logged in']) {
             <!-- Intro Section -->
                 <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
                     <!--<div class="full-bg-img">-->
-                        <div class="container flex-center">
-                            <div class="row pt-5 mt-3">
-                                <div class="col-md-12">
-                                    <div class="text-center">
-                                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s" id="custname">
-                                            <strong></strong>
-                                        </h1>
-                                        <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
-                                        <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
-                                            <strong>tagline</strong>
-                                        </h5>
-                                        <a class="btn btn-outline-yellow wow fadeInDown" data-wow-delay="0.4s" id="gotosite">To Our Home Page</a>
-                                        <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
-                                        <a class="btn btn-outline-yellow wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fixed-bottom">
-                                <div class="col-md-12">
-                                    <div class="text-center">
-                                        <p>
-                                            <?php
-                                            require_once('/includes/ofc_footer.php')
-                                            ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <!--</div>-->
-                </div>
+                    <div class="container flex-center">
+                        <div class="row pt-5 mt-3">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s" id="custname">
+                                        <strong></strong>
+                                    </h1>
+                                    <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
+                                    <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
+                                        <strong>tagline</strong>
+                                    </h5>
+                                    <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="gotosite">To Our Home Page</a>
+                                    <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
+                                    <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
+                                </div> <!-- text -->
+                            </div> <!-- col-md-12 -->
+                        </div> <!-- Row -->
+                        <div class="row fixed-bottom">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <?php
+                                        require_once('/includes/ofc_footer.php')
+                                    ?>
+                                </div> <!-- text -->
+                            </div> <!-- col-md-12 -->
+                        </div> <!-- Row -->
+                    </div> <!-- container -->
+                    
+                </div> <!-- view -->
 
         </header>
         <!--Main Navigation-->

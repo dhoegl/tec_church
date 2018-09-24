@@ -6,7 +6,7 @@ if(!$_SESSION['logged in']) {
 }
    require_once('ofc_dbconnect.php');
 
-// 	if (isset($_GET['action']) ) 
+// 	if (isset($_GET['action']) )
 //	{
 /*Query unapproved prayer listing: visible = 3 (all) and status = 0 */
 		$unapprovedprayerquery = "SELECT p.create_date AS prayerupdatedate, p.name AS fullname, m.Name_1 AS firsthim, m.Name_2 AS firsther, m.Surname AS last, p.prayer_id AS prayerid, p.title AS prayertitle, p.prayer_text AS prayertext, p.pray_praise AS praypraise, p.updated AS updatereq FROM " . $_SESSION['prayertable'] . " p INNER JOIN " . $_SESSION['dirtablename'] . " m on m.idDirectory = p.owner_id WHERE p.visible = '3' and p.status = '1' and p.approved='0' ORDER BY p.create_date DESC";
@@ -25,16 +25,28 @@ if(!$_SESSION['logged in']) {
 				$prayerid = $unapprovedrow['prayerid'];
 				$prayer_title = $unapprovedrow['prayertitle'];
 				$prayer_text = $unapprovedrow['prayertext'];
-				$fullname = $unapprovedrow['fullname'];				
+				$fullname = $unapprovedrow['fullname'];
 				$glance = $prayer_title . " :: " . substr($unapprovedrow['prayertext'],0,50) . "...";
 				$praypraise = $unapprovedrow['praypraise'];
-				$detail_button = "Details";
+                if($unapprovedrow['prayanswer'] == '1') {
+					$prayanswer = "YES";
+				}
+				else {
+					$prayanswer = "NO";
+				}
 
-				// Stores each database record to an array 
-//					$buildjson = array('prayerdate' => $prayerupdate, 'id' => $prayerid, 'title' => $prayer_title, 'prayertext' => $prayer_text, 'fullname' => $fullname, 'glance' => $glance); 
-					$buildjson = array('id' => $prayerid, 'prayerdate' => $prayerupdate, 'fullname' => $fullname, 'prayertitle' => $prayer_title, 'glance' => $glance, 'praypraise' => $praypraise, 'detailbutton' => $detail_button, 'prayertext' => $prayer_text); 
- 					// Adds each array into the container array 
- 					array_push($listarray, $buildjson); 
+				$detail_button = "Details";
+                $approve_button = "Approve";
+				$reject_button = "Reject";
+
+
+				// Stores each database record to an array
+//					$buildjson = array('prayerdate' => $prayerupdate, 'id' => $prayerid, 'title' => $prayer_title, 'prayertext' => $prayer_text, 'fullname' => $fullname, 'glance' => $glance);
+                //$buildjson = array('id' => $prayerid, 'prayerdate' => $prayerupdate, 'fullname' => $fullname, 'prayertitle' => $prayer_title, 'glance' => $glance, 'praypraise' => $praypraise, 'detailbutton' => $detail_button, 'prayertext' => $prayer_text);
+// Sept 16 Test
+                $buildjson = array('id' => $prayerid, 'prayerdate' => $prayerupdate, 'praypraise' => $praypraise, 'prayanswer' => $prayanswer, 'fullname' => $fullname, 'prayertitle' => $prayer_title, 'detailbutton' => $detail_button, 'approvebutton' => $approve_button, 'rejectbutton' => $reject_button, 'prayertext' => $prayer_text);
+ 					// Adds each array into the container array
+ 					array_push($listarray, $buildjson);
 			}
 			// Prepend array with parent element
 //			$listarray = array('ActivePrayerList' => $listarray);
@@ -43,7 +55,7 @@ if(!$_SESSION['logged in']) {
 //	}
 
 	header('Content-type: application/json');
-	echo json_encode($listarray); 
+	echo json_encode($listarray);
 
 ?>
 

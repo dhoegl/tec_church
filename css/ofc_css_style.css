@@ -122,8 +122,12 @@ body
 {
     background-color: gray;
     color: white;
-    font-weight: bolder;
+    font-weight: normal;
     text-align: center;
+}
+/* allow space between footer and main body */
+.bottom-buffer { 
+    margin-bottom: 50px;
 }
 /******************** Button Styles *************************/
 /******************** Button Styles *************************/
@@ -152,7 +156,8 @@ body
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 0px;
 }
 .button_flat_blue {
     background-color: #0800ff;
@@ -165,8 +170,8 @@ body
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
-
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 0px;
 }
 .button_flat_blue_small {
     background-color: #0800ff;
@@ -179,7 +184,9 @@ body
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
 }
 .button_flat_blue_tiny {
     background-color: #0800ff;
@@ -192,7 +199,8 @@ body
     font-size: 10px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 0px;
 }
 .button_flat_red_small {
     background-color: #ff0000;
@@ -205,7 +213,8 @@ body
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-	-webkit-appearance:square-button;
+    -webkit-appearance: square-button;
+    -webkit-border-radius: 0px;
 }
 
 /********************** Styles for Bootstrap Modal Popups ***************************/

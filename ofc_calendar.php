@@ -143,7 +143,7 @@ $count = $result->num_rows;
     ?>
 
     <!-- Intro Section -->
-<div class="container-fluid profile_bg">
+<div class="container-fluid profile_bg bottom-buffer">
     <div class="row pt-2">
         <div class="col-sm-12">
             <p>
@@ -184,6 +184,16 @@ $count = $result->num_rows;
             <div id='calendar' style='margin:3em 0;font-size:13px'></div>
         </div> <!-- col-sm-12 --> 
     </div> <!-- row -->
+    <div class="row fixed-bottom">
+        <div class="col-md-12">
+            <div class="text-center">
+                <?php
+                require_once('/includes/ofc_footer.php')
+                ?>
+            </div><!-- text -->
+        </div><!-- col-md-12 -->
+    </div><!-- Row -->
+
 </div> <!-- container -->
 
 
