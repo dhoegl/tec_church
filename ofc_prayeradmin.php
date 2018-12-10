@@ -342,9 +342,9 @@ var jQ152 = jQuery.noConflict();
                     </div> <!--dropdown-menu-->
                 </div> <!--dropdown-->
             </div> <!--btn-group-->
-            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#testalert" aria-expanded="false" aria-controls="testalert">
+            <!--<button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#testalert" aria-expanded="false" aria-controls="testalert">
                 Test Alert
-            </button>
+            </button>-->
             </div> <!-- col sm-12 -->
     </div> <!-- row -->
     <div class="collapse" id="collapseExample">
@@ -449,15 +449,13 @@ var jQ152 = jQuery.noConflict();
 <!--***************************** Test Alert Popup ***********************************-->
 <!--***************************** Test Alert Popup ***********************************-->
 <!--***************************** Test Alert Popup ***********************************-->
-<div class="modal fade" id="testalert">
-    <div class="alert alert-primary alert-dismissable" role="alert">
+    <!--<div class="alert alert-primary alert-dismissable" id="testalert">
         <h4 class="alert-heading">Well done!</h4>
         <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
         <hr>
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-        <button class="btn btn-primary close" data-dismiss="alert" aria-label="close">Close</button>
-    </div>
-</div>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>-->
 
 <!--***************************** View Prayer Info MODAL ***********************************-->
 <!--***************************** View Prayer Info MODAL ***********************************-->

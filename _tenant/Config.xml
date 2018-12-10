@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
   <settings>
     <customer>
-      <ID>
+      <ID> <!--Unique customer ID used to segregate environments and data-->
         001
       </ID>
-      <name>
+      <name> <!--Formal customer name-->
         Trinity Evangel Church
       </name>
-      <nickname>
+      <nickname> <!--Customer acronym – assists to shorten name when customer chooses to do so, also helps reduce page space is limited-->
         TEC
       </nickname>
-      <domain>
+      <domain> <!--Actual URL to access the Site-->
         ofctest.ourfamilyconnections.org
       </domain>
-      <title>
+      <title> <!--Webpage Title – this is what’s shown on browser tab-->
         TEC Family Connection
       </title>
-      <homepage>
+      <homepage> <!--Organization’s homepage – OurFamilyConnections homepage will link directly (via button-click) to your designated homepage-->
         http://trinityevangel.org
       </homepage>
-      <banner>
+      <banner> <!--Webpage banner image-->
         url('/_tenant/images/x.jpg')
       </banner>
-      <backsplash>
+      <backsplash> <!--Shown on homepage-->
         url('/_tenant/images/TEC_splash.jpg')
       </backsplash>
-      <logo>
+      <logo> <!--Customer’s logo image-->
         url('/_tenant/images/trinity_logo.png')
       </logo>
-      <nav_logo>
+      <nav_logo> <!--Navigation Bar image-->
         /_tenant/images/trinity_logo.png
       </nav_logo>
-      <tagline>
+      <tagline> <!--Specialized text phrase pointing users to organization’s theme, motto, or value-proposition-->
         Reformed and Still Reforming
       </tagline>
       <special1> <!--Home Page Mission Statement Image-->

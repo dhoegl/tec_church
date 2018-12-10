@@ -4,7 +4,7 @@ if(!$_SESSION['logged in']) {
 	session_destroy();
 	exit();
 }
-/* Get email address of selected prayer owner - called from tecprayer.php */
+/* Get email address of selected prayer owner - called from ofc_prayeradmin.php */
     require_once('../ofc_dbconnect.php');
     
 	if ( !isset($_GET['prayerID'])) {
@@ -14,7 +14,7 @@ if(!$_SESSION['logged in']) {
 	else {
 		$prayerID = $_GET['prayerID'];
 		$prayerquery = "SELECT p.prayer_id, l.email_addr FROM " . $_SESSION['logintablename'] . " l INNER JOIN " . $_SESSION['prayertable'] . " p on p.name = CONCAT(l.firstname, ' ' , l.lastname) WHERE p.prayer_id = '" . $prayerID . "'";
-		$prayerresult = $mysql->query($prayerquery) or die(" SQL query Get Email Address error. Error:" . mysql_errno() . " " . mysql_error());
+		$prayerresult = $mysql->query($prayerquery) or die(" SQL query Get Email Address error. Error:" . $mysql->errno . " " . $mysql->error);
 		$prayercount = $prayerresult->num_rows;
 		$prayerarray = array();
 		while($prayerrow = $prayerresult->fetch_assoc()) {

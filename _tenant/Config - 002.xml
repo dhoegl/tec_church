@@ -10,9 +10,15 @@
       <nickname>
         ECS
       </nickname>
+      <domain> <!--Actual URL to access the Site-->
+        ofctest.ourfamilyconnections.org
+      </domain>
       <title>
         ECS Family Connection
       </title>
+      <homepage> <!--Organization’s homepage – OurFamilyConnections homepage will link directly (via button-click) to your designated homepage-->
+        http://trinityevangel.org
+      </homepage>
       <banner>
         url('/_tenant/images/x.jpg')
       </banner>
