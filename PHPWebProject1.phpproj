@@ -335,11 +335,8 @@
   <ItemGroup>
     <Compile Include="js\ofc_config_ajax_call.js" />
     <Content Include="images\x.jpg" />
-    <Content Include="_tenant\Config - 001.xml" />
     <Content Include="_tenant\Config - 002.xml" />
-    <Content Include="_tenant\Config - TEC.xml" />
-    <Content Include="_tenant\Config - Template.xml" />
-    <Content Include="_tenant\Config.xml" />
+    <Content Include="_tenant\Config - 001.xml" />
     <Content Include="_tenant\Config_old.xml" />
     <Content Include="_tenant\images\cropped-ECS-2016-45.jpg" />
     <Content Include="_tenant\images\cropped-ECS-2016-51.jpg" />

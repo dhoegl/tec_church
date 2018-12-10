@@ -2,56 +2,56 @@
   <settings>
     <customer>
       <ID> <!--Unique customer ID used to segregate environments and data-->
-        001
+        00x
       </ID>
       <name> <!--Formal customer name-->
-        Trinity Evangel Church
+        xxxxxxxxxxxxxxxxxxxxxxx
       </name>
       <nickname> <!--Customer acronym – assists to shorten name when customer chooses to do so, also helps reduce page space is limited-->
-        TEC
+        xxx
       </nickname>
       <domain> <!--Actual URL to access the Site-->
-        ofctest.ourfamilyconnections.org
+        xxxxxxxx.ourfamilyconnections.org
       </domain>
       <title> <!--Webpage Title – this is what’s shown on browser tab-->
-        TEC Family Connection
+        xxxxxxxxxxxxxxxxxxxxxxxxxxx
       </title>
       <homepage> <!--Organization’s homepage – OurFamilyConnections homepage will link directly (via button-click) to your designated homepage-->
-        http://trinityevangel.org
+        xxxxxxxxxxxxxxxxxxxxxxxxx
       </homepage>
       <banner> <!--Webpage banner image-->
-        url('/_tenant/images/x.jpg')
+        url('/_tenant/images/xxxxxxx')
       </banner>
       <backsplash> <!--Shown on homepage-->
-        url('/_tenant/images/TEC_splash.jpg')
+        url('/_tenant/images/xxxxxxx')
       </backsplash>
       <logo> <!--Customer’s logo image-->
-        url('/_tenant/images/trinity_logo.png')
+        url('/_tenant/images/xxxxxxx')
       </logo>
       <nav_logo> <!--Navigation Bar image-->
-        /_tenant/images/trinity_logo.png
+        /_tenant/images/xxxxxxxxx
       </nav_logo>
       <tagline> <!--Specialized text phrase pointing users to organization’s theme, motto, or value-proposition-->
-        Reformed and Still Reforming
+        xxxxxxxxxxxxx
       </tagline>
       <special1> <!--Home Page Mission Statement Image-->
-        url('/_tenant/images/x.jpg')
+        url('/_tenant/images/xxxxxxxx')
       </special1>
-      <visibility1> <!--Prayer Request visibility - Elders (for Church); Board (for School) -->
-        Elders Only
+      <visibility1> <!--Prayer Request visibility - Elders Only (for Church); Board Only (for School) -->
+        xxxxxxxxxxxxxx
       </visibility1>
       <visibility2> <!--Prayer Request destination - Church Family; School Family -->
-        Your church family (elder approval required)
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       </visibility2>
       <prayerapproval> <!--Prayer Request approval notification - Church or School; Elder or Board/Administrator -->
-        New prayer requests to our church family require elder approval.
-        Church family will be notified as soon as it's approved.
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
       </prayerapproval>
       <contact>
         mailto:firebird@hoeglund.com
       </contact>
     </customer>
-    <theme>
-      TEC
+    <theme> <!-- Use to identify tenant.css file for customer-->
+      xxx
     </theme>
   </settings>
