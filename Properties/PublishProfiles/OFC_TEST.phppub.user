@@ -872,7 +872,10 @@
       <publishTime>12/10/2018 04:40:26</publishTime>
     </File>
     <File Include="_tenant/Config - 002.xml">
-      <publishTime>12/10/2018 04:45:44</publishTime>
+      <publishTime>12/10/2018 04:55:40</publishTime>
+    </File>
+    <File Include="_tenant/Config - Template.xml">
+      <publishTime>12/10/2018 04:39:46</publishTime>
     </File>
     <File Include="_tenant/Config_old.xml">
       <publishTime>09/08/2018 01:03:08</publishTime>
