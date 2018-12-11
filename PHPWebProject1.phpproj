@@ -251,7 +251,7 @@
     <Compile Include="services\ofc_profile_contact_update.php" />
     <Compile Include="services\ofc_register_submit.php" />
     <Compile Include="services\ofc_username_check.php" />
-    <Compile Include="_tenant\css\tenant.css" />
+    <Compile Include="_tenant\css\tenant-001.css" />
     <Compile Include="_tenant\images\cropped-ECS-2016-31.jpg" />
     <Compile Include="_tenant\images\cropped-ECS-2016-52.jpg" />
     <Compile Include=".gitignore" />
