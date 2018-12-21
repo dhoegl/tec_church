@@ -50,8 +50,20 @@
       <contact>
         mailto:firebird@hoeglund.com
       </contact>
+      <theme> <!-- Use to identify tenant.css file for customer-->
+        ECS
+      </theme>
+      <services-directory>
+        YES
+      </services-directory>
+      <services-calendar>
+        YES
+      </services-calendar>
+      <services-prayer>
+        NO
+      </services-prayer>
+      <services-events>
+        NO
+      </services-events>
     </customer>
-    <theme> <!-- Use to identify tenant.css file for customer-->
-      ECS
-    </theme>
   </settings>
