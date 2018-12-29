@@ -50,8 +50,24 @@
       <contact>
         mailto:firebird@hoeglund.com
       </contact>
+      <theme> <!-- Use to identify tenant.css file for customer-->
+        TEC
+      </theme>
+      <services-directory>
+        <!-- Use to specify whether Directory feature is enabled for customer-->
+        YES
+      </services-directory>
+      <services-calendar>
+        <!-- Use to specify whether Calendar feature is enabled for customer-->
+        YES
+      </services-calendar>
+      <services-prayer>
+        <!-- Use to specify whether Prayer Request feature is enabled for customer-->
+        NO
+      </services-prayer>
+      <services-events>
+        <!-- Use to specify whether Events feature is enabled for customer-->
+        NO
+      </services-events>
     </customer>
-    <theme> <!-- Use to identify tenant.css file for customer-->
-      TEC
-    </theme>
   </settings>
