@@ -1611,7 +1611,7 @@ var jQ55 = jQuery.noConflict();
 </div> <!-- modal-fade -->
 
 
-<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins2) -->
+<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
 	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     
     <!-- Tenant Configuration JavaScript Call -->
