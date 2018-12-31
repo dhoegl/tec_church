@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAC69rbyim0EKPDdJ3/SYhVwAAAAACAAAAAAADZgAAwAAAABAAAAAtIcborscbHcnWr0zLeq0UAAAAAASAAACgAAAAEAAAACyyRQ9Y6w2ioEJEqRXVHYwYAAAAoSSqmyYrlCtfD1WWD75wRBuTsubZLIsxFAAAAM/2QdqZl78nfdagmAKlHDIUg05X</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIEJywYlqnEakeh1N1mOa1QAAAAACAAAAAAADZgAAwAAAABAAAADWO/kOop5RPN/UTYr/k3wBAAAAAASAAACgAAAAEAAAAC+DzVbavr9tmXie1b0XETsYAAAAMJjMppozpnGPg9rp3EFJUwbpjOFRq8poFAAAAA9gnUwDn7WT1DcRN3J/0AHVxxi5</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <File Include=".gitignore">
@@ -482,13 +482,16 @@
       <publishTime>09/12/2017 04:05:03</publishTime>
     </File>
     <File Include="ofc_profile.php">
-      <publishTime>09/18/2018 17:50:04</publishTime>
+      <publishTime>12/29/2018 16:28:30</publishTime>
     </File>
     <File Include="ofc_profilesetup.php">
       <publishTime>03/05/2017 22:47:57</publishTime>
     </File>
     <File Include="ofc_recover.php">
       <publishTime>03/05/2017 22:46:37</publishTime>
+    </File>
+    <File Include="ofc_recover2.php">
+      <publishTime>12/31/2018 06:25:39</publishTime>
     </File>
     <File Include="ofc_register.php">
       <publishTime>04/04/2018 03:12:16</publishTime>
@@ -512,7 +515,7 @@
       <publishTime>08/22/2017 04:09:22</publishTime>
     </File>
     <File Include="ofc_welcome.php">
-      <publishTime>03/27/2018 00:52:33</publishTime>
+      <publishTime>12/31/2018 06:28:37</publishTime>
     </File>
     <File Include="ofc_welcome_old.php">
       <publishTime>03/02/2017 23:35:02</publishTime>
@@ -869,13 +872,13 @@
       <publishTime>09/19/2017 22:02:13</publishTime>
     </File>
     <File Include="_tenant/Config - 001.xml">
-      <publishTime>12/10/2018 04:40:26</publishTime>
+      <publishTime>12/21/2018 03:40:56</publishTime>
     </File>
     <File Include="_tenant/Config - 002.xml">
-      <publishTime>12/10/2018 04:55:40</publishTime>
+      <publishTime>12/21/2018 03:39:28</publishTime>
     </File>
     <File Include="_tenant/Config - Template.xml">
-      <publishTime>12/10/2018 04:39:46</publishTime>
+      <publishTime>12/21/2018 03:33:22</publishTime>
     </File>
     <File Include="_tenant/Config.xml">
       <publishTime>12/10/2018 04:55:40</publishTime>
@@ -884,7 +887,7 @@
       <publishTime>09/08/2018 01:03:08</publishTime>
     </File>
     <File Include="_tenant/css/tenant-002.css">
-      <publishTime>12/11/2018 05:50:29</publishTime>
+      <publishTime>12/11/2018 05:58:28</publishTime>
     </File>
     <File Include="_tenant/css/tenant.css">
       <publishTime>12/11/2018 05:59:10</publishTime>

@@ -62,7 +62,8 @@ session_start();
 //                echo '<div class="btn-group mr-4" role="group" aria-label="Second group">';
                 echo '<a type="button" class="btn btn-primary margin-left" href="ofc_register.php">Register</a>';
 //                echo '</div>';
-                echo '<button type="button" class="btn btn-danger margin-left">Forgot Password</button>';
+//                echo '<button type="button" class="btn btn-danger margin-left">Forgot Password</button>';
+                echo '<a type="button" class="btn btn-danger margin-left" href="ofc_recover2.php">Forgot Password</a>';
 //                echo '</div>';
                 echo '</form>';
 
