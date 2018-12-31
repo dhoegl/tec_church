@@ -57,7 +57,7 @@ require_once 'ofc_dbconnect.php';
     <div class="row">
         <p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                How do I register
+                How do I reset my password
             </button>
         </p>
     </div> <!-- row -->
@@ -67,29 +67,12 @@ require_once 'ofc_dbconnect.php';
                     <div class="card card-body">
                         <h4 class="card-title">Confirmation Code</h4>
                         <ul class="card-text">
-                            <li>Your church administrator may have provided a Code for you.</li>
-                            <li>Select Yes and enter the 5-digit Confirmation Code.</li>
-                        </ul>
-                        <h4 class="card-title">User Name</h4>
-                        <ul class="card-text">
-                            <li>Select a unique User Name for your registration.</li>
-                            <li>User Name must be 5 or more characters.</li>
-                        </ul>
-                        <h4 class="card-title">Password</h4>
-                        <ul class="card-text">
-                            <li>Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</li>
-                        </ul>
-                    </div>
-            </div> <!-- col-sm-6 -->
-            <div class="col-sm-6">
-                    <div class="card card-body">
-                        <h4 class="card-title">First and Last Name</h4>
-                        <ul class="card-text">
-                            <li>First and Last Name must contain at least one character.</li>
-                        </ul>
-                        <h4 class="card-title">Email Address</h4>
-                        <ul class="card-text">
-                            <li>Email address will be used to correspond with other church family members.</li>
+                            <li>Enter your username in the box below, and click the 'Reset Password' button. An email will be sent to the email address we have on file.</li>
+                            <li>Check your mailbox for an email requesting you to reset your password at our site.</li>
+                            <li>Click on the hyperlink in the email and enter a new password at the Password Reset page.</li>
+                            <li>If you don't receive an email notification within a few minutes (don't forget to check your Junk or Spam folder), please contact one of our church elders for assistance.</li>
+                            <br />
+                            <li><strong>NOTE: </strong>Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
@@ -100,49 +83,16 @@ require_once 'ofc_dbconnect.php';
         <div class="col-sm-6">
 <!--            <div class="card bg-light border-primary m-3">-->
             <div class="card bg-light border-primary p-3">
-                <h2 class="text-center">WELCOME</h2>
-                <h3 class="text-center">Please Register</h3>
-                <h4 align="center"><strong><font color="red">* All fields MUST be filled in</font></strong></h4>
-<!--                <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>-->
-                <form name='registernew' id="register" action='/services/ofc_register_submit.php' method="POST">
+                <h3 class="text-center">Please enter your UserName below</h3>
+                <form name='passwordreset' id="reset" method="POST">
                     <div class="form-group">
-                        <label for="confirmcode">I received a church Confirmation Code:</label>
-                        <div class="form-check churchcodecheck">
-                            <input class="form-check-input" type="radio" name="confirmcode" id="codeyes" value="YES" checked>
-                                <label class="form-check-label" for="codeyes">YES</label>
-                        </div>
-                        <div class="form-check churchcodecheck">
-                            <input class="form-check-input" type="radio" name="confirmcode" id="codeno" value="NO">
-                                <label class="form-check-label" for="codeno">NO</label>
-                        </div>
-                        <label id="churchcodelabel" for="churchcode">Enter your 5-digit Confirmation Code: <strong><font color="red">*</font></strong><span id="confirm_code_len"></span></label>
-                        <input type="text" class="form-control" name="churchcodename" id="churchcode" aria-describedby="churchcode" placeholder="confirmation code">
-                        </input>
-                        <label for="username">Select a User Name: <strong><font color="red">*</font></strong><span id="unique_user"></span></label>
+                        <label for="username">Enter your User Name: <strong><font color="red">*</font></strong><span id="unique_user"></span></label>
                         <input type="text" class="form-control" name="usernamename" id="username" aria-describedby="emailHelp" placeholder="UserName">
-                        </input>
-                        <label for="password">Choose a Password: <strong><font color="red">*   </font></strong><span id="register_result"></span></label>
-                        <input type="password" class="form-control" name="passwordname" id="password" aria-describedby="emailHelp" placeholder="StrongPassword">
-                        </input>
-                        <label for="repeatpassword">Re-enter your Password: <strong><font color="red">*   </font></strong><span id="password_match"></span></label>
-                        <input type="password" class="form-control" id="repeatpassword" aria-describedby="emailHelp" placeholder="StrongPassword">
-                        </input>
-                        <label for="firstname">Your First Name: <strong><font color="red">*</font></strong></label>
-                        <input type="text" class="form-control" name="firstnamename" id="firstname" aria-describedby="emailHelp" placeholder="First Name">
-                        </input>
-                        <label for="lastname">Your Last Name: <strong><font color="red">*</font></strong></label>
-                        <input type="text" class="form-control" name="lastnamename" id="lastname" aria-describedby="emailHelp" placeholder="Last Name">
-                        </input>
-                        <label for="emailaddress">Your Email Address: <strong><font color="red">*</font></strong><span id="email_choose"></span></label>
-                        <input type="email" class="form-control" name="emailaddressname" id="emailaddress" aria-describedby="emailHelp" placeholder="Email Address">
-                        </input>
-                        <label for="repeatemailaddress">Re-enter your Email Address: <strong><font color="red">*</font></strong><span id="email_match"></span></label>
-                        <input type="email" class="form-control" id="repeatemailaddress" aria-describedby="emailHelp" placeholder="Email Address">
                         </input>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-secondary" name="clear" value="Clear" />
-                        <input type="submit" class="btn btn-primary disabled" name="registersubmit" id="register_submit" value="Register" />
+                        <input type="submit" class="btn btn-primary disabled" name="password_reset" id="reset_submit" value="Reset Password" />
                     </div>
                 </form>
             </div> <!--card-->
@@ -152,9 +102,8 @@ require_once 'ofc_dbconnect.php';
                 <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h3 class="card-title">What happens next</h3>
-                    <p>After completing this entry form, our administrators will verify and approve your request to access our site.</p>
-                    <p>You will be notified via email (using the address at left) that your access has been granted.</p>
-                    <p>If you don't receive an email notification within 48 hours <strong>(don't forget to check your Junk Mail folder)</strong>, please contact one of our church elders for assistance.</p>
+                    <p>After entering your UserName, you will receive an email in the mailbox used when you originally logged in.</p>
+                    <p>If you don't receive an email notification within a few minutes <strong>(don't forget to check your Junk or Spam folder)</strong>, please contact one of your administrators for assistance.</p>
                 </div> <!-- card-body -->
             </div> <!-- card -->
         </div> <!-- col-sm-6 -->
@@ -166,22 +115,11 @@ require_once 'ofc_dbconnect.php';
     $submit = $_POST['submit'];
     $clear = $_POST['clear'];
 
-    $confirmcode = strip_tags($_POST['churchcodename']);
     $username = strip_tags($_POST['usernamename']);
-    $password = strip_tags($_POST['passwordname']);
-    $firstname = strip_tags($_POST['firstnamename']);
-    $lastname = strip_tags($_POST['lastnamename']);
-    $emailaddr = strip_tags($_POST['emailaddressname']);
-    $date = date("Y-m-d");
 	
     if($clear)
     {
-        $confirmcode = "";
         $username = "";
-        $password = "";
-        $firstname = "";
-        $lastname = "";
-        $emailaddr = "";
     }
     if ($submit)
     {
