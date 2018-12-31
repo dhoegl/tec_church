@@ -70,7 +70,7 @@ require_once 'ofc_dbconnect.php';
                             <li>Enter your username in the box below, and click the 'Reset Password' button. An email will be sent to the email address we have on file.</li>
                             <li>Check your mailbox for an email requesting you to reset your password at our site.</li>
                             <li>Click on the hyperlink in the email and enter a new password at the Password Reset page.</li>
-                            <li>If you don't receive an email notification within a few minutes (don't forget to check your Junk or Spam folder), please contact one of our church elders for assistance.</li>
+                            <li>If you don't receive an email notification within a few minutes (don't forget to check your Junk or Spam folder), please contact one of your administrators for assistance.</li>
                             <br />
                             <li><strong>NOTE: </strong>Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</li>
                         </ul>
