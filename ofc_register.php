@@ -67,7 +67,7 @@ require_once 'ofc_dbconnect.php';
                     <div class="card card-body">
                         <h4 class="card-title">Confirmation Code</h4>
                         <ul class="card-text">
-                            <li>Your church administrator may have provided a Code for you.</li>
+                            <li>Your administrator may have provided a Code for you.</li>
                             <li>Select Yes and enter the 5-digit Confirmation Code.</li>
                         </ul>
                         <h4 class="card-title">User Name</h4>
@@ -89,7 +89,7 @@ require_once 'ofc_dbconnect.php';
                         </ul>
                         <h4 class="card-title">Email Address</h4>
                         <ul class="card-text">
-                            <li>Email address will be used to correspond with other church family members.</li>
+                            <li>Email address will be used to correspond with other OFC family members.</li>
                         </ul>
                     </div>
             </div> <!-- col-sm-6 -->
@@ -106,7 +106,7 @@ require_once 'ofc_dbconnect.php';
 <!--                <h4 align="center"><strong>Note:</strong> Password must be at least 7 characters, contain one uppercase letter, one lowercase letter, and one number (0-9) or one special character.</h4>-->
                 <form name='registernew' id="register" action='/services/ofc_register_submit.php' method="POST">
                     <div class="form-group">
-                        <label for="confirmcode">I received a church Confirmation Code:</label>
+                        <label for="confirmcode">I received a Confirmation Code:</label>
                         <div class="form-check churchcodecheck">
                             <input class="form-check-input" type="radio" name="confirmcode" id="codeyes" value="YES" checked>
                                 <label class="form-check-label" for="codeyes">YES</label>
