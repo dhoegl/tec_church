@@ -84,7 +84,7 @@ session_start();
               <div class="row">
                   <div class="panel panel-default">
                       <div class="panel-body bg-success">
-                          <h1 class="text-center">TEST SITE</h1>
+                          <h1 class="text-center">TEST SITE2</h1>
                       </div>
                   </div>
                   <div class="col-sm-6 bg-warning">
