@@ -50,7 +50,6 @@
     <Compile Include="css\jumbotron.css" />
     <Compile Include="css\mdb.min.css" />
     <Compile Include="css\ofc_css_style.css" />
-    <Compile Include="css\ofc_welcome_style.css" />
     <Compile Include="css\signin.css" />
     <Compile Include="css\style.css" />
     <Compile Include="font\roboto\Roboto-Bold.woff" />
@@ -348,6 +347,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="js\ofc_config_ajax_call.js" />
+    <Content Include="css\ofc_welcome_style.css" />
     <Content Include="images\master_welcome.png" />
     <Content Include="images\x.jpg" />
     <Content Include="_tenant\Config - 002.xml" />

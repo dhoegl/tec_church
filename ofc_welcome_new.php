@@ -22,7 +22,7 @@ session_start();
         <link href="css/mdb.min.css" rel="stylesheet" />
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+        <!--<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" />-->
 
         <!-- Custom styles for this template -->
         <!--    <link href="css/signin.css" rel="stylesheet">-->
@@ -32,9 +32,9 @@ session_start();
         <link href="css/ofc_css_style.css" rel="stylesheet" />
         <link href="css/ofc_welcome_style.css" rel="stylesheet" />
 
-        <style type="text/css">/* Chart.js */
+        <!--<style type="text/css">/* Chart.js */
             @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
-        </style>
+        </style>-->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
