@@ -50,7 +50,7 @@
     <Compile Include="css\jumbotron.css" />
     <Compile Include="css\mdb.min.css" />
     <Compile Include="css\ofc_css_style.css" />
-    <Compile Include="css\ofc_style.css" />
+    <Compile Include="css\ofc_welcome_style.css" />
     <Compile Include="css\signin.css" />
     <Compile Include="css\style.css" />
     <Compile Include="font\roboto\Roboto-Bold.woff" />
@@ -153,6 +153,7 @@
     <Compile Include="ofc_menu.php" />
     <Compile Include="ofc_nav.php" />
     <Compile Include="ofc_recover2.php" />
+    <Compile Include="ofc_welcome_new.php" />
     <Compile Include="profile_img\-jim and Gail (2).jpg" />
     <Compile Include="profile_img\1.jpg" />
     <Compile Include="profile_img\10.jpg" />

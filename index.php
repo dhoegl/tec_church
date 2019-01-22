@@ -5,6 +5,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-header( 'Location: http://ofctest.ourfamilyconnections.org/ofc_welcome.php' ) ;
+header( 'Location: http://ofctest.ourfamilyconnections.org/ofc_welcome_new.php' ) ;
 ?>
 
