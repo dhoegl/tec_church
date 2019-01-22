@@ -25,6 +25,10 @@
       <backsplash> <!--Shown on homepage-->
         url('/_tenant/images/xxxxxxx')
       </backsplash>
+      <backsplash_Welcome>
+        <!--Shown on Master Welcome Page (ofc_welcome.php)-->
+        url('/_tenant/images/cropped-ECS-2016-45.jpg')
+      </backsplash_Welcome>
       <logo> <!--Customer’s logo image-->
         url('/_tenant/images/xxxxxxx')
       </logo>

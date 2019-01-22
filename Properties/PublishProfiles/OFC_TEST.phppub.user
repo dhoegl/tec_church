@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIEJywYlqnEakeh1N1mOa1QAAAAACAAAAAAADZgAAwAAAABAAAADWO/kOop5RPN/UTYr/k3wBAAAAAASAAACgAAAAEAAAAC+DzVbavr9tmXie1b0XETsYAAAAMJjMppozpnGPg9rp3EFJUwbpjOFRq8poFAAAAA9gnUwDn7WT1DcRN3J/0AHVxxi5</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdngo9v37fUmgvHrAXjr44QAAAAACAAAAAAADZgAAwAAAABAAAAC3FJcT4BfFMwhIQ0I4u28sAAAAAASAAACgAAAAEAAAAGsMW9Ppc3L6/MDvY+agzTgYAAAAw9uKYjXZQcFd7agTNhHRQBrsBw7C4VHcFAAAAGHKUgWPstQy0ldG0EXmopf+284m</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <File Include=".gitignore">
@@ -74,7 +74,7 @@
       <publishTime>08/21/2018 03:18:40</publishTime>
     </File>
     <File Include="css/ofc_css_style.css">
-      <publishTime>09/18/2018 17:35:24</publishTime>
+      <publishTime>01/22/2019 00:54:50</publishTime>
     </File>
     <File Include="css/ofc_style.css">
       <publishTime>03/06/2017 21:52:36</publishTime>
@@ -103,6 +103,9 @@
     <File Include="font/roboto/Roboto-Regular.woff2">
       <publishTime>08/22/2018 03:58:55</publishTime>
     </File>
+    <File Include="images/Background1.png">
+      <publishTime>01/22/2019 01:48:34</publishTime>
+    </File>
     <File Include="images/content_bg.png">
       <publishTime>10/05/2014 21:01:11</publishTime>
     </File>
@@ -114,6 +117,9 @@
     </File>
     <File Include="images/img_400_300_blue.png">
       <publishTime>08/17/2017 07:05:08</publishTime>
+    </File>
+    <File Include="images/master_welcome.png">
+      <publishTime>01/22/2019 01:48:34</publishTime>
     </File>
     <File Include="images/ourfamilyconnections2.png">
       <publishTime>12/29/2017 21:17:49</publishTime>
@@ -320,7 +326,7 @@
       <publishTime>08/21/2018 03:18:45</publishTime>
     </File>
     <File Include="js/ofc_config_ajax_call.js">
-      <publishTime>09/15/2018 22:05:41</publishTime>
+      <publishTime>01/22/2019 00:40:56</publishTime>
     </File>
     <File Include="js/ofc_new_prayer_accept_click.js">
       <publishTime>03/09/2017 20:25:58</publishTime>
@@ -494,7 +500,7 @@
       <publishTime>12/31/2018 07:02:57</publishTime>
     </File>
     <File Include="ofc_register.php">
-      <publishTime>04/04/2018 03:12:16</publishTime>
+      <publishTime>01/22/2019 00:11:00</publishTime>
     </File>
     <File Include="ofc_registerexist.php">
       <publishTime>03/07/2017 04:09:43</publishTime>
@@ -515,7 +521,7 @@
       <publishTime>08/22/2017 04:09:22</publishTime>
     </File>
     <File Include="ofc_welcome.php">
-      <publishTime>12/31/2018 06:28:37</publishTime>
+      <publishTime>01/22/2019 00:56:14</publishTime>
     </File>
     <File Include="ofc_welcome_old.php">
       <publishTime>03/02/2017 23:35:02</publishTime>
@@ -878,10 +884,10 @@
       <publishTime>12/21/2018 03:39:28</publishTime>
     </File>
     <File Include="_tenant/Config - Template.xml">
-      <publishTime>12/21/2018 03:33:22</publishTime>
+      <publishTime>01/22/2019 00:29:44</publishTime>
     </File>
     <File Include="_tenant/Config.xml">
-      <publishTime>01/03/2019 22:34:36</publishTime>
+      <publishTime>01/22/2019 00:29:44</publishTime>
     </File>
     <File Include="_tenant/Config_old.xml">
       <publishTime>09/08/2018 01:03:08</publishTime>

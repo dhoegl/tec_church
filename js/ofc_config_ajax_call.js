@@ -70,6 +70,18 @@ function xmlParser(xml) {
         document.getElementById("backsplash").style.backgroundPosition = "center";
         document.getElementById("backsplash").style.backgroundSize = "cover";
     }
+    //Get backsplash_Welcome image (half-screen image on Master Splash screen) name from config.xml
+    var backsplash_Welcome_text;
+    backsplash_Welcome_text = (navJQ(xml).find('backsplash_Welcome').text());
+    var backsplash_Welcome_image;
+    backsplash_Welcome_image = backsplash_Welcome_text;
+    console.log("backsplash_Welcome = " + backsplash_Welcome_text);
+    console.log("backsplash_Welcome image = " + backsplash_Welcome_image);
+    if (document.getElementById("backsplash_Welcome")) {
+        document.getElementById("backsplash_Welcome").style.backgroundImage = backsplash_Welcome_image;
+        document.getElementById("backsplash_Welcome").style.backgroundPosition = "center";
+        document.getElementById("backsplash_Welcome").style.backgroundSize = "cover";
+    }
     //Get special1 image (embedded image below backsplashImage) name from config.xml
     var special1text;
     special1text = (navJQ(xml).find('special1').text());

@@ -3,5 +3,6 @@
   <PropertyGroup>
     <NameOfLastUsedPHPPublishProfile>OFC_TEST</NameOfLastUsedPHPPublishProfile>
     <ProjectView>ShowAllFiles</ProjectView>
+    <RuntimePath />
   </PropertyGroup>
 </Project>

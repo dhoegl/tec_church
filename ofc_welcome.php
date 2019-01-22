@@ -79,39 +79,40 @@ session_start();
       </div> <!-- container -->
     </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-body bg-success">
-                <h1 class="text-center">TEST SITE</h1>
-            </div>
-        </div>
-            <div class="col-sm-6 bg-warning">
-                <img src="images/ourfamilyconnections4.png" class="img-responsive center-block" alt=""/>
-            </div>
-            <div class="col-sm-6 bg-warning">
-                <h2 class="text-center">WELCOME</h2>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-body bg-warning center-block">
-                    <h3 class="text-center">Connecting Your Church Family and Friends</h3>
-                    <h4 align="center">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</h4>
-                    <h4 align="center">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</h4>
-                    <h4 align="center">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</h4>
-                </div> <!--panel-body-->
-            </div> <!--panel-->
-        </div> <!--row-->
-    </div> <!--container-->
+      <div class="ofc_welcome_background">
+          <div class="container">
+              <div class="row">
+                  <div class="panel panel-default">
+                      <div class="panel-body bg-success">
+                          <h1 class="text-center">TEST SITE</h1>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 bg-warning">
+                      <img src="images/ourfamilyconnections4.png" class="img-responsive center-block" alt="" />
+                  </div>
+                  <div class="col-sm-6 bg-warning">
+                      <h2 class="text-center">WELCOME</h2>
+                  </div>
+                  <div class="panel panel-default">
+                      <div class="panel-body bg-warning center-block">
+                          <h3 class="text-center">Connecting Your Family and Friends</h3>
+                          <h4 align="center">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</h4>
+                          <h4 align="center">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</h4>
+                          <h4 align="center">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</h4>
+                      </div><!--panel-body-->
+                  </div><!--panel-->
+              </div><!--row-->
+          </div><!--container-->
+      </div>
 
 
 
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="js/bootstrap.min.js"></script>
+          <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+          <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-  </body>
+</body>
 </html>
