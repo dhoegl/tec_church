@@ -153,6 +153,7 @@
     <Compile Include="ofc_nav.php" />
     <Compile Include="ofc_recover2.php" />
     <Compile Include="ofc_welcome_new.php" />
+    <Compile Include="ofc_welcome_new2.php" />
     <Compile Include="profile_img\-jim and Gail (2).jpg" />
     <Compile Include="profile_img\1.jpg" />
     <Compile Include="profile_img\10.jpg" />
