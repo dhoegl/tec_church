@@ -49,7 +49,7 @@ session_start();
 <body>
 
     <header>
-        <!--Navbar-->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -83,24 +83,71 @@ session_start();
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
-            <div class="mask rgba-black-light align-items-center">
+            <div class="mask rgba-gradient align-items-center">
                 <!-- Content -->
                 <div class="container">
                     <!--Grid row-->
-                    <div class="row">
+                    <div class="row mt-5">
                         <!--Grid column-->
-                        <div class="col-md-12 mb-4 white-text text-center align-self-center">
-                            <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s">
-                                <strong>Minimalist intro</strong>
-                            </h1>
-                            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s" />
-                            <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s">
-                                <strong>Photography & design</strong>
-                            </h5>
-                            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
-                            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+                        <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+                            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h1>
+                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
+                            <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
+                    nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea
+                    dolor molestiae, quisquam iste, maiores. Nulla.
+                            </h6>
+                            <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6 col-xl-5 mb-4">
+                            <!--Form-->
+                            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <!--Header-->
+                                    <div class="text-center">
+                                        <h3 class="white-text">
+                                            <i class="fas fa-user black-text"></i> Register:
+                                        </h3>
+                                        <hr class="hr-light" />
+                                    </div>
+                                    <!--Body-->
+                                    <div class="md-form">
+                                        <i class="fas fa-user prefix white-text active"></i>
+                                        <input type="text" id="form3" class="white-text form-control" />
+                                        <label for="form3" class="active">Your name</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-envelope prefix white-text active"></i>
+                                        <input type="email" id="form2" class="white-text form-control" />
+                                        <label for="form2" class="active">Your email</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fas fa-lock prefix white-text active"></i>
+                                        <input type="password" id="form4" class="white-text form-control" />
+                                        <label for="form4">Your password</label>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-indigo">Sign up</button>
+                                        <hr class="hr-light mb-3 mt-4" />
+                                        <div class="inline-ul text-center">
+                                            <a class="p-2 m-2 tw-ic">
+                                                <i class="fab fa-twitter white-text"></i>
+                                            </a>
+                                            <a class="p-2 m-2 li-ic">
+                                                <i class="fab fa-linkedin-in white-text"></i>
+                                            </a>
+                                            <a class="p-2 m-2 ins-ic">
+                                                <i class="fas fa-instagram white-text"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Form-->
                         </div>
                         <!--Grid column-->
                     </div>
@@ -112,6 +159,7 @@ session_start();
         </div>
         <!-- Full Page Intro -->
     </header>
+
     <!-- Main navigation -->
     <!--Main Layout-->
     <main>
