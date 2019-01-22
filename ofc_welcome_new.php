@@ -5,15 +5,21 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!--<meta charset="utf-8" />
+        <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>TEST - Welcome to OurFamilyConnections</title>
 
+        <!-- Font Awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" />
+
         <!-- Bootstrap -->
-        <!--<link href="css/bootstrap.min.css" rel="stylesheet" />-->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
         <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    -->
+
+        <!-- MDBootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet" />
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
@@ -25,6 +31,10 @@ session_start();
         <!-- Extended styles for this page -->
         <link href="css/ofc_css_style.css" rel="stylesheet" />
         <link href="css/ofc_welcome_style.css" rel="stylesheet" />
+
+        <style type="text/css">/* Chart.js */
+            @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+        </style>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
