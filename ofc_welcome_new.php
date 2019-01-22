@@ -109,7 +109,7 @@ session_start();
                                 <div class="card-body">
                                     <!--Header-->
                                     <div class="text-center">
-                                        <h3 class="white-text">
+                                        <h3 class="black-text">
                                             <i class="fas fa-user black-text"></i> Register:
                                         </h3>
                                         <hr class="hr-light" />
