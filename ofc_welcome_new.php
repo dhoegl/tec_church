@@ -50,40 +50,69 @@ session_start();
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <strong>MDB</strong>
+
+                <a class="navbar-brand" href="ofc_welcome_new.php">
+                    <strong>OurFamilyConnections</strong>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">
-                                Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline">
-                        <div class="md-form my-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                        </div>
-                    </form>
-                </div>
+                    <!--                <div class="collapse navbar-collapse" id="navbar">-->
+                    <?php
+                        if(!$_SESSION['logged in']) {
+                            session_destroy();
+                            //echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin2.php"';
+                            echo '<form class="form-inline" name="form1" method="post" action="ofc_checklogin2.php">';
+                            echo '<ul class="navbar-nav">';
+                            //echo '<ul class="nav">';
+                            echo '<li class="nav-item px-2 mt-2 active">';
+                           //echo '<div class="form-group">';
+                            echo '<input type="text" placeholder="username" name="myusername" class="form-control" required="TRUE" autofocus="TRUE" />';
+                            echo '</li>';
+                            echo '<li class="nav-item px-2 mt-2">';
+                            echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE" />';
+                            echo '</li>';
+            //                echo '<div class="btn-group mr-4" role="group" aria-label="First group">';
+                            echo '<li class="nav-item">';
+                            echo '<button type="submit" class="btn btn-success">Sign-in</button>';
+                            echo '</li>';
+            //                echo '</div>';
+            //                echo '<div class="btn-group pad-left">';
+            //                echo '<div class="btn-group mr-4" role="group" aria-label="Second group">';
+                            echo '<li class="nav-item">';
+                            echo '<a class="nav-link btn btn-primary" href="ofc_register.php" role="button">Register</a>';
+                            echo '</li>';
+            //                echo '</div>';
+            //                echo '<button type="button" class="btn btn-danger margin-left">Forgot Password</button>';
+                            echo '<li class="nav-item">';
+                            echo '<a class="nav-link btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>';
+            //                echo '</div>';
+                            echo '</li>';
+                            echo '</ul>';
+                            echo '</form>';
+                        }
+                        else
+                        {
+                            $homeurl = "location:ofc_home.php";
+                            header($homeurl);
+
+                        }
+                    ?>
+                </div><!--/.navbar-collapse -->
+
+
+
             </div>
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!--<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
+        <div class="view" style="background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
                 <!-- Content -->
@@ -91,63 +120,41 @@ session_start();
                     <!--Grid row-->
                     <div class="row mt-5">
                         <!--Grid column-->
-                        <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
-                            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h1>
-                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
-                            <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
-                    nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea
-                    dolor molestiae, quisquam iste, maiores. Nulla.
-                            </h6>
-                            <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
-                        </div>
-                        <!--Grid column-->
-                        <!--Grid column-->
-                        <div class="col-md-6 col-xl-5 mb-4">
+                        <div class="col-lg-6 mb-4 mt-5">
                             <!--Form-->
                             <div class="card wow fadeInRight" data-wow-delay="0.3s">
                                 <div class="card-body">
                                     <!--Header-->
+                                    <img src="images/ourfamilyconnections4.png" class="img-fluid max-width: 100%" height="auto" alt="" />
                                     <div class="text-center">
-                                        <h3 class="black-text">
-                                            <i class="fas fa-user black-text"></i> Register:
+                                        <h3 class="white-text">
+                                            <i class="white-text"></i> connecting friends and family
                                         </h3>
-                                        <hr class="hr-light" />
+                                        <hr class="hr-bold" />
+                                        <h6 class="white-text">
+                                            WELCOME!
+                                        </h6>
+
                                     </div>
                                     <!--Body-->
-                                    <div class="md-form">
-                                        <i class="fas fa-user prefix white-text active"></i>
-                                        <input type="text" id="form3" class="white-text form-control" />
-                                        <label for="form3" class="active">Your name</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fas fa-envelope prefix white-text active"></i>
-                                        <input type="email" id="form2" class="white-text form-control" />
-                                        <label for="form2" class="active">Your email</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fas fa-lock prefix white-text active"></i>
-                                        <input type="password" id="form4" class="white-text form-control" />
-                                        <label for="form4">Your password</label>
-                                    </div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-indigo">Sign up</button>
-                                        <hr class="hr-light mb-3 mt-4" />
-                                        <div class="inline-ul text-center">
-                                            <a class="p-2 m-2 tw-ic">
-                                                <i class="fab fa-twitter white-text"></i>
-                                            </a>
-                                            <a class="p-2 m-2 li-ic">
-                                                <i class="fab fa-linkedin-in white-text"></i>
-                                            </a>
-                                            <a class="p-2 m-2 ins-ic">
-                                                <i class="fas fa-instagram white-text"></i>
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!--/.Form-->
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-6 mb-5 mt-lg-5 mt-5 white-text text-center">
+                            <!--<div class="col-md-6 mb-5 mt-md-5 mt-5 white-text text-center text-sm-left">-->
+                                <h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Tap or click the menu selector above to sign-in with your username and password above!</h2>
+                                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
+                                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                    If you haven't yet registered, use the <span><button type="button" class="btn btn-primary">REGISTER</button></span> button above and submit your information to our administrators.'
+                                </h6>
+                                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
+                                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                    Don't remember your password? Click the <span><button type="button" class="btn btn-danger">FORGOT PASSWORD</button></span> button above to reset it.'
+                                </h6>
+                                <a class="btn btn-outline-white wow fadeInLeft mt-5" data-wow-delay="0.3s">Contact Us</a>
                         </div>
                         <!--Grid column-->
                     </div>
