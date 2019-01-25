@@ -50,7 +50,7 @@ session_start();
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark scrolling-navbar">
             <div class="container">
 
                 <a class="navbar-brand" href="ofc_welcome_new.php">
@@ -66,35 +66,28 @@ session_start();
                     <?php
                         if(!$_SESSION['logged in']) {
                             session_destroy();
-                            //echo '<form class="navbar-form navbar-right" name="form1" method="post" action="ofc_checklogin2.php"';
-                            echo '<form class="form-inline" name="form1" method="post" action="ofc_checklogin2.php">';
+                            //echo '<ul class="navbar-nav">';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-primary" href="ofc_register.php" role="button">Register</a>';
+                            //echo '</li>';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>';
+                            //echo '</li>';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-light" href="#" role="button">About Us</a>';
+                            //echo '</li>';
+                            //echo '</ul>';
                             echo '<ul class="navbar-nav">';
-                            //echo '<ul class="nav">';
-                            echo '<li class="nav-item px-2 mt-2 active">';
-                           //echo '<div class="form-group">';
-                            echo '<input type="text" placeholder="username" name="myusername" class="form-control" required="TRUE" autofocus="TRUE" />';
-                            echo '</li>';
-                            echo '<li class="nav-item px-2 mt-2">';
-                            echo '<input type="password" placeholder="password" name="mypassword" class="form-control" required="TRUE" />';
-                            echo '</li>';
-            //                echo '<div class="btn-group mr-4" role="group" aria-label="First group">';
-                            echo '<li class="nav-item">';
-                            echo '<button type="submit" class="btn btn-success">Sign-in</button>';
-                            echo '</li>';
-            //                echo '</div>';
-            //                echo '<div class="btn-group pad-left">';
-            //                echo '<div class="btn-group mr-4" role="group" aria-label="Second group">';
-                            echo '<li class="nav-item">';
-                            echo '<a class="nav-link btn btn-primary" href="ofc_register.php" role="button">Register</a>';
-                            echo '</li>';
-            //                echo '</div>';
-            //                echo '<button type="button" class="btn btn-danger margin-left">Forgot Password</button>';
-                            echo '<li class="nav-item">';
-                            echo '<a class="nav-link btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>';
-            //                echo '</div>';
-                            echo '</li>';
-                            echo '</ul>';
-                            echo '</form>';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-primary" href="ofc_register.php" role="button">Register</a>';
+                            //echo '</li>';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>';
+                            //echo '</li>';
+                            //echo '<li class="nav-item">';
+                            //echo '<a class="nav-link btn btn-light" href="#" role="button">About Us</a>';
+                            //echo '</li>';
+                            //echo '</ul>';
                         }
                         else
                         {
@@ -120,6 +113,54 @@ session_start();
                     <!--Grid row-->
                     <div class="row mt-5">
                         <!--Grid column-->
+                        <div class="col-lg-6 mb-5 mt-lg-5 mt-5 white-text">
+                            <!--Form-->
+                            <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                                <div class="card-body text-center">
+                                    <!--Header-->
+                                    <!--<form class="form-inline" name="form1" method="post" action="ofc_checklogin2.php">-->
+                                        <form name="form1" method="post" action="ofc_checklogin2.php">
+                                            <div class="text-center">
+                                                <h2 class="white-text">
+                                                    <i class="white-text"></i> Sign in here
+                                                </h2>
+                                            </div>
+                                            <!--Body-->
+                                            <div class="md-form">
+                                                <i class="fas white-text active"></i>
+                                                <input type="text" id="form_user" name="myusername" class="white-text form-control" />
+                                                <label for="form_user" class="active">username</label>
+                                            </div>
+                                            <div class="md-form">
+                                                <i class="fas white-text active"></i>
+                                                <input type="password" id="form_pass" name="mypassword" class="white-text form-control" />
+                                                <label for="form_pass" class="active">password</label>
+                                            </div>
+                                            <div class="text-center mt-4">
+                                                <button type="submit" class="btn btn-success">Sign-in</button>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    <a class="btn btn-primary" href="ofc_register.php" role="button">Register</a>
+                                                    <a class="btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>
+                                                </span>
+                                            </div>
+                                        </form>
+                                </div>
+                            </div>
+                            <!--/.Form-->
+                            <!--<div class="col-md-6 mb-5 mt-md-5 mt-5 white-text text-center text-sm-left">-->
+                                <!--<h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Tap or click the menu selector above to sign-in with your username and password above!</h2>-->
+                                <!--<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
+                                <h6 class="mb-3 wow fadeInLeft text-left" data-wow-delay="0.3s">
+                                    If you haven't yet registered, use the <span><button type="button" class="btn btn-primary">REGISTER</button></span> button above and submit your information to our administrators.'
+                                </h6>
+                                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                    Don't remember your password? Click the <span><button type="button" class="btn btn-danger">FORGOT PASSWORD</button></span> button above to reset it.'
+                                </h6>-->
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
                         <div class="col-lg-6 mb-4 mt-5">
                             <!--Form-->
                             <div class="card wow fadeInRight" data-wow-delay="0.3s">
@@ -128,13 +169,12 @@ session_start();
                                     <img src="images/ourfamilyconnections4.png" class="img-fluid max-width: 100%" height="auto" alt="" />
                                     <div class="text-center">
                                         <h3 class="white-text">
-                                            <i class="white-text"></i> connecting friends and family
+                                            <i class="white-text"></i> we're glad you're here
                                         </h3>
-                                        <hr class="hr-bold" />
+                                        <!--<hr class="hr-bold" />-->
                                         <h6 class="white-text">
-                                            WELCOME!
+                                            +++
                                         </h6>
-
                                     </div>
                                     <!--Body-->
                                 </div>
@@ -142,23 +182,21 @@ session_start();
                             <!--/.Form-->
                         </div>
                         <!--Grid column-->
-                        <!--Grid column-->
-                        <div class="col-lg-6 mb-5 mt-lg-5 mt-5 white-text text-center">
-                            <!--<div class="col-md-6 mb-5 mt-md-5 mt-5 white-text text-center text-sm-left">-->
-                                <h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Tap or click the menu selector above to sign-in with your username and password above!</h2>
-                                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
-                                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
-                                    If you haven't yet registered, use the <span><button type="button" class="btn btn-primary">REGISTER</button></span> button above and submit your information to our administrators.'
-                                </h6>
-                                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
-                                <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
-                                    Don't remember your password? Click the <span><button type="button" class="btn btn-danger">FORGOT PASSWORD</button></span> button above to reset it.'
-                                </h6>
-                                <a class="btn btn-outline-white wow fadeInLeft mt-5" data-wow-delay="0.3s">Contact Us</a>
-                        </div>
-                        <!--Grid column-->
                     </div>
                     <!--Grid row-->
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body bg-light center-block">
+                                        <h3 class="card-title">Connecting Family and Friends</h3>
+                                        <p class="card-text">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</p>
+                                        <p class="card-text">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</p>
+                                        <p class="card-text">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</p>
+                                    </div><!--card-body-->
+                                </div><!--card-->
+                            </div><!--row-->
+                    </div><!--col-->
+
                 </div>
                 <!-- Content -->
             </div>
@@ -170,20 +208,25 @@ session_start();
     <!-- Main navigation -->
     <!--Main Layout-->
     <main>
-        <div class="container">
-            <!--Grid row-->
-            <div class="row py-5">
-                <!--Grid column-->
-                <div class="col-md-12 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <!-- Footer -->
+        <footer class="page-footer font-small blue fixed-bottom">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-7">
+                    <!-- Copyright -->
+                    <div class="text-center py-2">
+                        © 2019 Copyright:
+                        <a href="http://ourfamilyconnections.org"> OurFamilyConnections.org</a>
+                    </div>
+                    <!-- Copyright -->
                 </div>
-                <!--Grid column-->
+                <div class="col-md-5">
+                    <div class="text-center py-2">
+                        <a href="#">About Us</a>
+                    </div>
+               </div>
             </div>
-            <!--Grid row-->
-        </div>
+<!--</footer>-->
+        <!-- Footer -->
     </main>
     <!--Main Layout-->
     <!-- SCRIPTS -->
