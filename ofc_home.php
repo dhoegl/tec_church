@@ -27,7 +27,7 @@ if(!$_SESSION['logged in']) {
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/style.css" rel="stylesheet">-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -51,46 +51,53 @@ if(!$_SESSION['logged in']) {
 
 
             <!-- Intro Section -->
-                <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
-                    <!--<div class="full-bg-img">-->
-                    <div class="container flex-center">
-                        <div class="row pt-5 mt-3">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s" id="custname">
-                                        <strong></strong>
-                                    </h1>
-                                    <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
-                                    <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
-                                        <strong>tagline</strong>
-                                    </h5>
-                                    <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="gotosite">To Our Home Page</a>
-                                    <!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
-                                    <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
-                                </div> <!-- text -->
-                            </div> <!-- col-md-12 -->
-                        </div> <!-- Row -->
-                        <div class="row fixed-bottom">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <?php
-                                        require_once('/includes/ofc_footer.php')
-                                    ?>
-                                </div> <!-- text -->
-                            </div> <!-- col-md-12 -->
-                        </div> <!-- Row -->
-                    </div> <!-- container -->
-                    
-                </div> <!-- view -->
+            <!--<div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">-->
+                <div class="view" style="height: 100%; background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                <!--<div class="view" id="backsplash">-->
+                <!--<div class="full-bg-img">-->
 
-        </header>
+                <!--TEST-->
+                <div class="container flex-center">
+                    <div class="row pt-5 mt-3">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s" id="custname">
+                                    <strong></strong>
+                                </h1>
+                                <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s" />
+                                <h5 class="text-uppercase mb-1 white-text wow fadeInDown" data-wow-delay="0.4s" id="TagLine">
+                                    <strong>tagline</strong>
+                                </h5>
+                                <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="gotosite">To Our Home Page</a>
+
+
+
+
+                                <!--Keep commented out--><!--<a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Upcoming classes</a>-->
+
+
+
+                                <!--TEST-->
+                                <a class="btn btn-primary wow fadeInDown" data-wow-delay="0.4s" id="contactus">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fixed-bottom">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <?php
+                                require_once('/includes/ofc_footer.php')
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- view -->
+
+</header>
         <!--Main Navigation-->
 
-        <!--Main Layout-->
-        <main>
-
-        </main>
-        <!--Main Layout-->
 
 
 

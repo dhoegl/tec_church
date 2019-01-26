@@ -13,5 +13,5 @@ session_start();
 /*		Access Log entry  */
 
 session_destroy();
-header("location:ofc_welcome.php");
+header("location:ofc_welcome_new.php");
 ?>

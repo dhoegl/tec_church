@@ -67,7 +67,7 @@ function xmlParser(xml) {
     console.log("backsplashimage = " + backsplashimage);
     if (document.getElementById("backsplash")) {
         document.getElementById("backsplash").style.backgroundImage = backsplashimage;
-        document.getElementById("backsplash").style.backgroundPosition = "center";
+        document.getElementById("backsplash").style.backgroundPosition = "center center";
         document.getElementById("backsplash").style.backgroundSize = "cover";
     }
     //Get backsplash_Welcome image (half-screen image on Master Splash screen) name from config.xml

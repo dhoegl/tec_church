@@ -62,7 +62,7 @@ session_start();
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                    <!--                <div class="collapse navbar-collapse" id="navbar">-->
+                   <!--                <div class="collapse navbar-collapse" id="navbar">-->
                     <?php
                         if(!$_SESSION['logged in']) {
                             session_destroy();
@@ -77,30 +77,46 @@ session_start();
                             //echo '<a class="nav-link btn btn-light" href="#" role="button">About Us</a>';
                             //echo '</li>';
                             //echo '</ul>';
-                            echo '<ul class="navbar-nav">';
+                            //echo '<ul class="navbar-nav">';
                             //echo '<li class="nav-item">';
                             //echo '<a class="nav-link btn btn-primary" href="ofc_register.php" role="button">Register</a>';
                             //echo '</li>';
                             //echo '<li class="nav-item">';
                             //echo '<a class="nav-link btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>';
                             //echo '</li>';
-                            //echo '<li class="nav-item">';
-                            //echo '<a class="nav-link btn btn-light" href="#" role="button">About Us</a>';
+                            //echo '<span class="nav-item">';
+                            //echo '<span class="nav-link btn btn-light"><a href="#" role="button">About Us</a>';
+                            //echo '</span>';
+                            ////echo '</ul>';
+                            //echo '<div class="navbar-nav">';
+                            //echo '<div class="navbar-item">';
+                            //echo '<div class="d-flex justify-content-end">';
+                            //echo '<div class="p-2 white-text float-right">Flex item1</div>';
+                            //echo '</div>';
+                            //echo '</div>';
+                            //echo '</div>';
+                            echo '<ul class="navbar-nav mr-auto">';
+                            //echo '<li class="nav-item active">';
+                            //echo '<a class="nav-link" href="#">';
+                            //echo '<span class="sr-only">(current)</span>';
+                            //echo '</a>';
                             //echo '</li>';
-                            //echo '</ul>';
+                            echo '</ul>';
+                            //echo '<span class="navbar-text white-text">';
+                            echo '<span class="nav-link">';
+                            //echo 'Navbar text with an inline element';
+                            echo '<a class="btn btn-light" href="#" role="button">About Us</a>';
+                            echo '</span>';
+
                         }
                         else
                         {
                             $homeurl = "location:ofc_home.php";
                             header($homeurl);
-
                         }
                     ?>
                 </div><!--/.navbar-collapse -->
-
-
-
-            </div>
+            </div><!--container-->
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
@@ -113,119 +129,133 @@ session_start();
                     <!--Grid row-->
                     <div class="row mt-5">
                         <!--Grid column-->
+                        <!--Grid column-->
                         <div class="col-lg-6 mb-5 mt-lg-5 mt-5 white-text">
                             <!--Form-->
                             <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                            <img src="images/ourfamilyconnections4.png" class="card-img-top max-width: 100%" alt="..." />
                                 <div class="card-body text-center">
                                     <!--Header-->
                                     <!--<form class="form-inline" name="form1" method="post" action="ofc_checklogin2.php">-->
-                                        <form name="form1" method="post" action="ofc_checklogin2.php">
-                                            <div class="text-center">
-                                                <h2 class="white-text">
-                                                    <i class="white-text"></i> Sign in here
-                                                </h2>
-                                            </div>
-                                            <!--Body-->
-                                            <div class="md-form">
-                                                <i class="fas white-text active"></i>
-                                                <input type="text" id="form_user" name="myusername" class="white-text form-control" />
-                                                <label for="form_user" class="active">username</label>
-                                            </div>
-                                            <div class="md-form">
-                                                <i class="fas white-text active"></i>
-                                                <input type="password" id="form_pass" name="mypassword" class="white-text form-control" />
-                                                <label for="form_pass" class="active">password</label>
-                                            </div>
-                                            <div class="text-center mt-4">
-                                                <button type="submit" class="btn btn-success">Sign-in</button>
-                                            </div>
-                                            <div>
-                                                <span>
-                                                    <a class="btn btn-primary" href="ofc_register.php" role="button">Register</a>
-                                                    <a class="btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>
-                                                </span>
-                                            </div>
-                                        </form>
-                                </div>
-                            </div>
+                                    <form name="form1" method="post" action="ofc_checklogin2.php">
+                                        <div class="text-center">
+                                            <h2 class="white-text">
+                                                <i class="white-text"></i> Please sign in to access our site
+                                            </h2>
+                                        </div><!--text-center-->
+                                        <div class="md-form">
+                                            <i class="fas white-text active"></i>
+                                            <input type="text" id="form_user" name="myusername" class="white-text form-control" />
+                                            <label for="form_user" class="active">username</label>
+                                        </div><!--md-form-->
+                                        <div class="md-form">
+                                            <i class="fas white-text active"></i>
+                                            <input type="password" id="form_pass" name="mypassword" class="white-text form-control" />
+                                            <label for="form_pass" class="active">password</label>
+                                        </div><!--md-form-->
+                                        <div class="text-center mt-4">
+                                            <button type="submit" class="btn btn-success">Sign-in</button>
+                                        </div><!--text-center-->
+                                        <!--btn-->
+                                        <div>
+                                            <span>
+                                                <a class="btn btn-primary" href="ofc_register.php" role="button">Register</a>
+                                                <a class="btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>
+                                            </span>
+                                            <h6 class="text-center white-text">
+                                                If you have not yet registered, click on the REGISTER button above, and fill out your information on the form
+                                            </h6>
+                                            <h6 class="text-center white-text">
+                                                If you forgot your password, click on the FORGOT PASSWORD button above to be sent a temporary password to your email address on file
+                                            </h6>
+                                        </div><!--btn-->
+                                    </form>
+                                </div><!--card-body-->
+                            </div><!--card-->
                             <!--/.Form-->
                             <!--<div class="col-md-6 mb-5 mt-md-5 mt-5 white-text text-center text-sm-left">-->
-                                <!--<h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Tap or click the menu selector above to sign-in with your username and password above!</h2>-->
-                                <!--<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
+                            <!--<h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Tap or click the menu selector above to sign-in with your username and password above!</h2>-->
+                            <!--<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
                                 <h6 class="mb-3 wow fadeInLeft text-left" data-wow-delay="0.3s">
                                     If you haven't yet registered, use the <span><button type="button" class="btn btn-primary">REGISTER</button></span> button above and submit your information to our administrators.'
                                 </h6>
                                 <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
                                     Don't remember your password? Click the <span><button type="button" class="btn btn-danger">FORGOT PASSWORD</button></span> button above to reset it.'
                                 </h6>-->
-                        </div>
-                        <!--Grid column-->
-                        <!--Grid column-->
+                        </div><!--Grid column-->
                         <div class="col-lg-6 mb-4 mt-5">
                             <!--Form-->
                             <div class="card wow fadeInRight" data-wow-delay="0.3s">
                                 <div class="card-body">
                                     <!--Header-->
-                                    <img src="images/ourfamilyconnections4.png" class="img-fluid max-width: 100%" height="auto" alt="" />
                                     <div class="text-center">
                                         <h3 class="white-text">
-                                            <i class="white-text"></i> we're glad you're here
+                                            <i class="white-text"></i> Welcome to the new Our Family Connections!
                                         </h3>
-                                        <!--<hr class="hr-bold" />-->
-                                        <h6 class="white-text">
-                                            +++
-                                        </h6>
-                                    </div>
+                                    </div><!--text-center-->
+                                    <div class="text-left">
+                                        <h4 class="white-text">
+                                            <i class="white-text"></i> Now enabled for your mobile device, new features include
+                                            <ul>
+                                                <li>
+                                                    Easy-to-navigate dropdown menus (when in mobile view, tap the 3-bars at the top of the screen)
+                                                </li>
+                                                <li>
+                                                    Works for all major mobile devices, large or small
+                                                </li>
+                                                <li>
+                                                    Rotating your device will expose more information - especially on small (narrow) devices
+                                                </li>
+                                                <li>
+                                                    Same rich experience regardless of whether using your computer or mobile device
+                                                </li>
+                                            </ul>
+                                        </h4>
+                                    </div><!--text-center-->
                                     <!--Body-->
-                                </div>
-                            </div>
+                                </div><!--card-body-->
+                            </div><!--card-->
                             <!--/.Form-->
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                        <div class="row mt-5">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body bg-light center-block">
-                                        <h3 class="card-title">Connecting Family and Friends</h3>
-                                        <p class="card-text">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</p>
-                                        <p class="card-text">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</p>
-                                        <p class="card-text">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</p>
-                                    </div><!--card-body-->
-                                </div><!--card-->
-                            </div><!--row-->
-                    </div><!--col-->
-
-                </div>
-                <!-- Content -->
-            </div>
-            <!-- Mask & flexbox options-->
-        </div>
-        <!-- Full Page Intro -->
+                        </div><!--Grid column-->
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!-- Mask & flexbox options-->
+        </div><!--view-->
+            
     </header>
 
     <!-- Main navigation -->
     <!--Main Layout-->
     <main>
+        <!--<div class="container">
+            <div class="row my-5">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body bg-light center-block">
+                            <h3 class="card-title">Connecting Family and Friends</h3>
+                            <p class="card-text">"...You shall love the Lord your God with all your heart and with all your soul and with all your mind. And... you shall love your neighbor as yourself." Matt 22:36-40 (ESV)</p>
+                            <p class="card-text">"...Love one another: just as I have loved you." John 13:34-35 (ESV)</p>
+                            <p class="card-text">"Rejoice always, pray without ceasing, give thanks in all circumstances." 1 Thess 5:16-18 (ESV)</p>-->
+                        <!--</div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
         <!-- Footer -->
         <footer class="page-footer font-small blue fixed-bottom">
             <div class="row d-flex align-items-center">
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <!-- Copyright -->
                     <div class="text-center py-2">
                         © 2019 Copyright:
                         <a href="http://ourfamilyconnections.org"> OurFamilyConnections.org</a>
+                         .  All rights reserved.
                     </div>
                     <!-- Copyright -->
                 </div>
-                <div class="col-md-5">
-                    <div class="text-center py-2">
-                        <a href="#">About Us</a>
-                    </div>
-               </div>
             </div>
-<!--</footer>-->
+        </footer>
         <!-- Footer -->
     </main>
     <!--Main Layout-->

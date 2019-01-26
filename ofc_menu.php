@@ -37,5 +37,5 @@ if($_SESSION['accesslevel'] == '3'){ // Authorized User
 ?>
 
 <li>
-    <a href='/teclogout.php'>Logout</a>
+    <a href='/ofc_logout.php'>Logout</a>
 </li>
