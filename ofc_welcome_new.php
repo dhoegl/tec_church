@@ -20,7 +20,7 @@ session_start();
         <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    -->
 
         <!-- MDBootstrap -->
-        <link href="css/mdb.min.css" rel="stylesheet" />
+        <link href="css/mdb470.min.css" rel="stylesheet" />
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <!--<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" />-->

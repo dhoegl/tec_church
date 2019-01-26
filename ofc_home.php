@@ -25,7 +25,7 @@ if(!$_SESSION['logged in']) {
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb459.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <!--<link href="css/style.css" rel="stylesheet">-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

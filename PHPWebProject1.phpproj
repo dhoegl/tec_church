@@ -349,6 +349,8 @@
   <ItemGroup>
     <Compile Include="js\ofc_config_ajax_call.js" />
     <Content Include="css\mdb.css" />
+    <Content Include="css\mdb459.min.css" />
+    <Content Include="css\mdb470.min.css" />
     <Content Include="css\ofc_welcome_style.css" />
     <Content Include="images\master_welcome.png" />
     <Content Include="images\x.jpg" />
