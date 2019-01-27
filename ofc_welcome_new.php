@@ -8,6 +8,7 @@ session_start();
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>TEST - Welcome to OurFamilyConnections</title>
 
@@ -120,8 +121,8 @@ session_start();
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <!--<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
-        <div class="view" style="background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!--<div class="view" style="background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
                 <!-- Content -->

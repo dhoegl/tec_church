@@ -51,8 +51,8 @@ if(!$_SESSION['logged in']) {
 
 
             <!-- Intro Section -->
-            <!--<div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">-->
-                <div class="view" style="height: 100%; background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="view hm-black-light jarallax" data-jarallax='{"speed": 0.2}' id="backsplash">
+                <!--<div class="view" style="height: 100%; background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
                 <!--<div class="view" id="backsplash">-->
                 <!--<div class="full-bg-img">-->
 
