@@ -50,7 +50,7 @@ require_once 'ofc_dbconnect.php';
 ?>
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="navbar-header">
-        <a class="navbar-brand" href="ofc_welcome.php">OurFamilyConnections</a>
+        <a class="navbar-brand" href="ofc_welcome_new.php">OurFamilyConnections</a>
     </div>
 </nav>
 <div class="container-fluid profile_bg">
@@ -149,7 +149,8 @@ require_once 'ofc_dbconnect.php';
         </div> <!--col-sm-6-->
         <div class="col-sm-6">
             <div class="card bg-light border-primary text-center p-3">
-                <img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">
+                <!--<img class="card-img-top" src="images/trinity_logo_web.png" style="width: 75%; align-self: center" alt="Card image cap">-->
+                <img class="card-img-top" src="images/ourfamilyconnections4.png" style="width: 75%; align-self: center" alt="Card image cap">
                 <div class="card-body">
                     <h3 class="card-title">What happens next</h3>
                     <p>After completing this entry form, our administrators will verify and approve your request to access our site.</p>

@@ -122,7 +122,7 @@ session_start();
         <!-- Navbar -->
         <!-- Full Page Intro -->
         <!--<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
-        <div class="view" style="background-image: url('../images/background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="view" style="background-image: url('../images/master_welcome2.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
                 <!-- Content -->
@@ -188,7 +188,8 @@ session_start();
                         </div><!--Grid column-->
                         <div class="col-lg-6 mb-4 mt-5">
                             <!--Form-->
-                            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                            <!--<div class="card wow fadeInRight" data-wow-delay="0.3s">-->
+                            <div class="card">
                                 <div class="card-body">
                                     <!--Header-->
                                     <div class="text-center">
@@ -271,9 +272,9 @@ session_start();
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script>
+    <!--<script>
         new WOW().init();
-    </script>
+    </script>-->
 
 </body>
 </html>
