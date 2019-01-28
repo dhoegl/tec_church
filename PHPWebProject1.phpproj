@@ -352,8 +352,10 @@
     <Content Include="css\mdb459.min.css" />
     <Content Include="css\mdb470.min.css" />
     <Content Include="css\ofc_welcome_style.css" />
+    <Content Include="images\background.png" />
     <Content Include="images\background2.png" />
     <Content Include="images\background3.png" />
+    <Content Include="images\background4.png" />
     <Content Include="images\background5.png" />
     <Content Include="images\master_welcome.png" />
     <Content Include="images\master_welcome2.png" />

@@ -121,8 +121,8 @@ session_start();
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-        <!--<div class="view" style="background-image: url('../images/master_welcome.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
+        <!--<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">-->
+        <div class="view" style="background-image: url('../images/background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
                 <!-- Content -->
@@ -133,20 +133,22 @@ session_start();
                         <!--Grid column-->
                         <div class="col-lg-6 mb-5 mt-lg-5 mt-5 white-text">
                             <!--Form-->
-                            <div class="card wow fadeInLeft" data-wow-delay="0.3s">
-                            <img src="images/ourfamilyconnections4.png" class="card-img-top max-width: 100%" alt="..." />
+                            <!--<div class="card wow fadeInLeft" data-wow-delay="0.3s">-->
+                            <div class="card">
+                                <img src="images/ourfamilyconnections4.png" class="card-img-top max-width: 100%" alt="..." />
                                 <div class="card-body text-center">
                                     <!--Header-->
                                     <!--<form class="form-inline" name="form1" method="post" action="ofc_checklogin2.php">-->
-                                    <form name="form1" method="post" action="ofc_checklogin2.php">
-                                        <div class="text-center">
-                                            <h2 class="white-text">
-                                                <i class="white-text"></i> Please sign in to access our site
-                                            </h2>
-                                        </div><!--text-center-->
+                                    <div class="text-center">
+                                        <h2 class="white-text">
+                                            <i class="white-text"></i> Please sign in to access our site
+                                        </h2>
+                                    </div><!--text-center-->
+                                    <form name="form1" method="post" class="text-center" action="ofc_checklogin2.php">
                                         <div class="md-form">
                                             <i class="fas white-text active"></i>
-                                            <input type="text" id="form_user" name="myusername" class="white-text form-control" />
+                                            <!--<input type="text" id="form-user" name="myusername" class="white-text form-control" />-->
+                                            <input type="text" id="form-user" name="myusername" class="white-text form-control" />
                                             <label for="form_user" class="active">username</label>
                                         </div><!--md-form-->
                                         <div class="md-form">
@@ -157,20 +159,20 @@ session_start();
                                         <div class="text-center mt-4">
                                             <button type="submit" class="btn btn-success">Sign-in</button>
                                         </div><!--text-center-->
-                                        <!--btn-->
-                                        <div>
-                                            <span>
-                                                <a class="btn btn-primary" href="ofc_register.php" role="button">Register</a>
-                                                <a class="btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>
-                                            </span>
-                                            <h6 class="text-center white-text">
-                                                If you have not yet registered, click on the REGISTER button above, and fill out your information on the form
-                                            </h6>
-                                            <h6 class="text-center white-text">
-                                                If you forgot your password, click on the FORGOT PASSWORD button above to be sent a temporary password to your email address on file
-                                            </h6>
-                                        </div><!--btn-->
                                     </form>
+                                    <div>
+                                        <!--btn-->
+                                        <span>
+                                            <a class="btn btn-primary" href="ofc_register.php" role="button">Register</a>
+                                            <a class="btn btn-danger" href="ofc_recover2.php" role="button">Forgot Password</a>
+                                        </span>
+                                        <h6 class="text-center white-text">
+                                            If you have not yet registered, click on the REGISTER button above, and fill out your information on the form
+                                        </h6>
+                                        <h6 class="text-center white-text">
+                                            If you forgot your password, click on the FORGOT PASSWORD button above to be sent a temporary password to your email address on file
+                                        </h6>
+                                    </div><!--btn-->
                                 </div><!--card-body-->
                             </div><!--card-->
                             <!--/.Form-->
