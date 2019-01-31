@@ -2,7 +2,7 @@
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
-	header("location:ofc_welcome.php");
+	header("location:ofc_welcome_new.php");
 	exit();
 }
 else {
@@ -621,7 +621,8 @@ var jQ55 = jQuery.noConflict();
 
   <!-- Intro Section -->
       
-<div class="container-fluid profile_bg bottom-buffer">
+<!--<div class="container-fluid profile_bg bottom-buffer">-->
+<div class="container-fluid bottom-buffer" id="backsplash">
 <?php
     if($MyView == 'Y')
     {
@@ -660,31 +661,37 @@ var jQ55 = jQuery.noConflict();
     }
 ?>
 
+    <!--<div class="row">
+        <div class="col-xs-12">
+            <div class="card bg-light" style="width: 100%">
+                <h4 class="text-center white-text px-2" id="profile_card">Name</h4>
+            </div>
+        </div>
+    </div>-->
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card bg-light m-3">
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="card bg-light border-primary p-3 mt-2">
                     <img class="card-img-top" id="profile_pic" style="width: 100%; align-self: center" alt="Card image cap">
-                    <h4 class="card-title text-center" id="profile_card">Name</h4>
             </div> <!-- card -->
-        </div> <!-- col-sm-4 -->
-        <div class="col-sm-4">
-            <div class="card bg-light m-3 px-2">
-                        <!--<div class="card-body">-->
-                            <h4 class="card-title text-center text-capitalize">Contact Information</h4>
-                            <h5 class="card-text"><u>Address</u></h5>
-                            <h6 class="card-text" id="profile_addr"></h6>
-                            <h5 class="card-text"><u>Phone</u></h5>
-                            <p class="card-text" id="profile_phone_home"></p>
-                            <p class="card-text" id="profile_cell_him"></p>
-                            <p class="card-text" id="profile_cell_her"></p>
-                            <h5 class="card-text"><u>Email</u></h5>
-                            <p class="card-text" id="profile_email_him"></p>
-                            <p class="card-text" id="profile_email_her"></p>
-                        <!-- </div>  card-body -->
+        </div><!--col-xs-6-->
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="card bg-light p-3 mt-2">
+                <!--<div class="card-body">-->
+                    <h4 class="card-title text-center text-capitalize" id="profile_card">Name</h4>
+                    <h5 class="card-text"><u>Address</u></h5>
+                    <h6 class="card-text" id="profile_addr"></h6>
+                    <h5 class="card-text"><u>Phone</u></h5>
+                    <p class="card-text" id="profile_phone_home"></p>
+                    <p class="card-text" id="profile_cell_him"></p>
+                    <p class="card-text" id="profile_cell_her"></p>
+                    <h5 class="card-text"><u>Email</u></h5>
+                    <p class="card-text" id="profile_email_him"></p>
+                    <p class="card-text" id="profile_email_her"></p>
+                <!-- </div>  card-body -->
             </div> <!-- card -->
-        </div> <!-- col-sm-4 -->
-        <div class="col-sm-4">
-            <div class="card bg-light m-3 px-2">
+        </div><!--col-xs-6-->
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="card bg-light p-3 mt-2">
                             <h4 class="card-title text-center text-capitalize">Celebrate with Us</h4>
                             <h5 class="card-text"><u>Anniversary</u></h5>
                             <p class="card-text" id="profile_anniv"></p>
@@ -692,83 +699,85 @@ var jQ55 = jQuery.noConflict();
                             <p class="card-text" id="profile_hisbday"></p>
                             <p class="card-text" id="profile_herbday"></p>
             </div> <!-- card -->
-        </div> <!-- col-sm-4 -->
-    </div> <!-- row -->
+        </div> <!-- col-xs-12 -->
+    </div><!--row-->
     <div class="row">
         <div class="col-sm-12">
-            <div class="card bg-light m-3 px-2">
+            <div class="card bg-light border-primary p-3 mt-2">
                 <div class="card-body">
                     <h4 class="card-title text-center text-capitalize">Children</h4>
-                    <table class="table table-sm table-responsive table-striped" id="profiletablechildren" border="0">
-                        <thead>
-                            <tr>
-                                <th class="strong">Name</th>
-                                <th class="strong">Birthdate</th>
-                                <th class="strong">Gender</th>
-                                <th class="strong">Age</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="c1n"></td>
-                                <td id="c1b"></td>
-                                <td id="c1g"></td>
-                                <td id="c1a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c2n"></td>
-                                <td id="c2b"></td>
-                                <td id="c2g"></td>
-                                <td id="c2a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c3n"></td>
-                                <td id="c3b"></td>
-                                <td id="c3g"></td>
-                                <td id="c3a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c4n"></td>
-                                <td id="c4b"></td>
-                                <td id="c4g"></td>
-                                <td id="c4a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c5n"></td>
-                                <td id="c5b"></td>
-                                <td id="c5g"></td>
-                                <td id="c5a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c6n"></td>
-                                <td id="c6b"></td>
-                                <td id="c6g"></td>
-                                <td id="c6a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c7n"></td>
-                                <td id="c7b"></td>
-                                <td id="c7g"></td>
-                                <td id="c7a"></td>
-                            </tr>
-                            <tr>
-                                <td id="c8n"></td>
-                                <td id="c8b"></td>
-                                <td id="c8g"></td>
-                                <td id="c8a"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive-sm">
+                        <table class="table table-striped" id="profiletablechildren" border="0">
+                            <thead>
+                                <tr>
+                                    <th class="strong">Name</th>
+                                    <th class="strong">Birthdate</th>
+                                    <th class="strong">Gender</th>
+                                    <th class="strong">Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="c1n"></td>
+                                    <td id="c1b"></td>
+                                    <td id="c1g"></td>
+                                    <td id="c1a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c2n"></td>
+                                    <td id="c2b"></td>
+                                    <td id="c2g"></td>
+                                    <td id="c2a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c3n"></td>
+                                    <td id="c3b"></td>
+                                    <td id="c3g"></td>
+                                    <td id="c3a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c4n"></td>
+                                    <td id="c4b"></td>
+                                    <td id="c4g"></td>
+                                    <td id="c4a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c5n"></td>
+                                    <td id="c5b"></td>
+                                    <td id="c5g"></td>
+                                    <td id="c5a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c6n"></td>
+                                    <td id="c6b"></td>
+                                    <td id="c6g"></td>
+                                    <td id="c6a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c7n"></td>
+                                    <td id="c7b"></td>
+                                    <td id="c7g"></td>
+                                    <td id="c7a"></td>
+                                </tr>
+                                <tr>
+                                    <td id="c8n"></td>
+                                    <td id="c8b"></td>
+                                    <td id="c8g"></td>
+                                    <td id="c8a"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!--div table-responsive-->
                 </div> <!-- card-body -->
             </div> <!-- card -->
         </div> <!-- col-sm-12 -->
     </div> <!-- row -->
-    <div class="row">
-        <div class="col-sm-12">
+    <!--<div class="row">
+        <div class="col-xs-12">
             <div class="card bg-light border-primary m-3">
                 <div class="card-body">
                     <h4 class="card-title">Pray With Us</h4>
-                    <div class="card-text">
+                    <div class="card-text">-->
 <!--                        	<?php
                         	if($MyView == "Y" || $AdminView == "Y"){
                 		echo "<td align='right'><input type='button' class='my_popup6_open button_flat_blue_small' id='childrenEdit' name='editChildren' value='Edit Children' /></td>";
@@ -776,13 +785,13 @@ var jQ55 = jQuery.noConflict();
                                 ?>
 -->
 
-                        <p class="card-text">Prayer Requests go here.</p>
+                        <!--<p class="card-text">Prayer Requests go here.</p>-->
 <!--                        <a href="#ModalPrayerNew" class="btn btn-primary">See More</a>-->
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalPrayerNew">New Prayer Request</button>
-                    </div> <!-- card-text -->
-                </div> <!-- card-body -->
-            </div> <!-- card -->
-        </div> <!-- col-sm-12 -->
+                            <!--<button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalPrayerNew">New Prayer Request</button>
+                    </div> 
+                </div> 
+            </div> 
+        </div>-->
 <!--    <div class="col-md-3">
         <div class="card m-3">
             <img class="card-img-top" src="images/img_400_300_blue.png" style="height: 100%" alt="Card image cap">
@@ -794,7 +803,7 @@ var jQ55 = jQuery.noConflict();
         </div>
     </div>-->
 
-    </div> <!-- Row -->
+    <!--</div>--> 
     <div class="row fixed-bottom">
         <div class="col-md-12">
             <div class="text-center">
@@ -802,7 +811,7 @@ var jQ55 = jQuery.noConflict();
                 require_once('/includes/ofc_footer.php')
                 ?>
             </div> <!-- text -->
-        </div> <!-- col-md-12 -->
+        </div> <!-- col-xs-12 -->
     </div> <!-- Row -->
 
 </div> <!-- Container -->
@@ -1613,6 +1622,8 @@ var jQ55 = jQuery.noConflict();
 
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
 	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
     
     <!-- Tenant Configuration JavaScript Call -->
     <script type="text/javascript" src="/js/ofc_config_ajax_call.js"></script>

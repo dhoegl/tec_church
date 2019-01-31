@@ -69,6 +69,8 @@ function xmlParser(xml) {
         document.getElementById("backsplash").style.backgroundImage = backsplashimage;
         document.getElementById("backsplash").style.backgroundPosition = "center center";
         document.getElementById("backsplash").style.backgroundSize = "cover";
+        document.getElementById("backsplash").style.backgroundAttachment = "fixed"; // background won't scroll
+
     }
     //Get backsplash_Welcome image (half-screen image on Master Splash screen) name from config.xml
     var backsplash_Welcome_text;

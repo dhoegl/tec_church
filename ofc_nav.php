@@ -1,6 +1,6 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="ofc_welcome.php">
+    <a class="navbar-brand" href="ofc_welcome_new.php">
         <!--<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" />-->
         <!--<img src="/_tenant/images/raggantssbs_or.png" width="30" height="30" class="d-inline-block align-top" alt="" />-->
         <img id="nav_logo" width="30" height="30" class="d-inline-block align-top" alt="" />

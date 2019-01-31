@@ -31,7 +31,10 @@ require_once 'ofc_dbconnect.php';
 <!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    
+
+<!-- Form field reset script - in case of back button usage to return to this form -->
+<script type="text/javascript" src="js/reset_register_form.js"></script>
+      
 <!-- Registration submission check script -->
 <script type="text/javascript" src="js/ofc_register_submit_check.js"></script>
 
@@ -108,11 +111,11 @@ require_once 'ofc_dbconnect.php';
                     <div class="form-group">
                         <label for="confirmcode">I received a Confirmation Code:</label>
                         <div class="form-check churchcodecheck">
-                            <input class="form-check-input" type="radio" name="confirmcode" id="codeyes" value="YES" checked>
+                            <input class="form-check-input" type="radio" name="confirmcode" id="codeyes" value="YES">
                                 <label class="form-check-label" for="codeyes">YES</label>
                         </div>
                         <div class="form-check churchcodecheck">
-                            <input class="form-check-input" type="radio" name="confirmcode" id="codeno" value="NO">
+                            <input class="form-check-input" type="radio" name="confirmcode" id="codeno" value="NO" checked>
                                 <label class="form-check-label" for="codeno">NO</label>
                         </div>
                         <label id="churchcodelabel" for="churchcode">Enter your 5-digit Confirmation Code: <strong><font color="red">*</font></strong><span id="confirm_code_len"></span></label>

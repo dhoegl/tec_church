@@ -2,7 +2,7 @@
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
-	header("location:ofc_welcome.php");
+	header("location:ofc_welcome_new.php");
 	exit();
 }
 
@@ -181,7 +181,7 @@ $count = $result->num_rows;
 <!--*****************************Calendar***********************************-->
     <div class="row justify-content-center">
         <div class="col-sm-10 bg-light">
-            <div id='calendar' style='margin:3em 0;font-size:13px'></div>
+            <div id='calendar' style='margin:3em 0;font-size:13px;border:solid'></div>
         </div> <!-- col-sm-12 --> 
     </div> <!-- row -->
     <div class="row fixed-bottom">

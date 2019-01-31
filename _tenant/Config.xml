@@ -22,12 +22,12 @@
       <banner> <!--Webpage banner image-->
         url('/_tenant/images/xxxxxxx')
       </banner>
-      <backsplash> <!--Shown on homepage-->
-        url('/_tenant/images/cropped-ECS-2016-45.jpg')
+      <backsplash> <!--Shown on ofc_home >> main homepage after logging in-->
+        url('/_tenant/images/cropped-ECS-2016-51.jpg')
       </backsplash>
       <backsplash_Welcome>
         <!--Shown on Master Welcome Page (ofc_welcome.php)-->
-        url('/_tenant/images/cropped-ECS-2016-45.jpg')
+        url('/_tenant/images/cropped-ECS-2016-51.jpg')
       </backsplash_Welcome>
       <logo> <!--Customer’s logo image-->
         url('/_tenant/images/raggantssbs_or.png')

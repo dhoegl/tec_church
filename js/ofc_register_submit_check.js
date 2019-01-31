@@ -6,7 +6,7 @@ $(document).ready(function()
 {
     var required_fields = 'N';
     var all_req_fields = 'N';
-    var churchcodeset = 'Y';
+    var churchcodeset = 'N';
     var churchcodelen = 'N';
     var usernameset = 'N';
     var passwordset = 'N';
@@ -45,8 +45,8 @@ $(document).ready(function()
             $('#register_submit').addClass('disabled'); 
         }
     });
-    $('#churchcodelabel').show(); 
-    $('#churchcode').show(); 
+    $('#churchcodelabel').hide();
+    $('#churchcode').hide(); 
 
 // </editor-fold>
 

@@ -14,8 +14,17 @@ body
     margin: 0;
 */
 }
-.profile_bg
-{
+.profile_bg {
+    /*background-color: #B4A7D6;*/
+    /*background-color: #c9c9c9;*/
+    background: url('../images/background3.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.profile_bgdir {
+    /*background-color: #FFF2CC;*/
     background-color: #c9c9c9;
 }
 .navbar-inverse 
@@ -126,10 +135,10 @@ body
     background-size: cover;
 }
 
-#footer 
-{
+#footer {
     background-color: gray;
     color: white;
+    font-size: 12px;
     font-weight: normal;
     text-align: center;
 }

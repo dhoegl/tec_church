@@ -251,11 +251,16 @@ session_start();
             <div class="row d-flex align-items-center">
                 <div class="col-md-12">
                     <!-- Copyright -->
-                    <div class="text-center py-2">
+                    <div class="text-center">
+                        <?php
+                        require_once('/includes/ofc_footer.php')
+                        ?>
+                    </div><!-- text -->
+                    <!--<div class="text-center py-2">
                         © 2019 Copyright:
                         <a href="http://ourfamilyconnections.org"> OurFamilyConnections.org</a>
                          .  All rights reserved.
-                    </div>
+                    </div>-->
                     <!-- Copyright -->
                 </div>
             </div>

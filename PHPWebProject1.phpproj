@@ -151,6 +151,8 @@
     <Compile Include="nbproject\project.xml" />
     <Compile Include="ofc_menu.php" />
     <Compile Include="ofc_nav.php" />
+    <Compile Include="ofc_profile2.php" />
+    <Compile Include="ofc_profile_old.php" />
     <Compile Include="ofc_recover2.php" />
     <Compile Include="ofc_welcome_new.php" />
     <Compile Include="ofc_welcome_new2.php" />
@@ -360,6 +362,7 @@
     <Content Include="images\master_welcome.png" />
     <Content Include="images\master_welcome2.png" />
     <Content Include="images\x.jpg" />
+    <Content Include="js\reset_register_form.js" />
     <Content Include="_tenant\Config - 002.xml" />
     <Content Include="_tenant\Config - 001.xml" />
     <Content Include="_tenant\Config - Template.xml" />

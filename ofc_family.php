@@ -2,7 +2,7 @@
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
-	header("location:ofc_welcome.php");
+	header("location:ofc_welcome_new.php");
 	exit();
 }
    require_once('ofc_dbconnect.php');
@@ -101,7 +101,7 @@ if(!$_SESSION['logged in']) {
     ?>
     
     <!-- Intro Section -->
-    <div class="container-fluid profile_bg bottom-buffer">
+    <div class="container-fluid profile_bgdir bottom-buffer">
         <div class="row pt-2">
             <div class="col-sm-12">
                 <p>

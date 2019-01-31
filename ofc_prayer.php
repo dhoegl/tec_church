@@ -2,7 +2,7 @@
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
-	header("location:ofc_welcome.php");
+	header("location:ofc_welcome_new.php");
 	exit();
 }
 $profileID = $_SESSION['idDirectory'];
