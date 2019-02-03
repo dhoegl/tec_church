@@ -2,7 +2,7 @@
   <settings>
     <customer>
       <ID> <!--Unique customer ID used to segregate environments and data-->
-        00x
+        0000x
       </ID>
       <name> <!--Formal customer name-->
         xxxxxxxxxxxxxxxxxxxxxxx

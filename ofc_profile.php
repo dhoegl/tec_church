@@ -703,10 +703,10 @@ var jQ55 = jQuery.noConflict();
     </div><!--row-->
     <div class="row">
         <div class="col-sm-12">
-            <div class="card bg-light border-primary p-3 mt-2">
+            <div class="card bg-light border-primary px-2 my-2 w-100">
                 <div class="card-body">
                     <h4 class="card-title text-center text-capitalize">Children</h4>
-                    <div class="table-responsive-sm">
+                    <div class="table-responsive-xs">
                         <table class="table table-striped" id="profiletablechildren" border="0">
                             <thead>
                                 <tr>
@@ -875,7 +875,9 @@ var jQ55 = jQuery.noConflict();
       <div class="modal-body">
 <!--            <p id="editProfile" class="my_popup4title"> </p>-->
             <form name='editcontact' method='post' action='/services/ofc_profile_contact_update.php'> 		
-                    <table id="editprofiletable" border='1' align='center' cellpadding='0' cellspacing='1' >
+                <div class="table-responsive">
+                    <h6 class="small-screen-alert">small screen? scroll or rotate device</h6>
+                    <table class="small-screen-modify" id="editprofiletable" border='1' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
 
@@ -990,7 +992,7 @@ var jQ55 = jQuery.noConflict();
                                 </td>
                         </tr>
                 </table>
-
+            </div><!--table responsive-->
       </div> <!-- modal-body -->
       <div class="modal-footer">
         <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
@@ -1103,13 +1105,16 @@ var jQ55 = jQuery.noConflict();
             </div> <!-- row -->
 
         </div> <!-- container-fluid -->
-
-                    <table id="editchildrentable" width='100%' border='1' align='center' cellpadding='0' cellspacing='1' >
+        <div class="table-responsive">
+            <h6 class="small-screen-alert">small screen? scroll or rotate device</h6>
+            <!--<table id="editchildrentable" width='100%' border='1' align='center' cellpadding='0' cellspacing='1' >-->
+            <table class="small-screen-modify" id="editchildrentable" border='1' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
 
 <!-- CHILD 1 EDIT -->
-                                    <table id="child1edit" width='100%' border='0' cellpadding='3' cellspacing='1'>
+                                    <!--<table id="child1edit" width='100%' border='0' cellpadding='3' cellspacing='1'>-->
+                                    <table id="child1edit" border='0' cellpadding='3' cellspacing='1'>
                                             <tr>
                                                 <td colspan="3"><br /></td>
                                             </tr>
@@ -1512,6 +1517,7 @@ var jQ55 = jQuery.noConflict();
                                     </td>
                             </tr>
                     </table>
+        </div><!--table-->
     </div> <!-- modal-body -->
     <div class="modal-footer">
       </div> <!-- modal-footer -->

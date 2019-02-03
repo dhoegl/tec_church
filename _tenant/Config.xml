@@ -2,7 +2,7 @@
   <settings>
     <customer>
       <ID> <!--Unique customer ID used to segregate environments and data-->
-        002
+        00002
       </ID>
       <name> <!--Formal customer name-->
         Evangel Classical School

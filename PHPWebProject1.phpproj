@@ -267,7 +267,7 @@
     <Compile Include="services\ofc_profile_contact_update.php" />
     <Compile Include="services\ofc_register_submit.php" />
     <Compile Include="services\ofc_username_check.php" />
-    <Compile Include="_tenant\css\tenant-002.css" />
+    <Compile Include="_tenant\css\tenant-00002.css" />
     <Compile Include="_tenant\images\cropped-ECS-2016-31.jpg" />
     <Compile Include="_tenant\images\cropped-ECS-2016-52.jpg" />
     <Compile Include=".gitignore" />
@@ -363,8 +363,8 @@
     <Content Include="images\master_welcome2.png" />
     <Content Include="images\x.jpg" />
     <Content Include="js\reset_register_form.js" />
-    <Content Include="_tenant\Config - 002.xml" />
-    <Content Include="_tenant\Config - 001.xml" />
+    <Content Include="_tenant\Config - 00002.xml" />
+    <Content Include="_tenant\Config - 00001.xml" />
     <Content Include="_tenant\Config - Template.xml" />
     <Content Include="_tenant\Config.xml" />
     <Content Include="_tenant\Config_old.xml" />

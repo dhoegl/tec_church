@@ -14,6 +14,25 @@ body
     margin: 0;
 */
 }
+
+/*Check screen-size and modify tables for small form-factor media*/
+@media screen and (max-width: 767px){
+    .small-screen-modify {
+        width: 75%;
+    }
+    .small-screen-alert {
+        display: block; /*show help text on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 18em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .small-screen-alert {
+        display: none; /*hide help text on screen when width >= 768px*/
+    }
+}
+
 .profile_bg {
     /*background-color: #B4A7D6;*/
     /*background-color: #c9c9c9;*/
@@ -27,10 +46,12 @@ body
     /*background-color: #FFF2CC;*/
     background-color: #c9c9c9;
 }
-.navbar-inverse 
-{
-  background-color: #222;
-  border-color: #080808;
+#profiletablechildren {
+    font-size: smaller;
+}
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
 }
 .navbar-brand a
 {

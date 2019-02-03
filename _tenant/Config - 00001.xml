@@ -63,7 +63,7 @@
       </services-calendar>
       <services-prayer>
         <!-- Use to specify whether Prayer Request feature is enabled for customer-->
-        NO
+        YES
       </services-prayer>
       <services-events>
         <!-- Use to specify whether Events feature is enabled for customer-->
