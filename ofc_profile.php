@@ -21,14 +21,22 @@ else {
         
     else {
         session_destroy();
-        header("location:ofc_welcome.php");
+        header("location:ofc_welcome_new.php");
         exit();
     }
-    /*Query Directory for State - unorthodox method to extract State value to determine 'selected' on Modal popup */
+    /*Query Directory for State and Child Grade - method to extract State value to determine 'selected' on Modal popup */
 		$profilequery = $mysql->query("SELECT * FROM $dir_tbl_name WHERE idDirectory = '" . $profileID . "'");
                 while ($staterow = $profilequery->fetch_assoc())
                 {
                     $recordState = $staterow['State'];
+                    $record_1_Grade = $staterow['Child_1_Grade'];
+                    $record_2_Grade = $staterow['Child_2_Grade'];
+                    $record_3_Grade = $staterow['Child_3_Grade'];
+                    $record_4_Grade = $staterow['Child_4_Grade'];
+                    $record_5_Grade = $staterow['Child_5_Grade'];
+                    $record_6_Grade = $staterow['Child_6_Grade'];
+                    $record_7_Grade = $staterow['Child_7_Grade'];
+                    $record_8_Grade = $staterow['Child_8_Grade'];
                 }
 
 }
@@ -230,6 +238,9 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_1_bday));
                         jQ05("#c1a").html(age2);
                         jQ05("#child1_email").attr("value",data[0].child_1_email);
+                        jQ05("#child1_school").attr("value",data[0].child_1_school);
+                        jQ05("#child1_grade").attr("value",data[0].child_1_grade);
+                        console.log("Test Grade 1 = " + data[0].child_1_grade);
                     }
 
                     // Child 2
@@ -253,6 +264,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_2_bday));
                         jQ05("#c2a").html(age2);
                         jQ05("#child2_email").attr("value",data[0].child_2_email);
+                        jQ05("#child2_grade").attr("value",data[0].child_2_grade);
+                        jQ05("#child2_school").attr("value",data[0].child_2_school);
                     }
 
                     // Child 3
@@ -276,6 +289,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_3_bday));
                         jQ05("#c3a").html(age2);
                         jQ05("#child3_email").attr("value",data[0].child_3_email);
+                        jQ05("#child3_grade").attr("value",data[0].child_3_grade);
+                        jQ05("#child3_school").attr("value",data[0].child_3_school);
                     }
 
                     // Child 4
@@ -299,6 +314,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_4_bday));
                         jQ05("#c4a").html(age2);
                         jQ05("#child4_email").attr("value",data[0].child_4_email);
+                        jQ05("#child4_grade").attr("value",data[0].child_4_grade);
+                        jQ05("#child4_school").attr("value",data[0].child_4_school);
                     }
 
                     // Child 5
@@ -322,6 +339,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_5_bday));
                         jQ05("#c5a").html(age2);
                         jQ05("#child5_email").attr("value",data[0].child_5_email);
+                        jQ05("#child5_grade").attr("value",data[0].child_5_grade);
+                        jQ05("#child5_school").attr("value",data[0].child_5_school);
                     }
 
                     // Child 6
@@ -345,6 +364,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_6_bday));
                         jQ05("#c6a").html(age2);
                         jQ05("#child6_email").attr("value",data[0].child_6_email);
+                        jQ05("#child6_grade").attr("value",data[0].child_6_grade);
+                        jQ05("#child6_school").attr("value",data[0].child_6_school);
                     }
 
                     // Child 7
@@ -368,6 +389,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_7_bday));
                         jQ05("#c7a").html(age2);
                         jQ05("#child7_email").attr("value",data[0].child_7_email);
+                        jQ05("#child7_grade").attr("value",data[0].child_7_grade);
+                        jQ05("#child7_school").attr("value",data[0].child_7_school);
                     }
 
                     // Child 8
@@ -391,6 +414,8 @@ else {
                         var age2 = calculate_age(new Date(data[0].child_8_bday));
                         jQ05("#c8a").html(age2);
                         jQ05("#child8_email").attr("value",data[0].child_8_email);
+                        jQ05("#child8_grade").attr("value",data[0].child_8_grade);
+                        jQ05("#child8_school").attr("value",data[0].child_8_school);
                     }
                 
             });
@@ -661,13 +686,6 @@ var jQ55 = jQuery.noConflict();
     }
 ?>
 
-    <!--<div class="row">
-        <div class="col-xs-12">
-            <div class="card bg-light" style="width: 100%">
-                <h4 class="text-center white-text px-2" id="profile_card">Name</h4>
-            </div>
-        </div>
-    </div>-->
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-4">
             <div class="card bg-light border-primary p-3 mt-2">
@@ -993,13 +1011,13 @@ var jQ55 = jQuery.noConflict();
                         </tr>
                 </table>
             </div><!--table responsive-->
-      </div> <!-- modal-body -->
       <div class="modal-footer">
         <input type="submit" name="submitcontact" class="btn btn-primary" value="Save changes" />
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 <!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div> <!-- modal-footer -->
       </form>
+      </div> <!-- modal-body -->
     </div> <!-- modal-content -->
   </div> <!-- modal-dialog -->
 </div> <!-- modal-fade -->
@@ -1107,7 +1125,6 @@ var jQ55 = jQuery.noConflict();
         </div> <!-- container-fluid -->
         <div class="table-responsive">
             <h6 class="small-screen-alert">small screen? scroll or rotate device</h6>
-            <!--<table id="editchildrentable" width='100%' border='1' align='center' cellpadding='0' cellspacing='1' >-->
             <table class="small-screen-modify" id="editchildrentable" border='1' align='center' cellpadding='0' cellspacing='1' >
                     <tr> 		
                             <td>
@@ -1146,6 +1163,36 @@ var jQ55 = jQuery.noConflict();
                                                     <td align='right'>Email</td>
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child1_email' type='email' size="25" id='child1_email'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child1_school' type='text' size="25" id='child1_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child1_grade" id="child1_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_1_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
@@ -1197,6 +1244,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child2_email' type='email' size="25" id='child2_email'></td>
                                             </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child2_school' type='text' size="25" id='child2_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child2_grade" id="child2_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_2_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                            </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
@@ -1245,6 +1323,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td align='right'>Email</td>
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child3_email' type='email' size="25" id='child3_email'></td>
+                                            </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child3_school' type='text' size="25" id='child3_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child3_grade" id="child3_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_3_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
@@ -1296,6 +1405,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child4_email' type='email' size="25" id='child4_email'></td>
                                             </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child4_school' type='text' size="25" id='child4_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child4_grade" id="child4_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_4_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                            </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
@@ -1345,6 +1485,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td align='right'>Email</td>
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child5_email' type='email' size="25" id='child5_email'></td>
+                                            </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child5_school' type='text' size="25" id='child5_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child5_grade" id="child5_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_5_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
@@ -1396,6 +1567,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child6_email' type='email' size="25" id='child6_email'></td>
                                             </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child6_school' type='text' size="25" id='child6_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child6_grade" id="child6_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_6_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                            </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
@@ -1445,6 +1647,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td align='right'>Email</td>
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child7_email' type='email' size="25" id='child7_email'></td>
+                                            </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child7_school' type='text' size="25" id='child7_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child7_grade" id="child7_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_7_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
                                             </tr>
                                             <tr>
                                                     <td><br /></td>
@@ -1496,6 +1729,37 @@ var jQ55 = jQuery.noConflict();
                                                     <td width='6'>:</td>
                                                     <td colspan="2"><input name='child8_email' type='email' size="25" id='child8_email'></td>
                                             </tr>
+<!--This section adds School and Grade-->
+                                            <tr>
+                                                    <td align='right'>School</td>
+                                                    <td width='6'>:</td>
+                                                    <td colspan="2"><input name='child8_school' type='text' size="25" id='child8_school'></td>
+                                            </tr>
+                                            <tr>
+                                                    <td align='right'>Grade</td>
+                                                    <td width='6'>:</td>
+                                                    <td>
+                                                        <select name="child8_grade" id="child8_grade">
+
+                                                            <?php
+                                                            $grades_query = "SELECT * from " . $_SESSION['gradestablename'];
+                                                            $gradesresult = $mysql->query($grades_query) or die(" SQL query error. Error:" . mysql_errno() . " " . mysql_error());
+                                                            while($grades_row = $gradesresult->fetch_assoc())
+                                                            {
+                                                                $grades_optionvalue = $grades_row['grades_abbr'] . " - " . $grades_row['grades_name'];
+                                                                $selectedgrade = $grades_row['grades_abbr'];		
+                                                                echo "<option value='" . $grades_optionvalue . "'";
+                                                                if($selectedgrade == $record_8_Grade)
+                                                                {
+                                                                    echo " selected='selected'";
+                                                                }
+                                                                echo ">" . $grades_optionvalue . "</option>";
+                                                            }
+
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                            </tr>
                                             <tr>
                                                     <td><br /></td>
                                             </tr>
@@ -1517,11 +1781,11 @@ var jQ55 = jQuery.noConflict();
                                     </td>
                             </tr>
                     </table>
-        </div><!--table-->
+        </div><!--table-responsive-->
+        </form>
     </div> <!-- modal-body -->
     <div class="modal-footer">
-      </div> <!-- modal-footer -->
-        </form>
+    </div> <!-- modal-footer -->
     </div> <!-- modal-content -->
   </div> <!-- modal-dialog -->
 </div> <!-- modal-fade -->

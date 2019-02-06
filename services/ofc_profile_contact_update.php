@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(!$_SESSION['logged in']) {
-	header("location:../ofc_welcome.php");
+	header("location:../ofc_welcome_new.php");
 	exit();
 }
 
