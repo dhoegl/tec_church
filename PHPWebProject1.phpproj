@@ -261,6 +261,8 @@
     <Compile Include="profile_img\96-pic.PNG" />
     <Compile Include="profile_img\x.jpg" />
     <Compile Include="services\csv_download.php" />
+    <Compile Include="services\ofc_getchildlist.php" />
+    <Compile Include="services\ofc_get_children.php" />
     <Compile Include="services\ofc_get_profile.php" />
     <Compile Include="services\ofc_profile_calendar_update.php" />
     <Compile Include="services\ofc_profile_children_update.php" />

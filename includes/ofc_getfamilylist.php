@@ -17,8 +17,8 @@ if(!$_SESSION['logged in']) {
 			echo "no data";
 		}
                 
-                        while($activerow = $activefamilyquery->fetch_assoc())
-                {
+        while($activerow = $activefamilyquery->fetch_assoc())
+        {
 //		echo "<tr><td><img src=imageview.php width='25' height='25'>"."</td>";
 		if(!$activerow['Internet_Restrict']){
 			echo "<tr><td>" . "<a href='/ofc_profile.php?id=" . $activerow['idDirectory'] . "'>view</a>"."</td>";

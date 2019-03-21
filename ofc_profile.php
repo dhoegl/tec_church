@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if(!$_SESSION['logged in']) {
 	session_destroy();
@@ -16,9 +16,7 @@ else {
 		        $MyView = 'N';
             }
             require_once('ofc_dbconnect.php');
-
     }
-        
     else {
         session_destroy();
         header("location:ofc_welcome_new.php");
@@ -38,7 +36,6 @@ else {
                     $record_7_Grade = $staterow['Child_7_Grade'];
                     $record_8_Grade = $staterow['Child_8_Grade'];
                 }
-
 }
 ?>
 <!DOCTYPE html>
@@ -62,6 +59,7 @@ else {
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap4.min.css">
+
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -74,18 +72,47 @@ else {
     <link href="css/ofc_css_style.css" rel="stylesheet">
     <!-- Tenant-specific stylesheet -->
     <link href="_tenant/css/tenant.css" rel="stylesheet">
+    <!-- Datatables stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">  
 
     
 <!-- Initialize jquery js script -->
-<!--    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
+<!--  ORIG TEST  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>-->
     <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
 
-<!-- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- ORIG TEST Datatables Javascript -->
+    <!--<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>-->
+
+<!-- ORIG TEST jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
 
 <!-- Popup script from http://dev.vast.com/jquery-popup-overlay/ -->
 <!--	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>-->
+
+<!-- NEW TEST ---- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js">
+	</script>        
+<!-- NEW TEST ---- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js">
+	</script>
+<!-- NEW TEST ---- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js">
+	</script>        
+<!-- NEW TEST ---- jQuery (necessary for Bootstrap's (BOOTSTRAP 4 BETA) JavaScript plugins) -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap4.min.js">
+	</script>
+
+<!-- ORIG TEST Datatables Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- ORIG TEST Datatables Javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>        
+    
+
+
+
+
+
 
 <!-- Call Image Verify jQuery script -->
 <script src="/js/image_verify.js"></script>
@@ -129,12 +156,38 @@ else {
             return newdatevalnoyear;
         }
     </script>
-    
+ 
+    <!--<script type="text/javascript">
+        var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
+        var jQ15 = jQuery.noConflict();
+        jQ15(document).ready(function() {
+            var request = jQ05.ajax({
+		        url: 'services/ofc_getchildlist.php',
+		        //url: 'services/ofc_get_children.php',
+		        type: 'POST',
+		        dataType: 'json',
+		        data: { profile_id: $profile_id}
+            });
+    });
+    </script>-->
+
+
+<!--*******************************DataTables stylesheet data**************************************-->
+<script type="text/javascript" charset="utf-8">
+    var jQ15 = jQuery.noConflict();
+        jQ15(document).ready(function() {
+                //jQ15('#testdata').DataTable({
+                //                        "order": [[ 1, 'asc' ], [ 2, 'asc' ]]
+
+                //                        });
+        jQ15('#testdata').DataTable();
+        });
+</script>
     <script type="text/javascript">
+        var jQ05 = jQuery.noConflict();
         var $profile_id = <?php echo "'" . $profileID . "'"; ?>;
         var $fullname = <?php echo "'" . $_SESSION['fullname'] . "'"; ?>;
         var $idDirectory = <?php echo "'" . $_SESSION['idDirectory'] . "'"; ?>;
-        var jQ05 = jQuery.noConflict();
         // Call script to pull profile data....
         jQ05(document).ready(function() {
             var request = jQ05.ajax({
@@ -143,7 +196,6 @@ else {
 		dataType: 'json',
 		data: { profile_id: $profile_id}
             });
-            
             // The ajax call succeeded. 
             request.done(function(data) {
                 var $c1a = "";
@@ -213,9 +265,7 @@ else {
                 jQ05("#hisbirthday").val(data[0].hisbday);
                 jQ05("#herbirthday").val(data[0].herbday);
                 jQ05("#lastnameforcalendar").attr("value",data[0].lastname);
-                
-
-//******************* CHILD DATA ***********
+                //******************* CHILD DATA ***********
                 // Load Profile Page Children Data
                     // Child 1
                     if(data[0].child_1_name)
@@ -242,7 +292,6 @@ else {
                         jQ05("#child1_grade").attr("value",data[0].child_1_grade);
                         console.log("Test Grade 1 = " + data[0].child_1_grade);
                     }
-
                     // Child 2
                     if(data[0].child_2_name)
                     {
@@ -267,7 +316,6 @@ else {
                         jQ05("#child2_grade").attr("value",data[0].child_2_grade);
                         jQ05("#child2_school").attr("value",data[0].child_2_school);
                     }
-
                     // Child 3
                     if(data[0].child_3_name)
                     {
@@ -292,7 +340,6 @@ else {
                         jQ05("#child3_grade").attr("value",data[0].child_3_grade);
                         jQ05("#child3_school").attr("value",data[0].child_3_school);
                     }
-
                     // Child 4
                     if(data[0].child_4_name)
                     {
@@ -317,7 +364,6 @@ else {
                         jQ05("#child4_grade").attr("value",data[0].child_4_grade);
                         jQ05("#child4_school").attr("value",data[0].child_4_school);
                     }
-
                     // Child 5
                     if(data[0].child_5_name)
                     {
@@ -342,7 +388,6 @@ else {
                         jQ05("#child5_grade").attr("value",data[0].child_5_grade);
                         jQ05("#child5_school").attr("value",data[0].child_5_school);
                     }
-
                     // Child 6
                     if(data[0].child_6_name)
                     {
@@ -367,7 +412,6 @@ else {
                         jQ05("#child6_grade").attr("value",data[0].child_6_grade);
                         jQ05("#child6_school").attr("value",data[0].child_6_school);
                     }
-
                     // Child 7
                     if(data[0].child_7_name)
                     {
@@ -392,7 +436,6 @@ else {
                         jQ05("#child7_grade").attr("value",data[0].child_7_grade);
                         jQ05("#child7_school").attr("value",data[0].child_7_school);
                     }
-
                     // Child 8
                     if(data[0].child_8_name)
                     {
@@ -417,20 +460,15 @@ else {
                         jQ05("#child8_grade").attr("value",data[0].child_8_grade);
                         jQ05("#child8_school").attr("value",data[0].child_8_school);
                     }
-                
             });
-            
             // The ajax call failed
             request.fail(function(xhr, status, errorThrown) {
                 console.log('Profile Info Failed');
                 console.log( "Error: " + errorThrown );
                 console.log( "Status: " + status );
                 alert('Failed to obtain profile data. Please re-load page.');
-
             });
-
  	});
-        
     </script>
 
 <!-- Detect and perform profile 'Edit' actions -->
@@ -732,6 +770,9 @@ var jQ55 = jQuery.noConflict();
                                     <th class="strong">Birthdate</th>
                                     <th class="strong">Gender</th>
                                     <th class="strong">Age</th>
+                                    <th class="strong">Email</th>
+                                    <th class="strong">School</th>
+                                    <th class="strong">Grade</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -790,6 +831,54 @@ var jQ55 = jQuery.noConflict();
             </div> <!-- card -->
         </div> <!-- col-sm-12 -->
     </div> <!-- row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card bg-light border-primary px-2 my-2 w-100">
+                <div class="card-body">
+                    <h4 class="card-title text-center text-capitalize">Children</h4>
+                    <div class="table-responsive-xs">
+                        <table id="testdata" class="table table-sm table-striped dt-responsive" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="strong">Name</th>
+                                    <th class="strong">Birthdate</th>
+                                    <th class="strong">Gender</th>
+                                    <th class="strong">Age</th>
+                                    <th class="strong">Email</th>
+                                    <th class="strong">School</th>
+                                    <th class="strong">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    // Get Children List from family details
+                                    //include('/services/ofc_getchildlist.php');
+                                    //include('/services/ofc_get_children.php');
+                                ?>	
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="strong">Name</th>
+                                    <th class="strong">Birthdate</th>
+                                    <th class="strong">Gender</th>
+                                    <th class="strong">Age</th>
+                                    <th class="strong">Email</th>
+                                    <th class="strong">School</th>
+                                    <th class="strong">Grade</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div><!--table-responsive-->
+                </div><!--card-body-->
+            </div><!--card-->
+        </div><!--col-->
+    </div><!--row-->
+
+
+
+
+
+
     <!--<div class="row">
         <div class="col-xs-12">
             <div class="card bg-light border-primary m-3">

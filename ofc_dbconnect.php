@@ -16,6 +16,7 @@ session_start();
 	$states_tbl_name="states";
 	$event_tbl_name="Events";
 	$grades_tbl_name="grades";
+    $child_tbl_name="children";
 
 	$_SESSION['logintablename'] = $login_tbl_name;
 	$_SESSION['dirtablename'] = $dir_tbl_name;
@@ -29,6 +30,7 @@ session_start();
 	$_SESSION['statestablename'] = $states_tbl_name;
 	$_SESSION['eventtablename'] = $event_tbl_name;
 	$_SESSION['gradestablename'] = $grades_tbl_name;
+    $_SESSION['childtablename'] = $child_tbl_name;
 
 
         $mysql = new mysqli($host, $username, $password, $db_name);
